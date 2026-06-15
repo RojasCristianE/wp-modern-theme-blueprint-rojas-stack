@@ -15,7 +15,6 @@ class MenuServiceProvider
         return [
             ['title' => __('Inicio', 'rojas-stack'), 'url' => home_url('/')],
             ['title' => __('Blog', 'rojas-stack'), 'url' => home_url('/blog')],
-            ['title' => __('Servicios', 'rojas-stack'), 'url' => home_url('/servicios')],
             ['title' => __('Contacto', 'rojas-stack'), 'url' => home_url('/contacto')],
         ];
     }

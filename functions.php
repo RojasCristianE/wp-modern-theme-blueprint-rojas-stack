@@ -24,6 +24,38 @@ if (file_exists(__DIR__ . '/.env')) {
     $dotenv->safeLoad();
 }
 
+// 2.1 Habilitar Herramientas de Debugging (Ignition & Clockwork)
+if (isset($_ENV['WP_ENV']) && $_ENV['WP_ENV'] === 'development') {
+    // Silenciar depreciaciones en PHP 8.5+ manualmente antes de Ignition
+    set_error_handler(function ($level, $message, $file, $line) {
+        if ($level & (E_DEPRECATED | E_USER_DEPRECATED)) {
+            return true; // Detener propagación
+        }
+        return false; // Seguir con el manejador de Ignition
+    });
+
+    // Spatie Ignition: Errores Visuales Modernos
+    if (class_exists(\Spatie\Ignition\Ignition::class)) {
+        \Spatie\Ignition\Ignition::make()
+            ->shouldDisplayException(true)
+            ->register();
+        
+        // En PHP 8.5+, Ignition captura depreciaciones de librerías core. 
+        // Restauramos el manejador previo para que solo las excepciones fatales usen Ignition.
+        restore_error_handler();
+    }
+
+    // Clockwork: Profiling y Debugging en Consola/Browser Extension
+    if (class_exists(\Clockwork\Support\Vanilla\Clockwork::class)) {
+        \Clockwork\Support\Vanilla\Clockwork::init([
+            'register_helpers' => true,
+        ]);
+    }
+
+    // Forzar el silenciado de depreciaciones al final de la inicialización de debug
+    error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+}
+
 // 3. Inicializar Timber (Motor de plantillas Twig)
 Timber\Timber::init();
 
@@ -34,7 +66,10 @@ Timber\Timber::$dirname = ['resources/views'];
 
 // 4. Inicializar Carbon Fields (Metadatos Code-First)
 add_action('after_setup_theme', function () {
+    $current_error_level = error_reporting();
+    error_reporting(0); // Silenciar temporalmente para evitar depreciaciones en PHP 8.5
     \Carbon_Fields\Carbon_Fields::boot();
+    error_reporting($current_error_level); // Restaurar nivel anterior
 });
 
 // 5. Iniciar la orquestación del tema

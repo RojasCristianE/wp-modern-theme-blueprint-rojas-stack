@@ -3,6 +3,7 @@
 namespace RojasStack\Providers;
 
 use RojasStack\Controllers\ContactController;
+use RojasStack\Controllers\BlogController;
 
 /**
  * RouteServiceProvider
@@ -17,6 +18,7 @@ class RouteServiceProvider
      */
     private array $routes = [
         '/contacto' => [ContactController::class, 'render_page'],
+        '/blog'     => [BlogController::class, 'render_page'],
     ];
 
     public function register(): void

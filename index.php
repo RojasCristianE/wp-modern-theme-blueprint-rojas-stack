@@ -8,5 +8,5 @@
 
 $context = Timber\Timber::context();
 
-// DEBUG: Forzar renderizado
+// Renderizamos la plantilla index.twig por defecto en el fallback
 Timber\Timber::render('index.twig', $context);

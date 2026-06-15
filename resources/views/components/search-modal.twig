@@ -44,7 +44,8 @@
                            hx-get="{{ site.url }}"
                            hx-trigger="keyup changed delay:300ms"
                            hx-target="#search-results"
-                           hx-indicator="#search-loading">
+                           hx-indicator="#search-loading"
+                           @focus="htmx.process($el)">
                     
                     <div id="search-loading" class="htmx-indicator absolute right-6 top-1/2 -translate-y-1/2">
                         <div class="animate-spin rounded-full h-5 w-5 border-2 border-brand-600 border-t-transparent"></div>

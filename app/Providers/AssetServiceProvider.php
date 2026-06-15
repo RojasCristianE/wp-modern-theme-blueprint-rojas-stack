@@ -41,14 +41,20 @@ class AssetServiceProvider
             // En producción, leemos el manifiesto
             $manifest = $this->get_manifest();
             
+            // Cargamos el CSS principal explícitamente si existe en el manifiesto
+            if (isset($manifest['resources/styles/main.css'])) {
+                $css_file = $manifest['resources/styles/main.css']['file'];
+                wp_enqueue_style('rojas-main-css', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $css_file);
+            }
+
             if (isset($manifest['resources/scripts/main.js'])) {
                 $js_file = $manifest['resources/scripts/main.js']['file'];
                 wp_enqueue_script('rojas-main', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $js_file, [], null, true);
                 
-                // Si el JS tiene CSS asociado, lo encolamos
+                // Si el JS tiene CSS asociado adicional, lo encolamos
                 if (isset($manifest['resources/scripts/main.js']['css'])) {
                     foreach ($manifest['resources/scripts/main.js']['css'] as $css_file) {
-                        wp_enqueue_style('rojas-main-css', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $css_file);
+                        wp_enqueue_style('rojas-js-associated-css', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $css_file);
                     }
                 }
             }

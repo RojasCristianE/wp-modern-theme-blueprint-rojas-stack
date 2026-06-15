@@ -27,4 +27,5 @@ hooks:
   post-start:
     - exec: composer install
     - exec: npm install
+    - exec: npm run build
     - exec: /var/www/html/.ddev/init-wp.sh
