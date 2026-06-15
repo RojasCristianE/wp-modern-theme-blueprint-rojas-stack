@@ -1,0 +1,9 @@
+services:
+  web:
+    volumes:
+      # Montamos el volumen invisible en la ruta donde vivirá el Core Fantasma
+      - wp-core-volume:/var/www/wp-core
+
+volumes:
+  wp-core-volume:
+    # Volumen gestionado exclusivamente por Docker

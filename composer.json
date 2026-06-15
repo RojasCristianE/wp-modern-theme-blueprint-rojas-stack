@@ -1,0 +1,47 @@
+{
+    "name": "cristian-rojas/wp-modern-theme-blueprint",
+    "description": "Rojas Stack: Modern Theme Architecture for WordPress (AI-First)",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Rojas",
+            "email": "cristian@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.5",
+        "timber/timber": "*",
+        "jgrossi/corcel": "*",
+        "htmlburger/carbon-fields": "*",
+        "vlucas/phpdotenv": "*",
+        "illuminate/http": "*",
+        "nesbot/carbon": "*",
+        "spatie/schema-org": "*",
+        "rakit/validation": "*",
+        "resend/resend-php": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "*",
+        "spatie/ignition": "*",
+        "deployer/deployer": "*",
+        "lucatume/wp-browser": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RojasStack\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

@@ -1,0 +1,2689 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "rojas_stack_infrastructure",
+        "label": "Rojas Stack Infrastructure Components",
+        "nodes": [
+          "ddev_docker_compose_valkey_valkey_service",
+          "ddev_docker_compose_wpcore_phantom_core",
+          "ddev_config_rojas_stack"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": ".ddev/config.yaml"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "install-bun.sh",
+      "file_type": "code",
+      "source_file": ".ddev/.webimageBuild/install-bun.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "webimagebuild_install_bun",
+      "community": 23,
+      "norm_label": "install-bun.sh"
+    },
+    {
+      "label": "install-bun.sh script",
+      "file_type": "code",
+      "source_file": ".ddev/.webimageBuild/install-bun.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_cristian_software_wp_modern_theme_blueprint_ddev_webimagebuild_install_bun_sh__entry",
+      "community": 23,
+      "norm_label": "install-bun.sh script"
+    },
+    {
+      "label": "init-wp.sh",
+      "file_type": "code",
+      "source_file": ".ddev/init-wp.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "ddev_init_wp",
+      "community": 17,
+      "norm_label": "init-wp.sh"
+    },
+    {
+      "label": "init-wp.sh script",
+      "file_type": "code",
+      "source_file": ".ddev/init-wp.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_cristian_software_wp_modern_theme_blueprint_ddev_init_wp_sh__entry",
+      "community": 17,
+      "norm_label": "init-wp.sh script"
+    },
+    {
+      "label": "cloudflared.sh",
+      "file_type": "code",
+      "source_file": ".ddev/share-providers/cloudflared.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "share_providers_cloudflared",
+      "community": 20,
+      "norm_label": "cloudflared.sh"
+    },
+    {
+      "label": "cloudflared.sh script",
+      "file_type": "code",
+      "source_file": ".ddev/share-providers/cloudflared.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_cristian_software_wp_modern_theme_blueprint_ddev_share_providers_cloudflared_sh__entry",
+      "community": 20,
+      "norm_label": "cloudflared.sh script"
+    },
+    {
+      "label": "ngrok.sh",
+      "file_type": "code",
+      "source_file": ".ddev/share-providers/ngrok.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "share_providers_ngrok",
+      "community": 21,
+      "norm_label": "ngrok.sh"
+    },
+    {
+      "label": "ngrok.sh script",
+      "file_type": "code",
+      "source_file": ".ddev/share-providers/ngrok.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_cristian_software_wp_modern_theme_blueprint_ddev_share_providers_ngrok_sh__entry",
+      "community": 21,
+      "norm_label": "ngrok.sh script"
+    },
+    {
+      "label": "install-bun.sh",
+      "file_type": "code",
+      "source_file": ".ddev/web-build/install-bun.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "web_build_install_bun",
+      "community": 22,
+      "norm_label": "install-bun.sh"
+    },
+    {
+      "label": "install-bun.sh script",
+      "file_type": "code",
+      "source_file": ".ddev/web-build/install-bun.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_cristian_software_wp_modern_theme_blueprint_ddev_web_build_install_bun_sh__entry",
+      "community": 22,
+      "norm_label": "install-bun.sh script"
+    },
+    {
+      "label": "xhprof_prepend.php",
+      "file_type": "code",
+      "source_file": ".ddev/xhprof/xhprof_prepend.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "xhprof_xhprof_prepend",
+      "community": 15,
+      "norm_label": "xhprof_prepend.php"
+    },
+    {
+      "label": "xhprof_completion()",
+      "file_type": "code",
+      "source_file": ".ddev/xhprof/xhprof_prepend.php",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "xhprof_xhprof_prepend_xhprof_completion",
+      "community": 15,
+      "norm_label": "xhprof_completion()"
+    },
+    {
+      "label": "append_profile_link()",
+      "file_type": "code",
+      "source_file": ".ddev/xhprof/xhprof_prepend.php",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "xhprof_xhprof_prepend_append_profile_link",
+      "community": 15,
+      "norm_label": "append_profile_link()"
+    },
+    {
+      "label": "ContactController.php",
+      "file_type": "code",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "controllers_contactcontroller",
+      "community": 9,
+      "norm_label": "contactcontroller.php"
+    },
+    {
+      "label": "ContactController",
+      "file_type": "code",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "controllers_contactcontroller_contactcontroller",
+      "community": 9,
+      "norm_label": "contactcontroller"
+    },
+    {
+      "label": ".register()",
+      "file_type": "code",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "controllers_contactcontroller_contactcontroller_register",
+      "community": 9,
+      "norm_label": ".register()"
+    },
+    {
+      "label": ".render_page()",
+      "file_type": "code",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "controllers_contactcontroller_contactcontroller_render_page",
+      "community": 9,
+      "norm_label": ".render_page()"
+    },
+    {
+      "label": ".handle_submit()",
+      "file_type": "code",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "controllers_contactcontroller_contactcontroller_handle_submit",
+      "community": 9,
+      "norm_label": ".handle_submit()"
+    },
+    {
+      "label": "PageFields.php",
+      "file_type": "code",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "fields_pagefields",
+      "community": 12,
+      "norm_label": "pagefields.php"
+    },
+    {
+      "label": "PageFields",
+      "file_type": "code",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "fields_pagefields_pagefields",
+      "community": 12,
+      "norm_label": "pagefields"
+    },
+    {
+      "label": ".__construct()",
+      "file_type": "code",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "fields_pagefields_pagefields_construct",
+      "community": 12,
+      "norm_label": ".__construct()"
+    },
+    {
+      "label": ".register_page_fields()",
+      "file_type": "code",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "fields_pagefields_pagefields_register_page_fields",
+      "community": 12,
+      "norm_label": ".register_page_fields()"
+    },
+    {
+      "label": "ThemeOptions.php",
+      "file_type": "code",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "fields_themeoptions",
+      "community": 13,
+      "norm_label": "themeoptions.php"
+    },
+    {
+      "label": "ThemeOptions",
+      "file_type": "code",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "fields_themeoptions_themeoptions",
+      "community": 13,
+      "norm_label": "themeoptions"
+    },
+    {
+      "label": ".__construct()",
+      "file_type": "code",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "fields_themeoptions_themeoptions_construct",
+      "community": 13,
+      "norm_label": ".__construct()"
+    },
+    {
+      "label": ".register_options()",
+      "file_type": "code",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "fields_themeoptions_themeoptions_register_options",
+      "community": 13,
+      "norm_label": ".register_options()"
+    },
+    {
+      "label": "AssetServiceProvider.php",
+      "file_type": "code",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "providers_assetserviceprovider",
+      "community": 6,
+      "norm_label": "assetserviceprovider.php"
+    },
+    {
+      "label": "AssetServiceProvider",
+      "file_type": "code",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "providers_assetserviceprovider_assetserviceprovider",
+      "community": 6,
+      "norm_label": "assetserviceprovider"
+    },
+    {
+      "label": ".register()",
+      "file_type": "code",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "providers_assetserviceprovider_assetserviceprovider_register",
+      "community": 6,
+      "norm_label": ".register()"
+    },
+    {
+      "label": ".enqueue_assets()",
+      "file_type": "code",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
+      "community": 6,
+      "norm_label": ".enqueue_assets()"
+    },
+    {
+      "label": ".is_dev()",
+      "file_type": "code",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "providers_assetserviceprovider_assetserviceprovider_is_dev",
+      "community": 6,
+      "norm_label": ".is_dev()"
+    },
+    {
+      "label": ".get_manifest()",
+      "file_type": "code",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "providers_assetserviceprovider_assetserviceprovider_get_manifest",
+      "community": 6,
+      "norm_label": ".get_manifest()"
+    },
+    {
+      "label": "MenuServiceProvider.php",
+      "file_type": "code",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "providers_menuserviceprovider",
+      "community": 10,
+      "norm_label": "menuserviceprovider.php"
+    },
+    {
+      "label": "MenuServiceProvider",
+      "file_type": "code",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "providers_menuserviceprovider_menuserviceprovider",
+      "community": 10,
+      "norm_label": "menuserviceprovider"
+    },
+    {
+      "label": ".get_primary_menu_definition()",
+      "file_type": "code",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
+      "community": 10,
+      "norm_label": ".get_primary_menu_definition()"
+    },
+    {
+      "label": ".register()",
+      "file_type": "code",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "providers_menuserviceprovider_menuserviceprovider_register",
+      "community": 10,
+      "norm_label": ".register()"
+    },
+    {
+      "label": ".inject_menu_to_context()",
+      "file_type": "code",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "providers_menuserviceprovider_menuserviceprovider_inject_menu_to_context",
+      "community": 10,
+      "norm_label": ".inject_menu_to_context()"
+    },
+    {
+      "label": "RouteServiceProvider.php",
+      "file_type": "code",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "providers_routeserviceprovider",
+      "community": 14,
+      "norm_label": "routeserviceprovider.php"
+    },
+    {
+      "label": "RouteServiceProvider",
+      "file_type": "code",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "providers_routeserviceprovider_routeserviceprovider",
+      "community": 14,
+      "norm_label": "routeserviceprovider"
+    },
+    {
+      "label": ".register()",
+      "file_type": "code",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "providers_routeserviceprovider_routeserviceprovider_register",
+      "community": 14,
+      "norm_label": ".register()"
+    },
+    {
+      "label": ".dispatch_routes()",
+      "file_type": "code",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
+      "community": 14,
+      "norm_label": ".dispatch_routes()"
+    },
+    {
+      "label": "SeoServiceProvider.php",
+      "file_type": "code",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "providers_seoserviceprovider",
+      "community": 7,
+      "norm_label": "seoserviceprovider.php"
+    },
+    {
+      "label": "SeoServiceProvider",
+      "file_type": "code",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "providers_seoserviceprovider_seoserviceprovider",
+      "community": 7,
+      "norm_label": "seoserviceprovider"
+    },
+    {
+      "label": ".register()",
+      "file_type": "code",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "providers_seoserviceprovider_seoserviceprovider_register",
+      "community": 7,
+      "norm_label": ".register()"
+    },
+    {
+      "label": ".render_schemas()",
+      "file_type": "code",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "providers_seoserviceprovider_seoserviceprovider_render_schemas",
+      "community": 7,
+      "norm_label": ".render_schemas()"
+    },
+    {
+      "label": ".render_organization_schema()",
+      "file_type": "code",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
+      "community": 7,
+      "norm_label": ".render_organization_schema()"
+    },
+    {
+      "label": ".render_article_schema()",
+      "file_type": "code",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "providers_seoserviceprovider_seoserviceprovider_render_article_schema",
+      "community": 7,
+      "norm_label": ".render_article_schema()"
+    },
+    {
+      "label": "ThemeSetup.php",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "setup_themesetup",
+      "community": 4,
+      "norm_label": "themesetup.php"
+    },
+    {
+      "label": "ThemeSetup",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "setup_themesetup_themesetup",
+      "community": 4,
+      "norm_label": "themesetup"
+    },
+    {
+      "label": ".__construct()",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "setup_themesetup_themesetup_construct",
+      "community": 4,
+      "norm_label": ".__construct()"
+    },
+    {
+      "label": ".register_hooks()",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "setup_themesetup_themesetup_register_hooks",
+      "community": 4,
+      "norm_label": ".register_hooks()"
+    },
+    {
+      "label": ".add_theme_supports()",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "setup_themesetup_themesetup_add_theme_supports",
+      "community": 4,
+      "norm_label": ".add_theme_supports()"
+    },
+    {
+      "label": ".register_menus()",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "setup_themesetup_themesetup_register_menus",
+      "community": 4,
+      "norm_label": ".register_menus()"
+    },
+    {
+      "label": ".add_to_context()",
+      "file_type": "code",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "setup_themesetup_themesetup_add_to_context",
+      "community": 4,
+      "norm_label": ".add_to_context()"
+    },
+    {
+      "label": "helpers.php",
+      "file_type": "code",
+      "source_file": "app/helpers.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_helpers",
+      "community": 16,
+      "norm_label": "helpers.php"
+    },
+    {
+      "label": "rs_asset()",
+      "file_type": "code",
+      "source_file": "app/helpers.php",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "app_helpers_rs_asset",
+      "community": 16,
+      "norm_label": "rs_asset()"
+    },
+    {
+      "label": "composer.json",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "composer",
+      "community": 0,
+      "norm_label": "composer.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "composer_name",
+      "community": 0,
+      "norm_label": "name"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "composer_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "composer_type",
+      "community": 0,
+      "norm_label": "type"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "composer_license",
+      "community": 0,
+      "norm_label": "license"
+    },
+    {
+      "label": "authors",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "composer_authors",
+      "community": 0,
+      "norm_label": "authors"
+    },
+    {
+      "label": "require",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "composer_require",
+      "community": 3,
+      "norm_label": "require"
+    },
+    {
+      "label": "php",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "composer_require_php",
+      "community": 3,
+      "norm_label": "php"
+    },
+    {
+      "label": "timber/timber",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "composer_require_timber_timber",
+      "community": 3,
+      "norm_label": "timber/timber"
+    },
+    {
+      "label": "jgrossi/corcel",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "composer_require_jgrossi_corcel",
+      "community": 3,
+      "norm_label": "jgrossi/corcel"
+    },
+    {
+      "label": "htmlburger/carbon-fields",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "composer_require_htmlburger_carbon_fields",
+      "community": 3,
+      "norm_label": "htmlburger/carbon-fields"
+    },
+    {
+      "label": "vlucas/phpdotenv",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "composer_require_vlucas_phpdotenv",
+      "community": 3,
+      "norm_label": "vlucas/phpdotenv"
+    },
+    {
+      "label": "illuminate/http",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "composer_require_illuminate_http",
+      "community": 3,
+      "norm_label": "illuminate/http"
+    },
+    {
+      "label": "nesbot/carbon",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "composer_require_nesbot_carbon",
+      "community": 3,
+      "norm_label": "nesbot/carbon"
+    },
+    {
+      "label": "spatie/schema-org",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "composer_require_spatie_schema_org",
+      "community": 3,
+      "norm_label": "spatie/schema-org"
+    },
+    {
+      "label": "rakit/validation",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "composer_require_rakit_validation",
+      "community": 3,
+      "norm_label": "rakit/validation"
+    },
+    {
+      "label": "resend/resend-php",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "composer_require_resend_resend_php",
+      "community": 3,
+      "norm_label": "resend/resend-php"
+    },
+    {
+      "label": "require-dev",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "composer_require_dev",
+      "community": 0,
+      "norm_label": "require-dev"
+    },
+    {
+      "label": "phpstan/phpstan",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "composer_require_dev_phpstan_phpstan",
+      "community": 0,
+      "norm_label": "phpstan/phpstan"
+    },
+    {
+      "label": "spatie/ignition",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "composer_require_dev_spatie_ignition",
+      "community": 0,
+      "norm_label": "spatie/ignition"
+    },
+    {
+      "label": "deployer/deployer",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "composer_require_dev_deployer_deployer",
+      "community": 0,
+      "norm_label": "deployer/deployer"
+    },
+    {
+      "label": "lucatume/wp-browser",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "composer_require_dev_lucatume_wp_browser",
+      "community": 0,
+      "norm_label": "lucatume/wp-browser"
+    },
+    {
+      "label": "autoload",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "composer_autoload",
+      "community": 0,
+      "norm_label": "autoload"
+    },
+    {
+      "label": "psr-4",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "composer_autoload_psr_4",
+      "community": 0,
+      "norm_label": "psr-4"
+    },
+    {
+      "label": "RojasStack\\\\",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "composer_psr_4_rojasstack",
+      "community": 0,
+      "norm_label": "rojasstack\\\\"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "composer_autoload_files",
+      "community": 0,
+      "norm_label": "files"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "composer_config",
+      "community": 8,
+      "norm_label": "config"
+    },
+    {
+      "label": "allow-plugins",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "composer_config_allow_plugins",
+      "community": 8,
+      "norm_label": "allow-plugins"
+    },
+    {
+      "label": "composer/installers",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "composer_allow_plugins_composer_installers",
+      "community": 8,
+      "norm_label": "composer/installers"
+    },
+    {
+      "label": "optimize-autoloader",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "composer_config_optimize_autoloader",
+      "community": 8,
+      "norm_label": "optimize-autoloader"
+    },
+    {
+      "label": "sort-packages",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "composer_config_sort_packages",
+      "community": 8,
+      "norm_label": "sort-packages"
+    },
+    {
+      "label": "minimum-stability",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "composer_minimum_stability",
+      "community": 0,
+      "norm_label": "minimum-stability"
+    },
+    {
+      "label": "prefer-stable",
+      "file_type": "code",
+      "source_file": "composer.json",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "composer_prefer_stable",
+      "community": 0,
+      "norm_label": "prefer-stable"
+    },
+    {
+      "label": "functions.php",
+      "file_type": "code",
+      "source_file": "functions.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "functions",
+      "community": 25,
+      "norm_label": "functions.php"
+    },
+    {
+      "label": "index.php",
+      "file_type": "code",
+      "source_file": "index.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "index",
+      "community": 29,
+      "norm_label": "index.php"
+    },
+    {
+      "label": "rotate-salts.php",
+      "file_type": "code",
+      "source_file": "infra/scripts/rotate-salts.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_rotate_salts",
+      "community": 24,
+      "norm_label": "rotate-salts.php"
+    },
+    {
+      "label": "generate_salt()",
+      "file_type": "code",
+      "source_file": "infra/scripts/rotate-salts.php",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "scripts_rotate_salts_generate_salt",
+      "community": 24,
+      "norm_label": "generate_salt()"
+    },
+    {
+      "label": "wp-config.example.php",
+      "file_type": "code",
+      "source_file": "infra/wp-config.example.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "infra_wp_config_example",
+      "community": 30,
+      "norm_label": "wp-config.example.php"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 1,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 1,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_private",
+      "community": 1,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 1,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_type",
+      "community": 1,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 1,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "package_scripts_dev",
+      "community": 1,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "package_scripts_build",
+      "community": 1,
+      "norm_label": "build"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "package_scripts_preview",
+      "community": 1,
+      "norm_label": "preview"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_scripts_lint",
+      "community": 1,
+      "norm_label": "lint"
+    },
+    {
+      "label": "fix",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_scripts_fix",
+      "community": 1,
+      "norm_label": "fix"
+    },
+    {
+      "label": "test:e2e",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_scripts_test_e2e",
+      "community": 1,
+      "norm_label": "test:e2e"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "package_devdependencies",
+      "community": 2,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@biomejs/biome",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "package_devdependencies_biomejs_biome",
+      "community": 2,
+      "norm_label": "@biomejs/biome"
+    },
+    {
+      "label": "@playwright/test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "package_devdependencies_playwright_test",
+      "community": 2,
+      "norm_label": "@playwright/test"
+    },
+    {
+      "label": "@tailwindcss/forms",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss_forms",
+      "community": 2,
+      "norm_label": "@tailwindcss/forms"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss_postcss",
+      "community": 2,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@tailwindcss/typography",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss_typography",
+      "community": 2,
+      "norm_label": "@tailwindcss/typography"
+    },
+    {
+      "label": "alpinejs",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "package_devdependencies_alpinejs",
+      "community": 2,
+      "norm_label": "alpinejs"
+    },
+    {
+      "label": "autoprefixer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "package_devdependencies_autoprefixer",
+      "community": 2,
+      "norm_label": "autoprefixer"
+    },
+    {
+      "label": "flowbite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "package_devdependencies_flowbite",
+      "community": 2,
+      "norm_label": "flowbite"
+    },
+    {
+      "label": "htmx.org",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "package_devdependencies_htmx_org",
+      "community": 2,
+      "norm_label": "htmx.org"
+    },
+    {
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "package_devdependencies_postcss",
+      "community": 2,
+      "norm_label": "postcss"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss",
+      "community": 2,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "package_devdependencies_vite",
+      "community": 2,
+      "norm_label": "vite"
+    },
+    {
+      "label": "vite-plugin-live-reload",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "package_devdependencies_vite_plugin_live_reload",
+      "community": 2,
+      "norm_label": "vite-plugin-live-reload"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "package_dependencies",
+      "community": 1,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "lucide-static",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "package_dependencies_lucide_static",
+      "community": 1,
+      "norm_label": "lucide-static"
+    },
+    {
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "postcss.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "postcss_config",
+      "community": 31,
+      "norm_label": "postcss.config.js"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "resources/scripts/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_main",
+      "community": 33,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "search.php",
+      "file_type": "code",
+      "source_file": "search.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "search",
+      "community": 34,
+      "norm_label": "search.php"
+    },
+    {
+      "label": "single.php",
+      "file_type": "code",
+      "source_file": "single.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "single",
+      "community": 35,
+      "norm_label": "single.php"
+    },
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tailwind_config",
+      "community": 36,
+      "norm_label": "tailwind.config.js"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "vite_config",
+      "community": 37,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "WP Modern Theme Blueprint DDEV Project",
+      "file_type": "concept",
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "id": "ddev_config_project_blueprint",
+      "community": 5,
+      "norm_label": "wp modern theme blueprint ddev project"
+    },
+    {
+      "label": "PHP 8.5 Runtime",
+      "file_type": "concept",
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "id": "ddev_config_php_8_5",
+      "community": 5,
+      "norm_label": "php 8.5 runtime"
+    },
+    {
+      "label": "Nginx-FPM Webserver",
+      "file_type": "concept",
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "id": "ddev_config_nginx_fpm",
+      "community": 5,
+      "norm_label": "nginx-fpm webserver"
+    },
+    {
+      "label": "Valkey Caching Service",
+      "file_type": "code",
+      "source_file": ".ddev/docker-compose.valkey.yaml",
+      "source_location": null,
+      "rationale": "Basado en la compatibilidad total con el protocolo RESP para el Rojas Stack.",
+      "id": "ddev_docker_compose_valkey_valkey_service",
+      "community": 11,
+      "norm_label": "valkey caching service"
+    },
+    {
+      "label": "Phantom WP Core Volume",
+      "file_type": "concept",
+      "source_file": ".ddev/docker-compose.wpcore.yaml",
+      "source_location": null,
+      "rationale": "Monta el volumen invisible en la ruta donde vivir\u00e1 el Core Fantasma.",
+      "id": "ddev_docker_compose_wpcore_phantom_core",
+      "community": 11,
+      "norm_label": "phantom wp core volume"
+    },
+    {
+      "label": "Rojas Stack Architecture",
+      "file_type": "rationale",
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "rationale": "Modern Theme Architecture for WordPress (AI-First) prioritized on separation of logic and view.",
+      "id": "ddev_config_rojas_stack",
+      "community": 11,
+      "norm_label": "rojas stack architecture"
+    },
+    {
+      "label": "Vite Dev Port (5173)",
+      "file_type": "concept",
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "id": "ddev_config_vite_port_config",
+      "community": 5,
+      "norm_label": "vite dev port (5173)"
+    },
+    {
+      "label": "Post-Start Lifecycle Hooks",
+      "file_type": "code",
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "id": "ddev_config_post_start_hooks",
+      "community": 5,
+      "norm_label": "post-start lifecycle hooks"
+    },
+    {
+      "label": "Custom DB Commands Environment",
+      "file_type": "document",
+      "source_file": ".ddev/commands/db/README.txt",
+      "source_location": null,
+      "id": "db_readme_custom_db_commands",
+      "community": 5,
+      "norm_label": "custom db commands environment"
+    },
+    {
+      "label": "XHGui Profiling Service",
+      "file_type": "code",
+      "source_file": ".ddev/.ddev-docker-compose-base.yaml",
+      "source_location": null,
+      "id": "ddev_ddev_docker_compose_base_xhgui",
+      "community": 11,
+      "norm_label": "xhgui profiling service"
+    },
+    {
+      "label": "Rojas Stack",
+      "file_type": "concept",
+      "source_file": "GEMINI.md",
+      "id": "gemini_rojas_stack",
+      "community": 19,
+      "norm_label": "rojas stack"
+    },
+    {
+      "label": "Theme-Centric Control",
+      "file_type": "rationale",
+      "source_file": "GEMINI.md",
+      "id": "gemini_theme_centric_control",
+      "community": 19,
+      "norm_label": "theme-centric control"
+    },
+    {
+      "label": "Separation of Layers",
+      "file_type": "rationale",
+      "source_file": "GEMINI.md",
+      "id": "gemini_separation_of_layers",
+      "community": 28,
+      "norm_label": "separation of layers"
+    },
+    {
+      "label": "AI-First & Predictability",
+      "file_type": "rationale",
+      "source_file": "GEMINI.md",
+      "id": "gemini_ai_first",
+      "community": 26,
+      "norm_label": "ai-first & predictability"
+    },
+    {
+      "label": "Corcel (ORM)",
+      "file_type": "concept",
+      "source_file": "GEMINI.md",
+      "id": "gemini_corcel",
+      "community": 27,
+      "norm_label": "corcel (orm)"
+    },
+    {
+      "label": "HTMX",
+      "file_type": "concept",
+      "source_file": "GEMINI.md",
+      "id": "gemini_htmx",
+      "community": 18,
+      "norm_label": "htmx"
+    },
+    {
+      "label": "AlpineJS",
+      "file_type": "concept",
+      "source_file": "GEMINI.md",
+      "id": "gemini_alpinejs",
+      "community": 18,
+      "norm_label": "alpinejs"
+    },
+    {
+      "label": "Upsun Provider",
+      "file_type": "concept",
+      "source_file": ".ddev/providers/upsun.yaml",
+      "id": "providers_upsun_upsun_provider",
+      "community": 32,
+      "norm_label": "upsun provider"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/.webimageBuild/install-bun.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "webimagebuild_install_bun",
+      "target": "home_cristian_software_wp_modern_theme_blueprint_ddev_webimagebuild_install_bun_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/init-wp.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ddev_init_wp",
+      "target": "home_cristian_software_wp_modern_theme_blueprint_ddev_init_wp_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/share-providers/cloudflared.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "share_providers_cloudflared",
+      "target": "home_cristian_software_wp_modern_theme_blueprint_ddev_share_providers_cloudflared_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/share-providers/ngrok.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "share_providers_ngrok",
+      "target": "home_cristian_software_wp_modern_theme_blueprint_ddev_share_providers_ngrok_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/web-build/install-bun.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_build_install_bun",
+      "target": "home_cristian_software_wp_modern_theme_blueprint_ddev_web_build_install_bun_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/xhprof/xhprof_prepend.php",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "xhprof_xhprof_prepend",
+      "target": "xhprof_xhprof_prepend_append_profile_link",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".ddev/xhprof/xhprof_prepend.php",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "xhprof_xhprof_prepend",
+      "target": "xhprof_xhprof_prepend_xhprof_completion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "controllers_contactcontroller",
+      "target": "controllers_contactcontroller_contactcontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "controllers_contactcontroller_contactcontroller",
+      "target": "controllers_contactcontroller_contactcontroller_handle_submit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "controllers_contactcontroller_contactcontroller",
+      "target": "controllers_contactcontroller_contactcontroller_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "controllers_contactcontroller_contactcontroller",
+      "target": "controllers_contactcontroller_contactcontroller_render_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "fields_pagefields",
+      "target": "fields_pagefields_pagefields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "fields_pagefields_pagefields",
+      "target": "fields_pagefields_pagefields_construct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Fields/PageFields.php",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "fields_pagefields_pagefields",
+      "target": "fields_pagefields_pagefields_register_page_fields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "fields_themeoptions",
+      "target": "fields_themeoptions_themeoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "fields_themeoptions_themeoptions",
+      "target": "fields_themeoptions_themeoptions_construct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "fields_themeoptions_themeoptions",
+      "target": "fields_themeoptions_themeoptions_register_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider",
+      "target": "providers_assetserviceprovider_assetserviceprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider_assetserviceprovider",
+      "target": "providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider_assetserviceprovider",
+      "target": "providers_assetserviceprovider_assetserviceprovider_get_manifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider_assetserviceprovider",
+      "target": "providers_assetserviceprovider_assetserviceprovider_is_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider_assetserviceprovider",
+      "target": "providers_assetserviceprovider_assetserviceprovider_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
+      "target": "providers_assetserviceprovider_assetserviceprovider_get_manifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
+      "target": "providers_assetserviceprovider_assetserviceprovider_is_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "providers_menuserviceprovider",
+      "target": "providers_menuserviceprovider_menuserviceprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "providers_menuserviceprovider_menuserviceprovider",
+      "target": "providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "providers_menuserviceprovider_menuserviceprovider",
+      "target": "providers_menuserviceprovider_menuserviceprovider_inject_menu_to_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "providers_menuserviceprovider_menuserviceprovider",
+      "target": "providers_menuserviceprovider_menuserviceprovider_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/MenuServiceProvider.php",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "providers_menuserviceprovider_menuserviceprovider_inject_menu_to_context",
+      "target": "providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "providers_routeserviceprovider",
+      "target": "providers_routeserviceprovider_routeserviceprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "providers_routeserviceprovider_routeserviceprovider",
+      "target": "providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "providers_routeserviceprovider_routeserviceprovider",
+      "target": "providers_routeserviceprovider_routeserviceprovider_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider",
+      "target": "providers_seoserviceprovider_seoserviceprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider_seoserviceprovider",
+      "target": "providers_seoserviceprovider_seoserviceprovider_register",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider_seoserviceprovider",
+      "target": "providers_seoserviceprovider_seoserviceprovider_render_article_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider_seoserviceprovider",
+      "target": "providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider_seoserviceprovider",
+      "target": "providers_seoserviceprovider_seoserviceprovider_render_schemas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider_seoserviceprovider_render_schemas",
+      "target": "providers_seoserviceprovider_seoserviceprovider_render_article_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "providers_seoserviceprovider_seoserviceprovider_render_schemas",
+      "target": "providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "setup_themesetup",
+      "target": "setup_themesetup_themesetup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "setup_themesetup_themesetup",
+      "target": "setup_themesetup_themesetup_add_theme_supports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "setup_themesetup_themesetup",
+      "target": "setup_themesetup_themesetup_add_to_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "setup_themesetup_themesetup",
+      "target": "setup_themesetup_themesetup_construct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "setup_themesetup_themesetup",
+      "target": "setup_themesetup_themesetup_register_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "setup_themesetup_themesetup",
+      "target": "setup_themesetup_themesetup_register_menus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "setup_themesetup_themesetup_construct",
+      "target": "setup_themesetup_themesetup_register_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/helpers.php",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "app_helpers",
+      "target": "app_helpers_rs_asset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_authors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_autoload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_minimum_stability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_prefer_stable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_require",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_require_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "composer",
+      "target": "composer_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_htmlburger_carbon_fields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_illuminate_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_jgrossi_corcel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_nesbot_carbon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_php",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_rakit_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_resend_resend_php",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_spatie_schema_org",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_timber_timber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "composer_require",
+      "target": "composer_require_vlucas_phpdotenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "composer_require_dev",
+      "target": "composer_require_dev_deployer_deployer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "composer_require_dev",
+      "target": "composer_require_dev_lucatume_wp_browser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "composer_require_dev",
+      "target": "composer_require_dev_phpstan_phpstan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "composer_require_dev",
+      "target": "composer_require_dev_spatie_ignition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "composer_autoload",
+      "target": "composer_autoload_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "composer_autoload",
+      "target": "composer_autoload_psr_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "composer_autoload_psr_4",
+      "target": "composer_psr_4_rojasstack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "composer_config",
+      "target": "composer_config_allow_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "composer_config",
+      "target": "composer_config_optimize_autoloader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "composer_config",
+      "target": "composer_config_sort_packages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "composer.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "composer_config_allow_plugins",
+      "target": "composer_allow_plugins_composer_installers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "infra/scripts/rotate-salts.php",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "scripts_rotate_salts",
+      "target": "scripts_rotate_salts_generate_salt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test_e2e",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_alpinejs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_autoprefixer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_biomejs_biome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_flowbite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_htmx_org",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_playwright_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_forms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_typography",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite_plugin_live_reload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_lucide_static",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".ddev/commands/db/README.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "db_readme_custom_db_commands",
+      "target": "ddev_config_project_blueprint"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_config_project_blueprint",
+      "target": "ddev_config_nginx_fpm"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_config_project_blueprint",
+      "target": "ddev_config_php_8_5"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_config_project_blueprint",
+      "target": "ddev_config_post_start_hooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_config_project_blueprint",
+      "target": "ddev_config_vite_port_config"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".ddev/docker-compose.valkey.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_config_rojas_stack",
+      "target": "ddev_docker_compose_valkey_valkey_service"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".ddev/config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_docker_compose_valkey_valkey_service",
+      "target": "ddev_ddev_docker_compose_base_xhgui"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".ddev/docker-compose.wpcore.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ddev_config_rojas_stack",
+      "target": "ddev_docker_compose_wpcore_phantom_core"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GEMINI.md",
+      "source": "gemini_rojas_stack",
+      "target": "gemini_theme_centric_control"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "GEMINI.md",
+      "source": "gemini_htmx",
+      "target": "gemini_alpinejs"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "rojas_stack_infrastructure",
+      "label": "Rojas Stack Infrastructure Components",
+      "nodes": [
+        "ddev_docker_compose_valkey_valkey_service",
+        "ddev_docker_compose_wpcore_phantom_core",
+        "ddev_config_rojas_stack"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".ddev/config.yaml"
+    }
+  ]
+}

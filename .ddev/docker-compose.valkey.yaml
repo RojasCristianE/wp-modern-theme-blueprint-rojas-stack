@@ -1,0 +1,17 @@
+# Configuración de Valkey para el Rojas Stack
+# Basado en la compatibilidad total con el protocolo RESP
+services:
+  valkey:
+    container_name: ddev-${DDEV_SITENAME}-valkey
+    image: valkey/valkey:latest
+    restart: "no"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    networks:
+      default:
+        aliases:
+          - ${DDEV_SITENAME}-valkey
+    # Exponemos el puerto estándar de Redis/Valkey
+    ports:
+      - "6379"

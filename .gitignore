@@ -1,0 +1,47 @@
+# Rojas Stack: WordPress Theme Blueprint .gitignore
+
+# Dependencies
+vendor/
+node_modules/
+.bun/
+
+# Build Assets
+dist/
+.vite/
+manifest.json
+
+# WordPress Core & Local Environment
+conductor/
+wp-config.php
+wp-config-ddev.php
+.ddev/db_snapshots/
+.ddev/.importdb*
+.ddev/commands/web/bun # Si creáramos comandos personalizados
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & Temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.stylelintcache
+.phpunit.result.cache
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

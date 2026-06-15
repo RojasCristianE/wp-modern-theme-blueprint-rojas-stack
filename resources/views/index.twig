@@ -1,0 +1,95 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{# Obtenemos los campos de Carbon Fields para la página actual #}
+{% set hero_title = function('carbon_get_post_meta', post.id, 'hero_title') %}
+{% set hero_subtitle = function('carbon_get_post_meta', post.id, 'hero_subtitle') %}
+{% set hero_cta_text = function('carbon_get_post_meta', post.id, 'hero_cta_text') %}
+{% set hero_cta_url = function('carbon_get_post_meta', post.id, 'hero_cta_url') %}
+
+<section class="relative overflow-hidden py-24 sm:py-32 bg-slate-50">
+    <!-- Círculos decorativos -->
+    <div class="absolute -top-24 -left-20 w-96 h-96 bg-brand-100/50 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute -bottom-24 -right-20 w-96 h-96 bg-indigo-100/50 rounded-full blur-3xl opacity-50"></div>
+
+    <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl mb-6">
+            {{ hero_title ?: 'Bienvenido al <span class="text-brand-600 italic">Futuro</span>'|raw }}
+        </h1>
+        
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            {{ hero_subtitle ?: 'Esta es una instalación de <strong>Rojas Stack Blueprint</strong>. El motor de WordPress está desacoplado y el desarrollo es 100% moderno.'|raw }}
+        </p>
+        
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+            {% if hero_cta_text %}
+                <a href="{{ hero_cta_url ?: '#' }}" class="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white bg-brand-600 rounded-full hover:bg-brand-700 transition-all shadow-xl shadow-brand-200 active:scale-95">
+                    {{ hero_cta_text }}
+                </a>
+            {% endif %}
+
+            <div class="flex items-center gap-3">
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 shadow-sm">Timber 2.0</span>
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 shadow-sm">Vite 8</span>
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 shadow-sm">Carbon Fields</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feed de Posts (Demostración de Loop) -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Últimos Posts</h2>
+                <p class="text-slate-500 mt-2">Explora las últimas noticias del stack.</p>
+            </div>
+            <a href="#" class="text-brand-600 font-bold text-sm hover:underline">Ver todos &rarr;</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for post in posts %}
+                <article class="group relative flex flex-col items-start bg-white p-2 rounded-3xl border border-slate-100 hover:border-brand-200 transition-all hover:shadow-2xl hover:shadow-brand-100/50">
+                    {% if post.thumbnail %}
+                        <div class="relative aspect-video w-full overflow-hidden rounded-2xl mb-6">
+                            <img src="{{ post.thumbnail.src|resize(600, 400) }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    {% else %}
+                        <div class="aspect-video w-full bg-slate-100 rounded-2xl mb-6 flex items-center justify-center text-slate-300">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                    {% endif %}
+                    
+                    <div class="px-4 pb-6">
+                        <time class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 block">
+                            {{ post.date|date('d M, Y') }}
+                        </time>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors mb-3">
+                            <a href="{{ post.link }}">
+                                <span class="absolute inset-0"></span>
+                                {{ post.title }}
+                            </a>
+                        </h3>
+                        <p class="text-slate-500 text-sm line-clamp-2">
+                            {{ post.preview.length(20) }}
+                        </p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Contacto (HTMX + Rakit) -->
+<section class="py-24 bg-slate-50 border-t border-slate-100">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 tracking-tight sm:text-4xl mb-4">¿Hablamos?</h2>
+            <p class="text-lg text-slate-600">Este formulario usa HTMX para el envío asíncrono y Rakit en el backend para validación estricta.</p>
+        </div>
+        
+        {% include 'partials/contact-form.twig' %}
+    </div>
+</section>
+{% endblock %}

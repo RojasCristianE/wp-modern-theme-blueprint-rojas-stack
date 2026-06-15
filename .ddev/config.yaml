@@ -1,0 +1,30 @@
+name: wp-modern-theme-blueprint
+type: wordpress
+docroot: ""
+php_version: "8.5"
+webserver_type: nginx-fpm
+db_type: mariadb:10.11
+db_version: ""
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database_extra_args: ""
+timezone: ""
+use_dns_docker_compose_adapter: false
+corepack_enable: true
+nodejs_version: "22"
+web_environment:
+  - PATH=$PATH:/home/linuxbrew/.linuxbrew/bin:/home/web/.bun/bin
+# Configuración para el puerto de Vite
+web_extra_exposed_ports:
+  - name: vite
+    container_port: 5173
+    http_port: 5172
+    https_port: 5173
+
+# Servicios adicionales para el Rojas Stack
+hooks:
+  post-start:
+    - exec: composer install
+    - exec: npm install
+    - exec: /var/www/html/.ddev/init-wp.sh
