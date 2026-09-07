@@ -19,9 +19,16 @@ it('registra los hooks AJAX para usuarios autenticados y anónimos', function ()
 
     (new ContactController())->register();
 
-    expect($hooks)->toHaveKeys(['wp_ajax_submit_contact', 'wp_ajax_nopriv_submit_contact'])
+    expect($hooks)->toHaveKeys([
+        'wp_ajax_submit_contact',
+        'wp_ajax_nopriv_submit_contact',
+        'wp_ajax_get_contact_form',
+        'wp_ajax_nopriv_get_contact_form',
+    ])
         ->and($hooks['wp_ajax_submit_contact'][1])->toBe('handle_submit')
-        ->and($hooks['wp_ajax_nopriv_submit_contact'][1])->toBe('handle_submit');
+        ->and($hooks['wp_ajax_nopriv_submit_contact'][1])->toBe('handle_submit')
+        ->and($hooks['wp_ajax_get_contact_form'][1])->toBe('render_form_fragment')
+        ->and($hooks['wp_ajax_nopriv_get_contact_form'][1])->toBe('render_form_fragment');
 });
 
 it('renderiza contact.twig con título en el contexto', function () {
@@ -101,4 +108,27 @@ it('envía el correo y muestra el mensaje de éxito cuando la validación pasa',
         ->and($mail[1])->toContain('Cristian Rojas')
         ->and($mail[2])->toContain('cristian@rojas.test')
         ->and($mail[2])->toContain('Hola, este mensaje');
+});
+
+it('usa el destinatario configurado en features.php si no es admin_email', function () {
+    when('__')->returnArg();
+    when('get_option')->justReturn('admin@site.test');
+    when('get_bloginfo')->justReturn('http://site.test');
+
+    $to = null;
+
+    Functions\expect('wp_mail')->once()->andReturnUsing(function (string $recipient, string $subject, string $body) use (&$to) {
+        $to = $recipient;
+    });
+    Functions\expect('wp_die')->once();
+
+    $_POST = [
+        'name'    => 'Cristian Rojas',
+        'email'   => 'cristian@rojas.test',
+        'message' => 'Hola, este mensaje tiene más de diez caracteres.',
+    ];
+
+    (new ContactController(['contact_recipient' => 'hola@rojas.test']))->handle_submit();
+
+    expect($to)->toBe('hola@rojas.test');
 });

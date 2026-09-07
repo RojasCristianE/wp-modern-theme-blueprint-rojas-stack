@@ -9,9 +9,14 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
     when('__')->returnArg();
 
     $captured = null;
+    $postsArgs = null;
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => ['site_url' => 'http://site.test']);
-    \Patchwork\redefine('Timber\Timber::get_posts', fn (): array => ['POST_A', 'POST_B']);
+    \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
+        $postsArgs = $args;
+
+        return ['POST_A', 'POST_B'];
+    });
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {
         $captured = [$template, $context];
     });
@@ -21,7 +26,26 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
     expect($captured[0])->toBe('blog.twig')
         ->and($captured[1]['title'])->toBe('Blog')
         ->and($captured[1]['posts'])->toBe(['POST_A', 'POST_B'])
-        ->and($captured[1]['site_url'])->toBe('http://site.test');
+        ->and($captured[1]['site_url'])->toBe('http://site.test')
+        ->and($postsArgs['posts_per_page'])->toBe(12);
+});
+
+it('respeta posts_per_page de la configuración del módulo blog', function () {
+    when('__')->returnArg();
+
+    $postsArgs = null;
+
+    \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
+    \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
+        $postsArgs = $args;
+
+        return [];
+    });
+    \Patchwork\redefine('Timber\Timber::render', fn (string $template, array $context) => null);
+
+    (new BlogController(['posts_per_page' => 5]))->render_page();
+
+    expect($postsArgs['posts_per_page'])->toBe(5);
 });
 
 it('register() es un no-op seguro', function () {

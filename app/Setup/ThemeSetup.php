@@ -2,55 +2,86 @@
 
 namespace RojasStack\Setup;
 
-use Timber\Timber;
+use RojasStack\Controllers\BlogController;
+use RojasStack\Controllers\ContactController;
+use RojasStack\Fields\PageFields;
+use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
+use RojasStack\Providers\MenuServiceProvider;
+use RojasStack\Providers\RouteServiceProvider;
+use RojasStack\Providers\SeoServiceProvider;
 
 /**
  * ThemeSetup
  * 
- * Esta clase orquesta la configuración inicial del tema, registrando soportes,
- * menús y delegando la carga de assets y filtros.
+ * Orquestador del tema: registra el núcleo (core: assets, menús, router,
+ * hooks y campos globales) y los módulos activables declarados en
+ * app/Config/features.php (spec §5). Un módulo deshabilitado no registra
+ * rutas, hooks ni campos.
  */
 class ThemeSetup
 {
     public function __construct()
     {
-        // 1. Registrar Assets (Vite / Manifest)
-        $assets = new AssetServiceProvider();
-        $assets->register();
+        $features = require get_template_directory() . '/app/Config/features.php';
 
-        // 2. Registrar Rutas Virtuales (Code-First Pages)
-        $router = new \RojasStack\Providers\RouteServiceProvider();
+        // --- Core (siempre activo) ---
+        (new AssetServiceProvider())->register();
+
+        $router = new RouteServiceProvider();
         $router->register();
 
-        // 3. Registrar Menús Programáticos
-        $menus = new \RojasStack\Providers\MenuServiceProvider();
-        $menus->register();
+        (new MenuServiceProvider())->register();
 
-        // 4. Registrar SEO (JSON-LD)
-        $seo = new \RojasStack\Providers\SeoServiceProvider();
-        $seo->register();
-
-        // 3. Registrar Controladores de Negocio
-        $contact = new \RojasStack\Controllers\ContactController();
-        $contact->register();
-
-        // Hook para refrescar el formulario vía HTMX
-        add_action('wp_ajax_get_contact_form', function() {
-            \Timber\Timber::render('partials/contact-form.twig', \Timber\Timber::context());
-            wp_die();
-        });
-        add_action('wp_ajax_nopriv_get_contact_form', function() {
-            \Timber\Timber::render('partials/contact-form.twig', \Timber\Timber::context());
-            wp_die();
-        });
-
-        // 4. Registrar Campos (Carbon Fields)
-        new \RojasStack\Fields\ThemeOptions();
-        new \RojasStack\Fields\PageFields();
-
-        // 3. Registrar Hooks básicos
         $this->register_hooks();
+        $this->register_core_fields();
+
+        // --- Módulos activables ---
+        if (self::enabled($features, 'pages')) {
+            $this->register_pages_fields();
+        }
+
+        if (self::enabled($features, 'blog')) {
+            $router->add_route('/blog', [BlogController::class, 'render_page']);
+            (new BlogController($features['blog'] ?? []))->register();
+        }
+
+        if (self::enabled($features, 'forms')) {
+            $router->add_route('/contacto', [ContactController::class, 'render_page']);
+            (new ContactController($features['forms'] ?? []))->register();
+        }
+
+        if (self::enabled($features, 'seo')) {
+            (new SeoServiceProvider($features['seo'] ?? []))->register();
+        }
+    }
+
+    /**
+     * Un módulo está habilitado si su llave 'enabled' es truthy.
+     *
+     * @param array<string, mixed> $features
+     */
+    private static function enabled(array $features, string $module): bool
+    {
+        $config = $features[$module] ?? [];
+
+        return (bool) (\is_array($config) ? ($config['enabled'] ?? false) : false);
+    }
+
+    /**
+     * Campos globales del tema (branding, opciones).
+     */
+    private function register_core_fields(): void
+    {
+        new ThemeOptions();
+    }
+
+    /**
+     * Campos del módulo 'pages' (hero de la portada, etc.).
+     */
+    private function register_pages_fields(): void
+    {
+        new PageFields();
     }
 
     /**

@@ -50,12 +50,14 @@ wp-modern-theme-blueprint/
 ├── .ddev/                # Configuración de desarrollo local.
 ├── .github/workflows/    # Pipelines de CI/CD (Test, Deploy).
 ├── app/                  # Lógica de Negocio (PHP Strict)
+│   ├── Config/           # features.php: módulos activables (spec §5).
 │   ├── Contracts/        # Interfaces (El manual para la IA).
 │   ├── Controllers/      # Controladores (Orquestación).
+│   ├── Fields/           # Definiciones de Carbon Fields.
 │   ├── Models/           # Modelos Eloquent de Corcel.
 │   ├── Providers/        # Service Providers (WordPress Hooks).
 │   ├── Services/         # Lógica pesada (APIs, Cache Purging).
-│   └── Fields/           # Definiciones de Carbon Fields.
+│   └── Setup/            # ThemeSetup: orquestador de core + módulos.
 ├── resources/            # Assets y Vistas (Vite/Twig)
 ├── e2e/                  # Tests con Playwright.
 ├── infra/                # Archivos de configuración de servidor.

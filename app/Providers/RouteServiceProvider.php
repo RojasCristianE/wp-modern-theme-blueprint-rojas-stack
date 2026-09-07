@@ -2,13 +2,12 @@
 
 namespace RojasStack\Providers;
 
-use RojasStack\Controllers\ContactController;
-use RojasStack\Controllers\BlogController;
-
 /**
  * RouteServiceProvider
  * 
- * Gestiona rutas virtuales que no requieren una página creada en la base de datos de WordPress.
+ * Router genérico para rutas virtuales que no requieren una página creada
+ * en la base de datos de WordPress. No conoce módulos: ThemeSetup registra
+ * las rutas de cada feature habilitado vía add_route() (spec §5).
  * Permite definir la estructura del sitio 100% desde el código.
  */
 class RouteServiceProvider
@@ -18,10 +17,17 @@ class RouteServiceProvider
      *
      * @var array<string, array{0: class-string, 1: string}> $routes
      */
-    private array $routes = [
-        '/contacto' => [ContactController::class, 'render_page'],
-        '/blog'     => [BlogController::class, 'render_page'],
-    ];
+    private array $routes = [];
+
+    /**
+     * Registra una ruta virtual.
+     *
+     * @param array{0: class-string, 1: string} $callback [ControllerClass, method]
+     */
+    public function add_route(string $path, array $callback): void
+    {
+        $this->routes[$path] = $callback;
+    }
 
     public function register(): void
     {

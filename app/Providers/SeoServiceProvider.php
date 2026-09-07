@@ -13,6 +13,21 @@ use Timber\Timber;
  */
 class SeoServiceProvider
 {
+    /**
+     * Config del módulo 'seo' (app/Config/features.php).
+     *
+     * @var array<string, mixed>
+     */
+    private array $config;
+
+    /**
+     * @param array<string, mixed> $config
+     */
+    public function __construct(array $config = [])
+    {
+        $this->config = $config;
+    }
+
     public function register(): void
     {
         add_action('wp_head', [$this, 'render_schemas'], 5);
@@ -36,7 +51,11 @@ class SeoServiceProvider
      */
     private function render_organization_schema(): void
     {
-        $company_name = carbon_get_theme_option('rs_company_name') ?: get_bloginfo('name');
+        // Prioridad: features.php → Carbon Fields → bloginfo
+        $company_name = $this->config['organization_name'] ?? null;
+        $company_name = ($company_name !== null && $company_name !== '')
+            ? (string) $company_name
+            : (carbon_get_theme_option('rs_company_name') ?: get_bloginfo('name'));
         $logo_url     = carbon_get_theme_option('rs_logo');
         $social_links = carbon_get_theme_option('rs_social_links') ?: [];
         
