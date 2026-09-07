@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-07)
 
 ## Corpus Check
-- 200 files · ~136,289 words
+- 203 files · ~136,525 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2823 nodes · 2917 edges · 211 communities (175 shown, 24 thin omitted)
+- 2831 nodes · 2926 edges · 211 communities (175 shown, 24 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8a137baa`
+- Built from commit: `9713f41c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -85,7 +85,7 @@
 - Procedure
 - detect_wp_project.mjs
 - Mocking Strategy: Real vs Mock Services
-- Page Object Model (POM)
+- Container-Based Testing
 - Tailwind CSS Layout Patterns
 - Tailwind CSS Documentation
 - biome.json
@@ -131,7 +131,7 @@
 - tailwind-css-patterns/SKILL.md
 - Tailwind CSS Performance Optimization
 - tool
-- ThemeSetup.php
+- ThemeOptions
 - Accessibility Code Patterns
 - Operable
 - Environment API (Vite 6+)
@@ -210,7 +210,7 @@
 - install-bun.sh
 - package.json
 - scripts
-- vite.config.js
+- ThemeSetup.php
 - @playwright/test
 - alpinejs
 - dependencies
@@ -251,7 +251,7 @@ Nodes (16): devDependencies, alpinejs, autoprefixer, @biomejs/biome, flowbite, h
 
 ### Community 2 - "playwright-best-practices/SKILL.md"
 Cohesion: 0.08
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
+Nodes (17): Basic Structure, Best Practices, Component Objects, Composition Patterns, Directory Structure, Do, Don't, Factory Functions (+9 more)
 
 ### Community 3 - "Especificación del Rojas Starter Theme"
 Cohesion: 0.05
@@ -513,9 +513,9 @@ Nodes (18): buildRecommendations(), DEFAULT_IGNORES, detectConfigConstants(), de
 Cohesion: 0.11
 Nodes (18): Anti-Patterns, Blocking Unwanted Requests, Core Principle, Decision Flowchart, Decision Matrix, Environment-Based Test Projects, Full Mock (route.fulfill), Hybrid Approach: Fixture-Based Mock Control (+10 more)
 
-### Community 77 - "Page Object Model (POM)"
-Cohesion: 0.12
-Nodes (17): Basic Structure, Best Practices, Component Objects, Composition Patterns, Directory Structure, Do, Don't, Factory Functions (+9 more)
+### Community 77 - "Container-Based Testing"
+Cohesion: 0.13
+Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 78 - "Tailwind CSS Layout Patterns"
 Cohesion: 0.12
@@ -574,7 +574,7 @@ Cohesion: 0.14
 Nodes (13): Code Patterns, Constraints, Core Workflow, Enum (PHP 8.1+), Knowledge Reference, MUST DO, MUST NOT DO, Output Templates (+5 more)
 
 ### Community 92 - "Organizing Reusable Test Code"
-Cohesion: 0.14
+Cohesion: 0.13
 Nodes (14): Anti-Patterns, Combined Project Structure, Custom Fixtures, Helper Functions, Helpers with side effects, Locator-only page objects, Monolithic fixtures, Organizing Reusable Test Code (+6 more)
 
 ### Community 93 - "What's Inside"
@@ -697,9 +697,9 @@ Nodes (9): Best Practices for Performance, Bundle Size Optimization, Content Pat
 Cohesion: 0.20
 Nodes (10): const, type, name, tool, version, additionalProperties, properties, required (+2 more)
 
-### Community 123 - "ThemeSetup.php"
-Cohesion: 0.22
-Nodes (4): PageFields, ThemeOptions, Carbon_Fields\Container, Carbon_Fields\Field
+### Community 123 - "ThemeOptions"
+Cohesion: 0.29
+Nodes (3): ThemeOptions, Carbon_Fields\Container, Carbon_Fields\Field
 
 ### Community 124 - "Accessibility Code Patterns"
 Cohesion: 0.22
@@ -774,7 +774,7 @@ Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
 ### Community 142 - "BlogController"
-Cohesion: 0.22
+Cohesion: 0.20
 Nodes (3): BlogController, Rakit\Validation\Validator, Timber\Timber
 
 ### Community 144 - "Glob Import"
@@ -930,36 +930,36 @@ Cohesion: 0.83
 Nodes (3): main(), parseArgs(), runWp()
 
 ### Community 204 - "package.json"
-Cohesion: 0.13
-Nodes (14): name, private, type, version, autoprefixer, @biomejs/biome, flowbite, lefthook (+6 more)
+Cohesion: 0.12
+Nodes (17): name, private, type, version, autoprefixer, @biomejs/biome, flowbite, @kucrut/vite-for-wp (+9 more)
 
 ### Community 206 - "scripts"
 Cohesion: 0.25
 Nodes (8): scripts, build, dev, fix, lint, prepare, preview, test:e2e
 
-### Community 207 - "vite.config.js"
-Cohesion: 0.50
-Nodes (3): @kucrut/vite-for-wp, vite, vite-plugin-live-reload
+### Community 208 - "@playwright/test"
+Cohesion: 0.33
+Nodes (3): envFile, wpEnv, @playwright/test
 
 ## Knowledge Gaps
-- **1941 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1936 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2071 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1943 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1938 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2076 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Performance & Parallelization` connect `Performance & Parallelization` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Test Annotations & Organization` connect `Test Annotations & Organization` to `playwright-best-practices/SKILL.md`?**
+- **Why does `Advanced Network Interception` connect `Advanced Network Interception` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Assertions & Waiting` connect `Assertions & Waiting` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1941 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1943 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.047619047619047616 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `playwright-best-practices/SKILL.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.08312020460358056 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08056265984654731 - nodes in this community are weakly interconnected._
