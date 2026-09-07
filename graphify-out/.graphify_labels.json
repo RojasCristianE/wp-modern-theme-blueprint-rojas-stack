@@ -70,7 +70,7 @@
   "68": "Patterns",
   "69": "GitHub Actions for Playwright",
   "70": "GitLab CI/CD Configuration",
-  "71": "Container-Based Testing",
+  "71": "RouteServiceProvider",
   "72": "Patterns",
   "73": "Tailwind CSS Development Patterns",
   "74": "Procedure",
@@ -122,7 +122,7 @@
   "120": "tailwind-css-patterns/SKILL.md",
   "121": "Tailwind CSS Performance Optimization",
   "122": "tool",
-  "123": "PageFields",
+  "123": "ThemeSetup.php",
   "124": "Accessibility Code Patterns",
   "125": "Operable",
   "126": "Environment API (Vite 6+)",
@@ -170,7 +170,7 @@
   "168": "Debugging WP-CLI",
   "169": "Multisite targeting",
   "170": "Safety rules (WP-CLI)",
-  "171": "Timber\\Timber",
+  "171": "features.php",
   "172": "MenuServiceProvider",
   "173": "SeoServiceProvider",
   "174": "Perceivable",
@@ -203,5 +203,6 @@
   "201": "rotate-salts.php",
   "202": "LICENSE.md",
   "203": "bootstrap.php",
-  "204": "HelpersTest.php"
+  "204": "HelpersTest.php",
+  "205": "FeaturesConfigTest.php"
 }

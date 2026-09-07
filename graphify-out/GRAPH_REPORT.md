@@ -1,22 +1,23 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-07)
 
 ## Corpus Check
-- 199 files · ~135,599 words
+- 201 files · ~136,389 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2814 nodes · 2900 edges · 205 communities (172 shown, 21 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.86)
+- 2825 nodes · 2917 edges · 206 communities (172 shown, 21 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d40ac49e`
+- Built from commit: `01457ecb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - composer.json
 - package.json
+- playwright-best-practices/SKILL.md
 - Especificación del Rojas Starter Theme
 - Node.js Best Practices
 - WP Modern Theme Blueprint DDEV Project
@@ -78,7 +79,7 @@
 - Patterns
 - GitHub Actions for Playwright
 - GitLab CI/CD Configuration
-- Container-Based Testing
+- RouteServiceProvider
 - Patterns
 - Tailwind CSS Development Patterns
 - Procedure
@@ -130,7 +131,7 @@
 - tailwind-css-patterns/SKILL.md
 - Tailwind CSS Performance Optimization
 - tool
-- PageFields
+- ThemeSetup.php
 - Accessibility Code Patterns
 - Operable
 - Environment API (Vite 6+)
@@ -178,7 +179,6 @@
 - Debugging WP-CLI
 - Multisite targeting
 - Safety rules (WP-CLI)
-- Timber\Timber
 - MenuServiceProvider
 - SeoServiceProvider
 - Perceivable
@@ -233,7 +233,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (205 total, 21 thin omitted)
+## Communities (206 total, 21 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -242,6 +242,10 @@ Nodes (40): composer/installers, pestphp/pest-plugin, authors, autoload, files, 
 ### Community 1 - "package.json"
 Cohesion: 0.04
 Nodes (44): dependencies, lucide-static, devDependencies, alpinejs, autoprefixer, @biomejs/biome, flowbite, htmx.org (+36 more)
+
+### Community 2 - "playwright-best-practices/SKILL.md"
+Cohesion: 0.06
+Nodes (26): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+18 more)
 
 ### Community 3 - "Especificación del Rojas Starter Theme"
 Cohesion: 0.05
@@ -324,8 +328,8 @@ Cohesion: 0.07
 Nodes (28): Access Config in Global Setup, Anti-Patterns to Avoid, Basic Global Setup, Basic Global Teardown, Combining Both, Common Parallel Pitfall, Conditional Teardown, Configure Global Setup (+20 more)
 
 ### Community 25 - "Patterns"
-Cohesion: 0.11
-Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
+Cohesion: 0.29
+Nodes (7): Dynamic Shard Count, Merging Shard Reports, Patterns, Sharding Across CI Machines, Test Isolation for Parallelism, Worker Configuration, Worker-Scoped Fixtures
 
 ### Community 26 - "iFrame Testing"
 Cohesion: 0.07
@@ -482,10 +486,6 @@ Nodes (19): Basic Workflow, Browser launch fails: "Missing dependencies", CLI Co
 ### Community 70 - "GitLab CI/CD Configuration"
 Cohesion: 0.11
 Nodes (18): Anti-Patterns, Basic Pipeline Configuration, Browser launch fails: "Failed to launch browser", Decision Guide, Environment Variables and Secrets, GitLab CI/CD Configuration, Key Commands, Merged report is empty after sharded run (+10 more)
-
-### Community 71 - "Container-Based Testing"
-Cohesion: 0.12
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 72 - "Patterns"
 Cohesion: 0.11
@@ -691,8 +691,8 @@ Nodes (9): Best Practices for Performance, Bundle Size Optimization, Content Pat
 Cohesion: 0.20
 Nodes (10): const, type, name, tool, version, additionalProperties, properties, required (+2 more)
 
-### Community 123 - "PageFields"
-Cohesion: 0.22
+### Community 123 - "ThemeSetup.php"
+Cohesion: 0.20
 Nodes (4): PageFields, ThemeOptions, Carbon_Fields\Container, Carbon_Fields\Field
 
 ### Community 124 - "Accessibility Code Patterns"
@@ -766,6 +766,10 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 ### Community 141 - "Responses and Fields (summary)"
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
+
+### Community 142 - "BlogController"
+Cohesion: 0.22
+Nodes (3): BlogController, Rakit\Validation\Validator, Timber\Timber
 
 ### Community 144 - "Glob Import"
 Cohesion: 0.33
@@ -863,10 +867,6 @@ Nodes (4): Common commands, Guardrails, Key flags, Multisite targeting
 Cohesion: 0.40
 Nodes (4): Golden rules, High-risk commands (require explicit confirmation), Logging, Safety rules (WP-CLI)
 
-### Community 171 - "Timber\Timber"
-Cohesion: 0.29
-Nodes (3): Rakit\Validation\Validator, Spatie\SchemaOrg\Schema, Timber\Timber
-
 ### Community 174 - "Perceivable"
 Cohesion: 0.50
 Nodes (4): Color contrast (1.4.3, 1.4.6), Media alternatives (1.2), Perceivable, Text alternatives (1.1)
@@ -925,18 +925,18 @@ Nodes (3): main(), parseArgs(), runWp()
 
 ## Knowledge Gaps
 - **1939 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1934 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2066 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2074 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Test Annotations & Organization` connect `Test Annotations & Organization` to `playwright-best-practices/SKILL.md`?**
+- **Why does `Advanced Network Interception` connect `Advanced Network Interception` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Why does `Performance & Parallelization` connect `Performance & Parallelization` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Advanced Network Interception` connect `Advanced Network Interception` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
   _1939 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
@@ -944,4 +944,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.04251700680272109 - nodes in this community are weakly interconnected._
 - **Should `playwright-best-practices/SKILL.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.12917271407837447 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06419753086419754 - nodes in this community are weakly interconnected._

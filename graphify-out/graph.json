@@ -26,7 +26,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": "pagefields",
       "source_file": "app/Fields/PageFields.php",
@@ -39,7 +39,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": "themeoptions",
       "source_file": "app/Fields/ThemeOptions.php",
@@ -57,19 +57,6 @@
       "norm_label": "blogcontroller",
       "source_file": "app/Controllers/BlogController.php",
       "source_location": "L12"
-    },
-    {
-      "id": "app_providers_routeserviceprovider_routeserviceprovider",
-      "label": "RouteServiceProvider",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": "routeserviceprovider",
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L14"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider",
@@ -95,7 +82,7 @@
       "file_type": "code",
       "norm_label": "contactcontroller",
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L13"
+      "source_location": "L15"
     },
     {
       "id": "app_setup_themesetup_themesetup",
@@ -108,7 +95,7 @@
       "file_type": "code",
       "norm_label": "themesetup",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L14"
+      "source_location": "L22"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider",
@@ -137,12 +124,25 @@
       "source_location": "L14"
     },
     {
+      "id": "app_providers_routeserviceprovider_routeserviceprovider",
+      "label": "RouteServiceProvider",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "RouteServiceProvider",
+      "file_type": "code",
+      "norm_label": "routeserviceprovider",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L13"
+    },
+    {
       "id": "app_fields_pagefields_pagefields_construct",
       "label": ".__construct()",
       "_callable": true,
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Fields/PageFields.php",
@@ -154,7 +154,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": ".register_page_fields()",
       "source_file": "app/Fields/PageFields.php",
@@ -166,7 +166,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Fields/ThemeOptions.php",
@@ -178,11 +178,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": ".register_options()",
       "source_file": "app/Fields/ThemeOptions.php",
       "source_location": "L20"
+    },
+    {
+      "id": "app_setup_themesetup_themesetup_register_core_fields",
+      "label": ".register_core_fields()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 123,
+      "community_name": "ThemeSetup.php",
+      "file_type": "code",
+      "norm_label": ".register_core_fields()",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L74"
     },
     {
       "id": "agents_skills_wp_block_development_scripts_list_blocks_existsdir",
@@ -389,6 +401,18 @@
       "source_location": "L15"
     },
     {
+      "id": "app_controllers_blogcontroller_blogcontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L24"
+    },
+    {
       "id": "app_controllers_blogcontroller_blogcontroller_register",
       "label": ".register()",
       "_callable": true,
@@ -398,7 +422,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L14"
+      "source_location": "L29"
     },
     {
       "id": "app_controllers_blogcontroller_blogcontroller_render_page",
@@ -410,31 +434,7 @@
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L22"
-    },
-    {
-      "id": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
-      "label": ".dispatch_routes()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": ".dispatch_routes()",
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L34"
-    },
-    {
-      "id": "app_providers_routeserviceprovider_routeserviceprovider_register",
-      "label": ".register()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": ".register()",
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L26"
+      "source_location": "L37"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
@@ -557,6 +557,18 @@
       "source_location": "L25"
     },
     {
+      "id": "app_controllers_contactcontroller_contactcontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ContactController",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L27"
+    },
+    {
       "id": "app_controllers_contactcontroller_contactcontroller_handle_submit",
       "label": ".handle_submit()",
       "_callable": true,
@@ -566,7 +578,7 @@
       "file_type": "code",
       "norm_label": ".handle_submit()",
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L33"
+      "source_location": "L63"
     },
     {
       "id": "app_controllers_contactcontroller_contactcontroller_register",
@@ -578,7 +590,19 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L15"
+      "source_location": "L32"
+    },
+    {
+      "id": "app_controllers_contactcontroller_contactcontroller_render_form_fragment",
+      "label": ".render_form_fragment()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ContactController",
+      "file_type": "code",
+      "norm_label": ".render_form_fragment()",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L57"
     },
     {
       "id": "app_controllers_contactcontroller_contactcontroller_render_page",
@@ -590,7 +614,19 @@
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L25"
+      "source_location": "L46"
+    },
+    {
+      "id": "app_controllers_contactcontroller_contactcontroller_resolve_recipient",
+      "label": ".resolve_recipient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ContactController",
+      "file_type": "code",
+      "norm_label": ".resolve_recipient()",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L114"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_theme_supports",
@@ -602,7 +638,7 @@
       "file_type": "code",
       "norm_label": ".add_theme_supports()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L71"
+      "source_location": "L102"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_to_context",
@@ -614,7 +650,7 @@
       "file_type": "code",
       "norm_label": ".add_to_context()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L97"
+      "source_location": "L128"
     },
     {
       "id": "app_setup_themesetup_themesetup_construct",
@@ -626,7 +662,19 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L16"
+      "source_location": "L24"
+    },
+    {
+      "id": "app_setup_themesetup_themesetup_enabled",
+      "label": ".enabled()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": ".enabled()",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L64"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_hooks",
@@ -638,7 +686,7 @@
       "file_type": "code",
       "norm_label": ".register_hooks()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L59"
+      "source_location": "L90"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_menus",
@@ -649,6 +697,18 @@
       "community_name": ".__construct",
       "file_type": "code",
       "norm_label": ".register_menus()",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L113"
+    },
+    {
+      "id": "app_setup_themesetup_themesetup_register_pages_fields",
+      "label": ".register_pages_fields()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": ".register_pages_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
       "source_location": "L82"
     },
@@ -701,6 +761,18 @@
       "source_location": "L25"
     },
     {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L26"
+    },
+    {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_register",
       "label": ".register()",
       "_callable": true,
@@ -710,7 +782,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L16"
+      "source_location": "L31"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_render_article_schema",
@@ -722,7 +794,7 @@
       "file_type": "code",
       "norm_label": ".render_article_schema()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L57"
+      "source_location": "L76"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
@@ -734,7 +806,7 @@
       "file_type": "code",
       "norm_label": ".render_organization_schema()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L37"
+      "source_location": "L52"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_render_schemas",
@@ -746,7 +818,7 @@
       "file_type": "code",
       "norm_label": ".render_schemas()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L21"
+      "source_location": "L36"
     },
     {
       "id": "agents_skills_wp_wpcli_and_ops_scripts_wpcli_inspect_main",
@@ -795,6 +867,42 @@
       "norm_label": "generate_salt()",
       "source_file": "infra/scripts/rotate-salts.php",
       "source_location": "L31"
+    },
+    {
+      "id": "app_providers_routeserviceprovider_routeserviceprovider_add_route",
+      "label": ".add_route()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "RouteServiceProvider",
+      "file_type": "code",
+      "norm_label": ".add_route()",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L27"
+    },
+    {
+      "id": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
+      "label": ".dispatch_routes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "RouteServiceProvider",
+      "file_type": "code",
+      "norm_label": ".dispatch_routes()",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L40"
+    },
+    {
+      "id": "app_providers_routeserviceprovider_routeserviceprovider_register",
+      "label": ".register()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "RouteServiceProvider",
+      "file_type": "code",
+      "norm_label": ".register()",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L32"
     },
     {
       "id": "agents_skills_wp_project_triage_scripts_detect_wp_project_buildrecommendations",
@@ -5977,7 +6085,7 @@
       "label": "PageFields.php",
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": "pagefields.php",
       "source_file": "app/Fields/PageFields.php",
@@ -5988,10 +6096,21 @@
       "label": "ThemeOptions.php",
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": "themeoptions.php",
       "source_file": "app/Fields/ThemeOptions.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_setup_themesetup",
+      "label": "ThemeSetup.php",
+      "_origin": "ast",
+      "community": 123,
+      "community_name": "ThemeSetup.php",
+      "file_type": "code",
+      "norm_label": "themesetup.php",
+      "source_file": "app/Setup/ThemeSetup.php",
       "source_location": "L1"
     },
     {
@@ -5999,7 +6118,7 @@
       "label": "Carbon_Fields\\Container",
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": "carbon_fields\\container",
       "source_file": "",
@@ -6010,7 +6129,7 @@
       "label": "Carbon_Fields\\Field",
       "_origin": "ast",
       "community": 123,
-      "community_name": "PageFields",
+      "community_name": "ThemeSetup.php",
       "file_type": "code",
       "norm_label": "carbon_fields\\field",
       "source_file": "",
@@ -8306,15 +8425,37 @@
       "source_location": "L1"
     },
     {
-      "id": "app_providers_routeserviceprovider",
-      "label": "RouteServiceProvider.php",
+      "id": "app_controllers_blogcontroller",
+      "label": "BlogController.php",
       "_origin": "ast",
       "community": 142,
       "community_name": "BlogController",
       "file_type": "code",
-      "norm_label": "routeserviceprovider.php",
-      "source_file": "app/Providers/RouteServiceProvider.php",
+      "norm_label": "blogcontroller.php",
+      "source_file": "app/Controllers/BlogController.php",
       "source_location": "L1"
+    },
+    {
+      "id": "app_controllers_contactcontroller",
+      "label": "ContactController.php",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": "contactcontroller.php",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "rakit_validation_validator",
+      "label": "Rakit\\Validation\\Validator",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": "rakit\\validation\\validator",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "tests_unit_blogcontrollertest",
@@ -8326,6 +8467,17 @@
       "norm_label": "blogcontrollertest.php",
       "source_file": "tests/Unit/BlogControllerTest.php",
       "source_location": "L1"
+    },
+    {
+      "id": "timber_timber",
+      "label": "Timber\\Timber",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": "timber\\timber",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "app_providers_assetserviceprovider",
@@ -10282,81 +10434,15 @@
       "source_location": "L1"
     },
     {
-      "id": "app_controllers_blogcontroller",
-      "label": "BlogController.php",
+      "id": "app_config_features",
+      "label": "features.php",
       "_origin": "ast",
       "community": 171,
-      "community_name": "Timber\\Timber",
+      "community_name": "features.php",
       "file_type": "code",
-      "norm_label": "blogcontroller.php",
-      "source_file": "app/Controllers/BlogController.php",
+      "norm_label": "features.php",
+      "source_file": "app/Config/features.php",
       "source_location": "L1"
-    },
-    {
-      "id": "app_controllers_contactcontroller",
-      "label": "ContactController.php",
-      "_origin": "ast",
-      "community": 171,
-      "community_name": "Timber\\Timber",
-      "file_type": "code",
-      "norm_label": "contactcontroller.php",
-      "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_providers_seoserviceprovider",
-      "label": "SeoServiceProvider.php",
-      "_origin": "ast",
-      "community": 171,
-      "community_name": "Timber\\Timber",
-      "file_type": "code",
-      "norm_label": "seoserviceprovider.php",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_setup_themesetup",
-      "label": "ThemeSetup.php",
-      "_origin": "ast",
-      "community": 171,
-      "community_name": "Timber\\Timber",
-      "file_type": "code",
-      "norm_label": "themesetup.php",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "rakit_validation_validator",
-      "label": "Rakit\\Validation\\Validator",
-      "_origin": "ast",
-      "community": 171,
-      "community_name": "Timber\\Timber",
-      "file_type": "code",
-      "norm_label": "rakit\\validation\\validator",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "spatie_schemaorg_schema",
-      "label": "Spatie\\SchemaOrg\\Schema",
-      "_origin": "ast",
-      "community": 171,
-      "community_name": "Timber\\Timber",
-      "file_type": "code",
-      "norm_label": "spatie\\schemaorg\\schema",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "timber_timber",
-      "label": "Timber\\Timber",
-      "_origin": "ast",
-      "community": 171,
-      "community_name": "Timber\\Timber",
-      "file_type": "code",
-      "norm_label": "timber\\timber",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "app_providers_menuserviceprovider",
@@ -10368,6 +10454,28 @@
       "norm_label": "menuserviceprovider.php",
       "source_file": "app/Providers/MenuServiceProvider.php",
       "source_location": "L1"
+    },
+    {
+      "id": "app_providers_seoserviceprovider",
+      "label": "SeoServiceProvider.php",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": "seoserviceprovider.php",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "spatie_schemaorg_schema",
+      "label": "Spatie\\SchemaOrg\\Schema",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": "spatie\\schemaorg\\schema",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "agents_skills_accessibility_skill_color_contrast_1_4_3_1_4_6",
@@ -12539,6 +12647,198 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker",
+      "label": "docker.md",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "docker.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L211"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_browsertype_launch_executable_doesn_t_exist",
+      "label": "\"browserType.launch: Executable doesn't exist\"",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"browsertype.launch: executable doesn't exist\"",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L223"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_ci_container_jobs",
+      "label": "CI Container Jobs",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ci container jobs",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L127"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_container_based_testing",
+      "label": "Container-Based Testing",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "container-based testing",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_custom_dockerfile",
+      "label": "Custom Dockerfile",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom dockerfile",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L40"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_dev_container_setup",
+      "label": "Dev Container Setup",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dev container setup",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L176"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_docker_compose_stack",
+      "label": "Docker Compose Stack",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker compose stack",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_net_err_connection_refused_in_docker_compose",
+      "label": "\"net::ERR_CONNECTION_REFUSED\" in docker-compose",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"net::err_connection_refused\" in docker-compose",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L232"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_official_image_usage",
+      "label": "Official Image Usage",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "official image usage",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_permission_denied_on_mounted_volumes",
+      "label": "Permission denied on mounted volumes",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "permission denied on mounted volumes",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L252"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_slow_container_tests_on_macos_windows",
+      "label": "Slow container tests on macOS/Windows",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "slow container tests on macos/windows",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L263"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L221"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_github_actions",
       "label": "github-actions.md",
       "_origin": "ast",
@@ -12561,6 +12861,150 @@
       "norm_label": "other-providers.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/other-providers.md",
       "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L297"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
+      "label": "CLI Commands",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cli commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L278"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
+      "label": "Merged report missing results",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report missing results",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L331"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
+      "label": "More workers = Slower",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more workers = slower",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L364"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
+      "label": "\"No tests found\" in some shards",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"no tests found\" in some shards",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L323"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
+      "label": "Sharding and Parallel Execution",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding and parallel execution",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
+      "label": "Tests pass solo but fail together",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests pass solo but fail together",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L312"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
+      "label": "Worker-scoped fixture not working",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixture not working",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L348"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_performance",
@@ -13175,6 +13619,17 @@
       "file_type": "code",
       "norm_label": "helperstest.php",
       "source_file": "tests/Unit/HelpersTest.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_unit_featuresconfigtest",
+      "label": "FeaturesConfigTest.php",
+      "_origin": "ast",
+      "community": 205,
+      "community_name": "FeaturesConfigTest.php",
+      "file_type": "code",
+      "norm_label": "featuresconfigtest.php",
+      "source_file": "tests/Unit/FeaturesConfigTest.php",
       "source_location": "L1"
     },
     {
@@ -14539,54 +14994,6 @@
       "source_location": "L309"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L297"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
-      "label": "CLI Commands",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "cli commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L278"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
       "label": "Dynamic Shard Count",
       "_origin": "ast",
@@ -14599,18 +15006,6 @@
       "source_location": "L229"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
-      "label": "Merged report missing results",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merged report missing results",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L331"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
       "label": "Merging Shard Reports",
       "_origin": "ast",
@@ -14621,30 +15016,6 @@
       "norm_label": "merging shard reports",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L103"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
-      "label": "More workers = Slower",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more workers = slower",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L364"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
-      "label": "\"No tests found\" in some shards",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"no tests found\" in some shards",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L323"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
@@ -14671,30 +15042,6 @@
       "source_location": "L78"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
-      "label": "Sharding and Parallel Execution",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding and parallel execution",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L3"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
       "label": "Test Isolation for Parallelism",
       "_origin": "ast",
@@ -14707,30 +15054,6 @@
       "source_location": "L187"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
-      "label": "Tests pass solo but fail together",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests pass solo but fail together",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L312"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L310"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
       "label": "Worker Configuration",
       "_origin": "ast",
@@ -14741,18 +15064,6 @@
       "norm_label": "worker configuration",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L34"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
-      "label": "Worker-scoped fixture not working",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixture not working",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L348"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
@@ -27548,196 +27859,15 @@
       "source_location": "L330"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker",
-      "label": "docker.md",
+      "id": "app_providers_routeserviceprovider",
+      "label": "RouteServiceProvider.php",
       "_origin": "ast",
       "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "docker.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "community_name": "RouteServiceProvider",
+      "file_type": "code",
+      "norm_label": "routeserviceprovider.php",
+      "source_file": "app/Providers/RouteServiceProvider.php",
       "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L211"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_browsertype_launch_executable_doesn_t_exist",
-      "label": "\"browserType.launch: Executable doesn't exist\"",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"browsertype.launch: executable doesn't exist\"",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L223"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_ci_container_jobs",
-      "label": "CI Container Jobs",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ci container jobs",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L127"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_container_based_testing",
-      "label": "Container-Based Testing",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "container-based testing",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_custom_dockerfile",
-      "label": "Custom Dockerfile",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom dockerfile",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L200"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_dev_container_setup",
-      "label": "Dev Container Setup",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dev container setup",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L176"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_docker_compose_stack",
-      "label": "Docker Compose Stack",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker compose stack",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L72"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_net_err_connection_refused_in_docker_compose",
-      "label": "\"net::ERR_CONNECTION_REFUSED\" in docker-compose",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"net::err_connection_refused\" in docker-compose",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L232"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_official_image_usage",
-      "label": "Official Image Usage",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "official image usage",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_permission_denied_on_mounted_volumes",
-      "label": "Permission denied on mounted volumes",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "permission denied on mounted volumes",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L252"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_slow_container_tests_on_macos_windows",
-      "label": "Slow container tests on macOS/Windows",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "slow container tests on macos/windows",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L263"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "Container-Based Testing",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L221"
     },
     {
       "id": "agents_skills_playwright_best_practices_testing_patterns_api_testing_401_unauthorized_when_using_request_fixture",
@@ -33474,7 +33604,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos de desarrollo & despliegue**",
       "source_file": "AGENTS.md",
-      "source_location": "L77"
+      "source_location": "L79"
     },
     {
       "id": "agents_estructura_del_tema_app_y_resources",
@@ -33510,7 +33640,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L89"
+      "source_location": "L91"
     },
     {
       "id": "agents_reglas_de_integraci\u00f3n_front_back_safe_rules",
@@ -33522,7 +33652,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd1d reglas de integracion front-back (safe rules)**",
       "source_file": "AGENTS.md",
-      "source_location": "L69"
+      "source_location": "L71"
     },
     {
       "id": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
@@ -34230,6 +34360,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_controllers_contactcontroller_contactcontroller_handle_submit",
+      "target": "app_controllers_contactcontroller_contactcontroller_resolve_recipient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
       "source": "app_providers_menuserviceprovider_menuserviceprovider_inject_menu_to_context",
       "target": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
       "relation": "calls",
@@ -34250,7 +34392,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L25",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -34262,7 +34404,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L28",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -34274,7 +34416,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L19",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_providers_menuserviceprovider_menuserviceprovider",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -34286,7 +34452,91 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L53",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_setup_themesetup_themesetup_register_core_fields",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_setup_themesetup_themesetup_register_pages_fields",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_controllers_blogcontroller_blogcontroller",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_controllers_contactcontroller_contactcontroller",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_providers_seoserviceprovider_seoserviceprovider",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_register_core_fields",
+      "target": "app_fields_themeoptions_themeoptions",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_register_pages_fields",
+      "target": "app_fields_pagefields_pagefields",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -34374,30 +34624,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_providers_routeserviceprovider",
-      "target": "app_controllers_contactcontroller_contactcontroller",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_routeserviceprovider",
-      "target": "app_controllers_blogcontroller_blogcontroller",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
       "source": "app_providers_seoserviceprovider",
       "target": "spatie_schemaorg_schema",
       "relation": "imports",
@@ -34423,7 +34649,43 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "timber_timber",
+      "target": "app_providers_menuserviceprovider_menuserviceprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_providers_seoserviceprovider_seoserviceprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_controllers_blogcontroller_blogcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34435,7 +34697,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_assetserviceprovider_assetserviceprovider",
+      "target": "app_controllers_contactcontroller_contactcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34443,6 +34705,42 @@
       "context": "import",
       "source_file": "app/Setup/ThemeSetup.php",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_fields_pagefields_pagefields",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_fields_themeoptions_themeoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_providers_assetserviceprovider_assetserviceprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -34820,7 +35118,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L69",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -34831,7 +35129,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L77",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -34842,7 +35140,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L89",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -61341,7 +61639,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -61407,7 +61705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -61429,7 +61727,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L14",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -62950,13 +63248,24 @@
     },
     {
       "source": "app_controllers_blogcontroller_blogcontroller",
+      "target": "app_controllers_blogcontroller_blogcontroller_construct",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app_controllers_blogcontroller_blogcontroller",
       "target": "app_controllers_blogcontroller_blogcontroller_register",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L14",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -62967,7 +63276,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L22",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "app_controllers_contactcontroller_contactcontroller",
+      "target": "app_controllers_contactcontroller_contactcontroller_resolve_recipient",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "app_controllers_contactcontroller_contactcontroller",
+      "target": "app_controllers_contactcontroller_contactcontroller_construct",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -62978,7 +63309,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L15",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -62989,7 +63320,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L25",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "app_controllers_contactcontroller_contactcontroller",
+      "target": "app_controllers_contactcontroller_contactcontroller_render_form_fragment",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Controllers/ContactController.php",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -63000,7 +63342,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ContactController.php",
-      "source_location": "L33",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -63137,13 +63479,24 @@
     },
     {
       "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_add_route",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
       "target": "app_providers_routeserviceprovider_routeserviceprovider_register",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L26",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -63154,7 +63507,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L34",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_seoserviceprovider_seoserviceprovider",
+      "target": "app_providers_seoserviceprovider_seoserviceprovider_construct",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -63165,7 +63529,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L16",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -63176,7 +63540,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L21",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -63187,7 +63551,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L37",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -63198,29 +63562,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L57",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup",
-      "target": "app_setup_themesetup_themesetup_construct",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup",
-      "target": "app_setup_themesetup_themesetup_register_hooks",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L59",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -63231,7 +63573,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L71",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -63242,7 +63584,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L82",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -63253,7 +63595,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L97",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup",
+      "target": "app_setup_themesetup_themesetup_construct",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup",
+      "target": "app_setup_themesetup_themesetup_enabled",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup",
+      "target": "app_setup_themesetup_themesetup_register_core_fields",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup",
+      "target": "app_setup_themesetup_themesetup_register_pages_fields",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup",
+      "target": "app_setup_themesetup_themesetup_register_hooks",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -65501,78 +65898,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_providers_menuserviceprovider_menuserviceprovider",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_providers_seoserviceprovider_seoserviceprovider",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_controllers_contactcontroller_contactcontroller",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_fields_themeoptions_themeoptions",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L49",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_fields_pagefields_pagefields",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L50",
-      "weight": 1.0
-    },
-    {
       "source": "ddev_config_rojas_stack",
       "target": "ddev_docker_compose_valkey_valkey_service",
       "relation": "rationale_for",
@@ -65654,5 +65979,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "d40ac49e54679805bb0c30003d8cd56e78234493"
+  "built_at_commit": "01457ecbea3127b996d97092a21cc026cbaa4995"
 }
