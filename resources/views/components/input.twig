@@ -13,11 +13,11 @@
 #}
 {% set id = id ?? name %}
 {% set type = type ?? 'text' %}
-{% set state_classes = error ? 'border-red-500 bg-red-50' : 'border-slate-200' %}
+{% set state_classes = error ? 'border-red-500 bg-red-500/10' : 'border-line' %}
 {% set field_classes = 'w-full px-4 py-3 rounded-xl border ' ~ state_classes ~ ' focus:ring-2 focus:ring-brand-600 focus:border-brand-600 transition-all outline-none' %}
 
 <div>
-    <label for="{{ id }}" class="block text-sm font-bold text-slate-700 mb-2">{{ label }}</label>
+    <label for="{{ id }}" class="block text-sm font-bold text-ink-muted mb-2">{{ label }}</label>
 
     {% if type == 'textarea' %}
         <textarea name="{{ name }}" id="{{ id }}" rows="{{ rows ?? 4 }}" placeholder="{{ placeholder ?? '' }}" class="{{ field_classes }}">{{ value ?? '' }}</textarea>

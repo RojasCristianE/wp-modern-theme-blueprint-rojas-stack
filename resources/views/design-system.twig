@@ -1,20 +1,20 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<section class="py-16 bg-slate-50">
+<section class="py-16 bg-page">
     <div class="container mx-auto px-4 max-w-5xl">
 
         <header class="mb-16 text-center">
-            <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 mb-4">{{ title }}</h1>
-            <p class="text-slate-600">
+            <h1 class="text-4xl font-extrabold tracking-tight text-ink mb-4">{{ title }}</h1>
+            <p class="text-ink-muted">
                 Catálogo de componentes Twig reutilizables (spec §8.3).
-                <span class="inline-block ml-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-800">Solo desarrollo</span>
+                <span class="inline-block ml-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-300">Solo desarrollo</span>
             </p>
         </header>
 
         {# ---------- Botones ---------- #}
-        <section class="mb-16 bg-white p-8 rounded-2xl border border-slate-200">
-            <h2 class="text-xl font-bold text-slate-800 mb-6">Botones</h2>
+        <section class="mb-16 bg-surface p-8 rounded-2xl border border-line">
+            <h2 class="text-xl font-bold text-ink mb-6">Botones</h2>
             <div class="flex flex-wrap items-center gap-4">
                 {% include 'components/button.twig' with { label: 'Primario', variant: 'primary' } %}
                 {% include 'components/button.twig' with { label: 'Secundario', variant: 'secondary' } %}
@@ -25,8 +25,8 @@
         </section>
 
         {# ---------- Inputs ---------- #}
-        <section class="mb-16 bg-white p-8 rounded-2xl border border-slate-200">
-            <h2 class="text-xl font-bold text-slate-800 mb-6">Inputs</h2>
+        <section class="mb-16 bg-surface p-8 rounded-2xl border border-line">
+            <h2 class="text-xl font-bold text-ink mb-6">Inputs</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
                 {% include 'components/input.twig' with { name: 'demo_text', label: 'Texto', placeholder: 'Escribe algo...' } %}
                 {% include 'components/input.twig' with { name: 'demo_email', label: 'Email', type: 'email', placeholder: 'hola@rojasstack.com' } %}
@@ -36,8 +36,8 @@
         </section>
 
         {# ---------- Alerts ---------- #}
-        <section class="mb-16 bg-white p-8 rounded-2xl border border-slate-200">
-            <h2 class="text-xl font-bold text-slate-800 mb-6">Alertas</h2>
+        <section class="mb-16 bg-surface p-8 rounded-2xl border border-line">
+            <h2 class="text-xl font-bold text-ink mb-6">Alertas</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {% include 'components/alert.twig' with { variant: 'success', title: 'Éxito', message: 'La operación se completó correctamente.' } %}
                 {% include 'components/alert.twig' with { variant: 'error', title: 'Error', message: 'Algo salió mal. Intenta de nuevo.' } %}
@@ -47,8 +47,8 @@
         </section>
 
         {# ---------- Cards ---------- #}
-        <section class="mb-8 bg-white p-8 rounded-2xl border border-slate-200">
-            <h2 class="text-xl font-bold text-slate-800 mb-6">Cards</h2>
+        <section class="mb-8 bg-surface p-8 rounded-2xl border border-line">
+            <h2 class="text-xl font-bold text-ink mb-6">Cards</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {% include 'components/card.twig' with {
                     title: 'Post sin imagen',

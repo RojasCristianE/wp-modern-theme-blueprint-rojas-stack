@@ -3,7 +3,7 @@
 #}
 {% embed 'components/alert.twig' with { variant: 'success', title: '¡Mensaje Enviado!', site_url: site.url } only %}
     {% block content %}
-        <p class="text-sm text-emerald-700">Tu mensaje ha sido capturado por Mailpit con éxito.</p>
-        <button hx-get="{{ site_url }}/wp-admin/admin-ajax.php?action=get_contact_form" hx-target="#contact-form-wrapper" class="mt-4 text-xs font-bold text-emerald-600 hover:underline underline-offset-4">Enviar otro mensaje</button>
+        <p class="text-sm text-emerald-700 dark:text-emerald-300">Tu mensaje ha sido capturado por Mailpit con éxito.</p>
+        <button hx-get="{{ site_url }}/wp-admin/admin-ajax.php?action=get_contact_form" hx-target="#contact-form-wrapper" class="mt-4 text-xs font-bold text-emerald-600 dark:text-emerald-300 hover:underline underline-offset-4">Enviar otro mensaje</button>
     {% endblock %}
 {% endembed %}

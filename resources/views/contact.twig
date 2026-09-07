@@ -1,14 +1,14 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<section class="py-20 lg:py-32 bg-slate-50">
+<section class="py-20 lg:py-32 bg-page">
     <div class="container mx-auto px-4">
         
         <div class="max-w-2xl mx-auto text-center mb-16">
-            <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl mb-6">
+            <h1 class="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl mb-6">
                 {{ title }}
             </h1>
-            <p class="text-lg text-slate-600">
+            <p class="text-lg text-ink-muted">
                 Esta página no existe en la base de datos de WordPress. 
                 Es una <strong>Ruta Virtual</strong> generada 100% por código en el Rojas Stack.
             </p>
@@ -17,26 +17,26 @@
         {% include 'partials/contact-form.twig' %}
 
         <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div class="bg-surface p-6 rounded-2xl border border-line shadow-sm text-center">
+                <div class="w-10 h-10 bg-brand-600/10 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 </div>
-                <h3 class="font-bold text-slate-800">Email</h3>
-                <p class="text-sm text-slate-500 mt-1">soporte@rojasstack.com</p>
+                <h3 class="font-bold text-ink">Email</h3>
+                <p class="text-sm text-ink-muted mt-1">soporte@rojasstack.com</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div class="bg-surface p-6 rounded-2xl border border-line shadow-sm text-center">
+                <div class="w-10 h-10 bg-brand-600/10 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 </div>
-                <h3 class="font-bold text-slate-800">Ubicación</h3>
-                <p class="text-sm text-slate-500 mt-1">Managua, Nicaragua (UNI)</p>
+                <h3 class="font-bold text-ink">Ubicación</h3>
+                <p class="text-sm text-ink-muted mt-1">Managua, Nicaragua (UNI)</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm text-center">
-                <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div class="bg-surface p-6 rounded-2xl border border-line shadow-sm text-center">
+                <div class="w-10 h-10 bg-brand-600/10 text-brand-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
-                <h3 class="font-bold text-slate-800">Horario</h3>
-                <p class="text-sm text-slate-500 mt-1">Lunes - Viernes, 8am - 6pm</p>
+                <h3 class="font-bold text-ink">Horario</h3>
+                <p class="text-sm text-ink-muted mt-1">Lunes - Viernes, 8am - 6pm</p>
             </div>
         </div>
 

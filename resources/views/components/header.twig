@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+<header class="sticky top-0 z-50 w-full bg-surface/80 backdrop-blur-md border-b border-line">
     <!-- DEBUG: Header Loaded -->
     <nav class="container mx-auto px-4 h-20 flex items-center justify-between">
         <!-- Logo -->
@@ -6,7 +6,7 @@
             <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-lg group-hover:bg-brand-700 transition-colors">
                 <span class="font-bold text-xl leading-none">R</span>
             </div>
-            <span class="text-xl font-bold tracking-tight text-slate-800">
+            <span class="text-xl font-bold tracking-tight text-ink">
                 {{ site.title }}
             </span>
         </a>
@@ -17,24 +17,24 @@
                 {% for item in menu.items %}
                     <li>
                         <a href="{{ item.link }}" 
-                           class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors {{ item.current ? 'text-brand-600' : '' }}">
+                           class="text-sm font-medium text-ink-muted hover:text-brand-600 transition-colors {{ item.current ? 'text-brand-600' : '' }}">
                             {{ item.title }}
                         </a>
                     </li>
                 {% endfor %}
             </ul>
 
-            <div class="h-6 w-px bg-slate-200"></div>
+            <div class="h-6 w-px bg-line"></div>
 
             {% include 'components/search-modal.twig' %}
             
-            <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-slate-900 rounded-full hover:bg-slate-800 transition-all shadow-md active:scale-95">
+            <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-surface bg-ink rounded-full hover:opacity-90 transition-all shadow-md active:scale-95">
                 Comenzar
             </a>
         </div>
 
         <!-- Mobile Menu Button (AlpineJS ready) -->
-        <button type="button" class="md:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
+        <button type="button" class="md:hidden p-2 text-ink-muted hover:bg-brand-600/10 rounded-lg transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>

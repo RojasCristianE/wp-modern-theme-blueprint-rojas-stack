@@ -7,17 +7,17 @@
 {% set hero_cta_text = function('carbon_get_post_meta', post.id, 'hero_cta_text') %}
 {% set hero_cta_url = function('carbon_get_post_meta', post.id, 'hero_cta_url') %}
 
-<section class="relative overflow-hidden py-24 sm:py-32 bg-slate-50">
+<section class="relative overflow-hidden py-24 sm:py-32 bg-page">
     <!-- Círculos decorativos -->
-    <div class="absolute -top-24 -left-20 w-96 h-96 bg-brand-100/50 rounded-full blur-3xl opacity-50"></div>
-    <div class="absolute -bottom-24 -right-20 w-96 h-96 bg-indigo-100/50 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute -top-24 -left-20 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute -bottom-24 -right-20 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl opacity-50"></div>
 
     <div class="container mx-auto px-4 relative z-10 text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl mb-6">
+        <h1 class="text-4xl font-extrabold tracking-tight text-ink sm:text-6xl lg:text-7xl mb-6">
             {{ hero_title ?: 'Bienvenido al <span class="text-brand-600 italic">Futuro</span>'|raw }}
         </h1>
         
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-ink-muted">
             {{ hero_subtitle ?: 'Esta es una instalación de <strong>Rojas Stack Blueprint</strong>. El motor de WordPress está desacoplado y el desarrollo es 100% moderno.'|raw }}
         </p>
         
@@ -29,9 +29,9 @@
             {% endif %}
 
             <div class="flex items-center gap-3">
-                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 shadow-sm">Timber 2.0</span>
-                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 shadow-sm">Vite 8</span>
-                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-600 shadow-sm">Carbon Fields</span>
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-surface border border-line text-ink-muted shadow-sm">Timber 2.0</span>
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-surface border border-line text-ink-muted shadow-sm">Vite 8</span>
+                <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-surface border border-line text-ink-muted shadow-sm">Carbon Fields</span>
             </div>
         </div>
     </div>

@@ -10,10 +10,10 @@
     {% endembed %}
 #}
 {% set variants = {
-    'success': { box: 'bg-emerald-50 border-emerald-200', title: 'text-emerald-900', text: 'text-emerald-700', icon: 'bg-emerald-500 text-white' },
-    'error': { box: 'bg-red-50 border-red-200', title: 'text-red-900', text: 'text-red-700', icon: 'bg-red-500 text-white' },
-    'warning': { box: 'bg-amber-50 border-amber-200', title: 'text-amber-900', text: 'text-amber-700', icon: 'bg-amber-500 text-white' },
-    'info': { box: 'bg-brand-50 border-brand-200', title: 'text-brand-900', text: 'text-brand-700', icon: 'bg-brand-600 text-white' },
+    'success': { box: 'bg-emerald-500/10 border-emerald-500/30', title: 'text-emerald-900 dark:text-emerald-100', text: 'text-emerald-700 dark:text-emerald-300', icon: 'bg-emerald-500 text-white' },
+    'error': { box: 'bg-red-500/10 border-red-500/30', title: 'text-red-900 dark:text-red-100', text: 'text-red-700 dark:text-red-300', icon: 'bg-red-500 text-white' },
+    'warning': { box: 'bg-amber-500/10 border-amber-500/30', title: 'text-amber-900 dark:text-amber-100', text: 'text-amber-700 dark:text-amber-300', icon: 'bg-amber-500 text-white' },
+    'info': { box: 'bg-brand-600/10 border-brand-600/30', title: 'text-brand-900 dark:text-brand-100', text: 'text-brand-700 dark:text-brand-300', icon: 'bg-brand-600 text-white' },
 } %}
 {% set current = variants[variant ?? 'info'] ?? variants.info %}
 

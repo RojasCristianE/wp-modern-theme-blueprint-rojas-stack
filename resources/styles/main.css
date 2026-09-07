@@ -17,6 +17,48 @@
   --color-brand-950: #172554;
 }
 
+/*
+ * Tokens semánticos con contrapartes dark (spec §8.1 + §8.2).
+ * Se resuelven en runtime: las utilidades (bg-surface, text-ink...)
+ * apuntan a estas variables, y el media query de dark mode solo
+ * reasigna los valores — sin toggle manual.
+ *
+ *   page     → fondo de la página        (light slate-50 / dark slate-900)
+ *   surface  → tarjetas, header, modal   (light white    / dark slate-800)
+ *   ink      → texto primario            (light slate-900 / dark slate-50)
+ *   ink-muted→ texto secundario          (light slate-600 / dark slate-400)
+ *   ink-faint→ texto decorativo          (light slate-400 / dark slate-500)
+ *   line     → bordes principales        (light slate-200 / dark slate-700)
+ */
+@theme inline {
+  --color-page: var(--rs-page);
+  --color-surface: var(--rs-surface);
+  --color-ink: var(--rs-ink);
+  --color-ink-muted: var(--rs-ink-muted);
+  --color-ink-faint: var(--rs-ink-faint);
+  --color-line: var(--rs-line);
+}
+
+:root {
+  --rs-page: #f8fafc;
+  --rs-surface: #ffffff;
+  --rs-ink: #0f172a;
+  --rs-ink-muted: #475569;
+  --rs-ink-faint: #94a3b8;
+  --rs-line: #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rs-page: #0f172a;
+    --rs-surface: #1e293b;
+    --rs-ink: #f8fafc;
+    --rs-ink-muted: #94a3b8;
+    --rs-ink-faint: #64748b;
+    --rs-line: #334155;
+  }
+}
+
 body {
   @apply antialiased;
 }
