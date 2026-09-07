@@ -69,7 +69,7 @@
       "file_type": "code",
       "norm_label": "assetserviceprovider",
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L12"
+      "source_location": "L16"
     },
     {
       "id": "app_controllers_contactcontroller_contactcontroller",
@@ -183,18 +183,6 @@
       "norm_label": ".register_options()",
       "source_file": "app/Fields/ThemeOptions.php",
       "source_location": "L20"
-    },
-    {
-      "id": "app_setup_themesetup_themesetup_register_core_fields",
-      "label": ".register_core_fields()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 123,
-      "community_name": "ThemeSetup.php",
-      "file_type": "code",
-      "norm_label": ".register_core_fields()",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L74"
     },
     {
       "id": "agents_skills_wp_block_development_scripts_list_blocks_existsdir",
@@ -446,43 +434,7 @@
       "file_type": "code",
       "norm_label": ".enqueue_assets()",
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L28"
-    },
-    {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_get_asset_url",
-      "label": ".get_asset_url()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": ".get_asset_url()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L97"
-    },
-    {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_get_manifest",
-      "label": ".get_manifest()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": ".get_manifest()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L78"
-    },
-    {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_is_dev",
-      "label": ".is_dev()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": ".is_dev()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L67"
+      "source_location": "L33"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider_register",
@@ -494,7 +446,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L20"
+      "source_location": "L25"
     },
     {
       "id": "agents_skills_wp_performance_scripts_perf_inspect_canrun",
@@ -677,6 +629,18 @@
       "source_location": "L64"
     },
     {
+      "id": "app_setup_themesetup_themesetup_register_core_fields",
+      "label": ".register_core_fields()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": ".register_core_fields()",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L74"
+    },
+    {
       "id": "app_setup_themesetup_themesetup_register_hooks",
       "label": ".register_hooks()",
       "_callable": true,
@@ -711,18 +675,6 @@
       "norm_label": ".register_pages_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
       "source_location": "L82"
-    },
-    {
-      "id": "app_helpers_rs_asset",
-      "label": "rs_asset()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "helpers.php",
-      "file_type": "code",
-      "norm_label": "rs_asset()",
-      "source_file": "app/helpers.php",
-      "source_location": "L16"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
@@ -1128,7 +1080,7 @@
       "file_type": "code",
       "norm_label": "composer/installers",
       "source_file": "composer.json",
-      "source_location": "L48"
+      "source_location": "L49"
     },
     {
       "id": "composer_allow_plugins_pestphp_pest_plugin",
@@ -1139,7 +1091,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest-plugin",
       "source_file": "composer.json",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "composer_authors",
@@ -1161,7 +1113,7 @@
       "file_type": "code",
       "norm_label": "autoload",
       "source_file": "composer.json",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "composer_autoload_files",
@@ -1172,7 +1124,7 @@
       "file_type": "code",
       "norm_label": "files",
       "source_file": "composer.json",
-      "source_location": "L37"
+      "source_location": "L38"
     },
     {
       "id": "composer_autoload_psr_4",
@@ -1183,7 +1135,7 @@
       "file_type": "code",
       "norm_label": "psr-4",
       "source_file": "composer.json",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "composer_config",
@@ -1194,7 +1146,7 @@
       "file_type": "code",
       "norm_label": "config",
       "source_file": "composer.json",
-      "source_location": "L46"
+      "source_location": "L47"
     },
     {
       "id": "composer_config_allow_plugins",
@@ -1205,7 +1157,7 @@
       "file_type": "code",
       "norm_label": "allow-plugins",
       "source_file": "composer.json",
-      "source_location": "L47"
+      "source_location": "L48"
     },
     {
       "id": "composer_config_optimize_autoloader",
@@ -1216,7 +1168,7 @@
       "file_type": "code",
       "norm_label": "optimize-autoloader",
       "source_file": "composer.json",
-      "source_location": "L51"
+      "source_location": "L52"
     },
     {
       "id": "composer_config_sort_packages",
@@ -1227,7 +1179,7 @@
       "file_type": "code",
       "norm_label": "sort-packages",
       "source_file": "composer.json",
-      "source_location": "L52"
+      "source_location": "L53"
     },
     {
       "id": "composer_description",
@@ -1260,7 +1212,7 @@
       "file_type": "code",
       "norm_label": "minimum-stability",
       "source_file": "composer.json",
-      "source_location": "L54"
+      "source_location": "L55"
     },
     {
       "id": "composer_name",
@@ -1282,7 +1234,7 @@
       "file_type": "code",
       "norm_label": "prefer-stable",
       "source_file": "composer.json",
-      "source_location": "L55"
+      "source_location": "L56"
     },
     {
       "id": "composer_psr_4_rojasstack",
@@ -1293,7 +1245,7 @@
       "file_type": "code",
       "norm_label": "rojasstack\\\\",
       "source_file": "composer.json",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "composer_require",
@@ -1315,7 +1267,7 @@
       "file_type": "code",
       "norm_label": "require-dev",
       "source_file": "composer.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "composer_require_dev_brain_monkey",
@@ -1326,7 +1278,7 @@
       "file_type": "code",
       "norm_label": "brain/monkey",
       "source_file": "composer.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "composer_require_dev_deployer_deployer",
@@ -1337,7 +1289,7 @@
       "file_type": "code",
       "norm_label": "deployer/deployer",
       "source_file": "composer.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "composer_require_dev_lucatume_wp_browser",
@@ -1348,7 +1300,7 @@
       "file_type": "code",
       "norm_label": "lucatume/wp-browser",
       "source_file": "composer.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "composer_require_dev_pestphp_pest",
@@ -1359,7 +1311,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest",
       "source_file": "composer.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "composer_require_dev_php_stubs_wordpress_stubs",
@@ -1370,7 +1322,7 @@
       "file_type": "code",
       "norm_label": "php-stubs/wordpress-stubs",
       "source_file": "composer.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "composer_require_dev_phpstan_phpstan",
@@ -1381,7 +1333,7 @@
       "file_type": "code",
       "norm_label": "phpstan/phpstan",
       "source_file": "composer.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "composer_require_dev_spatie_ignition",
@@ -1392,7 +1344,7 @@
       "file_type": "code",
       "norm_label": "spatie/ignition",
       "source_file": "composer.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "composer_require_htmlburger_carbon_fields",
@@ -1403,7 +1355,7 @@
       "file_type": "code",
       "norm_label": "htmlburger/carbon-fields",
       "source_file": "composer.json",
-      "source_location": "L16"
+      "source_location": "L14"
     },
     {
       "id": "composer_require_illuminate_http",
@@ -1414,7 +1366,7 @@
       "file_type": "code",
       "norm_label": "illuminate/http",
       "source_file": "composer.json",
-      "source_location": "L18"
+      "source_location": "L15"
     },
     {
       "id": "composer_require_jgrossi_corcel",
@@ -1425,7 +1377,18 @@
       "file_type": "code",
       "norm_label": "jgrossi/corcel",
       "source_file": "composer.json",
-      "source_location": "L15"
+      "source_location": "L16"
+    },
+    {
+      "id": "composer_require_kucrut_vite_for_wp",
+      "label": "kucrut/vite-for-wp",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "kucrut/vite-for-wp",
+      "source_file": "composer.json",
+      "source_location": "L17"
     },
     {
       "id": "composer_require_nesbot_carbon",
@@ -1436,7 +1399,7 @@
       "file_type": "code",
       "norm_label": "nesbot/carbon",
       "source_file": "composer.json",
-      "source_location": "L19"
+      "source_location": "L18"
     },
     {
       "id": "composer_require_php",
@@ -1458,7 +1421,7 @@
       "file_type": "code",
       "norm_label": "rakit/validation",
       "source_file": "composer.json",
-      "source_location": "L21"
+      "source_location": "L19"
     },
     {
       "id": "composer_require_resend_resend_php",
@@ -1469,7 +1432,7 @@
       "file_type": "code",
       "norm_label": "resend/resend-php",
       "source_file": "composer.json",
-      "source_location": "L22"
+      "source_location": "L20"
     },
     {
       "id": "composer_require_spatie_schema_org",
@@ -1480,7 +1443,7 @@
       "file_type": "code",
       "norm_label": "spatie/schema-org",
       "source_file": "composer.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "composer_require_timber_timber",
@@ -1491,7 +1454,7 @@
       "file_type": "code",
       "norm_label": "timber/timber",
       "source_file": "composer.json",
-      "source_location": "L14"
+      "source_location": "L22"
     },
     {
       "id": "composer_require_vlucas_phpdotenv",
@@ -1502,7 +1465,7 @@
       "file_type": "code",
       "norm_label": "vlucas/phpdotenv",
       "source_file": "composer.json",
-      "source_location": "L17"
+      "source_location": "L23"
     },
     {
       "id": "composer_scripts",
@@ -1513,7 +1476,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "composer.json",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "composer_scripts_analyze",
@@ -1524,7 +1487,7 @@
       "file_type": "code",
       "norm_label": "analyze",
       "source_file": "composer.json",
-      "source_location": "L42"
+      "source_location": "L43"
     },
     {
       "id": "composer_scripts_lint",
@@ -1535,7 +1498,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "composer.json",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "composer_scripts_test",
@@ -1546,7 +1509,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "composer.json",
-      "source_location": "L44"
+      "source_location": "L45"
     },
     {
       "id": "composer_type",
@@ -1560,55 +1523,11 @@
       "source_location": "L4"
     },
     {
-      "id": "e2e_home_spec",
-      "label": "home.spec.js",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "home.spec.js",
-      "source_file": "e2e/home.spec.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "package",
-      "label": "package.json",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "package.json",
-      "source_file": "package.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "package_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "package.json",
-      "source_location": "L31"
-    },
-    {
-      "id": "package_dependencies_lucide_static",
-      "label": "lucide-static",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "lucide-static",
-      "source_file": "package.json",
-      "source_location": "L32"
-    },
-    {
       "id": "package_devdependencies",
       "label": "devDependencies",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
@@ -1619,29 +1538,29 @@
       "label": "alpinejs",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "alpinejs",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_devdependencies_autoprefixer",
       "label": "autoprefixer",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "package_devdependencies_biomejs_biome",
       "label": "@biomejs/biome",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "@biomejs/biome",
       "source_file": "package.json",
@@ -1652,451 +1571,132 @@
       "label": "flowbite",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "flowbite",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "package_devdependencies_htmx_org",
       "label": "htmx.org",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "htmx.org",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
+    },
+    {
+      "id": "package_devdependencies_kucrut_vite_for_wp",
+      "label": "@kucrut/vite-for-wp",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@kucrut/vite-for-wp",
+      "source_file": "package.json",
+      "source_location": "L17"
     },
     {
       "id": "package_devdependencies_lefthook",
       "label": "lefthook",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "lefthook",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies_playwright_test",
       "label": "@playwright/test",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "package_devdependencies_postcss",
       "label": "postcss",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "package_devdependencies_tailwindcss",
       "label": "tailwindcss",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_tailwindcss_forms",
       "label": "@tailwindcss/forms",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "@tailwindcss/forms",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "package_devdependencies_tailwindcss_postcss",
       "label": "@tailwindcss/postcss",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "package_devdependencies_tailwindcss_typography",
       "label": "@tailwindcss/typography",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "@tailwindcss/typography",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "package_devdependencies_vite",
       "label": "vite",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "package_devdependencies_vite_plugin_live_reload",
       "label": "vite-plugin-live-reload",
       "_origin": "ast",
       "community": 1,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "file_type": "code",
       "norm_label": "vite-plugin-live-reload",
       "source_file": "package.json",
-      "source_location": "L29"
-    },
-    {
-      "id": "package_name",
-      "label": "name",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "name",
-      "source_file": "package.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "package_private",
-      "label": "private",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "private",
-      "source_file": "package.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "package_scripts",
-      "label": "scripts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "package.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "package_scripts_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "build",
-      "source_file": "package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "package_scripts_dev",
-      "label": "dev",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "package.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "package_scripts_fix",
-      "label": "fix",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "fix",
-      "source_file": "package.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "package_scripts_lint",
-      "label": "lint",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "lint",
-      "source_file": "package.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "package_scripts_prepare",
-      "label": "prepare",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "prepare",
-      "source_file": "package.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "package_scripts_preview",
-      "label": "preview",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "preview",
-      "source_file": "package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "package_scripts_test_e2e",
-      "label": "test:e2e",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "test:e2e",
-      "source_file": "package.json",
-      "source_location": "L12"
-    },
-    {
-      "id": "package_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "package.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "package_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "package.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "playwright_config",
-      "label": "playwright.config.js",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "playwright.config.js",
-      "source_file": "playwright.config.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "resources_scripts_main",
-      "label": "main.js",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "main.js",
-      "source_file": "resources/scripts/main.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "vite_config",
-      "label": "vite.config.js",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "vite.config.js",
-      "source_file": "vite.config.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_alpinejs",
-      "label": "alpinejs",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "alpinejs",
-      "source_file": "package.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "ref_autoprefixer",
-      "label": "autoprefixer",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "autoprefixer",
-      "source_file": "package.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "ref_biomejs_biome",
-      "label": "@biomejs/biome",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@biomejs/biome",
-      "source_file": "package.json",
-      "source_location": "L16"
-    },
-    {
-      "id": "ref_flowbite",
-      "label": "flowbite",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "flowbite",
-      "source_file": "package.json",
-      "source_location": "L23"
-    },
-    {
-      "id": "ref_htmx_org",
-      "label": "htmx.org",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "htmx.org",
-      "source_file": "package.json",
-      "source_location": "L24"
-    },
-    {
-      "id": "ref_lefthook",
-      "label": "lefthook",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "lefthook",
-      "source_file": "package.json",
-      "source_location": "L25"
-    },
-    {
-      "id": "ref_lucide_static",
-      "label": "lucide-static",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "lucide-static",
-      "source_file": "package.json",
-      "source_location": "L32"
-    },
-    {
-      "id": "ref_playwright_test",
-      "label": "@playwright/test",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@playwright/test",
-      "source_file": "package.json",
-      "source_location": "L17"
-    },
-    {
-      "id": "ref_postcss",
-      "label": "postcss",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "postcss",
-      "source_file": "package.json",
-      "source_location": "L26"
-    },
-    {
-      "id": "ref_tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "tailwindcss",
-      "source_file": "package.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "ref_tailwindcss_forms",
-      "label": "@tailwindcss/forms",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@tailwindcss/forms",
-      "source_file": "package.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "ref_tailwindcss_postcss",
-      "label": "@tailwindcss/postcss",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@tailwindcss/postcss",
-      "source_file": "package.json",
-      "source_location": "L19"
-    },
-    {
-      "id": "ref_tailwindcss_typography",
-      "label": "@tailwindcss/typography",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@tailwindcss/typography",
-      "source_file": "package.json",
-      "source_location": "L20"
-    },
-    {
-      "id": "ref_vite",
-      "label": "vite",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "vite",
-      "source_file": "package.json",
-      "source_location": "L28"
-    },
-    {
-      "id": "ref_vite_plugin_live_reload",
-      "label": "vite-plugin-live-reload",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "vite-plugin-live-reload",
-      "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "agents_skills_nodejs_backend_patterns_skill",
@@ -12863,150 +12463,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L297"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
-      "label": "CLI Commands",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "cli commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L278"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
-      "label": "Merged report missing results",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merged report missing results",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L331"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
-      "label": "More workers = Slower",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more workers = slower",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L364"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
-      "label": "\"No tests found\" in some shards",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"no tests found\" in some shards",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L323"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
-      "label": "Sharding and Parallel Execution",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding and parallel execution",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
-      "label": "Tests pass solo but fail together",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests pass solo but fail together",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L312"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L310"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
-      "label": "Worker-scoped fixture not working",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixture not working",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L348"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_performance",
       "label": "infrastructure-ci-cd/performance.md",
       "_origin": "ast",
@@ -13611,15 +13067,169 @@
       "source_location": "L1"
     },
     {
-      "id": "tests_unit_helperstest",
-      "label": "HelpersTest.php",
+      "id": "package",
+      "label": "package.json",
       "_origin": "ast",
       "community": 204,
-      "community_name": "HelpersTest.php",
+      "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "helperstest.php",
-      "source_file": "tests/Unit/HelpersTest.php",
+      "norm_label": "package.json",
+      "source_file": "package.json",
       "source_location": "L1"
+    },
+    {
+      "id": "package_name",
+      "label": "name",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "name",
+      "source_file": "package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "package_private",
+      "label": "private",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "private",
+      "source_file": "package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "package_type",
+      "label": "type",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "type",
+      "source_file": "package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "package_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "ref_autoprefixer",
+      "label": "autoprefixer",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "autoprefixer",
+      "source_file": "package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "ref_biomejs_biome",
+      "label": "@biomejs/biome",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@biomejs/biome",
+      "source_file": "package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "ref_flowbite",
+      "label": "flowbite",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "flowbite",
+      "source_file": "package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "ref_lefthook",
+      "label": "lefthook",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "lefthook",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "ref_lucide_static",
+      "label": "lucide-static",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "lucide-static",
+      "source_file": "package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "ref_postcss",
+      "label": "postcss",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "postcss",
+      "source_file": "package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "ref_tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "tailwindcss",
+      "source_file": "package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "ref_tailwindcss_forms",
+      "label": "@tailwindcss/forms",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@tailwindcss/forms",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "ref_tailwindcss_postcss",
+      "label": "@tailwindcss/postcss",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@tailwindcss/postcss",
+      "source_file": "package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "ref_tailwindcss_typography",
+      "label": "@tailwindcss/typography",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@tailwindcss/typography",
+      "source_file": "package.json",
+      "source_location": "L21"
     },
     {
       "id": "tests_unit_featuresconfigtest",
@@ -13631,6 +13241,204 @@
       "norm_label": "featuresconfigtest.php",
       "source_file": "tests/Unit/FeaturesConfigTest.php",
       "source_location": "L1"
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "dev",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "package_scripts_fix",
+      "label": "fix",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "fix",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "package_scripts_lint",
+      "label": "lint",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "lint",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "package_scripts_prepare",
+      "label": "prepare",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "prepare",
+      "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "package_scripts_preview",
+      "label": "preview",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "preview",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "package_scripts_test_e2e",
+      "label": "test:e2e",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "test:e2e",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "vite_config",
+      "label": "vite.config.js",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "vite.config.js",
+      "file_type": "code",
+      "norm_label": "vite.config.js",
+      "source_file": "vite.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_kucrut_vite_for_wp",
+      "label": "@kucrut/vite-for-wp",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "vite.config.js",
+      "file_type": "concept",
+      "norm_label": "@kucrut/vite-for-wp",
+      "source_file": "package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "ref_vite",
+      "label": "vite",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "vite.config.js",
+      "file_type": "concept",
+      "norm_label": "vite",
+      "source_file": "package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "ref_vite_plugin_live_reload",
+      "label": "vite-plugin-live-reload",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "vite.config.js",
+      "file_type": "concept",
+      "norm_label": "vite-plugin-live-reload",
+      "source_file": "package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "e2e_home_spec",
+      "label": "home.spec.js",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "@playwright/test",
+      "file_type": "code",
+      "norm_label": "home.spec.js",
+      "source_file": "e2e/home.spec.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "playwright_config",
+      "label": "playwright.config.js",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "@playwright/test",
+      "file_type": "code",
+      "norm_label": "playwright.config.js",
+      "source_file": "playwright.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_playwright_test",
+      "label": "@playwright/test",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "@playwright/test",
+      "file_type": "concept",
+      "norm_label": "@playwright/test",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "resources_scripts_main",
+      "label": "main.js",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "alpinejs",
+      "file_type": "code",
+      "norm_label": "main.js",
+      "source_file": "resources/scripts/main.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_alpinejs",
+      "label": "alpinejs",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "alpinejs",
+      "file_type": "concept",
+      "norm_label": "alpinejs",
+      "source_file": "package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "ref_htmx_org",
+      "label": "htmx.org",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "alpinejs",
+      "file_type": "concept",
+      "norm_label": "htmx.org",
+      "source_file": "package.json",
+      "source_location": "L25"
     },
     {
       "id": "agents_skills_playwright_best_practices_testing_patterns_i18n_accept_language_header",
@@ -13979,6 +13787,28 @@
       "norm_label": "visual regression for i18n",
       "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
       "source_location": "L430"
+    },
+    {
+      "id": "package_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "package_dependencies_lucide_static",
+      "label": "lucide-static",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "lucide-static",
+      "source_file": "package.json",
+      "source_location": "L33"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -14994,6 +14824,54 @@
       "source_location": "L309"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L297"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
+      "label": "CLI Commands",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cli commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L278"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
       "label": "Dynamic Shard Count",
       "_origin": "ast",
@@ -15006,6 +14884,18 @@
       "source_location": "L229"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
+      "label": "Merged report missing results",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report missing results",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L331"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
       "label": "Merging Shard Reports",
       "_origin": "ast",
@@ -15016,6 +14906,30 @@
       "norm_label": "merging shard reports",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L103"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
+      "label": "More workers = Slower",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more workers = slower",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L364"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
+      "label": "\"No tests found\" in some shards",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"no tests found\" in some shards",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L323"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
@@ -15042,6 +14956,30 @@
       "source_location": "L78"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
+      "label": "Sharding and Parallel Execution",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding and parallel execution",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L3"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
       "label": "Test Isolation for Parallelism",
       "_origin": "ast",
@@ -15054,6 +14992,30 @@
       "source_location": "L187"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
+      "label": "Tests pass solo but fail together",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests pass solo but fail together",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L312"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L310"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
       "label": "Worker Configuration",
       "_origin": "ast",
@@ -15064,6 +15026,18 @@
       "norm_label": "worker configuration",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L34"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
+      "label": "Worker-scoped fixture not working",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixture not working",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L348"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
@@ -34757,7 +34731,7 @@
     },
     {
       "source": "package",
-      "target": "ref_playwright_test",
+      "target": "ref_kucrut_vite_for_wp",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34769,7 +34743,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss_forms",
+      "target": "ref_playwright_test",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34781,7 +34755,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss_postcss",
+      "target": "ref_tailwindcss_forms",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34793,7 +34767,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss_typography",
+      "target": "ref_tailwindcss_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34805,7 +34779,7 @@
     },
     {
       "source": "package",
-      "target": "ref_alpinejs",
+      "target": "ref_tailwindcss_typography",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34817,7 +34791,7 @@
     },
     {
       "source": "package",
-      "target": "ref_autoprefixer",
+      "target": "ref_alpinejs",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34829,7 +34803,7 @@
     },
     {
       "source": "package",
-      "target": "ref_flowbite",
+      "target": "ref_autoprefixer",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34841,7 +34815,7 @@
     },
     {
       "source": "package",
-      "target": "ref_htmx_org",
+      "target": "ref_flowbite",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34853,7 +34827,7 @@
     },
     {
       "source": "package",
-      "target": "ref_lefthook",
+      "target": "ref_htmx_org",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34865,7 +34839,7 @@
     },
     {
       "source": "package",
-      "target": "ref_postcss",
+      "target": "ref_lefthook",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34877,7 +34851,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34889,7 +34863,7 @@
     },
     {
       "source": "package",
-      "target": "ref_vite",
+      "target": "ref_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34901,7 +34875,7 @@
     },
     {
       "source": "package",
-      "target": "ref_vite_plugin_live_reload",
+      "target": "ref_vite",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34913,6 +34887,18 @@
     },
     {
       "source": "package",
+      "target": "ref_vite_plugin_live_reload",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "ref_lucide_static",
       "relation": "imports",
       "_origin": "ast",
@@ -34920,7 +34906,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -35045,7 +35031,7 @@
     },
     {
       "source": "vite_config",
-      "target": "ref_vite_plugin_live_reload",
+      "target": "ref_kucrut_vite_for_wp",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35053,6 +35039,18 @@
       "context": "import",
       "source_file": "vite.config.js",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config",
+      "target": "ref_vite_plugin_live_reload",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "vite.config.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -61665,17 +61663,6 @@
       "weight": 1.0
     },
     {
-      "source": "app_helpers",
-      "target": "app_helpers_rs_asset",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/helpers.php",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
       "source": "app_providers_assetserviceprovider",
       "target": "app_providers_assetserviceprovider_assetserviceprovider",
       "relation": "contains",
@@ -61683,7 +61670,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -61936,7 +61923,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -61958,7 +61945,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -61980,7 +61967,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -61991,7 +61978,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -62013,7 +62000,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L54",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -62024,7 +62011,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -62046,7 +62033,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -62057,7 +62044,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -62068,7 +62055,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -62079,7 +62066,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -62090,7 +62077,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -62101,7 +62088,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -62112,7 +62099,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -62123,7 +62110,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -62139,7 +62126,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_timber_timber",
+      "target": "composer_require_htmlburger_carbon_fields",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62150,7 +62137,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_jgrossi_corcel",
+      "target": "composer_require_illuminate_http",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62161,7 +62148,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_htmlburger_carbon_fields",
+      "target": "composer_require_jgrossi_corcel",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62172,7 +62159,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_vlucas_phpdotenv",
+      "target": "composer_require_kucrut_vite_for_wp",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62183,7 +62170,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_illuminate_http",
+      "target": "composer_require_nesbot_carbon",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62194,7 +62181,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_nesbot_carbon",
+      "target": "composer_require_rakit_validation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62205,7 +62192,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_spatie_schema_org",
+      "target": "composer_require_resend_resend_php",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62216,7 +62203,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_rakit_validation",
+      "target": "composer_require_spatie_schema_org",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62227,13 +62214,24 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_resend_resend_php",
+      "target": "composer_require_timber_timber",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require",
+      "target": "composer_require_vlucas_phpdotenv",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -62244,7 +62242,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -62255,7 +62253,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -62266,7 +62264,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -62277,7 +62275,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -62288,7 +62286,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -62299,7 +62297,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -62310,7 +62308,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -62321,7 +62319,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -62332,7 +62330,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -62343,7 +62341,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -62420,7 +62418,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -62464,7 +62462,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -62480,7 +62478,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_playwright_test",
+      "target": "package_devdependencies_kucrut_vite_for_wp",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62491,7 +62489,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_forms",
+      "target": "package_devdependencies_playwright_test",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62502,7 +62500,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
+      "target": "package_devdependencies_tailwindcss_forms",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62513,7 +62511,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_typography",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62524,7 +62522,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_alpinejs",
+      "target": "package_devdependencies_tailwindcss_typography",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62535,7 +62533,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_autoprefixer",
+      "target": "package_devdependencies_alpinejs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62546,7 +62544,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_flowbite",
+      "target": "package_devdependencies_autoprefixer",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62557,7 +62555,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_htmx_org",
+      "target": "package_devdependencies_flowbite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62568,7 +62566,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_lefthook",
+      "target": "package_devdependencies_htmx_org",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62579,7 +62577,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_postcss",
+      "target": "package_devdependencies_lefthook",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62590,7 +62588,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62601,7 +62599,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite",
+      "target": "package_devdependencies_tailwindcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62612,13 +62610,24 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite_plugin_live_reload",
+      "target": "package_devdependencies_vite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite_plugin_live_reload",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -63397,7 +63406,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L20",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -63408,40 +63417,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_assetserviceprovider_assetserviceprovider",
-      "target": "app_providers_assetserviceprovider_assetserviceprovider_is_dev",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_assetserviceprovider_assetserviceprovider",
-      "target": "app_providers_assetserviceprovider_assetserviceprovider_get_manifest",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L78",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_assetserviceprovider_assetserviceprovider",
-      "target": "app_providers_assetserviceprovider_assetserviceprovider_get_asset_url",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L97",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -65979,5 +65955,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "01457ecbea3127b996d97092a21cc026cbaa4995"
+  "built_at_commit": "8a137baa152716d98e3515b5838399a17370f035"
 }

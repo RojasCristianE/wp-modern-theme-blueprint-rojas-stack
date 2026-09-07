@@ -1,6 +1,6 @@
 {
   "0": "composer.json",
-  "1": "package.json",
+  "1": "devDependencies",
   "2": "playwright-best-practices/SKILL.md",
   "3": "Especificación del Rojas Starter Theme",
   "4": "Node.js Best Practices",
@@ -203,6 +203,11 @@
   "201": "rotate-salts.php",
   "202": "LICENSE.md",
   "203": "bootstrap.php",
-  "204": "HelpersTest.php",
-  "205": "FeaturesConfigTest.php"
+  "204": "package.json",
+  "205": "FeaturesConfigTest.php",
+  "206": "scripts",
+  "207": "vite.config.js",
+  "208": "@playwright/test",
+  "209": "alpinejs",
+  "210": "dependencies"
 }
