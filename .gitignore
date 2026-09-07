@@ -60,6 +60,10 @@ playwright/.cache/
 # quedarse sin espacio en /tmp)
 .composer-cache/
 
+# Playwright: resultados y reportes HTML (regenerables)
+test-results/
+playwright-report/
+
 # graphify: cache AST derivada (regenerable); el grafo (graph.json),
 # GRAPH_REPORT.md y graph.html sí se trackean
 graphify-out/cache/
