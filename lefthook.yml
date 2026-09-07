@@ -1,0 +1,14 @@
+# lefthook.yml — Orquestador de Git Hooks (Rojas Stack)
+# Referencia: https://lefthook.dev/configuration/
+
+pre-commit:
+  commands:
+    # Lint + formato del frontend (mirrors CI: bun run lint)
+    biome:
+      glob: "*.{js,jsx,ts,tsx,mjs,cjs,css,json,jsonc}"
+      run: bun run lint
+
+    # Análisis estático PHP (PHP 8.5 vive en DDEV; requiere `ddev start` activo)
+    phpstan:
+      glob: "*.php"
+      run: ddev exec composer analyze

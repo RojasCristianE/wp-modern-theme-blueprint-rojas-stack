@@ -22,6 +22,7 @@
     "autoprefixer": "latest",
     "flowbite": "latest",
     "htmx.org": "latest",
+    "lefthook": "^2.1.12",
     "postcss": "latest",
     "tailwindcss": "latest",
     "vite": "latest",
