@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "latest",
+    "@kucrut/vite-for-wp": "^0.12.0",
     "@playwright/test": "latest",
     "@tailwindcss/forms": "latest",
     "@tailwindcss/postcss": "^4.3.1",

@@ -2,17 +2,22 @@
 
 namespace RojasStack\Providers;
 
+use function Kucrut\Vite\enqueue_asset;
+
 /**
  * AssetServiceProvider
  * 
- * Gestiona la resolución de rutas de assets compilados por Vite.
- * Detecta si el servidor de desarrollo de Vite está activo o si debe
- * leer el archivo manifest.json en producción.
+ * Encola los assets de Vite vía kucrut/vite-for-wp (spec §7.1).
+ * La librería resuelve ambos modos:
+ *   - Desarrollo: mientras corre `bun run dev`, existe dist/vite-dev-server.json
+ *     y los assets se sirven desde el dev server con HMR.
+ *   - Producción: lee dist/manifest.json y encola el bundle con su CSS asociado.
  */
 class AssetServiceProvider
 {
-    private const VITE_SERVER = 'http://localhost:5173';
     private const DIST_DIR = 'dist';
+    private const MAIN_ENTRY = 'resources/scripts/main.js';
+    private const MAIN_HANDLE = 'rojas-main';
 
     /**
      * Registra los assets en los hooks de WordPress.
@@ -23,89 +28,18 @@ class AssetServiceProvider
     }
 
     /**
-     * Encola los scripts y estilos según el entorno.
+     * Encola el bundle principal (JS + CSS asociado).
      */
     public function enqueue_assets(): void
     {
-        $is_dev = self::is_dev();
-        
-        if ($is_dev) {
-            // En desarrollo, inyectamos el cliente de Vite directamente
-            wp_enqueue_script('vite-client', self::VITE_SERVER . '/@vite/client', [], null, true);
-            wp_script_add_data('vite-client', 'type', 'module');
-
-            // Cargamos el script principal (Vite se encarga del CSS)
-            wp_enqueue_script('rojas-main', self::VITE_SERVER . '/resources/scripts/main.js', [], null, true);
-            wp_script_add_data('rojas-main', 'type', 'module');
-        } else {
-            // En producción, leemos el manifiesto
-            $manifest = self::get_manifest();
-            
-            // Cargamos el CSS principal explícitamente si existe en el manifiesto
-            if (isset($manifest['resources/styles/main.css'])) {
-                $css_file = $manifest['resources/styles/main.css']['file'];
-                wp_enqueue_style('rojas-main-css', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $css_file);
-            }
-
-            if (isset($manifest['resources/scripts/main.js'])) {
-                $js_file = $manifest['resources/scripts/main.js']['file'];
-                wp_enqueue_script('rojas-main', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $js_file, [], null, true);
-                
-                // Si el JS tiene CSS asociado adicional, lo encolamos
-                if (isset($manifest['resources/scripts/main.js']['css'])) {
-                    foreach ($manifest['resources/scripts/main.js']['css'] as $css_file) {
-                        wp_enqueue_style('rojas-js-associated-css', get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $css_file);
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * Detecta si estamos en entorno de desarrollo con Vite corriendo.
-     */
-    private static function is_dev(): bool
-    {
-        // En DDEV, el archivo 'hot' suele estar en la raíz del tema si vite dev está activo
-        return file_exists(get_template_directory() . '/hot');
-    }
-
-    /**
-     * Lee el manifest.json.
-     *
-     * @return array<string, mixed> Mapa 'ruta del asset' => metadatos (file, css, src, ...)
-     */
-    private static function get_manifest(): array
-    {
-        $manifest_path = get_template_directory() . '/' . self::DIST_DIR . '/.vite/manifest.json';
-        
-        if (!file_exists($manifest_path)) {
-            return [];
-        }
-
-        return json_decode(file_get_contents($manifest_path), true) ?: [];
-    }
-
-    /**
-     * Resuelve la URL pública de un asset compilado por Vite.
-     *
-     * En desarrollo apunta al servidor de Vite; en producción resuelve la
-     * ruta desde dist/.vite/manifest.json.
-     *
-     * @param string $path Ruta relativa al asset en resources/
-     */
-    public static function get_asset_url(string $path): string
-    {
-        if (self::is_dev()) {
-            return self::VITE_SERVER . '/' . $path;
-        }
-
-        $manifest = self::get_manifest();
-
-        if (!isset($manifest[$path]['file'])) {
-            return '';
-        }
-
-        return get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $manifest[$path]['file'];
+        enqueue_asset(
+            get_template_directory() . '/' . self::DIST_DIR,
+            self::MAIN_ENTRY,
+            [
+                'handle' => self::MAIN_HANDLE,
+                'css-media' => 'all',
+                'in-footer' => true,
+            ]
+        );
     }
 }

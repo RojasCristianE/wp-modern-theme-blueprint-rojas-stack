@@ -11,15 +11,16 @@
     ],
     "require": {
         "php": ">=8.5",
-        "timber/timber": "*",
-        "jgrossi/corcel": "*",
         "htmlburger/carbon-fields": "*",
-        "vlucas/phpdotenv": "*",
         "illuminate/http": "*",
+        "jgrossi/corcel": "*",
+        "kucrut/vite-for-wp": "^0.12.0",
         "nesbot/carbon": "*",
-        "spatie/schema-org": "*",
         "rakit/validation": "*",
-        "resend/resend-php": "*"
+        "resend/resend-php": "*",
+        "spatie/schema-org": "*",
+        "timber/timber": "*",
+        "vlucas/phpdotenv": "*"
     },
     "require-dev": {
         "brain/monkey": "^2.7",

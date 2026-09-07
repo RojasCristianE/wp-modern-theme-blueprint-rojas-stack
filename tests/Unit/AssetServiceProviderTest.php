@@ -5,49 +5,96 @@ declare(strict_types=1);
 use RojasStack\Providers\AssetServiceProvider;
 use function Brain\Monkey\Functions\when;
 
+/*
+ * Tests de integración: el provider delega en kucrut/vite-for-wp REAL
+ * (no se redefine la librería). Se mockea únicamente la superficie de WP
+ * con Brain Monkey y se usa el manifest fixture de tests/fixtures/theme.
+ */
+
+if (!defined('WP_CONTENT_DIR')) {
+    define('WP_CONTENT_DIR', FIXTURE_THEME);
+}
+
+const DEV_SERVER_FIXTURE = FIXTURE_THEME . '/dist/vite-dev-server.json';
+
+beforeEach(function () {
+    // Superficie WP usada por vite-for-wp
+    when('get_template_directory')->justReturn(FIXTURE_THEME);
+    when('wp_json_file_decode')->alias(fn ($path) => json_decode((string) file_get_contents((string) $path)));
+    when('wp_normalize_path')->alias(fn ($path) => str_replace('\\', '/', (string) $path));
+    when('wp_parse_args')->alias(fn ($args, $defaults) => array_merge($defaults, (array) $args));
+    when('apply_filters')->alias(fn (...$args) => $args[1]);
+    when('content_url')->alias(fn ($path) => 'http://theme.test/wp-content/' . ltrim((string) $path, '/'));
+    when('untrailingslashit')->alias(fn ($value) => rtrim((string) $value, '/'));
+    when('add_filter')->justReturn(null);
+    when('wp_script_is')->justReturn(false);
+
+    // Registro/encolado capturados
+    $GLOBALS['vftw_registered_scripts'] = [];
+    $GLOBALS['vftw_registered_styles'] = [];
+    $GLOBALS['vftw_enqueued'] = [];
+
+    when('wp_register_script')->alias(function (string $handle, string $src) {
+        $GLOBALS['vftw_registered_scripts'][$handle] = $src;
+
+        return true;
+    });
+    when('wp_register_style')->alias(function (string $handle, string $src) {
+        $GLOBALS['vftw_registered_styles'][$handle] = $src;
+
+        return true;
+    });
+    when('wp_enqueue_script')->alias(fn (string $handle) => $GLOBALS['vftw_enqueued'][] = $handle);
+    when('wp_enqueue_style')->alias(fn (string $handle) => $GLOBALS['vftw_enqueued'][] = $handle);
+});
+
 afterEach(function () {
-    if (is_file(FIXTURE_THEME . '/hot')) {
-        unlink(FIXTURE_THEME . '/hot');
+    if (is_file(DEV_SERVER_FIXTURE)) {
+        unlink(DEV_SERVER_FIXTURE);
     }
 });
 
-it('resuelve assets contra el servidor Vite en desarrollo (hot file presente)', function () {
-    when('get_template_directory')->justReturn(FIXTURE_THEME);
+it('registra el hook wp_enqueue_scripts', function () {
+    $hooks = [];
 
-    touch(FIXTURE_THEME . '/hot');
+    when('add_action')->alias(function (string $hook, callable|array $callback) use (&$hooks) {
+        $hooks[$hook] = $callback;
+    });
 
-    expect(AssetServiceProvider::get_asset_url('resources/scripts/main.js'))
-        ->toBe('http://localhost:5173/resources/scripts/main.js');
+    (new AssetServiceProvider())->register();
+
+    expect($hooks)->toHaveKey('wp_enqueue_scripts')
+        ->and($hooks['wp_enqueue_scripts'][1])->toBe('enqueue_assets');
 });
 
-it('resuelve assets desde el manifest en producción', function () {
-    when('get_template_directory')->justReturn(FIXTURE_THEME);
-    when('get_template_directory_uri')->justReturn(THEME_URI);
+it('carga el bundle de producción desde dist/manifest.json con su CSS', function () {
+    (new AssetServiceProvider())->enqueue_assets();
 
-    expect(AssetServiceProvider::get_asset_url('resources/scripts/main.js'))
-        ->toBe(THEME_URI . '/dist/assets/main-abc123.js');
+    $scripts = $GLOBALS['vftw_registered_scripts'];
+    $styles  = $GLOBALS['vftw_registered_styles'];
+
+    expect($scripts)->toHaveKey('rojas-main')
+        ->and($scripts['rojas-main'])->toBe('http://theme.test/wp-content/dist/assets/main-abc123.js')
+        ->and($styles)->not->toBeEmpty()
+        ->and(array_values($styles)[0])->toContain('assets/main-def456.css')
+        ->and($GLOBALS['vftw_enqueued'])->toContain('rojas-main');
 });
 
-it('resuelve CSS desde el manifest en producción', function () {
-    when('get_template_directory')->justReturn(FIXTURE_THEME);
-    when('get_template_directory_uri')->justReturn(THEME_URI);
+it('sirve los assets desde el dev server mientras corre bun run dev', function () {
+    // Lo que el plugin dev_server() de @kucrut/vite-for-wp escribe en dist/
+    file_put_contents(DEV_SERVER_FIXTURE, (string) json_encode([
+        'base'    => '/',
+        'origin'  => 'http://localhost:5173',
+        'port'    => 5173,
+        'plugins' => [],
+    ]));
 
-    expect(AssetServiceProvider::get_asset_url('resources/styles/main.css'))
-        ->toBe(THEME_URI . '/dist/assets/main-ghi789.css');
-});
+    (new AssetServiceProvider())->enqueue_assets();
 
-it('devuelve cadena vacía si el asset no está en el manifest', function () {
-    when('get_template_directory')->justReturn(FIXTURE_THEME);
-    when('get_template_directory_uri')->justReturn(THEME_URI);
+    $scripts = $GLOBALS['vftw_registered_scripts'];
 
-    expect(AssetServiceProvider::get_asset_url('resources/scripts/no-existe.js'))
-        ->toBe('');
-});
-
-it('devuelve cadena vacía si no existe manifest.json', function () {
-    when('get_template_directory')->justReturn(sys_get_temp_dir() . '/rs-sin-manifest-' . bin2hex(random_bytes(4)));
-    when('get_template_directory_uri')->justReturn(THEME_URI);
-
-    expect(AssetServiceProvider::get_asset_url('resources/scripts/main.js'))
-        ->toBe('');
+    // Cliente Vite + entry principal apuntando al dev server (HMR)
+    expect($scripts)->not->toBeEmpty()
+        ->and(array_filter($scripts, fn ($src) => str_contains($src, '@vite/client')))->not->toBeEmpty()
+        ->and($scripts['rojas-main'])->toBe('http://localhost:5173/resources/scripts/main.js');
 });

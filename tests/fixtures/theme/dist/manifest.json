@@ -1,0 +1,9 @@
+{
+  "resources/scripts/main.js": {
+    "file": "assets/main-abc123.js",
+    "css": ["assets/main-def456.css"]
+  },
+  "resources/styles/main.css": {
+    "file": "assets/main-ghi789.css"
+  }
+}
