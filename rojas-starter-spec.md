@@ -375,17 +375,47 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 ## 12. Ruta de migración desde el blueprint actual
 
-1. **Auditar código existente:** eliminar dependencias no usadas y consolidar providers.
-2. **Reemplazar asset provider:** migrar de `AssetServiceProvider` manual a `kucrut/vite-for-wp`.
-3. **Crear sistema de configuración central:** mover configuraciones hardcodeadas a `app/Config/features.php`.
-4. **Estandarizar componentes Twig:** extraer botones, inputs, tarjetas y alertas en `resources/views/components/`.
-5. **Implementar dark mode:** agregar media query `prefers-color-scheme: dark` y tokens oscuros.
-6. **Crear Example CPT:** añadir un custom post type de ejemplo desactivado por defecto.
-7. **Evolucionar contacto a form engine:** generalizar `ContactController` a `FormServiceProvider` o `FormController` configurable.
-8. **Configurar testing:** crear `tests/Unit/` y `tests/E2E/`, agregar Pest y Playwright.
-9. **Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.
-10. **Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`.
-11. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL.
+> **Estado (2026-09-07):** pasos 1–6 y 8–9 completados y verificados
+> (15 tests Pest, 4 smoke tests Playwright, CI en GitHub Actions,
+> Lefthook pre-commit). La implementación real difiere de este plan
+> en dos puntos documentados en §12.1.
+
+1. ~~**Auditar código existente:** eliminar dependencias no usadas y consolidar providers.~~ ✅
+2. ~~**Reemplazar asset provider:** migrar de `AssetServiceProvider` manual a `kucrut/vite-for-wp`.~~ ✅
+3. ~~**Crear sistema de configuración central:** mover configuraciones hardcodeadas a `app/Config/features.php`.~~ ✅
+4. ~~**Estandarizar componentes Twig:** extraer botones, inputs, tarjetas y alertas en `resources/views/components/`.~~ ✅ (con módulo `design_system` y ruta `/__components` activos)
+5. ~~**Implementar dark mode:** agregar media query `prefers-color-scheme: dark` y tokens oscuros.~~ ✅ (tokens semánticos runtime + `@theme inline`)
+6. ~~**Crear Example CPT:** añadir un custom post type de ejemplo desactivado por defecto.~~ ✅ (`ExampleCptServiceProvider` + `archive-podcast.twig` / `single-podcast.twig`)
+7. **Evolucionar contacto a form engine:** generalizar `ContactController` a `FormServiceProvider` o `FormController` configurable. ⬜
+8. ~~**Configurar testing:** crear `tests/Unit/` y `tests/E2E/`, agregar Pest y Playwright.~~ ✅ (Pest + Brain Monkey + Patchwork; Playwright con Chrome del sistema)
+9. ~~**Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.~~ ✅ (`lefthook.yml`: biome + phpstan + pest por archivos staged)
+10. **Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`. ⬜ (AGENTS.md actualizado; falta README y `docs/`)
+11. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜
+
+### 12.1 Desviaciones de la implementación respecto a este plan
+
+- **Jerarquía de templates (crítico):** el blueprint original tenía un
+  `index.php` que renderizaba `index.twig` para toda petición,
+  bloqueando la jerarquía de WordPress (`archive-{post_type}.twig`,
+  `single-{post_type}.twig`, ...). El fix delega la resolución a la
+  jerarquía de Timber desde `index.php`: las rutas virtuales del
+  `RouteServiceProvider` siguen teniendo prioridad (interceptan en
+  `template_redirect`, antes de la resolución de templates), y todo lo
+  demás (archives, singles, home) resuelve nativamente. **Regla del
+  stack:** el router es para páginas 100% code-first; el contenido de
+  la DB usa la jerarquía Twig. Esto responde también la pregunta de
+  §13 sobre rutas virtuales vs. jerarquía: conviven, con la jerarquía
+  como base y el router como override explícito.
+- **Detección de dev server:** en vez del archivo `hot` en la raíz del
+  tema (enfoque manual original), `kucrut/vite-for-wp` usa
+  `dist/vite-dev-server.json`, escrito/limpiado por el plugin
+  `dev_server()` de `@kucrut/vite-for-wp` mientras `bun run dev` corre.
+  Gotcha operativo: si el dev server muere abruptamente (kill -9), el
+  manifest queda huérfano y el sitio sigue apuntando a URLs muertas
+  hasta borrarlo a mano.
+- **Dependencias:** se mantienen wildcards (`*`/`latest`) durante la
+  fase experimental; `composer.lock` y `bun.lock` son el mecanismo real
+  de reproducibilidad (ver §13).
 
 ---
 
@@ -393,7 +423,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 - **Versionado de dependencias:** ¿se deben fijar versiones en `composer.json`/`package.json` para estabilidad, o mantener wildcards y confiar en que cada proyecto gestione updates?
 - **Multilenguaje:** aunque se eligió "plugin-agnóstico", ¿debe existir un ejemplo mínimo de internacionalización (i18n) listo para WPML/Polylang?
-- **Rutas virtuales vs. jerarquía de templates:** ¿permitir que `RouteServiceProvider` sobrescriba slugs de posts/páginas existentes, o respetar siempre el contenido de la DB?
+- **Rutas virtuales vs. jerarquía de templates:** respondido en §12.1 — conviven: la jerarquía Twig es la base (contenido de la DB) y el `RouteServiceProvider` es override explícito code-first (intercepta en `template_redirect`).
 - **Generador de POT:** ¿incluir un workflow/script para generar archivos `.pot` de traducción?
 - **CLI interno:** ¿vale la pena incluir un comando propio (ej. `wp rojas-starter make:component`) o mantenerlo manual?
 
@@ -402,9 +432,9 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 ## 14. Criterios de éxito
 
 - [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos.
-- [ ] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional.
-- [ ] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores.
-- [ ] Todos los módulos son activables/desactivables desde `app/Config/features.php`.
+- [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
+- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (15 tests Pest + 4 smoke E2E + PHPStan nivel 6 + Biome).
+- [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).
 - [ ] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
 
 ---
