@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="py-20 bg-page">
+    <div class="container mx-auto px-4">
+
+        <header class="text-center mb-16">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Rojas Stack</p>
+            <h1 class="text-4xl font-extrabold tracking-tight text-ink mb-4">Podcasts</h1>
+            <p class="text-ink-muted max-w-2xl mx-auto">
+                Módulo example_cpt del Rojas Stack: archive nativo del Custom Post Type.
+            </p>
+        </header>
+
+        {% if posts %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for post in posts %}
+                    {% set card_image = post.thumbnail ? post.thumbnail.src|resize(600, 400) : null %}
+                    {% include 'components/card.twig' with {
+                        title: post.title,
+                        url: post.link,
+                        excerpt: post.preview ? post.preview.length(20) : post.excerpt,
+                        image: card_image,
+                        meta: post.date|date('d M, Y'),
+                        link_label: 'Escuchar →',
+                    } only %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center text-ink-muted py-16">
+                Aún no hay episodios publicados.
+            </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endblock %}

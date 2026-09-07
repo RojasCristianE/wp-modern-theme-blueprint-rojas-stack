@@ -8,6 +8,7 @@ use RojasStack\Controllers\DesignSystemController;
 use RojasStack\Fields\PageFields;
 use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
+use RojasStack\Providers\ExampleCptServiceProvider;
 use RojasStack\Providers\MenuServiceProvider;
 use RojasStack\Providers\RouteServiceProvider;
 use RojasStack\Providers\SeoServiceProvider;
@@ -58,6 +59,10 @@ class ThemeSetup
 
         if (self::enabled($features, 'design_system')) {
             $router->add_route('/__components', [DesignSystemController::class, 'render_page']);
+        }
+
+        if (self::enabled($features, 'example_cpt')) {
+            (new ExampleCptServiceProvider($features['example_cpt'] ?? []))->register();
         }
     }
 
