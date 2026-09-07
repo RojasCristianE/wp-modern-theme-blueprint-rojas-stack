@@ -1,0 +1,32 @@
+{#
+  Alerta semántica (success | error | warning | info).
+
+  Uso simple (include):
+    {% include 'components/alert.twig' with { variant: 'success', title: '...', message: '...' } %}
+
+  Uso avanzado (embed) para contenido rico:
+    {% embed 'components/alert.twig' with { variant: 'success', title: '...' } %}
+        {% block content %}...HTML libre...{% endblock %}
+    {% endembed %}
+#}
+{% set variants = {
+    'success': { box: 'bg-emerald-50 border-emerald-200', title: 'text-emerald-900', text: 'text-emerald-700', icon: 'bg-emerald-500 text-white' },
+    'error': { box: 'bg-red-50 border-red-200', title: 'text-red-900', text: 'text-red-700', icon: 'bg-red-500 text-white' },
+    'warning': { box: 'bg-amber-50 border-amber-200', title: 'text-amber-900', text: 'text-amber-700', icon: 'bg-amber-500 text-white' },
+    'info': { box: 'bg-brand-50 border-brand-200', title: 'text-brand-900', text: 'text-brand-700', icon: 'bg-brand-600 text-white' },
+} %}
+{% set current = variants[variant ?? 'info'] ?? variants.info %}
+
+<div class="p-6 border rounded-2xl text-center shadow-sm {{ current.box }}">
+    <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 {{ current.icon }}">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+    </div>
+
+    {% if title %}
+        <h3 class="font-bold text-lg mb-1 {{ current.title }}">{{ title }}</h3>
+    {% endif %}
+
+    {% block content %}
+        <p class="text-sm {{ current.text }}">{{ message }}</p>
+    {% endblock %}
+</div>

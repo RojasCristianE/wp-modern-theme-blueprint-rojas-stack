@@ -82,19 +82,23 @@ it('re-renderiza el formulario con errores cuando la validación falla', functio
         ->and($rendered[1]['old'])->toBe($_POST);
 });
 
-it('envía el correo y muestra el mensaje de éxito cuando la validación pasa', function () {
+it('envía el correo y renderiza el fragmento de éxito cuando la validación pasa', function () {
     when('__')->returnArg();
     when('get_option')->justReturn('admin@site.test');
     when('get_bloginfo')->justReturn('http://site.test');
 
     $mail = null;
+    $rendered = null;
+
+    \Patchwork\redefine('Timber\Timber::context', fn (): array => ['site' => (object) ['url' => 'http://site.test']]);
+    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
+        $rendered = [$template, $context];
+    });
 
     Functions\expect('wp_mail')->once()->andReturnUsing(function (string $to, string $subject, string $body) use (&$mail) {
         $mail = [$to, $subject, $body];
     });
     Functions\expect('wp_die')->once();
-
-    $this->expectOutputRegex('/Mensaje Enviado/');
 
     $_POST = [
         'name'    => 'Cristian Rojas',
@@ -107,7 +111,8 @@ it('envía el correo y muestra el mensaje de éxito cuando la validación pasa',
     expect($mail[0])->toBe('admin@site.test')
         ->and($mail[1])->toContain('Cristian Rojas')
         ->and($mail[2])->toContain('cristian@rojas.test')
-        ->and($mail[2])->toContain('Hola, este mensaje');
+        ->and($mail[2])->toContain('Hola, este mensaje')
+        ->and($rendered[0])->toBe('partials/contact-success.twig');
 });
 
 it('usa el destinatario configurado en features.php si no es admin_email', function () {

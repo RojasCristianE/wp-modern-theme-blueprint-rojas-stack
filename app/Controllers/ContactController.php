@@ -94,15 +94,8 @@ class ContactController
 
         wp_mail($to, $subject, $body);
 
-        // 3. Devolver mensaje de éxito
-        echo '<div class="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-center shadow-sm">
-                <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <h3 class="text-emerald-900 font-bold text-lg mb-1">¡Mensaje Enviado!</h3>
-                <p class="text-emerald-700 text-sm">Tu mensaje ha sido capturado por Mailpit con éxito.</p>
-                <button hx-get="' . get_bloginfo('url') . '/wp-admin/admin-ajax.php?action=get_contact_form" hx-target="#contact-form-wrapper" class="mt-4 text-xs font-bold text-emerald-600 hover:underline underline-offset-4">Enviar otro mensaje</button>
-              </div>';
+        // 3. Devolver fragmento de éxito (usa el componente alert vía HTMX)
+        Timber::render('partials/contact-success.twig', Timber::context());
         
         wp_die();
     }

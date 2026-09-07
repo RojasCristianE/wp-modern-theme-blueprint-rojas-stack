@@ -4,6 +4,7 @@ namespace RojasStack\Setup;
 
 use RojasStack\Controllers\BlogController;
 use RojasStack\Controllers\ContactController;
+use RojasStack\Controllers\DesignSystemController;
 use RojasStack\Fields\PageFields;
 use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
@@ -53,6 +54,10 @@ class ThemeSetup
 
         if (self::enabled($features, 'seo')) {
             (new SeoServiceProvider($features['seo'] ?? []))->register();
+        }
+
+        if (self::enabled($features, 'design_system')) {
+            $router->add_route('/__components', [DesignSystemController::class, 'render_page']);
         }
     }
 

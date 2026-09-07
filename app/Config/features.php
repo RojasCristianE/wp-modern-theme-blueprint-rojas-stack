@@ -48,7 +48,8 @@ return [
         'organization_name' => null,
     ],
 
-    // Spec pasos 4 y 10: ruta /__components pendiente de implementación.
+    // Ruta /__components con el catálogo de componentes (spec §8.3).
+    // En producción queda deshabilitada salvo override manual.
     'design_system' => [
         'enabled' => ($_ENV['WP_ENV'] ?? '') === 'development',
     ],

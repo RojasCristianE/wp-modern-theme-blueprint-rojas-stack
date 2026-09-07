@@ -1,0 +1,26 @@
+{#
+  Botón base del Rojas Stack (spec §8.3).
+
+  Parámetros:
+  - label:    Texto del botón (usar embed con block content para contenido rico).
+  - variant:  'primary' | 'secondary' | 'ghost'. Default: 'primary'.
+  - href:     Si se define renderiza <a>; si no, <button>.
+  - type:     Tipo del <button>. Default: 'button'.
+  - full:     true → ancho completo (para formularios).
+  - disabled: true → opacidad + pointer-events none (+ atributo disabled).
+  - classes:  Clases extra para personalización puntual.
+#}
+{% set variant_classes = {
+    'primary': 'text-white bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-200',
+    'secondary': 'text-slate-900 bg-white border border-slate-200 hover:bg-slate-100 shadow-sm',
+    'ghost': 'text-slate-600 hover:text-brand-600 hover:bg-brand-50',
+} %}
+{% set base_classes = 'inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all active:scale-95 outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2' %}
+{% set size_classes = full ? 'w-full px-8 py-4 text-base' : 'px-5 py-2.5 text-sm' %}
+{% set all_classes = base_classes ~ ' ' ~ size_classes ~ ' ' ~ (variant_classes[variant ?? 'primary'] ?? variant_classes.primary) ~ ' ' ~ (disabled ? 'opacity-50 pointer-events-none' : '') ~ ' ' ~ (classes ?? '') %}
+
+{% if href %}
+    <a href="{{ href }}" class="{{ all_classes }}">{{ label }}</a>
+{% else %}
+    <button type="{{ type ?? 'button' }}" class="{{ all_classes }}" {{ disabled ? 'disabled' }}>{{ label }}</button>
+{% endif %}

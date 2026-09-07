@@ -1,0 +1,35 @@
+import { readFileSync } from 'node:fs';
+import { expect, test } from '@playwright/test';
+
+/*
+ * Smoke test del catálogo de componentes (/__components).
+ * Solo corre cuando el módulo design_system está activo (WP_ENV=development).
+ */
+
+const envFile = readFileSync(new URL('../.env', import.meta.url), 'utf8');
+const wpEnv = envFile.match(/^WP_ENV=(.*)$/m)?.[1]?.trim();
+
+test.skip(wpEnv !== 'development', 'design_system requiere WP_ENV=development');
+
+test('el catálogo de componentes renderiza todas las secciones', async ({
+  page,
+}) => {
+  await page.goto('/__components');
+
+  await expect(
+    page.getByRole('heading', { level: 1, name: 'Design System' }),
+  ).toBeVisible();
+
+  for (const section of ['Botones', 'Inputs', 'Alertas', 'Cards']) {
+    await expect(page.getByRole('heading', { name: section })).toBeVisible();
+  }
+
+  // Variantes del botón primary y un estado deshabilitado
+  await expect(page.getByRole('button', { name: 'Primario' })).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Deshabilitado' }),
+  ).toBeDisabled();
+
+  // Un input con estado de error
+  await expect(page.locator('#demo_error')).toHaveValue('no-valido');
+});
