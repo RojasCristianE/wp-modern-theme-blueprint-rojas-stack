@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "biome check .",
     "fix": "biome check --apply .",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "prepare": "npx skilld prepare || true"
   },
   "devDependencies": {
     "@biomejs/biome": "latest",
