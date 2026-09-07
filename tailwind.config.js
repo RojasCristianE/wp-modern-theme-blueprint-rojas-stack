@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./*.php",
-    "./app/**/*.php",
-    "./resources/views/**/*.twig",
-    "./resources/scripts/**/*.js",
-    "./node_modules/flowbite/**/*.js"
+    './*.php',
+    './app/**/*.php',
+    './resources/views/**/*.twig',
+    './resources/scripts/**/*.js',
+    './node_modules/flowbite/**/*.js',
   ],
   theme: {
     extend: {
@@ -29,6 +29,6 @@ export default {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
   ],
-}
+};

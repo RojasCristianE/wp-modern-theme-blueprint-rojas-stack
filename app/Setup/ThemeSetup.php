@@ -87,6 +87,13 @@ class ThemeSetup
         ]);
     }
 
+    /**
+     * Inyecta las opciones globales del tema (Carbon Fields) en el contexto de Timber.
+     *
+     * @param array<string, mixed> $context
+     *
+     * @return array<string, mixed>
+     */
     public function add_to_context(array $context): array
     {
         // Inyectar opciones globales del tema (Carbon Fields)

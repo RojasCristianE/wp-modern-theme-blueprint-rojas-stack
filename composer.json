@@ -22,10 +22,11 @@
         "resend/resend-php": "*"
     },
     "require-dev": {
-        "phpstan/phpstan": "*",
-        "spatie/ignition": "*",
         "deployer/deployer": "*",
-        "lucatume/wp-browser": "*"
+        "lucatume/wp-browser": "*",
+        "php-stubs/wordpress-stubs": "^7.1",
+        "phpstan/phpstan": "*",
+        "spatie/ignition": "*"
     },
     "autoload": {
         "psr-4": {
@@ -34,6 +35,10 @@
         "files": [
             "app/helpers.php"
         ]
+    },
+    "scripts": {
+        "analyze": "phpstan analyse --no-progress",
+        "lint": "phpstan analyse --no-progress"
     },
     "config": {
         "allow-plugins": {

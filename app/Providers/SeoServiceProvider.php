@@ -40,7 +40,7 @@ class SeoServiceProvider
         $logo_url     = carbon_get_theme_option('rs_logo');
         $social_links = carbon_get_theme_option('rs_social_links') ?: [];
         
-        $social_urls = array_map(fn($item) => $social_links['url'] ?? '', $social_links);
+        $social_urls = array_map(fn($item) => $item['url'] ?? '', $social_links);
 
         $schema = Schema::organization()
             ->name($company_name)
@@ -59,12 +59,15 @@ class SeoServiceProvider
         $post = Timber::get_post();
         if (!$post) return;
 
+        $author = $post->author();
+        $thumb  = $post->thumbnail();
+
         $schema = Schema::article()
-            ->headline($post->title)
-            ->datePublished($post->date('c'))
-            ->dateModified($post->modified_date('c'))
-            ->author(Schema::person()->name($post->author->name()))
-            ->image($post->thumbnail ? $post->thumbnail->src : '');
+            ->headline($post->title())
+            ->datePublished(new \DateTimeImmutable($post->date('c')))
+            ->dateModified(new \DateTimeImmutable($post->modified_date('c')))
+            ->author(Schema::person()->name($author ? $author->name() : ''))
+            ->image($thumb instanceof \Timber\Image ? $thumb->src() : '');
 
         echo $schema->toScript();
     }

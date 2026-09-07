@@ -1,0 +1,12 @@
+parameters:
+	# Subir progresivamente según madure el starter (ver rojas-starter-spec.md §9.1)
+	level: 6
+	paths:
+		- app
+	# Stubs: WordPress core + funciones globales de Carbon Fields
+	scanFiles:
+		- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+		- vendor/htmlburger/carbon-fields/core/functions.php
+	# Cache dentro del proyecto: el overlay de Docker (/tmp) vive en la
+	# partición raíz del host y puede quedarse sin espacio
+	tmpDir: .cache/phpstan

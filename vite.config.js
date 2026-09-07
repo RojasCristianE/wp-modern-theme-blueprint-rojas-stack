@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import liveReload from 'vite-plugin-live-reload';
-import path from 'path';
+import path from 'node:path';
 
 export default defineConfig({
   plugins: [
@@ -9,7 +9,7 @@ export default defineConfig({
       path.resolve(__dirname, './resources/views/**/*.twig'),
     ]),
   ],
-  
+
   // Configuración de la construcción
   build: {
     outDir: 'dist',

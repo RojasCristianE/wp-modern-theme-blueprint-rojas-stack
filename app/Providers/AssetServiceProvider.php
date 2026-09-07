@@ -27,7 +27,7 @@ class AssetServiceProvider
      */
     public function enqueue_assets(): void
     {
-        $is_dev = $this->is_dev();
+        $is_dev = self::is_dev();
         
         if ($is_dev) {
             // En desarrollo, inyectamos el cliente de Vite directamente
@@ -39,7 +39,7 @@ class AssetServiceProvider
             wp_script_add_data('rojas-main', 'type', 'module');
         } else {
             // En producción, leemos el manifiesto
-            $manifest = $this->get_manifest();
+            $manifest = self::get_manifest();
             
             // Cargamos el CSS principal explícitamente si existe en el manifiesto
             if (isset($manifest['resources/styles/main.css'])) {
@@ -64,7 +64,7 @@ class AssetServiceProvider
     /**
      * Detecta si estamos en entorno de desarrollo con Vite corriendo.
      */
-    private function is_dev(): bool
+    private static function is_dev(): bool
     {
         // En DDEV, el archivo 'hot' suele estar en la raíz del tema si vite dev está activo
         return file_exists(get_template_directory() . '/hot');
@@ -72,8 +72,10 @@ class AssetServiceProvider
 
     /**
      * Lee el manifest.json.
+     *
+     * @return array<string, mixed> Mapa 'ruta del asset' => metadatos (file, css, src, ...)
      */
-    private function get_manifest(): array
+    private static function get_manifest(): array
     {
         $manifest_path = get_template_directory() . '/' . self::DIST_DIR . '/.vite/manifest.json';
         
@@ -82,5 +84,28 @@ class AssetServiceProvider
         }
 
         return json_decode(file_get_contents($manifest_path), true) ?: [];
+    }
+
+    /**
+     * Resuelve la URL pública de un asset compilado por Vite.
+     *
+     * En desarrollo apunta al servidor de Vite; en producción resuelve la
+     * ruta desde dist/.vite/manifest.json.
+     *
+     * @param string $path Ruta relativa al asset en resources/
+     */
+    public static function get_asset_url(string $path): string
+    {
+        if (self::is_dev()) {
+            return self::VITE_SERVER . '/' . $path;
+        }
+
+        $manifest = self::get_manifest();
+
+        if (!isset($manifest[$path]['file'])) {
+            return '';
+        }
+
+        return get_template_directory_uri() . '/' . self::DIST_DIR . '/' . $manifest[$path]['file'];
     }
 }

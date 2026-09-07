@@ -10,6 +10,9 @@ namespace RojasStack\Providers;
  */
 class MenuServiceProvider
 {
+    /**
+     * @return array<int, array<string, mixed>> Items del menú ('title', 'url')
+     */
     public function get_primary_menu_definition(): array
     {
         return [
@@ -26,6 +29,11 @@ class MenuServiceProvider
         add_filter('timber/context', [$this, 'inject_menu_to_context'], 20);
     }
 
+    /**
+     * @param array<string, mixed> $context Contexto base de Timber
+     *
+     * @return array<string, mixed>
+     */
     public function inject_menu_to_context(array $context): array
     {
         // Generamos un objeto de menú "falso" pero estructurado como Timber espera

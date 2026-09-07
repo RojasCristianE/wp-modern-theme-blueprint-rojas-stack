@@ -15,6 +15,8 @@ class RouteServiceProvider
 {
     /**
      * Mapa de rutas: 'slug' => ['ControllerClass', 'method']
+     *
+     * @var array<string, array{0: class-string, 1: string}> $routes
      */
     private array $routes = [
         '/contacto' => [ContactController::class, 'render_page'],

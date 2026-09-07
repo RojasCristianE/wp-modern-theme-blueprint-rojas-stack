@@ -18,15 +18,15 @@
 }
 
 body {
-    @apply antialiased;
+  @apply antialiased;
 }
 
 .htmx-indicator {
-    display: none;
+  display: none;
 }
 .htmx-request .htmx-indicator {
-    display: block;
+  display: block;
 }
 .htmx-request.htmx-indicator {
-    display: block;
+  display: block;
 }

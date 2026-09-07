@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "biome check .",
-    "fix": "biome check --apply .",
+    "fix": "biome check --write .",
     "test:e2e": "playwright test",
     "prepare": "npx skilld prepare || true"
   },
