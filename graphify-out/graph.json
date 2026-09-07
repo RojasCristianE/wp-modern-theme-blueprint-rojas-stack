@@ -13446,6 +13446,17 @@
       "source_location": "L1"
     },
     {
+      "id": "e2e_dark_mode_spec",
+      "label": "dark-mode.spec.js",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "@playwright/test",
+      "file_type": "code",
+      "norm_label": "dark-mode.spec.js",
+      "source_file": "e2e/dark-mode.spec.js",
+      "source_location": "L1"
+    },
+    {
       "id": "e2e_design_system_spec",
       "label": "design-system.spec.js",
       "_origin": "ast",
@@ -29926,7 +29937,7 @@
       "file_type": "code",
       "norm_label": "source",
       "source_file": "biome.json",
-      "source_location": "L22"
+      "source_location": "L31"
     },
     {
       "id": "biome_assist",
@@ -29937,7 +29948,7 @@
       "file_type": "code",
       "norm_label": "assist",
       "source_file": "biome.json",
-      "source_location": "L20"
+      "source_location": "L29"
     },
     {
       "id": "biome_assist_actions",
@@ -29948,7 +29959,7 @@
       "file_type": "code",
       "norm_label": "actions",
       "source_file": "biome.json",
-      "source_location": "L21"
+      "source_location": "L30"
     },
     {
       "id": "biome_css",
@@ -29959,7 +29970,7 @@
       "file_type": "code",
       "norm_label": "css",
       "source_file": "biome.json",
-      "source_location": "L15"
+      "source_location": "L24"
     },
     {
       "id": "biome_css_parser",
@@ -29970,7 +29981,7 @@
       "file_type": "code",
       "norm_label": "parser",
       "source_file": "biome.json",
-      "source_location": "L16"
+      "source_location": "L25"
     },
     {
       "id": "biome_files",
@@ -30003,7 +30014,7 @@
       "file_type": "code",
       "norm_label": "formatter",
       "source_file": "biome.json",
-      "source_location": "L6"
+      "source_location": "L15"
     },
     {
       "id": "biome_formatter_indentstyle",
@@ -30014,7 +30025,7 @@
       "file_type": "code",
       "norm_label": "indentstyle",
       "source_file": "biome.json",
-      "source_location": "L7"
+      "source_location": "L16"
     },
     {
       "id": "biome_formatter_indentwidth",
@@ -30025,7 +30036,7 @@
       "file_type": "code",
       "norm_label": "indentwidth",
       "source_file": "biome.json",
-      "source_location": "L8"
+      "source_location": "L17"
     },
     {
       "id": "biome_formatter_quotestyle",
@@ -30036,7 +30047,7 @@
       "file_type": "code",
       "norm_label": "quotestyle",
       "source_file": "biome.json",
-      "source_location": "L12"
+      "source_location": "L21"
     },
     {
       "id": "biome_javascript",
@@ -30047,7 +30058,7 @@
       "file_type": "code",
       "norm_label": "javascript",
       "source_file": "biome.json",
-      "source_location": "L10"
+      "source_location": "L19"
     },
     {
       "id": "biome_javascript_formatter",
@@ -30058,7 +30069,7 @@
       "file_type": "code",
       "norm_label": "formatter",
       "source_file": "biome.json",
-      "source_location": "L11"
+      "source_location": "L20"
     },
     {
       "id": "biome_parser_tailwinddirectives",
@@ -30069,7 +30080,7 @@
       "file_type": "code",
       "norm_label": "tailwinddirectives",
       "source_file": "biome.json",
-      "source_location": "L17"
+      "source_location": "L26"
     },
     {
       "id": "biome_schema",
@@ -30091,7 +30102,7 @@
       "file_type": "code",
       "norm_label": "organizeimports",
       "source_file": "biome.json",
-      "source_location": "L23"
+      "source_location": "L32"
     },
     {
       "id": "agents_skills_vite_references_core_features_built_in_constants",
@@ -35095,6 +35106,18 @@
       "context": "import",
       "source_file": "tests/Unit/DesignSystemControllerTest.php",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "e2e_dark_mode_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "e2e/dark-mode.spec.js",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -61870,24 +61893,24 @@
     },
     {
       "source": "biome",
-      "target": "biome_javascript",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "biome.json",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "biome",
-      "target": "biome_css",
+      "target": "biome_formatter",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
       "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "biome",
+      "target": "biome_javascript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "biome.json",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -61903,13 +61926,24 @@
     },
     {
       "source": "biome",
+      "target": "biome_css",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "biome.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "biome",
       "target": "biome_assist",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L20",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -61924,17 +61958,6 @@
       "weight": 1.0
     },
     {
-      "source": "biome",
-      "target": "biome_formatter",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "biome.json",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
       "source": "biome_actions_source",
       "target": "biome_source_organizeimports",
       "relation": "contains",
@@ -61942,7 +61965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L23",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -61953,7 +61976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L21",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -61964,7 +61987,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L22",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -61975,7 +61998,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L16",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -61986,7 +62009,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L17",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -62008,7 +62031,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L7",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -62019,7 +62042,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L8",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -62030,7 +62053,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L11",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -62041,7 +62064,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L12",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -66150,5 +66173,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "9713f41c59846099c202ba02e6726cddca151fbb"
+  "built_at_commit": "3b73d9f35c5ae430fbe9c62760af81b18e4a9c30"
 }
