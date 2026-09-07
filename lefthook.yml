@@ -12,3 +12,8 @@ pre-commit:
     phpstan:
       glob: "*.php"
       run: ddev exec composer analyze
+
+    # Suite unitaria (Pest, sin WordPress real)
+    pest:
+      glob: "*.php"
+      run: ddev exec composer test

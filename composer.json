@@ -22,8 +22,10 @@
         "resend/resend-php": "*"
     },
     "require-dev": {
+        "brain/monkey": "^2.7",
         "deployer/deployer": "*",
         "lucatume/wp-browser": "*",
+        "pestphp/pest": "^3.8",
         "php-stubs/wordpress-stubs": "^7.1",
         "phpstan/phpstan": "*",
         "spatie/ignition": "*"
@@ -38,11 +40,13 @@
     },
     "scripts": {
         "analyze": "phpstan analyse --no-progress",
-        "lint": "phpstan analyse --no-progress"
+        "lint": "phpstan analyse --no-progress",
+        "test": "pest"
     },
     "config": {
         "allow-plugins": {
-            "composer/installers": true
+            "composer/installers": true,
+            "pestphp/pest-plugin": true
         },
         "optimize-autoloader": true,
         "sort-packages": true

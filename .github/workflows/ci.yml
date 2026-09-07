@@ -45,3 +45,6 @@ jobs:
 
       - name: PHPStan (level 6)
         run: composer analyze
+
+      - name: Unit tests (Pest)
+        run: composer test

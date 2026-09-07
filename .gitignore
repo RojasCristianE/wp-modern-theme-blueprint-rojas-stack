@@ -56,6 +56,10 @@ playwright/.cache/
 .continue/skills/
 .gemini/skills/
 
+# Cache de composer redirigida al proyecto (el overlay de Docker puede
+# quedarse sin espacio en /tmp)
+.composer-cache/
+
 # graphify: cache AST derivada (regenerable); el grafo (graph.json),
 # GRAPH_REPORT.md y graph.html sí se trackean
 graphify-out/cache/
