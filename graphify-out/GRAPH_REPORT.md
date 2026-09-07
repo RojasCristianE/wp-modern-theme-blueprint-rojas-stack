@@ -1,23 +1,22 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-07)
 
 ## Corpus Check
-- 207 files · ~137,235 words
+- 207 files · ~137,553 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2839 nodes · 2935 edges · 216 communities (175 shown, 25 thin omitted)
+- 2840 nodes · 2936 edges · 211 communities (174 shown, 25 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `da1ee1af`
+- Built from commit: `e2db0930`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - composer.json
 - devDependencies
-- Page Object Model (POM)
 - Especificación del Rojas Starter Theme
 - Node.js Best Practices
 - WP Modern Theme Blueprint DDEV Project
@@ -66,7 +65,7 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
-- Complex Authentication Flow Patterns
+- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -240,7 +239,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (216 total, 25 thin omitted)
+## Communities (211 total, 25 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -250,13 +249,9 @@ Nodes (41): composer/installers, pestphp/pest-plugin, authors, autoload, files, 
 Cohesion: 0.12
 Nodes (16): devDependencies, alpinejs, autoprefixer, @biomejs/biome, flowbite, htmx.org, @kucrut/vite-for-wp, lefthook (+8 more)
 
-### Community 2 - "Page Object Model (POM)"
-Cohesion: 0.11
-Nodes (17): Basic Structure, Best Practices, Component Objects, Composition Patterns, Directory Structure, Do, Don't, Factory Functions (+9 more)
-
 ### Community 3 - "Especificación del Rojas Starter Theme"
 Cohesion: 0.05
-Nodes (42): 10. Plan de documentación, 11.1 Distribución, 11.2 Licencia, 11. Distribución y licenciamiento, 12. Ruta de migración desde el blueprint actual, 13. Preguntas abiertas y supuestos, 14. Criterios de éxito, 1.1 Propósito (+34 more)
+Nodes (43): 10. Plan de documentación, 11.1 Distribución, 11.2 Licencia, 11. Distribución y licenciamiento, 12.1 Desviaciones de la implementación respecto a este plan, 12. Ruta de migración desde el blueprint actual, 13. Preguntas abiertas y supuestos, 14. Criterios de éxito (+35 more)
 
 ### Community 4 - "Node.js Best Practices"
 Cohesion: 0.05
@@ -442,9 +437,9 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
 
-### Community 58 - "Complex Authentication Flow Patterns"
-Cohesion: 0.10
-Nodes (21): Capturing Verification Tokens, Complete Reset Flow, Complex Authentication Flow Patterns, Detecting Expired Sessions, Email Verification Flows, Expired Token Handling, Fully Mocked Verification, Logout from All Devices (+13 more)
+### Community 58 - "playwright-best-practices/SKILL.md"
+Cohesion: 0.05
+Nodes (38): Capturing Verification Tokens, Complete Reset Flow, Complex Authentication Flow Patterns, Detecting Expired Sessions, Email Verification Flows, Expired Token Handling, Fully Mocked Verification, Logout from All Devices (+30 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -950,11 +945,11 @@ Nodes (6): Custom Queries, Eager Loading, Glob Import, Multiple Patterns, Named 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `assertions-waiting.md`?**
+- **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.021) - this node is a cross-community bridge._
-- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `test-suite-structure.md`?**
+- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `WebSocket & Real-Time Testing` connect `WebSocket & Real-Time Testing` to `fixtures-hooks.md`?**
+- **Why does `WebSocket & Real-Time Testing` connect `WebSocket & Real-Time Testing` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
   _1943 weakly-connected nodes found - possible documentation gaps or missing edges._
@@ -962,5 +957,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.047619047619047616 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
-- **Should `Page Object Model (POM)` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+- **Should `Especificación del Rojas Starter Theme` be split into smaller, more focused modules?**
+  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
