@@ -38,8 +38,34 @@ return [
 
     'forms' => [
         'enabled' => true,
-        // 'admin_email' = get_option('admin_email'); o un email explícito.
-        'contact_recipient' => 'admin_email',
+
+        // Cada entrada es una instancia del FormController genérico
+        // (spec paso 7): ruta virtual, templates, campos/reglas Rakit,
+        // destinatario y textos de éxito, todo por formulario.
+        'forms' => [
+            'contact' => [
+                'route' => '/contacto',
+                'title' => 'Contáctanos',
+                'page_template' => 'contact.twig',
+                'form_template' => 'partials/contact-form.twig',
+                'success_template' => 'partials/form-success.twig',
+                // 'admin_email' = get_option('admin_email'); o un email explícito.
+                'recipient' => 'admin_email',
+                // Token ':name' se reemplaza por el valor del campo name.
+                'subject' => 'Nuevo mensaje de: :name',
+                'fields' => [
+                    'name' => 'required|min:3',
+                    'email' => 'required|email',
+                    'message' => 'required|min:10',
+                ],
+                'success' => [
+                    'title' => '¡Mensaje Enviado!',
+                    'message' => 'Tu mensaje ha sido capturado por Mailpit con éxito.',
+                    // Selector HTMX del wrapper que hx-swap reemplaza.
+                    'target' => '#contact-form-wrapper',
+                ],
+            ],
+        ],
     ],
 
     'seo' => [

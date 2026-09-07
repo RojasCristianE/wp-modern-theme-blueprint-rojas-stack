@@ -1,0 +1,15 @@
+{#
+  Fragmento de éxito genérico del FormController (spec paso 7).
+
+  Contexto (inyectado por FormController::handle_submit()):
+  - success.title:        Título de la alerta.
+  - success.message:      Mensaje de éxito.
+  - success.fragment_url: URL admin-ajax para recargar el formulario.
+  - success.target:       Selector HTMX que hx-swap reemplaza.
+#}
+{% embed 'components/alert.twig' with { variant: 'success', title: success.title } only %}
+    {% block content %}
+        <p class="text-sm text-emerald-700 dark:text-emerald-300">{{ success.message }}</p>
+        <button hx-get="{{ success.fragment_url }}" hx-target="{{ success.target }}" class="mt-4 text-xs font-bold text-emerald-600 dark:text-emerald-300 hover:underline underline-offset-4">Enviar otro mensaje</button>
+    {% endblock %}
+{% endembed %}

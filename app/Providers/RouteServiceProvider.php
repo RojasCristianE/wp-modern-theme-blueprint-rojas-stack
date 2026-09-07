@@ -2,6 +2,8 @@
 
 namespace RojasStack\Providers;
 
+use Closure;
+
 /**
  * RouteServiceProvider
  * 
@@ -13,18 +15,20 @@ namespace RojasStack\Providers;
 class RouteServiceProvider
 {
     /**
-     * Mapa de rutas: 'slug' => ['ControllerClass', 'method']
+     * Mapa de rutas: 'slug' => callback
      *
-     * @var array<string, array{0: class-string, 1: string}> $routes
+     * @var array<string, callable> $routes
      */
     private array $routes = [];
 
     /**
      * Registra una ruta virtual.
      *
-     * @param array{0: class-string, 1: string} $callback [ControllerClass, method]
+     * @param array{0: class-string, 1: string}|callable $callback
+     *        [ControllerClass, method] o un callable sobre una instancia
+     *        ya configurada (p.ej. FormController por formulario).
      */
-    public function add_route(string $path, array $callback): void
+    public function add_route(string $path, array|callable $callback): void
     {
         $this->routes[$path] = $callback;
     }
@@ -47,14 +51,18 @@ class RouteServiceProvider
 
         foreach ($this->routes as $path => $callback) {
             if ($current_path === $path) {
-                $controllerClass = $callback[0];
-                $method = $callback[1];
-
-                if (class_exists($controllerClass)) {
-                    $controller = new $controllerClass();
-                    $controller->$method();
+                // Callable sobre instancia ya configurada (FormController)
+                if ($callback instanceof Closure) {
+                    $callback();
                     exit; // Detenemos WordPress después de renderizar nuestra ruta virtual
                 }
+
+                // Par [ControllerClass, method] — instancia con estado o clase pura
+                $controller = is_object($callback[0]) ? $callback[0] : new $callback[0]();
+                $method = $callback[1];
+
+                $controller->$method();
+                exit; // Detenemos WordPress después de renderizar nuestra ruta virtual
             }
         }
     }

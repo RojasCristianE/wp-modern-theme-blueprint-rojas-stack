@@ -3,35 +3,58 @@
 declare(strict_types=1);
 
 use Brain\Monkey\Functions;
-use RojasStack\Controllers\ContactController;
+use RojasStack\Controllers\FormController;
 use function Brain\Monkey\Functions\when;
+
+/*
+ * Tests del motor de formularios genérico (spec paso 7).
+ * La instancia 'contact' de features.php define el contrato.
+ */
+
+const FORM_CONFIG = [
+    'route'            => '/contacto',
+    'title'            => 'Contáctanos',
+    'page_template'    => 'contact.twig',
+    'form_template'    => 'partials/contact-form.twig',
+    'success_template' => 'partials/form-success.twig',
+    'recipient'        => 'admin_email',
+    'subject'          => 'Nuevo mensaje de: :name',
+    'fields'           => [
+        'name'    => 'required|min:3',
+        'email'   => 'required|email',
+        'message' => 'required|min:10',
+    ],
+    'success'          => [
+        'title'   => '¡Mensaje Enviado!',
+        'message' => 'Tu mensaje ha sido capturado por Mailpit con éxito.',
+        'target'  => '#contact-form-wrapper',
+    ],
+];
 
 afterEach(function () {
     $_POST = [];
 });
 
-it('registra los hooks AJAX para usuarios autenticados y anónimos', function () {
+it('deriva los hooks AJAX de la clave del formulario', function () {
     $hooks = [];
 
     when('add_action')->alias(function (string $hook, callable|array $callback) use (&$hooks) {
         $hooks[$hook] = $callback;
     });
 
-    (new ContactController())->register();
+    (new FormController('contact', FORM_CONFIG))->register();
 
     expect($hooks)->toHaveKeys([
         'wp_ajax_submit_contact',
         'wp_ajax_nopriv_submit_contact',
-        'wp_ajax_get_contact_form',
-        'wp_ajax_nopriv_get_contact_form',
+        'wp_ajax_get_form_contact',
+        'wp_ajax_nopriv_get_form_contact',
     ])
         ->and($hooks['wp_ajax_submit_contact'][1])->toBe('handle_submit')
-        ->and($hooks['wp_ajax_nopriv_submit_contact'][1])->toBe('handle_submit')
-        ->and($hooks['wp_ajax_get_contact_form'][1])->toBe('render_form_fragment')
-        ->and($hooks['wp_ajax_nopriv_get_contact_form'][1])->toBe('render_form_fragment');
+        ->and($hooks['wp_ajax_get_form_contact'][1])->toBe('render_fragment');
 });
 
-it('renderiza contact.twig con título en el contexto', function () {
+it('renderiza la página configurada con el título del formulario', function () {
     when('__')->returnArg();
 
     $captured = null;
@@ -41,7 +64,7 @@ it('renderiza contact.twig con título en el contexto', function () {
         $captured = [$template, $context];
     });
 
-    (new ContactController())->render_page();
+    (new FormController('contact', FORM_CONFIG))->render_page();
 
     expect($captured[0])->toBe('contact.twig')
         ->and($captured[1]['title'])->toBe('Contáctanos');
@@ -71,7 +94,7 @@ it('re-renderiza el formulario con errores cuando la validación falla', functio
     ];
 
     try {
-        (new ContactController())->handle_submit();
+        (new FormController('contact', FORM_CONFIG))->handle_submit();
         $this->fail('wp_die() debería haber terminado la ejecución');
     } catch (RuntimeException $e) {
         expect($e->getMessage())->toBe('WP_DIE');
@@ -82,7 +105,7 @@ it('re-renderiza el formulario con errores cuando la validación falla', functio
         ->and($rendered[1]['old'])->toBe($_POST);
 });
 
-it('envía el correo y renderiza el fragmento de éxito cuando la validación pasa', function () {
+it('envía el correo con todos los campos y renderiza el fragmento de éxito', function () {
     when('__')->returnArg();
     when('get_option')->justReturn('admin@site.test');
     when('get_bloginfo')->justReturn('http://site.test');
@@ -90,7 +113,7 @@ it('envía el correo y renderiza el fragmento de éxito cuando la validación pa
     $mail = null;
     $rendered = null;
 
-    \Patchwork\redefine('Timber\Timber::context', fn (): array => ['site' => (object) ['url' => 'http://site.test']]);
+    \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
         $rendered = [$template, $context];
     });
@@ -106,23 +129,32 @@ it('envía el correo y renderiza el fragmento de éxito cuando la validación pa
         'message' => 'Hola, este mensaje tiene más de diez caracteres.',
     ];
 
-    (new ContactController())->handle_submit();
+    (new FormController('contact', FORM_CONFIG))->handle_submit();
 
     expect($mail[0])->toBe('admin@site.test')
-        ->and($mail[1])->toContain('Cristian Rojas')
-        ->and($mail[2])->toContain('cristian@rojas.test')
-        ->and($mail[2])->toContain('Hola, este mensaje')
-        ->and($rendered[0])->toBe('partials/contact-success.twig');
+        ->and($mail[1])->toBe('Nuevo mensaje de: Cristian Rojas')
+        ->and($mail[2])->toContain('Name: Cristian Rojas')
+        ->and($mail[2])->toContain('Email: cristian@rojas.test')
+        ->and($mail[2])->toContain('Message: Hola, este mensaje')
+        ->and($rendered[0])->toBe('partials/form-success.twig')
+        ->and($rendered[1]['success']['fragment_url'])->toContain('action=get_form_contact')
+        ->and($rendered[1]['success']['target'])->toBe('#contact-form-wrapper');
 });
 
-it('usa el destinatario configurado en features.php si no es admin_email', function () {
+it('usa el destinatario configurado si no es admin_email', function () {
     when('__')->returnArg();
     when('get_option')->justReturn('admin@site.test');
     when('get_bloginfo')->justReturn('http://site.test');
 
     $to = null;
+    $rendered = null;
 
-    Functions\expect('wp_mail')->once()->andReturnUsing(function (string $recipient, string $subject, string $body) use (&$to) {
+    \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
+    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
+        $rendered = $template;
+    });
+
+    Functions\expect('wp_mail')->once()->andReturnUsing(function (string $recipient) use (&$to) {
         $to = $recipient;
     });
     Functions\expect('wp_die')->once();
@@ -133,7 +165,24 @@ it('usa el destinatario configurado en features.php si no es admin_email', funct
         'message' => 'Hola, este mensaje tiene más de diez caracteres.',
     ];
 
-    (new ContactController(['contact_recipient' => 'hola@rojas.test']))->handle_submit();
+    (new FormController('contact', array_merge(FORM_CONFIG, ['recipient' => 'hola@rojas.test'])))->handle_submit();
 
     expect($to)->toBe('hola@rojas.test');
+});
+
+it('un segundo formulario deriva sus propios hooks sin colisionar', function () {
+    $hooks = [];
+
+    when('add_action')->alias(function (string $hook, callable|array $callback) use (&$hooks) {
+        $hooks[$hook] = $callback;
+    });
+
+    (new FormController('newsletter', ['fields' => ['email' => 'required|email']]))->register();
+
+    expect($hooks)->toHaveKeys([
+        'wp_ajax_submit_newsletter',
+        'wp_ajax_nopriv_submit_newsletter',
+        'wp_ajax_get_form_newsletter',
+        'wp_ajax_nopriv_get_form_newsletter',
+    ]);
 });

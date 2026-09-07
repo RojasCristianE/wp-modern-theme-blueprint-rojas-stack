@@ -1,5 +1,5 @@
 <div id="contact-form-wrapper" class="w-full max-w-lg mx-auto bg-surface p-8 rounded-3xl border border-line shadow-xl">
-    <form hx-post="{{ site.url }}/wp-admin/admin-ajax.php"
+    <form hx-post="{{ site.url }}/wp-admin/admin-ajax.php?action=submit_contact"
           hx-target="#contact-form-wrapper"
           hx-swap="outerHTML"
           class="space-y-6">

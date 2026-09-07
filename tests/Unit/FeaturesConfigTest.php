@@ -23,7 +23,7 @@ it('expone los módulos del spec §5 con sus estados por defecto', function () {
         ->and($features['blog']['posts_per_page'])->toBe(12)
         ->and($features['pages']['enabled'])->toBeTrue()
         ->and($features['forms']['enabled'])->toBeTrue()
-        ->and($features['forms']['contact_recipient'])->toBe('admin_email')
+        ->and($features['forms']['forms']['contact']['recipient'])->toBe('admin_email')
         ->and($features['seo']['enabled'])->toBeTrue()
         ->and($features['seo']['organization_name'])->toBeNull()
         ->and($features['example_cpt']['enabled'])->toBeFalse()

@@ -3,8 +3,8 @@
 namespace RojasStack\Setup;
 
 use RojasStack\Controllers\BlogController;
-use RojasStack\Controllers\ContactController;
 use RojasStack\Controllers\DesignSystemController;
+use RojasStack\Controllers\FormController;
 use RojasStack\Fields\PageFields;
 use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
@@ -49,8 +49,16 @@ class ThemeSetup
         }
 
         if (self::enabled($features, 'forms')) {
-            $router->add_route('/contacto', [ContactController::class, 'render_page']);
-            (new ContactController($features['forms'] ?? []))->register();
+            // Cada formulario definido en features.php es una instancia
+            // del FormController genérico (spec paso 7).
+            foreach ($features['forms']['forms'] ?? [] as $key => $form_config) {
+                $form = new FormController((string) $key, is_array($form_config) ? $form_config : []);
+                $form->register();
+
+                if (isset($form_config['route'])) {
+                    $router->add_route((string) $form_config['route'], [$form, 'render_page']);
+                }
+            }
         }
 
         if (self::enabled($features, 'seo')) {
