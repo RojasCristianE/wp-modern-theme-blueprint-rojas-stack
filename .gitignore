@@ -4,6 +4,7 @@
 vendor/
 node_modules/
 .bun/
+package-lock.json
 
 # Build Assets
 dist/
@@ -16,7 +17,8 @@ wp-config.php
 wp-config-ddev.php
 .ddev/db_snapshots/
 .ddev/.importdb*
-.ddev/commands/web/bun # Si creáramos comandos personalizados
+# Comandos personalizados de DDEV (si se crean)
+.ddev/commands/web/bun
 
 # Environment & Secrets
 .env
@@ -45,3 +47,10 @@ test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
+
+# Agent skills: la fuente vive en .agents/ + skills-lock.json;
+# las copias derivadas se regeneran con `skilld prepare`
+.skilld
+.claude/skills/
+.continue/skills/
+.gemini/skills/
