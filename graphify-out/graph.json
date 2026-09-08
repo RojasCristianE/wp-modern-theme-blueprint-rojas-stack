@@ -46,26 +46,13 @@
       "source_location": "L13"
     },
     {
-      "id": "app_controllers_blogcontroller_blogcontroller",
-      "label": "BlogController",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": "blogcontroller",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L12"
-    },
-    {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller",
       "label": "DesignSystemController",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": "designsystemcontroller",
       "source_file": "app/Controllers/DesignSystemController.php",
@@ -130,7 +117,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "archivecontroller",
       "source_file": "app/Controllers/ArchiveController.php",
@@ -143,7 +130,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "searchcontroller",
       "source_file": "app/Controllers/SearchController.php",
@@ -174,6 +161,19 @@
       "norm_label": "examplecptserviceprovider",
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
       "source_location": "L16"
+    },
+    {
+      "id": "app_controllers_blogcontroller_blogcontroller",
+      "label": "BlogController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 220,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": "blogcontroller",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L12"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider",
@@ -454,48 +454,12 @@
       "source_location": "L15"
     },
     {
-      "id": "app_controllers_blogcontroller_blogcontroller_construct",
-      "label": ".__construct()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": ".__construct()",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L24"
-    },
-    {
-      "id": "app_controllers_blogcontroller_blogcontroller_register",
-      "label": ".register()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": ".register()",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L29"
-    },
-    {
-      "id": "app_controllers_blogcontroller_blogcontroller_render_page",
-      "label": ".render_page()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "BlogController",
-      "file_type": "code",
-      "norm_label": ".render_page()",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L40"
-    },
-    {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller_register",
       "label": ".register()",
       "_callable": true,
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/DesignSystemController.php",
@@ -507,7 +471,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/DesignSystemController.php",
@@ -679,7 +643,7 @@
       "file_type": "code",
       "norm_label": ".add_theme_supports()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L131"
+      "source_location": "L133"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_to_context",
@@ -691,7 +655,7 @@
       "file_type": "code",
       "norm_label": ".add_to_context()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L157"
+      "source_location": "L159"
     },
     {
       "id": "app_setup_themesetup_themesetup_construct",
@@ -715,7 +679,7 @@
       "file_type": "code",
       "norm_label": ".enabled()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L93"
+      "source_location": "L95"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_core_fields",
@@ -727,7 +691,7 @@
       "file_type": "code",
       "norm_label": ".register_core_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L103"
+      "source_location": "L105"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_hooks",
@@ -739,7 +703,7 @@
       "file_type": "code",
       "norm_label": ".register_hooks()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L119"
+      "source_location": "L121"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_menus",
@@ -751,7 +715,7 @@
       "file_type": "code",
       "norm_label": ".register_menus()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L142"
+      "source_location": "L144"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_pages_fields",
@@ -763,7 +727,7 @@
       "file_type": "code",
       "norm_label": ".register_pages_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L111"
+      "source_location": "L113"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
@@ -910,16 +874,28 @@
       "source_location": "L31"
     },
     {
+      "id": "app_controllers_archivecontroller_archivecontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "ArchiveController",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L27"
+    },
+    {
       "id": "app_controllers_archivecontroller_archivecontroller_register",
       "label": ".register()",
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L22"
+      "source_location": "L32"
     },
     {
       "id": "app_controllers_archivecontroller_archivecontroller_render_fragment",
@@ -927,11 +903,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": ".render_fragment()",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L37"
+      "source_location": "L47"
     },
     {
       "id": "app_controllers_searchcontroller_searchcontroller_construct",
@@ -939,7 +915,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Controllers/SearchController.php",
@@ -951,7 +927,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/SearchController.php",
@@ -963,7 +939,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": ".render_fragment()",
       "source_file": "app/Controllers/SearchController.php",
@@ -1040,6 +1016,42 @@
       "norm_label": "init()",
       "source_file": "resources/scripts/main.js",
       "source_location": "L20"
+    },
+    {
+      "id": "app_controllers_blogcontroller_blogcontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 220,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L24"
+    },
+    {
+      "id": "app_controllers_blogcontroller_blogcontroller_register",
+      "label": ".register()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 220,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": ".register()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L29"
+    },
+    {
+      "id": "app_controllers_blogcontroller_blogcontroller_render_page",
+      "label": ".render_page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 220,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": ".render_page()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L40"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_add_route",
@@ -7219,7 +7231,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd16 agentes de ia**",
       "source_file": "README.md",
-      "source_location": "L154"
+      "source_location": "L158"
     },
     {
       "id": "readme_caracter\u00edsticas",
@@ -7243,7 +7255,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos**",
       "source_file": "README.md",
-      "source_location": "L111"
+      "source_location": "L115"
     },
     {
       "id": "readme_componentes",
@@ -7255,7 +7267,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udfa8 componentes**",
       "source_file": "README.md",
-      "source_location": "L130"
+      "source_location": "L134"
     },
     {
       "id": "readme_configuraci\u00f3n_de_m\u00f3dulos",
@@ -7279,7 +7291,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udea2 despliegue (theme-only)**",
       "source_file": "README.md",
-      "source_location": "L144"
+      "source_location": "L148"
     },
     {
       "id": "readme_dise\u00f1ado_por_cristian_rojas_el_arquitecto",
@@ -7291,7 +7303,7 @@
       "node_kind": "heading",
       "norm_label": "**disenado por cristian rojas (el arquitecto)**",
       "source_file": "README.md",
-      "source_location": "L164"
+      "source_location": "L168"
     },
     {
       "id": "readme_estructura",
@@ -7327,7 +7339,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcdc licencia**",
       "source_file": "README.md",
-      "source_location": "L158"
+      "source_location": "L162"
     },
     {
       "id": "readme_modo_desarrollo_hmr",
@@ -8134,7 +8146,7 @@
       "label": "BlogController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": "blogcontroller.php",
       "source_file": "app/Controllers/BlogController.php",
@@ -8145,10 +8157,21 @@
       "label": "DesignSystemController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": "designsystemcontroller.php",
       "source_file": "app/Controllers/DesignSystemController.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_controllers_formcontroller",
+      "label": "FormController.php",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Timber\\Timber",
+      "file_type": "code",
+      "norm_label": "formcontroller.php",
+      "source_file": "app/Controllers/FormController.php",
       "source_location": "L1"
     },
     {
@@ -8156,29 +8179,29 @@
       "label": "SearchController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": "searchcontroller.php",
       "source_file": "app/Controllers/SearchController.php",
       "source_location": "L1"
     },
     {
-      "id": "tests_unit_blogcontrollertest",
-      "label": "BlogControllerTest.php",
+      "id": "rakit_validation_validator",
+      "label": "Rakit\\Validation\\Validator",
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
-      "norm_label": "blogcontrollertest.php",
-      "source_file": "tests/Unit/BlogControllerTest.php",
-      "source_location": "L1"
+      "norm_label": "rakit\\validation\\validator",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "tests_unit_designsystemcontrollertest",
       "label": "DesignSystemControllerTest.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": "designsystemcontrollertest.php",
       "source_file": "tests/Unit/DesignSystemControllerTest.php",
@@ -8189,7 +8212,7 @@
       "label": "Timber\\Timber",
       "_origin": "ast",
       "community": 142,
-      "community_name": "BlogController",
+      "community_name": "Timber\\Timber",
       "file_type": "code",
       "norm_label": "timber\\timber",
       "source_file": "",
@@ -9079,28 +9102,6 @@
       "norm_label": "serialization caution",
       "source_file": ".agents/skills/wp-wpcli-and-ops/references/search-replace.md",
       "source_location": "L34"
-    },
-    {
-      "id": "app_controllers_formcontroller",
-      "label": "FormController.php",
-      "_origin": "ast",
-      "community": 151,
-      "community_name": "FormController",
-      "file_type": "code",
-      "norm_label": "formcontroller.php",
-      "source_file": "app/Controllers/FormController.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "rakit_validation_validator",
-      "label": "Rakit\\Validation\\Validator",
-      "_origin": "ast",
-      "community": 151,
-      "community_name": "FormController",
-      "file_type": "code",
-      "norm_label": "rakit\\validation\\validator",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "agents_skills_wordpress_router_references_decision_tree",
@@ -13065,7 +13066,7 @@
       "label": "ArchiveController.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "archivecontroller.php",
       "source_file": "app/Controllers/ArchiveController.php",
@@ -13076,7 +13077,7 @@
       "label": "Brain\\Monkey\\Functions",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "brain\\monkey\\functions",
       "source_file": "",
@@ -13087,7 +13088,7 @@
       "label": "ArchiveControllerTest.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "archivecontrollertest.php",
       "source_file": "tests/Unit/ArchiveControllerTest.php",
@@ -13098,7 +13099,7 @@
       "label": "FormControllerTest.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "formcontrollertest.php",
       "source_file": "tests/Unit/FormControllerTest.php",
@@ -13109,7 +13110,7 @@
       "label": "SearchControllerTest.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchController",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "searchcontrollertest.php",
       "source_file": "tests/Unit/SearchControllerTest.php",
@@ -14553,6 +14554,17 @@
       "norm_label": "when to use",
       "source_file": ".agents/skills/laravel-patterns/SKILL.md",
       "source_location": "L11"
+    },
+    {
+      "id": "tests_unit_blogcontrollertest",
+      "label": "BlogControllerTest.php",
+      "_origin": "ast",
+      "community": 220,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": "blogcontrollertest.php",
+      "source_file": "tests/Unit/BlogControllerTest.php",
+      "source_location": "L1"
     },
     {
       "id": "agents_skills_playwright_best_practices_core_annotations_add_annotations",
@@ -16362,7 +16374,7 @@
       "node_kind": "heading",
       "norm_label": "10. plan de documentacion",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L354"
+      "source_location": "L358"
     },
     {
       "id": "rojas_starter_spec_11_1_distribuci\u00f3n",
@@ -16374,7 +16386,7 @@
       "node_kind": "heading",
       "norm_label": "11.1 distribucion",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L369"
+      "source_location": "L373"
     },
     {
       "id": "rojas_starter_spec_11_2_licencia",
@@ -16386,7 +16398,7 @@
       "node_kind": "heading",
       "norm_label": "11.2 licencia",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L374"
+      "source_location": "L378"
     },
     {
       "id": "rojas_starter_spec_11_distribuci\u00f3n_y_licenciamiento",
@@ -16398,7 +16410,7 @@
       "node_kind": "heading",
       "norm_label": "11. distribucion y licenciamiento",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L367"
+      "source_location": "L371"
     },
     {
       "id": "rojas_starter_spec_12_1_desviaciones_de_la_implementaci\u00f3n_respecto_a_este_plan",
@@ -16410,7 +16422,7 @@
       "node_kind": "heading",
       "norm_label": "12.1 desviaciones de la implementacion respecto a este plan",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L400"
+      "source_location": "L404"
     },
     {
       "id": "rojas_starter_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
@@ -16422,7 +16434,7 @@
       "node_kind": "heading",
       "norm_label": "12. ruta de migracion desde el blueprint actual",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L380"
+      "source_location": "L384"
     },
     {
       "id": "rojas_starter_spec_13_preguntas_abiertas_y_supuestos",
@@ -16434,7 +16446,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L455"
+      "source_location": "L459"
     },
     {
       "id": "rojas_starter_spec_14_criterios_de_\u00e9xito",
@@ -16446,7 +16458,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L465"
+      "source_location": "L469"
     },
     {
       "id": "rojas_starter_spec_1_1_prop\u00f3sito",
@@ -16650,7 +16662,7 @@
       "node_kind": "heading",
       "norm_label": "6. estructura de carpetas propuesta",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L137"
+      "source_location": "L141"
     },
     {
       "id": "rojas_starter_spec_7_1_vite_kucrut_vite_for_wp",
@@ -16662,7 +16674,7 @@
       "node_kind": "heading",
       "norm_label": "7.1 vite + `kucrut/vite-for-wp`",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L213"
+      "source_location": "L217"
     },
     {
       "id": "rojas_starter_spec_7_2_scripts_npm_bun",
@@ -16674,7 +16686,7 @@
       "node_kind": "heading",
       "norm_label": "7.2 scripts npm/bun",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L259"
+      "source_location": "L263"
     },
     {
       "id": "rojas_starter_spec_7_3_tailwind_css_v4",
@@ -16686,7 +16698,7 @@
       "node_kind": "heading",
       "norm_label": "7.3 tailwind css v4",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L274"
+      "source_location": "L278"
     },
     {
       "id": "rojas_starter_spec_7_sistema_de_build_y_assets",
@@ -16698,7 +16710,7 @@
       "node_kind": "heading",
       "norm_label": "7. sistema de build y assets",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L211"
+      "source_location": "L215"
     },
     {
       "id": "rojas_starter_spec_8_1_tokens_de_dise\u00f1o",
@@ -16710,7 +16722,7 @@
       "node_kind": "heading",
       "norm_label": "8.1 tokens de diseno",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L283"
+      "source_location": "L287"
     },
     {
       "id": "rojas_starter_spec_8_2_dark_mode",
@@ -16722,7 +16734,7 @@
       "node_kind": "heading",
       "norm_label": "8.2 dark mode",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L298"
+      "source_location": "L302"
     },
     {
       "id": "rojas_starter_spec_8_3_componentes_twig_base",
@@ -16734,7 +16746,7 @@
       "node_kind": "heading",
       "norm_label": "8.3 componentes twig base",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L312"
+      "source_location": "L316"
     },
     {
       "id": "rojas_starter_spec_8_4_design_system_route",
@@ -16746,7 +16758,7 @@
       "node_kind": "heading",
       "norm_label": "8.4 design system route",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L320"
+      "source_location": "L324"
     },
     {
       "id": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
@@ -16758,7 +16770,7 @@
       "node_kind": "heading",
       "norm_label": "8. sistema de diseno",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L281"
+      "source_location": "L285"
     },
     {
       "id": "rojas_starter_spec_9_1_static_analysis_y_linting",
@@ -16770,7 +16782,7 @@
       "node_kind": "heading",
       "norm_label": "9.1 static analysis y linting",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L327"
+      "source_location": "L331"
     },
     {
       "id": "rojas_starter_spec_9_2_tests_unitarios",
@@ -16782,7 +16794,7 @@
       "node_kind": "heading",
       "norm_label": "9.2 tests unitarios",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L332"
+      "source_location": "L336"
     },
     {
       "id": "rojas_starter_spec_9_3_tests_e2e",
@@ -16794,7 +16806,7 @@
       "node_kind": "heading",
       "norm_label": "9.3 tests e2e \u2705",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L336"
+      "source_location": "L340"
     },
     {
       "id": "rojas_starter_spec_9_4_git_hooks",
@@ -16806,7 +16818,7 @@
       "node_kind": "heading",
       "norm_label": "9.4 git hooks",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L348"
+      "source_location": "L352"
     },
     {
       "id": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
@@ -16818,7 +16830,7 @@
       "node_kind": "heading",
       "norm_label": "9. estrategia de calidad y testing",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L325"
+      "source_location": "L329"
     },
     {
       "id": "rojas_starter_spec_encolado_en_php",
@@ -16830,7 +16842,7 @@
       "node_kind": "heading",
       "norm_label": "encolado en php",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L243"
+      "source_location": "L247"
     },
     {
       "id": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
@@ -16854,7 +16866,7 @@
       "node_kind": "heading",
       "norm_label": "instalacion",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L216"
+      "source_location": "L220"
     },
     {
       "id": "rojas_starter_spec_vite_config_js",
@@ -16866,7 +16878,7 @@
       "node_kind": "heading",
       "norm_label": "`vite.config.js`",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L222"
+      "source_location": "L226"
     },
     {
       "id": "infra_wp_config_example",
@@ -35299,7 +35311,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L44",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -35311,7 +35323,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L46",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -35323,7 +35335,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L47",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -35335,7 +35347,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L51",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -35347,7 +35359,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L59",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -35359,7 +35371,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L66",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -35371,7 +35383,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L76",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -35383,7 +35395,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L84",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -35395,7 +35407,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L105",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -35407,7 +35419,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L113",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -64137,7 +64149,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L164",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -64148,7 +64160,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L111",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -64170,7 +64182,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L130",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -64181,7 +64193,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L144",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -64192,7 +64204,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L154",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -64203,7 +64215,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L158",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -64280,7 +64292,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L369",
+      "source_location": "L373",
       "weight": 1.0
     },
     {
@@ -64291,7 +64303,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L374",
+      "source_location": "L378",
       "weight": 1.0
     },
     {
@@ -64302,7 +64314,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L400",
+      "source_location": "L404",
       "weight": 1.0
     },
     {
@@ -64434,7 +64446,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L216",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -64445,7 +64457,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L222",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -64456,7 +64468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L243",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -64467,7 +64479,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L213",
+      "source_location": "L217",
       "weight": 1.0
     },
     {
@@ -64478,7 +64490,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L259",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -64489,7 +64501,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L274",
+      "source_location": "L278",
       "weight": 1.0
     },
     {
@@ -64500,7 +64512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L283",
+      "source_location": "L287",
       "weight": 1.0
     },
     {
@@ -64511,7 +64523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L298",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -64522,7 +64534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L312",
+      "source_location": "L316",
       "weight": 1.0
     },
     {
@@ -64533,7 +64545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L320",
+      "source_location": "L324",
       "weight": 1.0
     },
     {
@@ -64544,7 +64556,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L327",
+      "source_location": "L331",
       "weight": 1.0
     },
     {
@@ -64555,7 +64567,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L332",
+      "source_location": "L336",
       "weight": 1.0
     },
     {
@@ -64566,7 +64578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L336",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -64577,7 +64589,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L348",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -64599,7 +64611,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L137",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -64610,7 +64622,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L211",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -64621,7 +64633,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L281",
+      "source_location": "L285",
       "weight": 1.0
     },
     {
@@ -64643,7 +64655,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L325",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -64654,7 +64666,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L354",
+      "source_location": "L358",
       "weight": 1.0
     },
     {
@@ -64665,7 +64677,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L367",
+      "source_location": "L371",
       "weight": 1.0
     },
     {
@@ -64676,7 +64688,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L380",
+      "source_location": "L384",
       "weight": 1.0
     },
     {
@@ -64687,7 +64699,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L455",
+      "source_location": "L459",
       "weight": 1.0
     },
     {
@@ -64698,7 +64710,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L465",
+      "source_location": "L469",
       "weight": 1.0
     },
     {
@@ -64778,13 +64790,24 @@
     },
     {
       "source": "app_controllers_archivecontroller_archivecontroller",
+      "target": "app_controllers_archivecontroller_archivecontroller_construct",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app_controllers_archivecontroller_archivecontroller",
       "target": "app_controllers_archivecontroller_archivecontroller_register",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L22",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -64795,7 +64818,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L37",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -65235,7 +65258,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L103",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -65246,7 +65269,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L111",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -65257,7 +65280,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L119",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
@@ -65268,7 +65291,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L131",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -65279,7 +65302,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L142",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -65290,7 +65313,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L157",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -65312,7 +65335,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L93",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -67718,5 +67741,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "a85059d5b2824799b8d54e369f73bccf83a4617a"
+  "built_at_commit": "9eb037bd660d9f18e9e18588cdbf318d1d8c84b5"
 }

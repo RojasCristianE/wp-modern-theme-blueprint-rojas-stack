@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
 
 ## Corpus Check
-- 218 files · ~145,707 words
+- 218 files · ~145,864 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2889 nodes · 3002 edges · 220 communities (183 shown, 23 thin omitted)
+- 2890 nodes · 3003 edges · 221 communities (183 shown, 24 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a85059d5`
+- Built from commit: `9eb037bd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -150,7 +150,7 @@
 - triage.schema.json
 - WP Project Triage
 - Responses and Fields (summary)
-- BlogController
+- Timber\Timber
 - Arquitectura del Rojas Stack
 - Brain\Monkey
 - `block.json` (metadata) guidance
@@ -210,7 +210,7 @@
 - package.json
 - @playwright/test
 - scripts
-- SearchController
+- ArchiveController
 - JavaScript API
 - AssetServiceProvider
 - **🛠 Stack Tecnológico (The Dream Team)**
@@ -221,6 +221,7 @@
 - main.js
 - seed-demo-content.sh
 - Patterns
+- BlogController
 
 ## God Nodes (most connected - your core abstractions)
 1. `Examples` - 24 edges
@@ -246,7 +247,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (220 total, 23 thin omitted)
+## Communities (221 total, 24 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -784,9 +785,9 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
-### Community 142 - "BlogController"
-Cohesion: 0.15
-Nodes (3): BlogController, DesignSystemController, Timber\Timber
+### Community 142 - "Timber\Timber"
+Cohesion: 0.20
+Nodes (3): DesignSystemController, Rakit\Validation\Validator, Timber\Timber
 
 ### Community 143 - "Arquitectura del Rojas Stack"
 Cohesion: 0.22
@@ -952,8 +953,8 @@ Nodes (3): envFile, wpEnv, @playwright/test
 Cohesion: 0.25
 Nodes (8): scripts, build, dev, fix, lint, prepare, preview, test:e2e
 
-### Community 208 - "SearchController"
-Cohesion: 0.17
+### Community 208 - "ArchiveController"
+Cohesion: 0.15
 Nodes (3): ArchiveController, SearchController, Brain\Monkey\Functions
 
 ### Community 209 - "JavaScript API"
@@ -982,8 +983,8 @@ Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Me
 
 ## Knowledge Gaps
 - **1959 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1954 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2104 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2105 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
