@@ -1,6 +1,5 @@
 {
   "0": "composer.json",
-  "1": "devDependencies",
   "2": "Complex Authentication Flow Patterns",
   "3": "Especificación del Rojas Starter Theme",
   "4": "Node.js Best Practices",
@@ -205,14 +204,9 @@
   "203": "bootstrap.php",
   "204": "package.json",
   "205": "FeaturesConfigTest.php",
-  "206": "scripts",
   "207": "Environment Variables",
-  "208": "@playwright/test",
-  "209": "alpinejs",
-  "210": "dependencies",
   "211": "**🛠 Stack Tecnológico (The Dream Team)**",
   "212": "4. Flujo de datos",
   "213": "Glob Import",
-  "214": "ExampleCptServiceProvider",
-  "215": "Container-Based Testing"
+  "214": "ExampleCptServiceProvider"
 }
