@@ -486,6 +486,26 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      un post rankea sobre el mismo término en el contenido de otro —
      y `published_at:desc` como desempate final de relevancia
      idéntica.
+  5. **Reorganización de la raíz para el instalador (post-plan):** la
+     raíz no se parece a un tema WP tradicional; se optimizó para
+     primera impresión. **Eliminados:** `tailwind.config.js` (relic de
+     Tailwind v3 — sin directiva `@config` en main.css, `require()` en
+     archivo ESM y plugins ya retirados; el theming vive en `@theme`),
+     `package-lock.json` (residuo npm; `bun.lock` es canónico) y
+     `postcss.config.js` (`@tailwindcss/postcss` inline en
+     `vite.config.js` → `css.postcss.plugins`). **Movido:**
+     `rojas-starter-spec.md` → `docs/spec.md` (git mv, refs en README y
+     phpstan.neon). **Decisión deliberada — sin dot-prefix en configs
+     de tooling** (`biome.json`, `phpstan.neon`, `phpunit.xml`,
+     `lefthook.yml`, `playwright.config.js`, `vite.config.js`): cada
+     tool resuelve su config por autodiscovery en raíz; renombrarlos a
+     `.nombre` obliga a flags en package.json, CI, lefthook y DDEV —
+     fricción real por una ganancia solo estética. Los 5 PHP de la
+     raíz son contrato duro de WP/Timber (puertas, no código); los
+     artefactos runtime (`dist/`, `node_modules/`, `vendor/`,
+     `wp-config*`, caches) son gitignored y quedan documentados en el
+     README (sección "Aparecen al correr"). Resultado: raíz de 25 →
+     21 archivos, todos con propósito evidente.
 
 ---
 
@@ -503,7 +523,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 - [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos. *(verificado manualmente desde clone limpio en la pre-publish sweep; pendiente la mecánica de GitHub Template/Packagist)*
 - [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
-- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (25 tests Pest + 7 e2e Playwright + PHPStan nivel 6 + Biome).
+- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (40 tests Pest + 14 e2e Playwright + PHPStan nivel 6 + Biome).
 - [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).
 - [x] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
 
