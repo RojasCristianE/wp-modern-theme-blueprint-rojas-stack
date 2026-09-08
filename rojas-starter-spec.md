@@ -384,7 +384,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 ## 12. Ruta de migración desde el blueprint actual
 
 > **Estado (2026-09-08):** pasos 1–11 completados y verificados
-> (31 tests Pest, 12 escenarios e2e Playwright, CI en GitHub Actions,
+> (32 tests Pest, 14 escenarios e2e Playwright, CI en GitHub Actions,
 > Lefthook pre-commit). La implementación real difiere de este plan
 > en los puntos documentados en §12.1.
 
@@ -453,6 +453,20 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      `/blog/page/N/` renderizan server-side sin JS (jerarquía y router
      respectivamente). Fixture reproducible: `bin/seed-demo-content.sh`
      (15 posts demo, categorías y tags multipágina).
+  3. **Patrón de skeleton unificado (post-plan, in-flow):** el overlay
+     `absolute` original del shell tapaba paginación y footer; fue
+     reemplazado por **reemplazo en flujo del documento**: skeleton y
+     contenido real son estados mutuamente excluyentes del mismo bloque
+     (`x-show` en el shell de archives; CSS puro vía la clase
+     `htmx-request` que HTMX añade al indicador en el modal de
+     búsqueda — sin Alpine ni JS extra). Regla del patrón: el skeleton
+     **replica el shape del contenido real** (el card no lleva imagen →
+     sin placeholder de imagen; las filas de búsqueda sí → thumb de
+     48px + dos líneas), vive **siempre del lado de la página** (los
+     fragmentos AJAX siguen siendo solo grid/resultados) y los estados
+     visibles previos a Alpine no usan `x-cloak` (evita flash vacío).
+     Verificación e2e: fetch ralentizado artificialmente, skeleton
+     visible en vuelo, `.absolute` = 0 dentro del shell, sin recarga.
 
 ---
 
