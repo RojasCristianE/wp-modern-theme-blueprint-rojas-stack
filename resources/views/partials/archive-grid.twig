@@ -49,7 +49,7 @@
             posts: posts,
             htmx: {
                 endpoint: htmx_endpoint|default('/wp-admin/admin-ajax.php'),
-                params: { action: 'rs_archive_page', taxonomy: archive_taxonomy|default('category'), term: archive_term|default('') },
+                params: { action: 'rs_archive_page', taxonomy: archive_taxonomy|default('category'), term: archive_term|default(''), base: htmx_base|default('') },
                 target: '#' ~ grid_id,
                 push_url: true,
                 base: htmx_base|default(''),

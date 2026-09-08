@@ -70,6 +70,31 @@ it('propaga la página actual del query a los args de posts (paginación)', func
     expect($postsArgs['paged'])->toBe(3);
 });
 
+it('usa la página explícita de la ruta virtual y expone el contrato HTMX', function () {
+    when('__')->returnArg();
+    when('get_query_var')->justReturn(0);
+    when('home_url')->alias(fn (string $p = '') => 'http://theme.test' . $p);
+
+    $captured  = null;
+    $postsArgs = null;
+
+    \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
+    \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
+        $postsArgs = $args;
+
+        return [];
+    });
+    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {
+        $captured = [$template, $context];
+    });
+
+    (new BlogController())->render_page(2);
+
+    expect($postsArgs['paged'])->toBe(2)
+        ->and($captured[1]['archive_term'])->toBe('')
+        ->and($captured[1]['htmx_base'])->toBe('http://theme.test/blog/');
+});
+
 it('register() es un no-op seguro', function () {
     (new BlogController())->register();
 

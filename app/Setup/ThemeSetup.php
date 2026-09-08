@@ -53,6 +53,9 @@ class ThemeSetup
 
         if (self::enabled($features, 'blog')) {
             $router->add_route('/blog', [BlogController::class, 'render_page']);
+            // Paginación de la ruta virtual: el placeholder captura el
+            // número y el router lo pasa como argumento al controller.
+            $router->add_route('/blog/page/{paged}', [BlogController::class, 'render_page']);
             (new BlogController($features['blog'] ?? []))->register();
         }
 

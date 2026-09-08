@@ -21,14 +21,20 @@ use WP_Query;
 class RouteServiceProvider
 {
     /**
-     * Mapa de rutas: 'slug' => callback
+     * Mapa de rutas: 'slug'|'patrón' => callback
      *
-     * @var array<string, callable> $routes
+     * @var array<string, array{0: class-string|object, 1: string}|callable> $routes
      */
     private array $routes = [];
 
     /**
      * Registra una ruta virtual.
+     *
+     * $path puede ser un slug exacto ('/blog') o un patrón con
+     * placeholders {param} que capturan 1+ caracteres sin '/':
+     * '/blog/page/{paged}'. Cada segmento capturado llega al callback
+     * como argumento posicional (string — el método destino coacciona
+     * al tipo declarado; los controllers del stack no usan strict_types).
      *
      * @param array{0: class-string|object, 1: string}|callable $callback
      *        [ControllerClass, method], [instancia, method] o un Closure
@@ -56,27 +62,60 @@ class RouteServiceProvider
         if (empty($current_path)) $current_path = '/';
 
         foreach ($this->routes as $path => $callback) {
-            if ($current_path === $path) {
-                // Ruta encontrada: WP marcó 404 (no existe en la DB) porque
-                // interceptamos después de la resolución de la query. Servimos
-                // contenido real => forzamos 200 y limpiamos el flag is_404
-                // (título "Page not found" y meta robots noindex dependen de él).
-                $this->serve_as_found();
+            $params = $this->match_route($path, $current_path);
+            if ($params === null) {
+                continue;
+            }
 
-                // Callable sobre instancia ya configurada (FormController)
-                if ($callback instanceof Closure) {
-                    $callback();
-                    $this->terminate(); // Detenemos WordPress después de renderizar nuestra ruta virtual
-                }
+            // Ruta encontrada: WP marcó 404 (no existe en la DB) porque
+            // interceptamos después de la resolución de la query. Servimos
+            // contenido real => forzamos 200 y limpiamos el flag is_404
+            // (título "Page not found" y meta robots noindex dependen de él).
+            $this->serve_as_found();
 
-                // Par [ControllerClass|instancia, method]
-                $controller = is_object($callback[0]) ? $callback[0] : new $callback[0]();
-                $method = $callback[1];
-
-                $controller->$method();
+            // Callable sobre instancia ya configurada (FormController)
+            if ($callback instanceof Closure) {
+                $callback(...array_values($params));
                 $this->terminate(); // Detenemos WordPress después de renderizar nuestra ruta virtual
             }
+
+            // Par [ControllerClass|instancia, method]
+            $controller = is_object($callback[0]) ? $callback[0] : new $callback[0]();
+            $method = $callback[1];
+
+            $controller->$method(...array_values($params));
+            $this->terminate(); // Detenemos WordPress después de renderizar nuestra ruta virtual
         }
+    }
+
+    /**
+     * Coincidencia exacta o por patrón con placeholders {param}.
+     *
+     * @return array<string, string>|null null si no coincide; los
+     *         segmentos capturados por nombre (p.ej. {paged} => '2').
+     */
+    private function match_route(string $path, string $current_path): ?array
+    {
+        if ($path === $current_path) {
+            return [];
+        }
+
+        if (!str_contains($path, '{')) {
+            return null;
+        }
+
+        $pattern = preg_replace(
+            '~\{([a-zA-Z_][a-zA-Z0-9_]*)\}~',
+            '(?P<$1>[^/]+)',
+            $path,
+        );
+
+        if (preg_match('~^' . $pattern . '$~', $current_path, $m) !== 1) {
+            return null;
+        }
+
+        // Solo los grupos nombrados (preg_match duplica índices numéricos).
+        return array_filter($m, 'is_string', ARRAY_FILTER_USE_KEY);
     }
 
     /**

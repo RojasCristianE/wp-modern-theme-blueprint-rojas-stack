@@ -49,7 +49,8 @@
         {# Anterior #}
         {% if has_prev %}
             {# Ternario (lazy), no default(): el filtro de Twig evalúa su argumento aunque el valor exista #}
-            {% set prev_href = pagination.prev ? pagination.prev.link : (htmx ? htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: prev_num })|url_encode) : '') %}
+            {% set prev_pretty = htmx.base ? (prev_num > 1 ? htmx.base ~ 'page/' ~ prev_num ~ '/' : htmx.base) : '' %}
+            {% set prev_href = pagination.prev ? pagination.prev.link : (prev_pretty ?: htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: prev_num })|url_encode)) %}
             <a href="{{ prev_href }}"
                aria-label="Página anterior"
                class="{{ arrow_classes }}"
@@ -68,7 +69,8 @@
                 <span class="{{ number_classes }} bg-brand-600 text-white border-brand-600 shadow-md shadow-brand-200" aria-current="page">{{ page.title }}</span>
             {% elseif page.link or htmx %}
                 {% set n = loop.index %}
-                {% set page_href = page.link ?: (htmx ? htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: n })|url_encode) : '') %}
+                {% set page_pretty = htmx.base and n > 1 ? htmx.base ~ 'page/' ~ n ~ '/' : htmx.base|default('') %}
+                {% set page_href = page.link ?: (page_pretty ?: htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: n })|url_encode)) %}
                 <a href="{{ page_href }}"
                    class="{{ number_classes }} bg-surface text-ink-muted border-line hover:text-brand-600 hover:border-brand-600"
                    {% if htmx %}hx-get="{{ htmx.endpoint }}?{{ htmx.params|merge({ paged: n })|url_encode }}" hx-target="{{ htmx.target }}" hx-swap="outerHTML"{% if htmx.push_url|default(false) %} hx-push-url="{{ htmx.base ? (n > 1 ? htmx.base ~ 'page/' ~ n ~ '/' : htmx.base) : 'true' }}"{% endif %}{% endif %}>{{ page.title }}</a>
@@ -79,7 +81,8 @@
 
         {# Siguiente #}
         {% if has_next %}
-            {% set next_href = pagination.next ? pagination.next.link : (htmx ? htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: next_num })|url_encode) : '') %}
+            {% set next_pretty = htmx.base ? htmx.base ~ 'page/' ~ next_num ~ '/' : '' %}
+            {% set next_href = pagination.next ? pagination.next.link : (next_pretty ?: htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: next_num })|url_encode)) %}
             <a href="{{ next_href }}"
                aria-label="Página siguiente"
                class="{{ arrow_classes }}"

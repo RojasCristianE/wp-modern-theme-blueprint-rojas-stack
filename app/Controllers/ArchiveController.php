@@ -70,10 +70,19 @@ class ArchiveController
         // parámetros absolutos.
         $term_link = $term !== '' ? get_term_link($term, $taxonomy) : home_url('/');
 
+        // Base bonita auto-descriptiva: la página que renderizó la
+        // paginación la manda en el request (p.ej. /blog/ para la ruta
+        // virtual) y el endpoint la hace eco; sin base válida, se deriva
+        // del término (o home). El prefijo home_url() evita bases ajenas.
+        $base = esc_url_raw(wp_unslash($_GET['base'] ?? ''));
+        if ($base === '' || !str_starts_with($base, home_url())) {
+            $base = is_wp_error($term_link) ? home_url('/') : $term_link;
+        }
+
         $context['htmx_endpoint']    = admin_url('admin-ajax.php');
         $context['archive_taxonomy'] = $taxonomy;
         $context['archive_term']     = $term;
-        $context['htmx_base']        = is_wp_error($term_link) ? home_url('/') : $term_link;
+        $context['htmx_base']        = $base;
 
         Timber::render('partials/archive-grid.twig', $context);
 

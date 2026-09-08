@@ -32,20 +32,30 @@ class BlogController
     }
 
     /**
-     * Renderiza la página del blog (Ruta Virtual)
+     * Renderiza la página del blog (Ruta Virtual).
+     *
+     * @param int $paged Página explícita capturada por el router
+     *                   (/blog/page/{paged}); 0 = usar el query var.
      */
-    public function render_page(): void
+    public function render_page(int $paged = 0): void
     {
         $context = Timber::context();
         $context['title'] = __('Blog', 'rojas-stack');
-        
-        // Obtenemos los posts para el feed del blog ('paged' alimenta
-        // components/pagination.twig — página 1 cuando el query no define una).
+
+        // Página explícita de la ruta virtual; si no llega, el query var
+        // ('paged' alimenta components/pagination.twig).
+        $page = max(1, $paged ?: (int) get_query_var('paged'));
+
         $context['posts'] = Timber::get_posts([
             'posts_per_page' => (int) ($this->config['posts_per_page'] ?? 12),
-            'paged'          => max(1, (int) get_query_var('paged')),
+            'paged'          => $page,
         ]);
-        
+
+        // Contrato de partials/archive-grid.twig (paginación HTMX): sin
+        // término (home del blog) y base bonita para hx-push-url.
+        $context['archive_term'] = '';
+        $context['htmx_base']    = home_url('/blog/');
+
         Timber::render('blog.twig', $context);
     }
 }

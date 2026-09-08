@@ -137,6 +137,44 @@ it('despacha callables sobre instancias configuradas (FormController)', function
     expect($form->rendered)->toBeTrue();
 });
 
+it('matchea patrones con placeholders y pasa los segmentos al callback', function () {
+    when('status_header')->justReturn();
+    when('nocache_headers')->justReturn();
+
+    $GLOBALS['wp_query'] = new WP_Query();
+
+    $_SERVER['REQUEST_URI'] = '/blog/page/2';
+
+    $received = 'NO_CALLED';
+    $router = new RouteServiceProvider();
+    $router->add_route('/blog/page/{paged}', function (int $paged) use (&$received) {
+        $received = $paged;
+    });
+
+    \Patchwork\redefine([$router, 'terminate'], function (): never {
+        throw new RuntimeException('TERMINATED');
+    });
+
+    try {
+        $router->dispatch_routes();
+    } catch (RuntimeException) {
+        // esperado
+    }
+
+    expect($received)->toBe(2);
+});
+
+it('no matchea el patrón cuando falta el segmento variable', function () {
+    $_SERVER['REQUEST_URI'] = '/blog/page/';
+
+    $router = new RouteServiceProvider();
+    $router->add_route('/blog/page/{paged}', fn () => throw new RuntimeException('no debería ejecutarse'));
+
+    $router->dispatch_routes();
+
+    expect(true)->toBeTrue();
+});
+
 it('no toca nada si ninguna ruta coincide', function () {
     $_SERVER['REQUEST_URI'] = '/pagina-inexistente';
 

@@ -36,6 +36,7 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
     when('wp_unslash')->returnArg();
     when('sanitize_key')->returnArg();
     when('sanitize_title')->returnArg();
+    when('esc_url_raw')->returnArg();
     when('get_object_taxonomies')->justReturn(['category', 'post_tag', 'post_format']);
     when('get_option')->alias(fn (string $k, mixed $d = false) => $k === 'posts_per_page' ? 5 : $d);
     when('admin_url')->alias(fn (string $p = '') => 'http://theme.test/wp-admin/' . $p);
@@ -86,6 +87,7 @@ it('cae a category y no filtra por término con GET inválido o ausente', functi
     when('wp_unslash')->returnArg();
     when('sanitize_key')->returnArg();
     when('sanitize_title')->returnArg();
+    when('esc_url_raw')->returnArg();
     when('get_object_taxonomies')->justReturn(['category', 'post_tag', 'post_format']);
     when('get_option')->alias(fn (string $k, mixed $d = false) => $k === 'posts_per_page' ? 5 : $d);
     when('admin_url')->alias(fn (string $p = '') => 'http://theme.test/wp-admin/' . $p);
