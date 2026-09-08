@@ -116,6 +116,8 @@ Input del modal (HTMX, hx-get, delay 300ms)
 
 La búsqueda tradicional (`/?s=`) sigue la jerarquía de plantillas (`search.php` → `search.twig`) y renderiza la página completa: cada superficie tiene un único camino.
 
+La **paginación de archives** (categorías, etiquetas) usa el mismo contrato: `admin-ajax?action=rs_archive_page` responde SOLO `partials/archive-grid.twig` (grid + paginación con `hx-push-url` de la URL bonita `base/page/N/`, no la del fetch). El scope Alpine `archiveView` vive FUERA del nodo swappeado: sobrevive a cada página y acompaña con dim de carga, scroll al inicio del grid y flash de entrada. Los `<a>` de la paginación conservan `href` real: la carga directa de `/category/slug/page/N/` resuelve server-side por la jerarquía (`archive.twig`).
+
 **Gestión de estado:** el estado persistente (filtros, paginación) vive en el servidor; **AlpineJS queda reservado para micro-interacciones efímeras** (dropdowns, modales).
 
 ## 5. Assets (Vite + vite-for-wp)

@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+#
+# Seed de contenido demo para verificar la paginación HTMX de archives
+# (categoría y etiqueta). Crea 15 posts con distribución de términos
+# pensada para que haya varias páginas: con posts_per_page=5 la home
+# del blog queda en 4 páginas, la categoría 'rojas-stack' en 2 y la
+# etiqueta 'htmx' en 2.
+#
+# Uso:  bash bin/seed-demo-content.sh   (idempotente: aborta si ya corrió)
+
+set -euo pipefail
+
+wp() { ddev wp --path=/var/www/wp-core --allow-root "$@" 2>/dev/null; }
+
+MARKER=$(wp option get rs_seed_demo_marker 2>/dev/null || true)
+if [ "${MARKER}" = "1" ]; then
+    echo "Seed ya aplicado (option rs_seed_demo_marker=1). Nada que hacer."
+    exit 0
+fi
+
+echo "Creando categorías…"
+wp term create category 'Rojas Stack' --slug=rojas-stack >/dev/null || true
+wp term create category 'Tutoriales' --slug=tutoriales >/dev/null || true
+
+echo "Creando etiquetas…"
+for tag in htmx alpine timber; do
+    wp term create post_tag "${tag}" >/dev/null 2>&1 || true
+done
+
+echo "Creando 15 posts…"
+TITLES=(
+    "Patrones de configuración code-first con Carbon Fields"
+    "HTMX en WordPress: el contrato de fragmentos"
+    "Timber 2 y la jerarquía de plantillas"
+    "Tailwind v4 con tokens semánticos y dark mode"
+    "Paginación sin recargar: fragmentos con hx-swap"
+    "Formularios HTMX con validación Rakit"
+    "Micro-interacciones efímeras con Alpine.js"
+    "Vite y vite-for-wp: assets modernos en el tema"
+    "Testing del tema con Pest y Brain Monkey"
+    "Playwright para e2e en WordPress"
+    "Lefthook: quality gates en el pre-commit"
+    "Rutas virtuales vs jerarquía de templates"
+    "SEO code-first con spatie/schema-org"
+    "DDEV como entorno local reproducible"
+    "Deploys theme-only con Deployer"
+)
+
+TAGSETS=("htmx timber" "htmx alpine" "timber" "alpine" "htmx" "htmx" "alpine timber" "timber" "htmx timber" "alpine" "htmx" "timber" "htmx" "alpine timber" "timber")
+
+i=0
+for title in "${TITLES[@]}"; do
+    i=$((i + 1))
+    if [ $((i % 3)) -eq 0 ]; then cat_id=tutoriales; else cat_id=rojas-stack; fi
+
+    # Idempotencia: si el post con slug demo-N ya existe, solo
+    # re-aseguramos sus términos y seguimos.
+    existing=$(wp post list --post_type=post --name="demo-${i}" --field=ID --post_status=publish | grep -oE '^[0-9]+' | tail -n 1 || true)
+    if [ -z "${existing}" ]; then
+        date=$(printf '2026-08-%02d 10:00:00' "$i")
+        post_id=$(wp post create \
+            --post_title="${title}" \
+            --post_name="demo-${i}" \
+            --post_status=publish \
+            --post_date="${date}" \
+            --post_category=0 \
+            --porcelain | grep -oE '^[0-9]+' | tail -n 1 || true)
+    else
+        post_id=${existing}
+    fi
+
+    # El phar de wp-cli emite notices PHP Deprecated en stdout: el ID
+    # porcelain se extrae con grep para no arrastrar ruido.
+    wp post term set "${post_id}" category "${cat_id}" >/dev/null
+    # shellcheck disable=SC2086
+    wp post term set "${post_id}" post_tag ${TAGSETS[$((i - 1))]} >/dev/null
+    echo "  ✓ demo-${i} [${cat_id}]"
+done
+
+wp option update rs_seed_demo_marker 1 >/dev/null
+echo "Listo: 15 posts, 3 categorías, 3 etiquetas."

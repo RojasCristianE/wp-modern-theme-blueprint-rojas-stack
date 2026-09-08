@@ -2,6 +2,7 @@
 
 namespace RojasStack\Setup;
 
+use RojasStack\Controllers\ArchiveController;
 use RojasStack\Controllers\BlogController;
 use RojasStack\Controllers\DesignSystemController;
 use RojasStack\Controllers\FormController;
@@ -38,6 +39,9 @@ class ThemeSetup
 
         // Búsqueda en vivo (core): endpoint del fragmento para HTMX (spec §9.3).
         (new SearchController())->register();
+
+        // Paginación de archives (core): fragmento grid+paginación para HTMX.
+        (new ArchiveController())->register();
 
         $this->register_hooks();
         $this->register_core_fields();

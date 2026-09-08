@@ -1,0 +1,61 @@
+{#
+  Fragmento de grid de archives (categoría, etiqueta y home del blog).
+
+  Página completa: archive.twig lo incluye con el contexto de la
+  jerarquía (el main query ya trae término y paginación).
+  HTMX: lo devuelve admin-ajax?action=rs_archive_page como SOLO este
+  fragmento; la paginación interior hace hx-get contra ese endpoint y
+  reemplaza el contenedor [data-archive-grid] sin recargar la página
+  (hx-push-url mantiene la URL /category/slug/page/N compartible).
+
+  Parámetros:
+  - posts:          PostQuery de Timber (con .pagination).
+  - htmx_enabled:   (opcional, default false) activa la variante HTMX
+                    de la paginación. La página completa la pasa en true;
+                    el fragmento del endpoint siempre true.
+  - archive_taxonomy: (para htmx) taxonomy del término paginado.
+  - archive_term:     (para htmx) slug del término; '' = home del blog.
+  - htmx_endpoint:    (para htmx) URL de admin-ajax. Los includes con
+                      `only` no ven `site`, así que la URL llega como
+                      parámetro (absoluta desde archive.twig; el
+                      endpoint AJAX la fija con admin_url()).
+  - htmx_base:        (para htmx) URL bonita del archive sin número de
+                      página (term.link / home del blog): hx-push-url
+                      la combina con page/N/ para dejar compartible la
+                      URL de la jerarquía, no la del fetch a admin-ajax.
+#}
+{% set htmx_enabled = htmx_enabled|default(false) %}
+{% set grid_id = 'archive-grid-' ~ random(100000, 999999) %}
+
+<div data-archive-grid id="{{ grid_id }}" class="w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for post in posts %}
+            {% include 'components/card.twig' with {
+                title: post.title,
+                url: post.link,
+                excerpt: post.preview.length(20),
+                image: post.thumbnail ? post.thumbnail.src|resize(600, 400) : null,
+                meta: post.date|date('d M, Y'),
+            } only %}
+        {% else %}
+            <p class="col-span-full text-center text-ink-muted py-12">
+                {{ __('No hay publicaciones todavía.', 'rojas-stack') }}
+            </p>
+        {% endfor %}
+    </div>
+
+    {% if htmx_enabled %}
+        {% include 'components/pagination.twig' with {
+            posts: posts,
+            htmx: {
+                endpoint: htmx_endpoint|default('/wp-admin/admin-ajax.php'),
+                params: { action: 'rs_archive_page', taxonomy: archive_taxonomy|default('category'), term: archive_term|default('') },
+                target: '#' ~ grid_id,
+                push_url: true,
+                base: htmx_base|default(''),
+            },
+        } only %}
+    {% else %}
+        {% include 'components/pagination.twig' with { posts: posts } only %}
+    {% endif %}
+</div>

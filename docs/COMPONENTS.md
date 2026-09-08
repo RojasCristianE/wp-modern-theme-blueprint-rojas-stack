@@ -159,15 +159,35 @@ Etiqueta/chip para categorías, tags, estados o contadores.
 
 ### `pagination.twig`
 
-Paginación numerada con flechas prev/next. Requiere que el loop sea paginado:
-el controller debe pasar `'paged' => max(1, (int) get_query_var('paged'))` a `Timber::get_posts()`.
+Paginación numerada con flechas prev/next. Usa el Pagination que Timber
+adjunta al PostQuery (`posts.pagination`); el controller debe pasar
+`'paged' => max(1, (int) get_query_var('paged'))` a `Timber::get_posts()`.
 
 | Prop | Tipo | Default | Descripción |
 |---|---|---|---|
-| `name` | string | `posts` | Nombre del paginado de Timber |
+| `posts` | PostQuery | — | Query de Timber con `.pagination` (sin esto no renderiza nada) |
+| `htmx` | object\|null | `null` | Activa la variante HTMX (sin esto, enlaces clásicos) |
+
+La variante `htmx` espera `{ endpoint, params, target, push_url?, base? }`:
+cada enlace pide el fragmento vía `hx-get` y swappea solo `target`; los
+`<a>` conservan su `href` real como fallback sin JS. Con `push_url: true`,
+`hx-push-url` lleva la URL bonita (`base` + `page/N/`) — la URL compartible
+de la jerarquía, no la del fetch a admin-ajax.
 
 ```twig
-{% include 'components/pagination.twig' with { name: 'posts' } %}
+{% include 'components/pagination.twig' with { posts: posts } only %}
+
+{# Variante HTMX (la construye partials/archive-grid.twig): #}
+{% include 'components/pagination.twig' with {
+    posts: posts,
+    htmx: {
+        endpoint: site.url ~ '/wp-admin/admin-ajax.php',
+        params: { action: 'rs_archive_page', taxonomy: 'category', term: 'rojas-stack' },
+        target: '#archive-grid-…',
+        push_url: true,
+        base: term.link,
+    },
+} only %}
 ```
 
 > Nota CPT: para paginar un archive de CPT propio (p.ej. `example_cpt`), extiende el
@@ -176,7 +196,7 @@ el controller debe pasar `'paged' => max(1, (int) get_query_var('paged'))` a `Ti
 
 ## Componentes de layout (no del catálogo)
 
-`components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda (Alpine abre/cierra, HTMX consulta `admin-ajax?action=rs_live_search` y hace `hx-swap` de `partials/search-results.twig` en `#search-results`). No son componentes de propósito general — se incluyen desde `base.twig`.
+`components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda (Alpine abre/cierra, HTMX consulta `admin-ajax?action=rs_live_search` y hace `hx-swap` de `partials/search-results.twig` en `#search-results`). `partials/archive-grid.twig` es el fragmento equivalente de archives: HTMX consulta `admin-ajax?action=rs_archive_page` y swappea grid+paginación dentro del scope Alpine `archiveView` (dim de carga, scroll y flash). No son componentes de propósito general — se incluyen desde `base.twig`.
 
 ## Extender el catálogo
 

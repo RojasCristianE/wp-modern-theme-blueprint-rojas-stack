@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{#
+  Archive de contenido (categoría y etiqueta — jerarquía de WordPress).
+
+  La paginación aquí es HTMX + Alpine: el grid vive dentro del scope de
+  x-data="archiveView" (micro-interacciones efímeras: dim de carga,
+  scroll y flash tras cada swap — regla §3 del stack). El fragmento que
+  HTMX reemplaza es [data-archive-grid]; el wrapper con x-data queda
+  FUERA del swap para sobrevivir a cada página.
+#}
+{% block content %}
+<section class="py-16" x-data="archiveView">
+    <div class="container mx-auto px-4">
+        <header class="mb-12 text-center max-w-2xl mx-auto">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">{{ __('Archivo', 'rojas-stack') }}</p>
+            <h1 class="text-4xl font-bold text-ink tracking-tight">{{ function('get_the_archive_title') }}</h1>
+            {% set archive_description = function('get_the_archive_description') %}
+            {% if archive_description %}
+                <div class="mt-4 text-ink-muted leading-relaxed">{{ archive_description }}</div>
+            {% endif %}
+        </header>
+
+        <div class="transition-opacity duration-150" :class="{ 'opacity-50 pointer-events-none': loading }">
+            {% include 'partials/archive-grid.twig' with {
+                posts: posts,
+                htmx_enabled: true,
+                archive_taxonomy: term.taxonomy|default('category'),
+                archive_term: term.slug|default(''),
+                htmx_endpoint: site.url ~ '/wp-admin/admin-ajax.php',
+                htmx_base: term.link|default(site.url ~ '/'),
+            } only %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -8,6 +8,17 @@
   Parámetros:
   - posts: El PostQuery de Timber (p.ej. la variable `posts` del contexto).
            Si no llega (include sin props), el componente no renderiza nada.
+  - htmx:  (opcional) Activa la variante HTMX: cada enlace pide el
+           fragmento del endpoint y hace swap de SOLO el contenedor
+           objetivo — sin recargar la página. Estructura:
+             {
+               endpoint: '…/wp-admin/admin-ajax.php',
+               params:   { action: 'rs_archive_page', taxonomy: '…', term: '…' },
+               target:   '#selector-del-grid',
+               push_url: true,   (opcional — hx-push-url para URL compartible)
+             }
+           Los <a> conservan su href real: sin JS (o click de contexto)
+           navegan la página completa — mejora progresiva.
 
   Nota CPT: para paginar un archive de CPT propio (p.ej. example_cpt),
   extiende este componente resolviendo el paginado contra el query de ese
@@ -19,13 +30,30 @@
 {% set pagination = posts.pagination ?? null %}
 
 {% if pagination and pagination.pages|length > 1 %}
+    {% set htmx = htmx|default(null) %}
+    {#
+      En el contexto del fragmento (admin-ajax) Timber computa prev/next
+      contra el query global y sus .title/.link llegan vacíos: para la
+      variante HTMX se derivan numéricamente de pagination.current.
+    #}
+    {% set current  = pagination.current|default(1) %}
+    {% set pages_ct = pagination.pages|length %}
+    {% set has_prev = htmx ? current > 1 : pagination.prev is not null %}
+    {% set has_next = htmx ? current < pages_ct : pagination.next is not null %}
+    {% set prev_num = current - 1 %}
+    {% set next_num = current + 1 %}
     {% set arrow_classes = 'inline-flex items-center justify-center p-2.5 rounded-full border border-line bg-surface text-ink-muted hover:text-brand-600 hover:border-brand-600 transition-colors' %}
     {% set number_classes = 'inline-flex items-center justify-center min-w-10 h-10 px-3 rounded-full text-sm font-semibold border transition-colors' %}
 
-    <nav aria-label="Paginación" class="flex items-center justify-center gap-2">
+    <nav aria-label="Paginación" class="flex items-center justify-center gap-2 mt-12"{% if htmx %} data-htmx-pagination="true"{% endif %}>
         {# Anterior #}
-        {% if pagination.prev %}
-            <a href="{{ pagination.prev.link }}" aria-label="Página anterior" class="{{ arrow_classes }}">
+        {% if has_prev %}
+            {# Ternario (lazy), no default(): el filtro de Twig evalúa su argumento aunque el valor exista #}
+            {% set prev_href = pagination.prev ? pagination.prev.link : (htmx ? htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: prev_num })|url_encode) : '') %}
+            <a href="{{ prev_href }}"
+               aria-label="Página anterior"
+               class="{{ arrow_classes }}"
+               {% if htmx %}hx-get="{{ htmx.endpoint }}?{{ htmx.params|merge({ paged: prev_num })|url_encode }}" hx-target="{{ htmx.target }}" hx-swap="outerHTML"{% if htmx.push_url|default(false) %} hx-push-url="{{ htmx.base ? (prev_num > 1 ? htmx.base ~ 'page/' ~ prev_num ~ '/' : htmx.base) : 'true' }}"{% endif %}{% endif %}>
                 {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4 rotate-180' } only %}
             </a>
         {% else %}
@@ -38,16 +66,24 @@
         {% for page in pagination.pages %}
             {% if page.current %}
                 <span class="{{ number_classes }} bg-brand-600 text-white border-brand-600 shadow-md shadow-brand-200" aria-current="page">{{ page.title }}</span>
-            {% elseif page.link %}
-                <a href="{{ page.link }}" class="{{ number_classes }} bg-surface text-ink-muted border-line hover:text-brand-600 hover:border-brand-600">{{ page.title }}</a>
+            {% elseif page.link or htmx %}
+                {% set n = loop.index %}
+                {% set page_href = page.link ?: (htmx ? htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: n })|url_encode) : '') %}
+                <a href="{{ page_href }}"
+                   class="{{ number_classes }} bg-surface text-ink-muted border-line hover:text-brand-600 hover:border-brand-600"
+                   {% if htmx %}hx-get="{{ htmx.endpoint }}?{{ htmx.params|merge({ paged: n })|url_encode }}" hx-target="{{ htmx.target }}" hx-swap="outerHTML"{% if htmx.push_url|default(false) %} hx-push-url="{{ htmx.base ? (n > 1 ? htmx.base ~ 'page/' ~ n ~ '/' : htmx.base) : 'true' }}"{% endif %}{% endif %}>{{ page.title }}</a>
             {% else %}
                 <span class="{{ number_classes }} bg-surface text-ink-muted border-line">{{ page.title }}</span>
             {% endif %}
         {% endfor %}
 
         {# Siguiente #}
-        {% if pagination.next %}
-            <a href="{{ pagination.next.link }}" aria-label="Página siguiente" class="{{ arrow_classes }}">
+        {% if has_next %}
+            {% set next_href = pagination.next ? pagination.next.link : (htmx ? htmx.endpoint ~ '?' ~ (htmx.params|merge({ paged: next_num })|url_encode) : '') %}
+            <a href="{{ next_href }}"
+               aria-label="Página siguiente"
+               class="{{ arrow_classes }}"
+               {% if htmx %}hx-get="{{ htmx.endpoint }}?{{ htmx.params|merge({ paged: next_num })|url_encode }}" hx-target="{{ htmx.target }}" hx-swap="outerHTML"{% if htmx.push_url|default(false) %} hx-push-url="{{ htmx.base ? (next_num > 1 ? htmx.base ~ 'page/' ~ next_num ~ '/' : htmx.base) : 'true' }}"{% endif %}{% endif %}>
                 {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
             </a>
         {% else %}
