@@ -70,6 +70,10 @@ it('renderiza la página configurada con el título del formulario', function ()
         ->and($captured[1]['title'])->toBe('Contáctanos');
 });
 
+// Nota: rakit/validation 1.4 (2020) emite E_DEPRECATED al compilar sus
+// clases en PHP 8.4+. Se pre-carga en tests/bootstrap.php con
+// error_reporting(0) para que la emisión ocurra fuera del contexto de
+// test — ningún evento llega a PHPUnit/Pest.
 it('re-renderiza el formulario con errores cuando la validación falla', function () {
     when('__')->returnArg();
 

@@ -48,26 +48,35 @@ Aunque este blueprint se enfoca en el desarrollo del tema, asume que el servidor
 
 ```text
 wp-modern-theme-blueprint/
-├── .ddev/                # Configuración de desarrollo local.
+├── .ddev/                # Configuración de desarrollo local (servicios: Valkey, Meilisearch).
 ├── .github/workflows/    # Pipelines de CI/CD (Test, Deploy).
+├── .agents/              # Fuente del sistema de skills para agentes IA.
 ├── app/                  # Lógica de Negocio (PHP Strict)
-│   ├── Config/           # features.php: módulos activables (spec §5).
-│   ├── Contracts/        # Interfaces (El manual para la IA).
-│   ├── Controllers/      # Controladores (Orquestación).
+│   ├── Config/           # features.php: módulos activables (spec §5) + env (POSTS_PER_PAGE, MEILI_*).
+│   ├── Contracts/        # Interfaces (SearchEngineInterface — el manual para la IA).
+│   ├── Controllers/      # Controladores (Orquestación): Blog, Form, Search, Archive, DesignSystem.
 │   ├── Fields/           # Definiciones de Carbon Fields.
-│   ├── Models/           # Modelos de dominio del proyecto (opcional).
-│   ├── Providers/        # Service Providers (WordPress Hooks).
-│   ├── Services/         # Lógica pesada (APIs, Cache Purging).
+│   ├── Providers/        # Service Providers (WordPress Hooks): Assets, Menus, Router, SEO, ExampleCpt.
+│   ├── Services/         # Integraciones: MeilisearchClient + MeilisearchIndexer.
 │   └── Setup/            # ThemeSetup: orquestador de core + módulos.
-├── resources/            # Assets y Vistas (Vite/Twig)
+├── bin/                  # Scripts de mantenimiento: meili-reindex.sh, seed-demo-content.sh.
+├── docs/                 # ARCHITECTURE.md, COMPONENTS.md, spec.md (documento vivo).
+├── resources/            # Assets y Vistas (Vite/Twig): styles (tokens @theme), scripts (Alpine+HTMX), views.
 ├── e2e/                  # Tests con Playwright.
-├── infra/                # Archivos de configuración de servidor.
-├── deploy.php            # Configuración de despliegue con Deployer.
-├── functions.php         # Bootstrap del tema.
-├── composer.json         # Dependencias PHP.
-├── package.json          # Dependencias Node/Bun.
-└── style.css             # Cabecera oficial del tema.
+├── infra/                # Archivos de configuración de servidor (wp-config.example.php).
+├── tests/Unit/           # Tests Pest + Brain Monkey + Patchwork (sin WP real).
+├── functions.php         # Bootstrap del tema (autoload, .env, Timber, Carbon, ThemeSetup).
+├── index.php             # Puerta WP: resuelve la jerarquía de templates vía Timber.
+├── search.php / single.php # Controladores de la jerarquía (búsqueda, single).
+├── style.css             # Cabecera oficial del tema (sin CSS real).
+├── vite.config.js        # Build: Tailwind v4 inline (css.postcss) + vite-for-wp.
+└── composer.json / package.json  # Dependencias PHP / Node (Bun).
 ```
+
+> **Nota de raíz:** NO existe `Models/` — la lectura es vía
+> `Timber::get_posts()`/WP_Query (regla de integridad §1). Los artefactos
+> runtime (`dist/`, `node_modules/`, `vendor/`, `wp-config*`, caches) son
+> gitignored y aparecen solo al correr el entorno.
 
 ## **🤝 Reglas de Integración Front-Back (Safe Rules)**
 
