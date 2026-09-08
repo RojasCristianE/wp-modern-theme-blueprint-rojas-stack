@@ -2,6 +2,8 @@
 
 Este documento define la arquitectura y filosofía del **Rojas Stack**, un entorno de ingeniería diseñado para el desarrollo de temas de WordPress "Monolíticos Modernos". Se prioriza la separación de lógica y vista, el tipado estricto, la predictibilidad y el uso de tecnologías Open Source comunitarias, creando un ecosistema optimizado para humanos y agentes de IA.
 
+> **Documentación:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) (decisiones y flujo de datos) · [docs/COMPONENTS.md](docs/COMPONENTS.md) (catálogo de componentes y tokens) · Catálogo visual en la ruta `/__components` (solo dev).
+
 ## **🧠 Filosofía del Stack**
 
 * **Theme-Centric Control:** El control total reside en el código del tema, minimizando la dependencia del CMS y plugins externos.

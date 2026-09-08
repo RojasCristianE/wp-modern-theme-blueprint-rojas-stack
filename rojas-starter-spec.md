@@ -375,10 +375,10 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 ## 12. Ruta de migración desde el blueprint actual
 
-> **Estado (2026-09-07):** pasos 1–6 y 8–9 completados y verificados
-> (15 tests Pest, 4 smoke tests Playwright, CI en GitHub Actions,
+> **Estado (2026-09-08):** pasos 1–10 completados y verificados
+> (21 tests Pest, 5 smoke tests Playwright, CI en GitHub Actions,
 > Lefthook pre-commit). La implementación real difiere de este plan
-> en dos puntos documentados en §12.1.
+> en los puntos documentados en §12.1.
 
 1. ~~**Auditar código existente:** eliminar dependencias no usadas y consolidar providers.~~ ✅
 2. ~~**Reemplazar asset provider:** migrar de `AssetServiceProvider` manual a `kucrut/vite-for-wp`.~~ ✅
@@ -386,10 +386,10 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 4. ~~**Estandarizar componentes Twig:** extraer botones, inputs, tarjetas y alertas en `resources/views/components/`.~~ ✅ (con módulo `design_system` y ruta `/__components` activos)
 5. ~~**Implementar dark mode:** agregar media query `prefers-color-scheme: dark` y tokens oscuros.~~ ✅ (tokens semánticos runtime + `@theme inline`)
 6. ~~**Crear Example CPT:** añadir un custom post type de ejemplo desactivado por defecto.~~ ✅ (`ExampleCptServiceProvider` + `archive-podcast.twig` / `single-podcast.twig`)
-7. **Evolucionar contacto a form engine:** generalizar `ContactController` a `FormServiceProvider` o `FormController` configurable. ⬜
+7. ~~**Evolucionar contacto a form engine:** generalizar `ContactController` a `FormServiceProvider` o `FormController` configurable.~~ ✅ (`FormController` genérico: cada formulario es una entrada en `features.php` con ruta, campos/reglas Rakit, destinatario y fragmento HTMX)
 8. ~~**Configurar testing:** crear `tests/Unit/` y `tests/E2E/`, agregar Pest y Playwright.~~ ✅ (Pest + Brain Monkey + Patchwork; Playwright con Chrome del sistema)
 9. ~~**Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.~~ ✅ (`lefthook.yml`: biome + phpstan + pest por archivos staged)
-10. **Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`. ⬜ (AGENTS.md actualizado; falta README y `docs/`)
+10. ~~**Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`.~~ ✅ (README reescrito, `docs/ARCHITECTURE.md`, `docs/COMPONENTS.md`, catálogo vivo en `/__components`)
 11. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜
 
 ### 12.1 Desviaciones de la implementación respecto a este plan
@@ -435,7 +435,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 - [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
 - [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (15 tests Pest + 4 smoke E2E + PHPStan nivel 6 + Biome).
 - [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).
-- [ ] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
+- [x] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
 
 ---
 

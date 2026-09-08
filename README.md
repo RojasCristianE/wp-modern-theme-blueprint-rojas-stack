@@ -1,66 +1,165 @@
-# **🚀 Rojas Stack: Modern Theme Architecture for WordPress**
+# **🚀 Rojas Stack — Starter Theme WordPress Moderno (AI-First)**
 
-[![Stack](https://img.shields.io/badge/Stack-Monolith_Moderno-6366f1)](https://github.com/cristian-rojas/wp-modern-theme-blueprint)
-[![Architecture](https://img.shields.io/badge/Architecture-AI--First-blue)](./GEMINI.md)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![CI](https://github.com/cristian-rojas/wp-modern-theme-blueprint/actions/workflows/ci.yml/badge.svg)](https://github.com/cristian-rojas/wp-modern-theme-blueprint/actions/workflows/ci.yml)
+[![PHP](https://img.shields.io/badge/PHP-8.5%2B-777bb4)](composer.json)
+[![Timber](https://img.shields.io/badge/Timber-Twig-93c47d)](https://timber.github.io/timber/)
+[![License](https://img.shields.io/badge/License-MIT-green)](rojas-starter-spec.md)
 
-El **Rojas Stack** es un blueprint de ingeniería diseñado para el desarrollo de temas de WordPress de alto rendimiento. Elimina la dependencia de constructores visuales y plugins innecesarios, adoptando un enfoque **Code-First** y **AI-Ready**.
+Starter theme WordPress **monolítico moderno, 100% code-first**: PHP estricto + Twig (Timber), Vite con HMR, Tailwind v4 con dark mode automático, HTMX + AlpineJS, y un sistema de módulos activables desde un solo archivo de configuración. Sin Gutenberg, sin page builders, sin plugins de UI.
 
-## **🌟 Características Principales**
+> **Documentación completa:** [Arquitectura](docs/ARCHITECTURE.md) · [Componentes y tokens](docs/COMPONENTS.md) · [Guía para agentes de IA](AGENTS.md) · [Spec](rojas-starter-spec.md)
 
-*   **⚡ Performance Extremo:** Bundling con **Vite**, interactividad con **HTMX/AlpineJS** y caché en el Edge.
-*   **🧠 IA-First:** Arquitectura estrictamente tipada y documentada para facilitar la colaboración con agentes de IA.
-*   **🛠 Soberanía Tecnológica:** Uso de estándares industriales (**PHP 8.2+**, **Bun**, **Docker**) y herramientas OSS (Valkey, MariaDB).
-*   **🔄 CI/CD Profesional:** Despliegues atómicos con **Deployer** y versionado automático con **Semantic Release**.
-*   **🛡️ Seguridad Integrada:** Manejo nativo de Nonces para HTMX y políticas de integridad de datos.
+## **✨ Características**
 
-## **🛠 Stack Tecnológico**
+- **⚡ DX moderna:** Vite + HMR total (via [`kucrut/vite-for-wp`](https://github.com/kucrut/vite-for-wp)), DDEV, Biome, PHPStan, Pest, Playwright, Lefthook, CI en GitHub Actions.
+- **🧩 Módulos activables:** blog, pages, forms, seo, example_cpt y design_system se activan/desactivan y parametrizan desde `app/Config/features.php`. Un módulo deshabilitado no registra rutas, hooks ni campos.
+- **🧱 Componentes Twig:** button, card, input, alert con API documentada por props y catálogo visual en `/__components` (solo dev).
+- **🌙 Dark mode automático:** tokens semánticos CSS con contrapartes dark vía `prefers-color-scheme` — sin toggle, sin duplicar clases.
+- **📨 Form engine config-driven:** cada formulario es una entrada en `features.php` (ruta, campos, reglas Rakit, destinatario, fragmento HTMX de éxito). Añadir un formulario = cero código nuevo.
+- **🧠 AI-First:** tipado estricto, docblocks con tipos, estructura predecible y `AGENTS.md` como constitución para agentes.
+
+## **🛠 Stack**
 
 | Capa | Tecnologías |
 | :--- | :--- |
-| **Backend** | PHP 8.2+, Composer, Timber (Twig), Corcel (Eloquent), Carbon Fields |
-| **Frontend** | Bun, Vite, Tailwind CSS, Flowbite, HTMX, AlpineJS |
-| **DevOps** | DDEV, GitHub Actions, Deployer, Semantic Release |
-| **Data/Cache** | MariaDB, Valkey (RESP compatible) |
-| **QA/Testing** | PHPStan, Biome, Playwright, Spatie Ignition |
+| **Backend** | PHP 8.5+, Composer, Timber (Twig), Carbon Fields, Corcel (read-only), Rakit Validation |
+| **Frontend** | Bun, Vite, Tailwind CSS v4, HTMX, AlpineJS |
+| **QA** | PHPStan (nivel 6), Biome, Pest + Brain Monkey + Patchwork, Playwright, Spatie Ignition |
+| **DevOps** | DDEV, GitHub Actions, Deployer, Lefthook |
 
-## **📂 Estructura del Proyecto**
+## **📂 Estructura**
 
 ```text
-wp-modern-theme-blueprint/
-├── app/                  # Lógica de Negocio (PHP Strict)
-│   ├── Contracts/        # Interfaces y Contratos
-│   ├── Controllers/      # Gestión de datos para Twig
-│   └── Providers/        # Integración con WordPress Hooks
-├── resources/            # Assets de Desarrollo
-│   ├── scripts/          # JavaScript Moderno
-│   └── views/            # Plantillas Twig (.twig)
-├── infra/                # Configuración de Servidor (Caddy)
-├── deploy.php            # Receta de despliegue (Deployer)
-└── GEMINI.md             # Constitución de Ingeniería (LEER PRIMERO)
+├── app/
+│   ├── Config/features.php   # ← Única fuente de verdad de módulos
+│   ├── Controllers/          # Orquestan datos → Twig (Blog, Form, DesignSystem)
+│   ├── Fields/               # Carbon Fields code-first (ThemeOptions, PageFields)
+│   ├── Providers/            # Hooks WP (Assets, Menus, Router, SEO, ExampleCpt)
+│   └── Setup/ThemeSetup.php  # Orquestador: core + módulos habilitados
+├── resources/
+│   ├── scripts/main.js       # Alpine + HTMX (importa main.css)
+│   ├── styles/main.css       # Tailwind v4 + tokens semánticos
+│   └── views/                # Twig: base, index, blog, single, contact,
+│       └── components/       #   button, card, input, alert, header, footer...
+├── docs/                     # ARCHITECTURE.md, COMPONENTS.md
+├── e2e/                      # Playwright (smoke tests)
+├── tests/Unit/               # Pest (sin WordPress real)
+├── functions.php             # Bootstrap: autoload, .env, Timber, Carbon, ThemeSetup
+└── style.css                 # Cabecera oficial del tema
 ```
 
-## **🚀 Inicio Rápido**
+## **🚀 Inicio rápido**
 
-1.  **Requisitos:** Tener instalado **Docker**, **DDEV**, **Bun** y **Composer**.
-2.  **Instalación:**
-    ```bash
-    ddev start
-    composer install
-    bun install
-    ```
-3.  **Desarrollo:**
-    ```bash
-    bun run dev
-    ```
+Requisitos: **Docker + DDEV**, **Bun** y **Composer** en el host (PHP 8.5 vive en el contenedor DDEV).
 
-## **🤝 Reglas de Oro**
+```bash
+# 1. Entorno (MariaDB, Valkey, Mailpit, web)
+ddev start
 
-1.  **Corcel es Read-Only:** La escritura de datos siempre usa funciones nativas de WP.
-2.  **Estado Híbrido:** Estado pesado en Servidor (HTMX), micro-interacciones en Cliente (Alpine).
-3.  **Cero Plugins de UI:** Todo componente visual se define en el tema, no en la DB.
+# 2. Dependencias
+composer install
+bun install
+
+# 3. Build de assets (o modo dev con HMR)
+bun run build
+```
+
+El sitio queda en `https://<nombre-proyecto>.ddev.site`. El "core fantasma" de WordPress (core fuera del repo, tema enlazado) se detecta y activa automáticamente en `ddev start`.
+
+### **Modo desarrollo (HMR)**
+
+```bash
+bun run dev
+```
+
+Los assets se sirven desde el dev server de Vite con hot reload de JS y Twig/PHP. ⚠️ Si el dev server muere abruptamente (crash, `kill -9`), borra el manifest huérfano: `rm dist/vite-dev-server.json`.
+
+## **🧩 Configuración de módulos**
+
+Todo se activa/parametriza en `app/Config/features.php`:
+
+```php
+'blog' => [
+    'enabled' => true,
+    'posts_per_page' => 12,
+],
+
+'forms' => [
+    'enabled' => true,
+    'forms' => [
+        'contact' => [
+            'route' => '/contacto',
+            'fields' => [
+                'name'    => 'required|min:3',
+                'email'   => 'required|email',
+                'message' => 'required|min:10',
+            ],
+            // ... recipient, subject, templates, textos de éxito
+        ],
+        // Añadir 'newsletter' => [...] = segundo formulario, sin código nuevo
+    ],
+],
+
+'example_cpt' => [
+    'enabled' => false,       // Actívalo para el CPT de ejemplo "Podcast"
+    'slug' => 'podcast',
+    'singular' => 'Podcast',
+    'plural' => 'Podcasts',
+],
+```
+
+## **⚡ Comandos**
+
+| Tarea | Comando |
+| :--- | :--- |
+| Levantar entorno | `ddev start` |
+| Modo dev (HMR) | `bun run dev` |
+| Build de producción | `bun run build` |
+| Tests unitarios (Pest) | `ddev exec composer test` |
+| Análisis estático (PHPStan 6) | `ddev exec composer analyze` |
+| Lint JS/CSS (Biome) | `bun run lint` (auto-fix: `bun run fix`) |
+| Tests E2E (Playwright) | `bun run test:e2e` |
+| Desplegar a producción | `ddev exec dep deploy production` |
+
+Los E2E corren contra el sitio DDEV activo y usan el Chrome del sistema. Para apuntar a otro entorno:
+
+```bash
+PLAYWRIGHT_BASE_URL=https://staging.example.com bun run test:e2e
+```
+
+## **🎨 Componentes**
+
+El catálogo vivo está en la ruta `/__components` (activa con `WP_ENV=development`). La referencia completa de props y tokens semánticos está en [`docs/COMPONENTS.md`](docs/COMPONENTS.md):
+
+```twig
+{% include 'components/card.twig' with {
+    title: post.title,
+    url: post.link,
+    excerpt: post.preview.length(20),
+    image: post.thumbnail ? post.thumbnail.src|resize(600, 400) : null,
+    meta: post.date|date('d M, Y'),
+} only %}
+```
+
+## **🚢 Despliegue (theme-only)**
+
+El repo contiene **solo el tema**: el core de WordPress mantiene sus actualizaciones automáticas de seguridad en producción. [Deployer](https://deployer.org) gestiona releases atómicas vía symlinks con `shared/` para `wp-content/uploads` y `.env`.
+
+```bash
+ddev exec dep deploy production
+```
+
+El pipeline de CI (`.github/workflows/ci.yml`) ejecuta Biome + build Vite, y PHPStan + Pest en cada push/PR. Los pre-commits (Lefthook) corren biome + phpstan + pest localmente.
+
+## **🤖 Agentes de IA**
+
+La arquitectura está optimizada para colaboración humano-agente: [`AGENTS.md`](AGENTS.md) define las reglas del stack (Corcel read-only, nonce HTMX, HTMX vs Alpine, contrato de fragmentos), los tipos están en cada firma y el catálogo de componentes es introspectable en `/__components`.
+
+## **📜 Licencia**
+
+MIT (el archivo `LICENSE` se añade en el paso de publicación — spec paso 11).
 
 ---
 
 ### **Diseñado por Cristian Rojas (El Arquitecto)**
-*Optimizado para la era de la web moderna, la soberanía tecnológica y la eficiencia extrema.*
+*Optimizado para la era de la web moderna, la soberanía tecnológica y la colaboración eficiente con IA.*
