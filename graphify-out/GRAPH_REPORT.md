@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
 
 ## Corpus Check
-- 210 files · ~141,735 words
+- 210 files · ~141,848 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2878 nodes · 2984 edges · 215 communities (182 shown, 20 thin omitted)
+- 2877 nodes · 2983 edges · 216 communities (182 shown, 20 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cd6cf6a8`
+- Built from commit: `8b4cd44d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,7 +66,6 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
-- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -217,6 +216,7 @@
 - 4. Flujo de datos
 - Glob Import
 - ExampleCptServiceProvider
+- Container-Based Testing
 
 ## God Nodes (most connected - your core abstractions)
 1. `Examples` - 24 edges
@@ -242,11 +242,11 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (215 total, 20 thin omitted)
+## Communities (216 total, 20 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
-Nodes (40): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+32 more)
+Nodes (39): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+31 more)
 
 ### Community 1 - "devDependencies"
 Cohesion: 0.12
@@ -443,10 +443,6 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 ### Community 57 - "Browser Console & JavaScript Error Handling"
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
-
-### Community 58 - "playwright-best-practices/SKILL.md"
-Cohesion: 0.08
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -966,15 +962,19 @@ Nodes (5): **1. Backend & Data (PHP & Composer)**, **2. Frontend & Interacción 
 
 ### Community 212 - "4. Flujo de datos"
 Cohesion: 0.50
-Nodes (4): 4.1 Lectura (ORM read-only), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4. Flujo de datos
+Nodes (4): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4. Flujo de datos
 
 ### Community 213 - "Glob Import"
 Cohesion: 0.33
 Nodes (6): Custom Queries, Eager Loading, Glob Import, Multiple Patterns, Named Imports, Negative Patterns
 
+### Community 215 - "Container-Based Testing"
+Cohesion: 0.12
+Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
+
 ## Knowledge Gaps
-- **1966 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1961 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2103 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1965 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1960 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2102 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -987,9 +987,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Multi-User & Collaboration Testing` connect `Multi-User & Collaboration Testing` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1966 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1965 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**

@@ -1239,7 +1239,7 @@
       "file_type": "code",
       "norm_label": "composer/installers",
       "source_file": "composer.json",
-      "source_location": "L48"
+      "source_location": "L47"
     },
     {
       "id": "composer_allow_plugins_pestphp_pest_plugin",
@@ -1250,7 +1250,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest-plugin",
       "source_file": "composer.json",
-      "source_location": "L49"
+      "source_location": "L48"
     },
     {
       "id": "composer_authors",
@@ -1272,7 +1272,7 @@
       "file_type": "code",
       "norm_label": "autoload",
       "source_file": "composer.json",
-      "source_location": "L33"
+      "source_location": "L32"
     },
     {
       "id": "composer_autoload_files",
@@ -1283,7 +1283,7 @@
       "file_type": "code",
       "norm_label": "files",
       "source_file": "composer.json",
-      "source_location": "L37"
+      "source_location": "L36"
     },
     {
       "id": "composer_autoload_psr_4",
@@ -1294,7 +1294,7 @@
       "file_type": "code",
       "norm_label": "psr-4",
       "source_file": "composer.json",
-      "source_location": "L34"
+      "source_location": "L33"
     },
     {
       "id": "composer_config",
@@ -1305,7 +1305,7 @@
       "file_type": "code",
       "norm_label": "config",
       "source_file": "composer.json",
-      "source_location": "L46"
+      "source_location": "L45"
     },
     {
       "id": "composer_config_allow_plugins",
@@ -1316,7 +1316,7 @@
       "file_type": "code",
       "norm_label": "allow-plugins",
       "source_file": "composer.json",
-      "source_location": "L47"
+      "source_location": "L46"
     },
     {
       "id": "composer_config_optimize_autoloader",
@@ -1327,7 +1327,7 @@
       "file_type": "code",
       "norm_label": "optimize-autoloader",
       "source_file": "composer.json",
-      "source_location": "L51"
+      "source_location": "L50"
     },
     {
       "id": "composer_config_sort_packages",
@@ -1338,7 +1338,7 @@
       "file_type": "code",
       "norm_label": "sort-packages",
       "source_file": "composer.json",
-      "source_location": "L52"
+      "source_location": "L51"
     },
     {
       "id": "composer_description",
@@ -1371,7 +1371,7 @@
       "file_type": "code",
       "norm_label": "minimum-stability",
       "source_file": "composer.json",
-      "source_location": "L54"
+      "source_location": "L53"
     },
     {
       "id": "composer_name",
@@ -1393,7 +1393,7 @@
       "file_type": "code",
       "norm_label": "prefer-stable",
       "source_file": "composer.json",
-      "source_location": "L55"
+      "source_location": "L54"
     },
     {
       "id": "composer_psr_4_rojasstack",
@@ -1404,7 +1404,7 @@
       "file_type": "code",
       "norm_label": "rojasstack\\\\",
       "source_file": "composer.json",
-      "source_location": "L35"
+      "source_location": "L34"
     },
     {
       "id": "composer_require",
@@ -1426,7 +1426,7 @@
       "file_type": "code",
       "norm_label": "require-dev",
       "source_file": "composer.json",
-      "source_location": "L25"
+      "source_location": "L24"
     },
     {
       "id": "composer_require_dev_brain_monkey",
@@ -1437,7 +1437,7 @@
       "file_type": "code",
       "norm_label": "brain/monkey",
       "source_file": "composer.json",
-      "source_location": "L26"
+      "source_location": "L25"
     },
     {
       "id": "composer_require_dev_deployer_deployer",
@@ -1448,7 +1448,7 @@
       "file_type": "code",
       "norm_label": "deployer/deployer",
       "source_file": "composer.json",
-      "source_location": "L27"
+      "source_location": "L26"
     },
     {
       "id": "composer_require_dev_pestphp_pest",
@@ -1459,7 +1459,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest",
       "source_file": "composer.json",
-      "source_location": "L28"
+      "source_location": "L27"
     },
     {
       "id": "composer_require_dev_php_stubs_wordpress_stubs",
@@ -1470,7 +1470,7 @@
       "file_type": "code",
       "norm_label": "php-stubs/wordpress-stubs",
       "source_file": "composer.json",
-      "source_location": "L29"
+      "source_location": "L28"
     },
     {
       "id": "composer_require_dev_phpstan_phpstan",
@@ -1481,7 +1481,7 @@
       "file_type": "code",
       "norm_label": "phpstan/phpstan",
       "source_file": "composer.json",
-      "source_location": "L30"
+      "source_location": "L29"
     },
     {
       "id": "composer_require_dev_spatie_ignition",
@@ -1492,7 +1492,7 @@
       "file_type": "code",
       "norm_label": "spatie/ignition",
       "source_file": "composer.json",
-      "source_location": "L31"
+      "source_location": "L30"
     },
     {
       "id": "composer_require_htmlburger_carbon_fields",
@@ -1517,17 +1517,6 @@
       "source_location": "L15"
     },
     {
-      "id": "composer_require_jgrossi_corcel",
-      "label": "jgrossi/corcel",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "jgrossi/corcel",
-      "source_file": "composer.json",
-      "source_location": "L16"
-    },
-    {
       "id": "composer_require_kucrut_vite_for_wp",
       "label": "kucrut/vite-for-wp",
       "_origin": "ast",
@@ -1536,7 +1525,7 @@
       "file_type": "code",
       "norm_label": "kucrut/vite-for-wp",
       "source_file": "composer.json",
-      "source_location": "L17"
+      "source_location": "L16"
     },
     {
       "id": "composer_require_nesbot_carbon",
@@ -1547,7 +1536,7 @@
       "file_type": "code",
       "norm_label": "nesbot/carbon",
       "source_file": "composer.json",
-      "source_location": "L18"
+      "source_location": "L17"
     },
     {
       "id": "composer_require_php",
@@ -1569,7 +1558,7 @@
       "file_type": "code",
       "norm_label": "rakit/validation",
       "source_file": "composer.json",
-      "source_location": "L19"
+      "source_location": "L18"
     },
     {
       "id": "composer_require_resend_resend_php",
@@ -1580,7 +1569,7 @@
       "file_type": "code",
       "norm_label": "resend/resend-php",
       "source_file": "composer.json",
-      "source_location": "L20"
+      "source_location": "L19"
     },
     {
       "id": "composer_require_spatie_schema_org",
@@ -1591,7 +1580,7 @@
       "file_type": "code",
       "norm_label": "spatie/schema-org",
       "source_file": "composer.json",
-      "source_location": "L21"
+      "source_location": "L20"
     },
     {
       "id": "composer_require_timber_timber",
@@ -1602,7 +1591,7 @@
       "file_type": "code",
       "norm_label": "timber/timber",
       "source_file": "composer.json",
-      "source_location": "L22"
+      "source_location": "L21"
     },
     {
       "id": "composer_require_vlucas_phpdotenv",
@@ -1613,7 +1602,7 @@
       "file_type": "code",
       "norm_label": "vlucas/phpdotenv",
       "source_file": "composer.json",
-      "source_location": "L23"
+      "source_location": "L22"
     },
     {
       "id": "composer_scripts",
@@ -1624,7 +1613,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "composer.json",
-      "source_location": "L41"
+      "source_location": "L40"
     },
     {
       "id": "composer_scripts_analyze",
@@ -1635,7 +1624,7 @@
       "file_type": "code",
       "norm_label": "analyze",
       "source_file": "composer.json",
-      "source_location": "L42"
+      "source_location": "L41"
     },
     {
       "id": "composer_scripts_lint",
@@ -1646,7 +1635,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "composer.json",
-      "source_location": "L43"
+      "source_location": "L42"
     },
     {
       "id": "composer_scripts_test",
@@ -1657,7 +1646,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "composer.json",
-      "source_location": "L44"
+      "source_location": "L43"
     },
     {
       "id": "composer_type",
@@ -8333,7 +8322,7 @@
       "node_kind": "heading",
       "norm_label": "5. assets (vite + vite-for-wp)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L106"
+      "source_location": "L108"
     },
     {
       "id": "docs_architecture_6_sistema_de_dise\u00f1o",
@@ -8345,7 +8334,7 @@
       "node_kind": "heading",
       "norm_label": "6. sistema de diseno",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L113"
+      "source_location": "L115"
     },
     {
       "id": "docs_architecture_7_calidad_y_testing",
@@ -8357,7 +8346,7 @@
       "node_kind": "heading",
       "norm_label": "7. calidad y testing",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L133"
+      "source_location": "L135"
     },
     {
       "id": "docs_architecture_8_despliegue_theme_only",
@@ -8369,7 +8358,7 @@
       "node_kind": "heading",
       "norm_label": "8. despliegue (theme-only)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L146"
+      "source_location": "L148"
     },
     {
       "id": "docs_architecture_9_decisiones_registradas_adrs_breves",
@@ -8381,7 +8370,7 @@
       "node_kind": "heading",
       "norm_label": "9. decisiones registradas (adrs breves)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L154"
+      "source_location": "L156"
     },
     {
       "id": "docs_architecture_arquitectura_del_rojas_stack",
@@ -13704,7 +13693,7 @@
       "node_kind": "heading",
       "norm_label": "**2. frontend & interaccion (bun & vite)**",
       "source_file": "AGENTS.md",
-      "source_location": "L25"
+      "source_location": "L24"
     },
     {
       "id": "agents_3_ci_cd_despliegue_del_tema",
@@ -13716,7 +13705,7 @@
       "node_kind": "heading",
       "norm_label": "**3. ci/cd & despliegue del tema**",
       "source_file": "AGENTS.md",
-      "source_location": "L30"
+      "source_location": "L29"
     },
     {
       "id": "agents_4_qa_debugging",
@@ -13728,7 +13717,7 @@
       "node_kind": "heading",
       "norm_label": "**4. qa & debugging**",
       "source_file": "AGENTS.md",
-      "source_location": "L36"
+      "source_location": "L35"
     },
     {
       "id": "agents_stack_tecnol\u00f3gico_the_dream_team",
@@ -13743,14 +13732,14 @@
       "source_location": "L15"
     },
     {
-      "id": "docs_architecture_4_1_lectura_orm_read_only",
-      "label": "4.1 Lectura (ORM read-only)",
+      "id": "docs_architecture_4_1_lectura_timber_wp_query",
+      "label": "4.1 Lectura (Timber / WP_Query)",
       "_origin": "ast",
       "community": 212,
       "community_name": "4. Flujo de datos",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.1 lectura (orm read-only)",
+      "norm_label": "4.1 lectura (timber / wp_query)",
       "source_file": "docs/ARCHITECTURE.md",
       "source_location": "L75"
     },
@@ -13764,7 +13753,7 @@
       "node_kind": "heading",
       "norm_label": "4.2 metadatos (code-first)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L82"
+      "source_location": "L84"
     },
     {
       "id": "docs_architecture_4_3_escritura_formularios",
@@ -13776,7 +13765,7 @@
       "node_kind": "heading",
       "norm_label": "4.3 escritura (formularios)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L89"
+      "source_location": "L91"
     },
     {
       "id": "docs_architecture_4_flujo_de_datos",
@@ -13883,6 +13872,198 @@
       "norm_label": "examplecptserviceprovidertest.php",
       "source_file": "tests/Unit/ExampleCptServiceProviderTest.php",
       "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker",
+      "label": "docker.md",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "docker.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L211"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_browsertype_launch_executable_doesn_t_exist",
+      "label": "\"browserType.launch: Executable doesn't exist\"",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"browsertype.launch: executable doesn't exist\"",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L223"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_ci_container_jobs",
+      "label": "CI Container Jobs",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ci container jobs",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L127"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_container_based_testing",
+      "label": "Container-Based Testing",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "container-based testing",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_custom_dockerfile",
+      "label": "Custom Dockerfile",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom dockerfile",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L40"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_dev_container_setup",
+      "label": "Dev Container Setup",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dev container setup",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L176"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_docker_compose_stack",
+      "label": "Docker Compose Stack",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker compose stack",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_net_err_connection_refused_in_docker_compose",
+      "label": "\"net::ERR_CONNECTION_REFUSED\" in docker-compose",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"net::err_connection_refused\" in docker-compose",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L232"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_official_image_usage",
+      "label": "Official Image Usage",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "official image usage",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_permission_denied_on_mounted_volumes",
+      "label": "Permission denied on mounted volumes",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "permission denied on mounted volumes",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L252"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_slow_container_tests_on_macos_windows",
+      "label": "Slow container tests on macOS/Windows",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "slow container tests on macos/windows",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L263"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L221"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -16190,7 +16371,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L423"
+      "source_location": "L427"
     },
     {
       "id": "rojas_starter_spec_14_criterios_de_\u00e9xito",
@@ -16202,7 +16383,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L433"
+      "source_location": "L437"
     },
     {
       "id": "rojas_starter_spec_1_1_prop\u00f3sito",
@@ -24337,198 +24518,6 @@
       "norm_label": "ci-cd.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/ci-cd.md",
       "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker",
-      "label": "docker.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "docker.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L211"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_browsertype_launch_executable_doesn_t_exist",
-      "label": "\"browserType.launch: Executable doesn't exist\"",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"browsertype.launch: executable doesn't exist\"",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L223"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_ci_container_jobs",
-      "label": "CI Container Jobs",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ci container jobs",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L127"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_container_based_testing",
-      "label": "Container-Based Testing",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "container-based testing",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_custom_dockerfile",
-      "label": "Custom Dockerfile",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom dockerfile",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L200"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_dev_container_setup",
-      "label": "Dev Container Setup",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dev container setup",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L176"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_docker_compose_stack",
-      "label": "Docker Compose Stack",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker compose stack",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L72"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_net_err_connection_refused_in_docker_compose",
-      "label": "\"net::ERR_CONNECTION_REFUSED\" in docker-compose",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"net::err_connection_refused\" in docker-compose",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L232"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_official_image_usage",
-      "label": "Official Image Usage",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "official image usage",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_permission_denied_on_mounted_volumes",
-      "label": "Permission denied on mounted volumes",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "permission denied on mounted volumes",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L252"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_slow_container_tests_on_macos_windows",
-      "label": "Slow container tests on macOS/Windows",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "slow container tests on macos/windows",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L263"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L221"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_github_actions",
@@ -34231,7 +34220,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udf10 arquitectura macro (infraestructura del servidor)**",
       "source_file": "AGENTS.md",
-      "source_location": "L42"
+      "source_location": "L41"
     },
     {
       "id": "agents_comandos_de_desarrollo_despliegue",
@@ -34243,7 +34232,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos de desarrollo & despliegue**",
       "source_file": "AGENTS.md",
-      "source_location": "L81"
+      "source_location": "L80"
     },
     {
       "id": "agents_estructura_del_tema_app_y_resources",
@@ -34255,7 +34244,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcc2 estructura del tema (`app/` y `resources/`)**",
       "source_file": "AGENTS.md",
-      "source_location": "L48"
+      "source_location": "L47"
     },
     {
       "id": "agents_filosof\u00eda_del_stack",
@@ -34279,7 +34268,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L93"
+      "source_location": "L92"
     },
     {
       "id": "agents_reglas_de_integraci\u00f3n_front_back_safe_rules",
@@ -34291,7 +34280,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd1d reglas de integracion front-back (safe rules)**",
       "source_file": "AGENTS.md",
-      "source_location": "L73"
+      "source_location": "L72"
     },
     {
       "id": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
@@ -35928,7 +35917,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L42",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -35939,7 +35928,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L48",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -35961,7 +35950,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L73",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -35972,7 +35961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L81",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -35983,7 +35972,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L93",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -62438,7 +62427,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -62449,7 +62438,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -62460,7 +62449,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L36",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -62790,7 +62779,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -62812,7 +62801,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -62834,7 +62823,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L41",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -62845,7 +62834,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L46",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -62867,7 +62856,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L54",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -62878,7 +62867,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L55",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -62900,7 +62889,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L34",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -62911,7 +62900,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L37",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -62922,7 +62911,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L35",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -62933,7 +62922,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L47",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -62944,7 +62933,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L51",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -62955,7 +62944,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -62966,7 +62955,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L48",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -62977,7 +62966,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L49",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -63015,7 +63004,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_jgrossi_corcel",
+      "target": "composer_require_kucrut_vite_for_wp",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63026,7 +63015,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_kucrut_vite_for_wp",
+      "target": "composer_require_nesbot_carbon",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63037,7 +63026,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_nesbot_carbon",
+      "target": "composer_require_rakit_validation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63048,7 +63037,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_rakit_validation",
+      "target": "composer_require_resend_resend_php",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63059,7 +63048,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_resend_resend_php",
+      "target": "composer_require_spatie_schema_org",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63070,7 +63059,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_spatie_schema_org",
+      "target": "composer_require_timber_timber",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63081,24 +63070,13 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_timber_timber",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_require",
       "target": "composer_require_vlucas_phpdotenv",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L23",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -63109,7 +63087,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L26",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -63120,7 +63098,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L27",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -63131,7 +63109,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -63142,7 +63120,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L29",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -63153,7 +63131,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -63164,7 +63142,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L31",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -63175,7 +63153,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L42",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -63186,7 +63164,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -63197,7 +63175,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L44",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -63235,7 +63213,7 @@
     },
     {
       "source": "docs_architecture_4_flujo_de_datos",
-      "target": "docs_architecture_4_1_lectura_orm_read_only",
+      "target": "docs_architecture_4_1_lectura_timber_wp_query",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63252,7 +63230,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L82",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -63263,7 +63241,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L89",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -63274,7 +63252,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L106",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -63285,7 +63263,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L113",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -63296,7 +63274,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L133",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -63307,7 +63285,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L146",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -63318,7 +63296,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L154",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -64407,7 +64385,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L423",
+      "source_location": "L427",
       "weight": 1.0
     },
     {
@@ -64418,7 +64396,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L433",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -67361,5 +67339,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "cd6cf6a8d78ea2c8290dda8f58bfc3511c10f3de"
+  "built_at_commit": "8b4cd44dfdf2ba4735c0b71d257f2b8f8758311c"
 }
