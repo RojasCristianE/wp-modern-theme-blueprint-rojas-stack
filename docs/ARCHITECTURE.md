@@ -72,12 +72,14 @@ Como el router intercepta *después* de que WP resolvió la query, una ruta virt
 
 ## 4. Flujo de datos
 
-### 4.1 Lectura (ORM read-only)
+### 4.1 Lectura (Timber / WP_Query)
 
-- **Corcel** (Eloquent) está disponible para consultas complejas de solo lectura.
-- En la práctica, los controllers usan `Timber::get_posts()` / `Timber::context()`, que ya envuelven `WP_Query` y entregan objetos listos para Twig.
+- Los controllers usan `Timber::get_posts()` / `Timber::context()`, que envuelven `WP_Query` y entregan objetos listos para Twig.
+- Para lecturas complejas específicas de un proyecto, usar `WP_Query`/`$wpdb` directamente o añadir Eloquent (Corcel) como dependencia local — nunca como parte del starter.
 
-**Regla de oro:** Corcel es **exclusivamente lectura**. Toda escritura usa funciones nativas (`wp_insert_post`, `wp_update_post`) para respetar los hooks y sanitización del core.
+**Regla de oro:** la **escritura** de datos usa siempre funciones nativas de WordPress (`wp_insert_post`, `wp_update_post`) para respetar los hooks y la sanitización del core.
+
+> Nota (2026-09-08): Corcel fue retirado del stack — sin uso en el código y con su dependencia `hautelook/phpass 0.3.4` yanked en Packagist (rompía instalaciones frescas). Ver ADR #11.
 
 ### 4.2 Metadatos (code-first)
 
@@ -160,8 +162,9 @@ Las utilidades (`bg-page`, `bg-surface`, `text-ink`, `border-line`) resuelven la
 | 3 | Router genérico (`add_route`) sin conocimiento de módulos | Los módulos registran lo suyo; el router no crece con cada feature |
 | 4 | `kucrut/vite-for-wp` sobre enqueue manual | Manifest estándar, detección de dev server mantenida por la librería |
 | 5 | Jerarquía Twig como base + router como override | Contenido de DB resuelve nativo; rutas code-first explícitas (§12.1) |
-| 6 | Corcel read-only; escritura nativa | Respetar hooks/sanitización del core de WP |
+| 6 | Escritura nativa de WP; lectura vía Timber/WP_Query | Respetar hooks/sanitización del core de WP |
 | 7 | HTMX para estado, Alpine para efímero | Sin SPAs; estado persistente verificable en servidor |
 | 8 | Tokens CSS runtime + `@theme inline` | Dark mode sin toggle ni duplicación de clases |
 | 9 | Tests con Brain Monkey + Patchwork | Suite rápida sin instalar WordPress real |
 | 10 | Wildcards de dependencias (fase experimental) | `composer.lock`/`bun.lock` son el mecanismo real de reproducibilidad |
+| 11 | Corcel retirado del stack; rangos caret anclados (2026-09-08) | Corcel sin uso en el código y con `hautelook/phpass 0.3.4` yanked en Packagist; los rangos caret fijan techos de major explícitos |

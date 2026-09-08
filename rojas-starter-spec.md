@@ -56,7 +56,7 @@ Transformar el **Rojas Stack Blueprint** actual en un **starter theme WordPress*
 ## 4. Decisiones de arquitectura
 
 ### 4.1 Patrón MVC ligero
-- **Modelos:** Corcel/Eloquent para lectura de datos (read-only).
+- **Modelos:** lectura vía `Timber::get_posts()`/`WP_Query` (Eloquent/Corcel opcional por proyecto, no incluido).
 - **Vistas:** Twig templates bajo `resources/views/`.
 - **Controladores:** PHP clases en `app/Controllers/` que orquestan datos para Twig.
 
@@ -162,7 +162,7 @@ rojas-starter/
 │   ├── Fields/
 │   │   ├── ThemeOptions.php
 │   │   └── PageFields.php
-│   ├── Models/                  # Modelos Corcel
+│   ├── Models/                  # Modelos de dominio del proyecto (opcional)
 │   ├── Providers/
 │   │   ├── AssetServiceProvider.php (usa kucrut/vite-for-wp)
 │   │   ├── MenuServiceProvider.php
@@ -414,15 +414,19 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
   Gotcha operativo: si el dev server muere abruptamente (kill -9), el
   manifest queda huérfano y el sitio sigue apuntando a URLs muertas
   hasta borrarlo a mano.
-- **Dependencias:** se mantienen wildcards (`*`/`latest`) durante la
-  fase experimental; `composer.lock` y `bun.lock` son el mecanismo real
-  de reproducibilidad (ver §13).
+- **Dependencias:** los wildcards (`*`/`latest`) de la fase experimental
+  fueron reemplazados por **rangos caret anclados** a las versiones
+  verificadas (2026-09-08); `composer.lock` y `bun.lock` siguen siendo
+  el mecanismo de reproducibilidad exacta. En el mismo paso se retiró
+  `jgrossi/corcel` (sin uso en el código y con su dependencia
+  `hautelook/phpass 0.3.4` yanked en Packagist) y `lucatume/wp-browser`
+  (sin uso, bloqueaba estructuralmente Pest 5).
 
 ---
 
 ## 13. Preguntas abiertas y supuestos
 
-- **Versionado de dependencias:** ¿se deben fijar versiones en `composer.json`/`package.json` para estabilidad, o mantener wildcards y confiar en que cada proyecto gestione updates?
+- **Versionado de dependencias:** resuelto (2026-09-08) — rangos caret anclados en `composer.json` (ver §12.1); los majors quedan como decisiones explícitas de upgrade.
 - **Multilenguaje:** aunque se eligió "plugin-agnóstico", ¿debe existir un ejemplo mínimo de internacionalización (i18n) listo para WPML/Polylang?
 - **Rutas virtuales vs. jerarquía de templates:** respondido en §12.1 — conviven: la jerarquía Twig es la base (contenido de la DB) y el `RouteServiceProvider` es override explícito code-first (intercepta en `template_redirect`).
 - **Generador de POT:** ¿incluir un workflow/script para generar archivos `.pot` de traducción?

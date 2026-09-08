@@ -8,16 +8,15 @@ Este documento define la arquitectura y filosofía del **Rojas Stack**, un entor
 
 * **Theme-Centric Control:** El control total reside en el código del tema, minimizando la dependencia del CMS y plugins externos.
 * **Separación de Capas (Responsabilidad Única):** Lógica encapsulada en PHP y vistas atómicas en Twig.
-* **AI-First & Predictibilidad:** Estructuras predecibles, tipado estricto (Corcel/Contracts/Carbon Fields) y auto-documentación in-situ para minimizar alucinaciones y fricción en el desarrollo colaborativo.
+* **AI-First & Predictibilidad:** Estructuras predecibles, tipado estricto (Contracts/Carbon Fields) y auto-documentación in-situ para minimizar alucinaciones y fricción en el desarrollo colaborativo.
 * **Soberanía Tecnológica (OSS Friendly):** Uso de alternativas de código abierto real (Valkey, MariaDB) y herramientas estándar de la industria (Composer, Bun, Vite).
 * **Despliegue Ágil (Theme-Only):** El repositorio se enfoca exclusivamente en el código del tema, permitiendo que el Core de WordPress mantenga sus actualizaciones automáticas de seguridad intactas en producción.
 
 ## **🛠 Stack Tecnológico (The Dream Team)**
 
 ### **1. Backend & Data (PHP & Composer)**
-* **Corcel (ORM):** Modelos Eloquent para lectura de datos de WordPress.
+* **Timber (Twig):** Motor de plantillas desacoplado; `Timber::get_posts()`/`WP_Query` para lectura.
 * **Carbon Fields:** Metadatos 100% Code-First.
-* **Timber (Twig):** Motor de plantillas desacoplado.
 * **MariaDB & Valkey:** Base de datos y caché de alto rendimiento.
 * **Action Scheduler:** Sistema de colas robusto.
 * **Illuminate HTTP & Carbon:** Utilidades modernas.
@@ -56,7 +55,7 @@ wp-modern-theme-blueprint/
 │   ├── Contracts/        # Interfaces (El manual para la IA).
 │   ├── Controllers/      # Controladores (Orquestación).
 │   ├── Fields/           # Definiciones de Carbon Fields.
-│   ├── Models/           # Modelos Eloquent de Corcel.
+│   ├── Models/           # Modelos de dominio del proyecto (opcional).
 │   ├── Providers/        # Service Providers (WordPress Hooks).
 │   ├── Services/         # Lógica pesada (APIs, Cache Purging).
 │   └── Setup/            # ThemeSetup: orquestador de core + módulos.
@@ -72,7 +71,7 @@ wp-modern-theme-blueprint/
 
 ## **🤝 Reglas de Integración Front-Back (Safe Rules)**
 
-1.  **Integridad de Datos (Read-Only ORM):** **Corcel se utiliza exclusivamente para LECTURA**. La escritura de datos usa funciones nativas (`wp_insert_post`) para respetar los hooks.
+1.  **Integridad de Datos (Write-Native):** La **escritura** de datos usa siempre funciones nativas (`wp_insert_post`) para respetar los hooks; la lectura pasa por `Timber::get_posts()`/`WP_Query`.
 2.  **Seguridad HTMX (X-WP-Nonce):** Todas las peticiones HTMX hacia la REST API de WordPress **deben incluir el nonce de seguridad**. Esto se configura inyectando globalmente la cabecera `X-WP-Nonce` mediante el evento `htmx:configRequest`.
 3.  **Gestión de Estado (HTMX vs Alpine):** El estado persistente (filtros, paginación) reside en el servidor. **AlpineJS se reserva estrictamente para micro-interacciones efímeras** (dropdowns, modales).
 4.  **El Contrato de Fragmentos:** Todo componente dinámico debe poder renderizarse de forma aislada. HTMX solicita estos fragmentos vía REST API y hace `hx-swap`.

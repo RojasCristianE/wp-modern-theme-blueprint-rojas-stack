@@ -22,7 +22,7 @@ Starter theme WordPress **monolítico moderno, 100% code-first**: PHP estricto +
 
 | Capa | Tecnologías |
 | :--- | :--- |
-| **Backend** | PHP 8.5+, Composer, Timber (Twig), Carbon Fields, Corcel (read-only), Rakit Validation |
+| **Backend** | PHP 8.5+, Composer, Timber (Twig), Carbon Fields, Rakit Validation |
 | **Frontend** | Bun, Vite, Tailwind CSS v4, HTMX, AlpineJS |
 | **QA** | PHPStan (nivel 6), Biome, Pest + Brain Monkey + Patchwork, Playwright, Spatie Ignition |
 | **DevOps** | DDEV, GitHub Actions, Deployer, Lefthook |
@@ -153,7 +153,7 @@ El pipeline de CI (`.github/workflows/ci.yml`) ejecuta Biome + build Vite, y PHP
 
 ## **🤖 Agentes de IA**
 
-La arquitectura está optimizada para colaboración humano-agente: [`AGENTS.md`](AGENTS.md) define las reglas del stack (Corcel read-only, nonce HTMX, HTMX vs Alpine, contrato de fragmentos), los tipos están en cada firma y el catálogo de componentes es introspectable en `/__components`.
+La arquitectura está optimizada para colaboración humano-agente: [`AGENTS.md`](AGENTS.md) define las reglas del stack (escritura nativa de WP, nonce HTMX, HTMX vs Alpine, contrato de fragmentos), los tipos están en cada firma y el catálogo de componentes es introspectable en `/__components`.
 
 ## **📜 Licencia**
 

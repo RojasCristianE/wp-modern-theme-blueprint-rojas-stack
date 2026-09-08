@@ -11,24 +11,23 @@
     ],
     "require": {
         "php": ">=8.5",
-        "htmlburger/carbon-fields": "*",
-        "illuminate/http": "*",
-        "jgrossi/corcel": "*",
+        "htmlburger/carbon-fields": "^3.6",
+        "illuminate/http": "^13.31",
         "kucrut/vite-for-wp": "^0.12.0",
-        "nesbot/carbon": "*",
-        "rakit/validation": "*",
-        "resend/resend-php": "*",
+        "nesbot/carbon": "^3.13",
+        "rakit/validation": "^1.4",
+        "resend/resend-php": "^1.13",
         "spatie/schema-org": "^5.0",
-        "timber/timber": "*",
-        "vlucas/phpdotenv": "*"
+        "timber/timber": "^2.5",
+        "vlucas/phpdotenv": "^5.7"
     },
     "require-dev": {
         "brain/monkey": "^2.7",
-        "deployer/deployer": "*",
+        "deployer/deployer": "^8.0",
         "pestphp/pest": "^5.1",
         "php-stubs/wordpress-stubs": "^7.1",
-        "phpstan/phpstan": "*",
-        "spatie/ignition": "*"
+        "phpstan/phpstan": "^2.2",
+        "spatie/ignition": "^1.16"
     },
     "autoload": {
         "psr-4": {
