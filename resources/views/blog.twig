@@ -29,6 +29,8 @@
                 } only %}
             {% endfor %}
         </div>
+
+        {% include 'components/pagination.twig' with { posts: posts } only %}
     </div>
 </section>
 {% endblock %}

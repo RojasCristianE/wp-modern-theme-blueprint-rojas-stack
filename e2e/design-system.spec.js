@@ -20,7 +20,14 @@ test('el catálogo de componentes renderiza todas las secciones', async ({
     page.getByRole('heading', { level: 1, name: 'Design System' }),
   ).toBeVisible();
 
-  for (const section of ['Botones', 'Inputs', 'Alertas', 'Cards']) {
+  for (const section of [
+    'Botones',
+    'Inputs',
+    'Alertas',
+    'Cards',
+    'Badges',
+    'Iconos',
+  ]) {
     await expect(page.getByRole('heading', { name: section })).toBeVisible();
   }
 
@@ -32,4 +39,8 @@ test('el catálogo de componentes renderiza todas las secciones', async ({
 
   // Un input con estado de error
   await expect(page.locator('#demo_error')).toHaveValue('no-valido');
+
+  // Badges y catálogo de iconos
+  await expect(page.getByText('Brand', { exact: true })).toBeVisible();
+  await expect(page.locator('svg[aria-hidden="true"]').first()).toBeAttached();
 });

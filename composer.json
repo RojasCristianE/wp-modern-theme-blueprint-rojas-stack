@@ -21,6 +21,7 @@
     "require-dev": {
         "brain/monkey": "^2.7",
         "deployer/deployer": "^8.0",
+        "itsgoingd/clockwork": "^5.3",
         "pestphp/pest": "^5.1",
         "php-stubs/wordpress-stubs": "^7.1",
         "phpstan/phpstan": "^2.2",

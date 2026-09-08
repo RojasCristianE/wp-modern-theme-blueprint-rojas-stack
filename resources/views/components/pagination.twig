@@ -1,0 +1,59 @@
+{#
+  Paginación del loop (spec §8.3). Numerada, con flechas prev/next.
+
+  Usa el Pagination que Timber adjunta al PostQuery devuelto por
+  Timber::get_posts() — no llama funciones adicionales. Requiere que el
+  controller pida la página actual: 'paged' => max(1, (int) get_query_var('paged')).
+
+  Parámetros:
+  - posts: El PostQuery de Timber (p.ej. la variable `posts` del contexto).
+           Si no llega (include sin props), el componente no renderiza nada.
+
+  Nota CPT: para paginar un archive de CPT propio (p.ej. example_cpt),
+  extiende este componente resolviendo el paginado contra el query de ese
+  post type — la base /page/N del main query solo cubre 'post'.
+
+  Uso:
+    {% include 'components/pagination.twig' with { posts: posts } only %}
+#}
+{% set pagination = posts.pagination ?? null %}
+
+{% if pagination and pagination.pages|length > 1 %}
+    {% set arrow_classes = 'inline-flex items-center justify-center p-2.5 rounded-full border border-line bg-surface text-ink-muted hover:text-brand-600 hover:border-brand-600 transition-colors' %}
+    {% set number_classes = 'inline-flex items-center justify-center min-w-10 h-10 px-3 rounded-full text-sm font-semibold border transition-colors' %}
+
+    <nav aria-label="Paginación" class="flex items-center justify-center gap-2">
+        {# Anterior #}
+        {% if pagination.prev %}
+            <a href="{{ pagination.prev.link }}" aria-label="Página anterior" class="{{ arrow_classes }}">
+                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4 rotate-180' } only %}
+            </a>
+        {% else %}
+            <span class="{{ arrow_classes }} opacity-40 pointer-events-none" aria-hidden="true">
+                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4 rotate-180' } only %}
+            </span>
+        {% endif %}
+
+        {# Números #}
+        {% for page in pagination.pages %}
+            {% if page.current %}
+                <span class="{{ number_classes }} bg-brand-600 text-white border-brand-600 shadow-md shadow-brand-200" aria-current="page">{{ page.title }}</span>
+            {% elseif page.link %}
+                <a href="{{ page.link }}" class="{{ number_classes }} bg-surface text-ink-muted border-line hover:text-brand-600 hover:border-brand-600">{{ page.title }}</a>
+            {% else %}
+                <span class="{{ number_classes }} bg-surface text-ink-muted border-line">{{ page.title }}</span>
+            {% endif %}
+        {% endfor %}
+
+        {# Siguiente #}
+        {% if pagination.next %}
+            <a href="{{ pagination.next.link }}" aria-label="Página siguiente" class="{{ arrow_classes }}">
+                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
+            </a>
+        {% else %}
+            <span class="{{ arrow_classes }} opacity-40 pointer-events-none" aria-hidden="true">
+                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
+            </span>
+        {% endif %}
+    </nav>
+{% endif %}

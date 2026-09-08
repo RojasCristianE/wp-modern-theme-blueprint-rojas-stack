@@ -1,0 +1,27 @@
+{#
+  Etiqueta/chip (spec §8.3). Para categorías, tags, estados o contadores.
+
+  Parámetros:
+  - label:   Texto del badge.
+  - href:    Si se define renderiza <a>; si no, <span>.
+  - variant: 'brand' | 'neutral' | 'success' | 'warning' | 'error'. Default: 'neutral'.
+  - classes: Clases extra para personalización puntual.
+
+  Ejemplos:
+    {% include 'components/badge.twig' with { label: 'Blog', variant: 'brand', href: '/blog' } %}
+    {% include 'components/badge.twig' with { label: 'Borrador', variant: 'warning' } only %}
+#}
+{% set variant_classes = {
+    'brand':   'bg-brand-600/10 text-brand-700 dark:text-brand-300 border-brand-600/20',
+    'neutral': 'bg-page text-ink-muted border-line',
+    'success': 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20',
+    'warning': 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20',
+    'error':   'bg-red-500/10 text-red-700 dark:text-red-300 border-red-500/20',
+} %}
+{% set all_classes = 'inline-flex items-center gap-1 px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wider ' ~ (variant_classes[variant ?? 'neutral'] ?? variant_classes.neutral) ~ ' ' ~ (classes ?? '') %}
+
+{% if href %}
+    <a href="{{ href }}" class="{{ all_classes }}">{{ label }}</a>
+{% else %}
+    <span class="{{ all_classes }}">{{ label }}</span>
+{% endif %}

@@ -7,6 +7,7 @@ use function Brain\Monkey\Functions\when;
 
 it('renderiza blog.twig con título y posts en el contexto', function () {
     when('__')->returnArg();
+    when('get_query_var')->justReturn(0); // sin ?paged= → página 1
 
     $captured = null;
     $postsArgs = null;
@@ -27,11 +28,13 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
         ->and($captured[1]['title'])->toBe('Blog')
         ->and($captured[1]['posts'])->toBe(['POST_A', 'POST_B'])
         ->and($captured[1]['site_url'])->toBe('http://site.test')
-        ->and($postsArgs['posts_per_page'])->toBe(12);
+        ->and($postsArgs['posts_per_page'])->toBe(12)
+        ->and($postsArgs['paged'])->toBe(1);
 });
 
 it('respeta posts_per_page de la configuración del módulo blog', function () {
     when('__')->returnArg();
+    when('get_query_var')->justReturn(0);
 
     $postsArgs = null;
 
@@ -46,6 +49,25 @@ it('respeta posts_per_page de la configuración del módulo blog', function () {
     (new BlogController(['posts_per_page' => 5]))->render_page();
 
     expect($postsArgs['posts_per_page'])->toBe(5);
+});
+
+it('propaga la página actual del query a los args de posts (paginación)', function () {
+    when('__')->returnArg();
+    when('get_query_var')->alias(fn (string $var) => $var === 'paged' ? 3 : 0);
+
+    $postsArgs = null;
+
+    \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
+    \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
+        $postsArgs = $args;
+
+        return [];
+    });
+    \Patchwork\redefine('Timber\Timber::render', fn (string $template, array $context) => null);
+
+    (new BlogController())->render_page();
+
+    expect($postsArgs['paged'])->toBe(3);
 });
 
 it('register() es un no-op seguro', function () {

@@ -47,7 +47,7 @@
         </section>
 
         {# ---------- Cards ---------- #}
-        <section class="mb-8 bg-surface p-8 rounded-2xl border border-line">
+        <section class="mb-16 bg-surface p-8 rounded-2xl border border-line">
             <h2 class="text-xl font-bold text-ink mb-6">Cards</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {% include 'components/card.twig' with {
@@ -64,6 +64,33 @@
                     image: 'https://picsum.photos/seed/rojas/640/360',
                     link_label: 'Ver post',
                 } %}
+            </div>
+        </section>
+
+        {# ---------- Badges ---------- #}
+        <section class="mb-16 bg-surface p-8 rounded-2xl border border-line">
+            <h2 class="text-xl font-bold text-ink mb-6">Badges</h2>
+            <div class="flex flex-wrap items-center gap-3">
+                {% include 'components/badge.twig' with { label: 'Brand', variant: 'brand' } %}
+                {% include 'components/badge.twig' with { label: 'Neutral', variant: 'neutral' } %}
+                {% include 'components/badge.twig' with { label: 'Éxito', variant: 'success' } %}
+                {% include 'components/badge.twig' with { label: 'Advertencia', variant: 'warning' } %}
+                {% include 'components/badge.twig' with { label: 'Error', variant: 'error' } %}
+                {% include 'components/badge.twig' with { label: 'Como enlace', variant: 'brand', href: '#' } %}
+            </div>
+        </section>
+
+        {# ---------- Iconos ---------- #}
+        <section class="mb-8 bg-surface p-8 rounded-2xl border border-line">
+            <h2 class="text-xl font-bold text-ink mb-6">Iconos</h2>
+            <p class="text-sm text-ink-muted mb-4">SVG inline vía <code class="text-xs bg-page px-2 py-0.5 rounded">components/icon.twig</code> — sin dependencias de iconos en runtime.</p>
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-4 max-w-2xl">
+                {% for name in ['search', 'close', 'check', 'check-circle', 'x-circle', 'alert-triangle', 'info', 'arrow-right', 'mail', 'calendar'] %}
+                    <div class="flex flex-col items-center gap-2 p-4 rounded-xl border border-line bg-page">
+                        {% include 'components/icon.twig' with { name: name, classes: 'w-6 h-6 text-ink' } only %}
+                        <span class="text-[10px] font-mono text-ink-faint">{{ name }}</span>
+                    </div>
+                {% endfor %}
             </div>
         </section>
 

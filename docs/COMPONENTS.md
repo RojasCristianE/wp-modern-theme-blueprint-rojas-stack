@@ -30,6 +30,22 @@ Definidos en `resources/styles/main.css`. Variables CSS en runtime puenteadas a 
 
 ## Catálogo
 
+### `icon.twig`
+
+SVG inline con trazo estilo lucide. El mapa de rutas vive en el propio archivo (licencia ISC de lucide) — sin dependencias de iconos en runtime.
+
+| Prop | Tipo | Default | Descripción |
+|---|---|---|---|
+| `name` | string | — | Clave del mapa (`search`, `close`, `check`, `check-circle`, `x-circle`, `alert-triangle`, `info`, `arrow-right`, `mail`, `calendar`). Desconocida → no renderiza nada |
+| `classes` | string | `w-5 h-5` | Clases del `<svg>` |
+| `stroke` | int | `2` | Grosor del trazo |
+
+```twig
+{% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
+```
+
+> Para añadir un icono: copia el `<path>` desde [lucide.dev](https://lucide.dev) y añádelo al mapa. Los iconos son la excepción documentada al uso de tokens: heredan `currentColor`.
+
 ### `button.twig`
 
 Botón pill con focus rings visibles y feedback `active:scale-95`.
@@ -104,7 +120,7 @@ Tarjeta para blog/portfolio con CTA.
 
 ### `alert.twig`
 
-Alerta semántica con icono. Dos modos de uso:
+Alerta semántica con icono (vía `icon.twig`: `check-circle`, `x-circle`, `alert-triangle`, `info`). Dos modos de uso:
 
 ```twig
 {# Simple (include): message como texto #}
@@ -125,6 +141,38 @@ Alerta semántica con icono. Dos modos de uso:
 | `variant` | `success` \| `error` \| `warning` \| `info` | `info` | Semántica (paleta con alpha translúcido, correcta en ambos modos) |
 | `title` | string? | — | Título |
 | `message` | string? | — | Texto (solo modo include) |
+
+### `badge.twig`
+
+Etiqueta/chip para categorías, tags, estados o contadores.
+
+| Prop | Tipo | Default | Descripción |
+|---|---|---|---|
+| `label` | string | — | Texto del badge |
+| `href` | string? | — | Si se define renderiza `<a>`, si no `<span>` |
+| `variant` | `brand` \| `neutral` \| `success` \| `warning` \| `error` | `neutral` | Paleta |
+| `classes` | string? | — | Clases extra |
+
+```twig
+{% include 'components/badge.twig' with { label: category.name, href: category.link, variant: 'brand' } only %}
+```
+
+### `pagination.twig`
+
+Paginación numerada con flechas prev/next. Requiere que el loop sea paginado:
+el controller debe pasar `'paged' => max(1, (int) get_query_var('paged'))` a `Timber::get_posts()`.
+
+| Prop | Tipo | Default | Descripción |
+|---|---|---|---|
+| `name` | string | `posts` | Nombre del paginado de Timber |
+
+```twig
+{% include 'components/pagination.twig' with { name: 'posts' } %}
+```
+
+> Nota CPT: para paginar un archive de CPT propio (p.ej. `example_cpt`), extiende el
+> componente resolviendo el paginado contra el query de ese post type — la base
+> `/page/N` del main query solo cubre `post`.
 
 ## Componentes de layout (no del catálogo)
 

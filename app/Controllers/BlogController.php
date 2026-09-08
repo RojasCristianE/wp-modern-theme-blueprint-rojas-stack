@@ -39,9 +39,11 @@ class BlogController
         $context = Timber::context();
         $context['title'] = __('Blog', 'rojas-stack');
         
-        // Obtenemos los posts para el feed del blog
+        // Obtenemos los posts para el feed del blog ('paged' alimenta
+        // components/pagination.twig — página 1 cuando el query no define una).
         $context['posts'] = Timber::get_posts([
             'posts_per_page' => (int) ($this->config['posts_per_page'] ?? 12),
+            'paged'          => max(1, (int) get_query_var('paged')),
         ]);
         
         Timber::render('blog.twig', $context);

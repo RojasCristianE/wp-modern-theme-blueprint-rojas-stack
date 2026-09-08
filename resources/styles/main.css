@@ -2,6 +2,7 @@
  * Estilos globales del Rojas Stack
  */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-brand-50: #eff6ff;
