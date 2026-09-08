@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
 
 ## Corpus Check
-- 210 files · ~142,261 words
+- 213 files · ~142,979 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2869 nodes · 2975 edges · 211 communities (180 shown, 18 thin omitted)
+- 2877 nodes · 2986 edges · 215 communities (178 shown, 23 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fb6c464d`
+- Built from commit: `228d73c5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,7 +66,6 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
-- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -131,7 +130,7 @@
 - tailwind-css-patterns/SKILL.md
 - Tailwind CSS Performance Optimization
 - tool
-- ThemeOptions
+- ThemeSetup.php
 - Accessibility Code Patterns
 - Operable
 - Environment API (Vite 6+)
@@ -150,7 +149,7 @@
 - triage.schema.json
 - WP Project Triage
 - Responses and Fields (summary)
-- ThemeSetup.php
+- DesignSystemController
 - Arquitectura del Rojas Stack
 - Brain\Monkey
 - `block.json` (metadata) guidance
@@ -208,7 +207,11 @@
 - settings-api.md
 - install-bun.sh
 - package.json
+- Container-Based Testing
 - Environment Variables
+- SearchController
+- BlogController
+- AssetServiceProvider
 - **🛠 Stack Tecnológico (The Dream Team)**
 - 4. Flujo de datos
 - Glob Import
@@ -238,7 +241,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (211 total, 18 thin omitted)
+## Communities (215 total, 23 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -439,10 +442,6 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 ### Community 57 - "Browser Console & JavaScript Error Handling"
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
-
-### Community 58 - "playwright-best-practices/SKILL.md"
-Cohesion: 0.08
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -700,9 +699,9 @@ Nodes (9): Best Practices for Performance, Bundle Size Optimization, Content Pat
 Cohesion: 0.20
 Nodes (10): const, type, name, tool, version, additionalProperties, properties, required (+2 more)
 
-### Community 123 - "ThemeOptions"
-Cohesion: 0.29
-Nodes (3): ThemeOptions, Carbon_Fields\Container, Carbon_Fields\Field
+### Community 123 - "ThemeSetup.php"
+Cohesion: 0.22
+Nodes (4): PageFields, ThemeOptions, Carbon_Fields\Container, Carbon_Fields\Field
 
 ### Community 124 - "Accessibility Code Patterns"
 Cohesion: 0.22
@@ -776,9 +775,9 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
-### Community 142 - "ThemeSetup.php"
-Cohesion: 0.17
-Nodes (3): BlogController, DesignSystemController, Timber\Timber
+### Community 142 - "DesignSystemController"
+Cohesion: 0.20
+Nodes (3): DesignSystemController, Rakit\Validation\Validator, Timber\Timber
 
 ### Community 143 - "Arquitectura del Rojas Stack"
 Cohesion: 0.22
@@ -803,14 +802,6 @@ Nodes (5): Formats and types, JSON Schema in WordPress, Schema and Argument Vali
 ### Community 150 - "Safe `wp search-replace`"
 Cohesion: 0.33
 Nodes (5): Common flags, Multisite notes, Recommended workflow, Safe `wp search-replace`, Serialization caution
-
-### Community 151 - "FormController"
-Cohesion: 0.19
-Nodes (3): FormController, Brain\Monkey\Functions, Rakit\Validation\Validator
-
-### Community 152 - ".__construct"
-Cohesion: 0.14
-Nodes (3): PageFields, AssetServiceProvider, ThemeSetup
 
 ### Community 153 - "Router decision tree (v1)"
 Cohesion: 0.40
@@ -941,8 +932,12 @@ Cohesion: 0.83
 Nodes (3): main(), parseArgs(), runWp()
 
 ### Community 204 - "package.json"
-Cohesion: 0.05
+Cohesion: 0.04
 Nodes (39): envFile, wpEnv, devDependencies, alpinejs, @biomejs/biome, htmx.org, @kucrut/vite-for-wp, lefthook (+31 more)
+
+### Community 206 - "Container-Based Testing"
+Cohesion: 0.12
+Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 207 - "Environment Variables"
 Cohesion: 0.33
@@ -953,29 +948,29 @@ Cohesion: 0.40
 Nodes (5): **1. Backend & Data (PHP & Composer)**, **2. Frontend & Interacción (Bun & Vite)**, **3. CI/CD & Despliegue del Tema**, **4. QA & Debugging**, **🛠 Stack Tecnológico (The Dream Team)**
 
 ### Community 212 - "4. Flujo de datos"
-Cohesion: 0.50
-Nodes (4): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4. Flujo de datos
+Cohesion: 0.40
+Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4.4 Lectura (búsqueda en vivo), 4. Flujo de datos
 
 ### Community 213 - "Glob Import"
 Cohesion: 0.33
 Nodes (6): Custom Queries, Eager Loading, Glob Import, Multiple Patterns, Named Imports, Negative Patterns
 
 ## Knowledge Gaps
-- **1958 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1953 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2095 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1959 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1954 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2099 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
+- **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Performance & Parallelization` connect `Performance & Parallelization` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `Fixtures & Hooks` connect `Fixtures & Hooks` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Multi-User & Collaboration Testing` connect `Multi-User & Collaboration Testing` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1958 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1959 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**
