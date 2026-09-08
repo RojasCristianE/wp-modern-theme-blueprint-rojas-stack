@@ -18,15 +18,14 @@
         "nesbot/carbon": "*",
         "rakit/validation": "*",
         "resend/resend-php": "*",
-        "spatie/schema-org": "*",
+        "spatie/schema-org": "^5.0",
         "timber/timber": "*",
         "vlucas/phpdotenv": "*"
     },
     "require-dev": {
         "brain/monkey": "^2.7",
         "deployer/deployer": "*",
-        "lucatume/wp-browser": "*",
-        "pestphp/pest": "^3.8",
+        "pestphp/pest": "^5.1",
         "php-stubs/wordpress-stubs": "^7.1",
         "phpstan/phpstan": "*",
         "spatie/ignition": "*"
