@@ -1239,7 +1239,7 @@
       "file_type": "code",
       "norm_label": "composer/installers",
       "source_file": "composer.json",
-      "source_location": "L44"
+      "source_location": "L45"
     },
     {
       "id": "composer_allow_plugins_pestphp_pest_plugin",
@@ -1250,7 +1250,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest-plugin",
       "source_file": "composer.json",
-      "source_location": "L45"
+      "source_location": "L46"
     },
     {
       "id": "composer_authors",
@@ -1272,7 +1272,7 @@
       "file_type": "code",
       "norm_label": "autoload",
       "source_file": "composer.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "composer_autoload_files",
@@ -1283,7 +1283,7 @@
       "file_type": "code",
       "norm_label": "files",
       "source_file": "composer.json",
-      "source_location": "L33"
+      "source_location": "L34"
     },
     {
       "id": "composer_autoload_psr_4",
@@ -1294,7 +1294,7 @@
       "file_type": "code",
       "norm_label": "psr-4",
       "source_file": "composer.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "composer_config",
@@ -1305,7 +1305,7 @@
       "file_type": "code",
       "norm_label": "config",
       "source_file": "composer.json",
-      "source_location": "L42"
+      "source_location": "L43"
     },
     {
       "id": "composer_config_allow_plugins",
@@ -1316,7 +1316,7 @@
       "file_type": "code",
       "norm_label": "allow-plugins",
       "source_file": "composer.json",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "composer_config_optimize_autoloader",
@@ -1327,7 +1327,7 @@
       "file_type": "code",
       "norm_label": "optimize-autoloader",
       "source_file": "composer.json",
-      "source_location": "L47"
+      "source_location": "L48"
     },
     {
       "id": "composer_config_sort_packages",
@@ -1338,7 +1338,7 @@
       "file_type": "code",
       "norm_label": "sort-packages",
       "source_file": "composer.json",
-      "source_location": "L48"
+      "source_location": "L49"
     },
     {
       "id": "composer_description",
@@ -1371,7 +1371,7 @@
       "file_type": "code",
       "norm_label": "minimum-stability",
       "source_file": "composer.json",
-      "source_location": "L50"
+      "source_location": "L51"
     },
     {
       "id": "composer_name",
@@ -1393,7 +1393,7 @@
       "file_type": "code",
       "norm_label": "prefer-stable",
       "source_file": "composer.json",
-      "source_location": "L51"
+      "source_location": "L52"
     },
     {
       "id": "composer_psr_4_rojasstack",
@@ -1404,7 +1404,7 @@
       "file_type": "code",
       "norm_label": "rojasstack\\\\",
       "source_file": "composer.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "composer_require",
@@ -1451,6 +1451,17 @@
       "source_location": "L23"
     },
     {
+      "id": "composer_require_dev_itsgoingd_clockwork",
+      "label": "itsgoingd/clockwork",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "itsgoingd/clockwork",
+      "source_file": "composer.json",
+      "source_location": "L24"
+    },
+    {
       "id": "composer_require_dev_pestphp_pest",
       "label": "pestphp/pest",
       "_origin": "ast",
@@ -1459,7 +1470,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest",
       "source_file": "composer.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "composer_require_dev_php_stubs_wordpress_stubs",
@@ -1470,7 +1481,7 @@
       "file_type": "code",
       "norm_label": "php-stubs/wordpress-stubs",
       "source_file": "composer.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "composer_require_dev_phpstan_phpstan",
@@ -1481,7 +1492,7 @@
       "file_type": "code",
       "norm_label": "phpstan/phpstan",
       "source_file": "composer.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "composer_require_dev_spatie_ignition",
@@ -1492,7 +1503,7 @@
       "file_type": "code",
       "norm_label": "spatie/ignition",
       "source_file": "composer.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "composer_require_htmlburger_carbon_fields",
@@ -1580,7 +1591,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "composer.json",
-      "source_location": "L37"
+      "source_location": "L38"
     },
     {
       "id": "composer_scripts_analyze",
@@ -1591,7 +1602,7 @@
       "file_type": "code",
       "norm_label": "analyze",
       "source_file": "composer.json",
-      "source_location": "L38"
+      "source_location": "L39"
     },
     {
       "id": "composer_scripts_lint",
@@ -1602,7 +1613,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "composer.json",
-      "source_location": "L39"
+      "source_location": "L40"
     },
     {
       "id": "composer_scripts_test",
@@ -1613,7 +1624,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "composer.json",
-      "source_location": "L40"
+      "source_location": "L41"
     },
     {
       "id": "composer_type",
@@ -1625,6 +1636,66 @@
       "norm_label": "type",
       "source_file": "composer.json",
       "source_location": "L4"
+    },
+    {
+      "id": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
+      "label": "Componentes de layout (no del cat\u00e1logo)",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "componentes de layout (no del catalogo)",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L177"
+    },
+    {
+      "id": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "label": "Componentes Twig y tokens de dise\u00f1o",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "componentes twig y tokens de diseno",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_components_convenciones",
+      "label": "Convenciones",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "convenciones",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "docs_components_extender_el_cat\u00e1logo",
+      "label": "Extender el cat\u00e1logo",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "extender el catalogo",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L181"
+    },
+    {
+      "id": "docs_components_tokens_sem\u00e1nticos",
+      "label": "Tokens sem\u00e1nticos",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tokens semanticos",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L14"
     },
     {
       "id": "agents_skills_nodejs_backend_patterns_skill",
@@ -30552,43 +30623,55 @@
       "label": "`alert.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`alert.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L105"
+      "source_location": "L121"
+    },
+    {
+      "id": "docs_components_badge_twig",
+      "label": "`badge.twig`",
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Cat\u00e1logo",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "`badge.twig`",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L145"
     },
     {
       "id": "docs_components_button_twig",
       "label": "`button.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`button.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L33"
+      "source_location": "L49"
     },
     {
       "id": "docs_components_card_twig",
       "label": "`card.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`card.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L80"
+      "source_location": "L96"
     },
     {
       "id": "docs_components_cat\u00e1logo",
       "label": "Cat\u00e1logo",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "catalogo",
@@ -30596,76 +30679,40 @@
       "source_location": "L31"
     },
     {
-      "id": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
-      "label": "Componentes de layout (no del cat\u00e1logo)",
+      "id": "docs_components_icon_twig",
+      "label": "`icon.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "componentes de layout (no del catalogo)",
+      "norm_label": "`icon.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L129"
-    },
-    {
-      "id": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
-      "label": "Componentes Twig y tokens de dise\u00f1o",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "componentes twig y tokens de diseno",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_components_convenciones",
-      "label": "Convenciones",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "convenciones",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L6"
-    },
-    {
-      "id": "docs_components_extender_el_cat\u00e1logo",
-      "label": "Extender el cat\u00e1logo",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "extender el catalogo",
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L133"
+      "source_location": "L33"
     },
     {
       "id": "docs_components_input_twig",
       "label": "`input.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`input.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L55"
+      "source_location": "L71"
     },
     {
-      "id": "docs_components_tokens_sem\u00e1nticos",
-      "label": "Tokens sem\u00e1nticos",
+      "id": "docs_components_pagination_twig",
+      "label": "`pagination.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "community_name": "Cat\u00e1logo",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "tokens semanticos",
+      "norm_label": "`pagination.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L14"
+      "source_location": "L160"
     },
     {
       "id": "agents_skills_wp_performance_skill",
@@ -62604,17 +62651,6 @@
     },
     {
       "source": "composer",
-      "target": "composer_autoload",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "composer",
       "target": "composer_description",
       "relation": "contains",
       "_origin": "ast",
@@ -62626,13 +62662,24 @@
     },
     {
       "source": "composer",
+      "target": "composer_autoload",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "composer",
       "target": "composer_scripts",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -62654,7 +62701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -62676,7 +62723,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -62687,7 +62734,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -62709,7 +62756,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -62720,7 +62767,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -62731,7 +62778,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -62742,7 +62789,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -62753,7 +62800,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -62764,7 +62811,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -62775,7 +62822,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -62786,7 +62833,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -62890,7 +62937,7 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_pestphp_pest",
+      "target": "composer_require_dev_itsgoingd_clockwork",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62901,7 +62948,7 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_php_stubs_wordpress_stubs",
+      "target": "composer_require_dev_pestphp_pest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62912,7 +62959,7 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_phpstan_phpstan",
+      "target": "composer_require_dev_php_stubs_wordpress_stubs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -62923,13 +62970,24 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_spatie_ignition",
+      "target": "composer_require_dev_phpstan_phpstan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require_dev",
+      "target": "composer_require_dev_spatie_ignition",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -62940,7 +62998,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -62951,7 +63009,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -62962,7 +63020,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -63149,12 +63207,34 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L105",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
       "source": "docs_components_cat\u00e1logo",
-      "target": "docs_components_button_twig",
+      "target": "docs_components_badge_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_pagination_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_icon_twig",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63165,13 +63245,24 @@
     },
     {
       "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_button_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
       "target": "docs_components_input_twig",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L55",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -63182,29 +63273,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L80",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
-      "target": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L129",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
-      "target": "docs_components_extender_el_cat\u00e1logo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L133",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -63216,6 +63285,28 @@
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
       "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_extender_el_cat\u00e1logo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -67071,5 +67162,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "26ac5d691327402f5a450d9e672d94be49e90232"
+  "built_at_commit": "fb6c464dbe20adc3744ce9c8eb162a1176a8d761"
 }

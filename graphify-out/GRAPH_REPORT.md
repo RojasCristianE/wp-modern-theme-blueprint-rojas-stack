@@ -1,21 +1,22 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
 
 ## Corpus Check
-- 210 files · ~141,833 words
+- 210 files · ~142,261 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2865 nodes · 2971 edges · 210 communities (179 shown, 18 thin omitted)
+- 2869 nodes · 2975 edges · 211 communities (180 shown, 18 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `26ac5d69`
+- Built from commit: `fb6c464d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - composer.json
+- Componentes Twig y tokens de diseño
 - Complex Authentication Flow Patterns
 - Especificación del Rojas Starter Theme
 - Node.js Best Practices
@@ -88,7 +89,7 @@
 - Tailwind CSS Layout Patterns
 - Tailwind CSS Documentation
 - biome.json
-- Componentes Twig y tokens de diseño
+- Catálogo
 - Procedure
 - WP-CLI and Ops
 - Queue System
@@ -237,11 +238,15 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (210 total, 18 thin omitted)
+## Communities (211 total, 18 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
-Nodes (36): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+28 more)
+Nodes (37): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+29 more)
+
+### Community 1 - "Componentes Twig y tokens de diseño"
+Cohesion: 0.40
+Nodes (5): Componentes de layout (no del catálogo), Componentes Twig y tokens de diseño, Convenciones, Extender el catálogo, Tokens semánticos
 
 ### Community 2 - "Complex Authentication Flow Patterns"
 Cohesion: 0.10
@@ -527,9 +532,9 @@ Nodes (17): Applying Variants in CSS, Arbitrary Values, Color System, Custom The
 Cohesion: 0.12
 Nodes (16): source, assist, actions, css, parser, files, includes, formatter (+8 more)
 
-### Community 81 - "Componentes Twig y tokens de diseño"
-Cohesion: 0.20
-Nodes (10): `alert.twig`, `button.twig`, `card.twig`, Catálogo, Componentes de layout (no del catálogo), Componentes Twig y tokens de diseño, Convenciones, Extender el catálogo (+2 more)
+### Community 81 - "Catálogo"
+Cohesion: 0.25
+Nodes (8): `alert.twig`, `badge.twig`, `button.twig`, `card.twig`, Catálogo, `icon.twig`, `input.twig`, `pagination.twig`
 
 ### Community 82 - "Procedure"
 Cohesion: 0.12
@@ -956,23 +961,23 @@ Cohesion: 0.33
 Nodes (6): Custom Queries, Eager Loading, Glob Import, Multiple Patterns, Named Imports, Negative Patterns
 
 ## Knowledge Gaps
-- **1954 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1949 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2091 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1958 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1953 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2095 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `Performance & Parallelization` connect `Performance & Parallelization` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Fixtures & Hooks` connect `Fixtures & Hooks` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1954 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1958 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
 - **Should `Especificación del Rojas Starter Theme` be split into smaller, more focused modules?**

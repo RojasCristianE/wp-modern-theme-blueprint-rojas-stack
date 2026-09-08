@@ -1,5 +1,6 @@
 {
   "0": "composer.json",
+  "1": "Componentes Twig y tokens de diseño",
   "2": "Complex Authentication Flow Patterns",
   "3": "Especificación del Rojas Starter Theme",
   "4": "Node.js Best Practices",
@@ -79,7 +80,7 @@
   "78": "Tailwind CSS Layout Patterns",
   "79": "Tailwind CSS Documentation",
   "80": "biome.json",
-  "81": "Componentes Twig y tokens de diseño",
+  "81": "Catálogo",
   "82": "Procedure",
   "83": "WP-CLI and Ops",
   "84": "Queue System",
