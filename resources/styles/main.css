@@ -118,3 +118,30 @@ body {
     animation: none;
   }
 }
+
+/*
+ * Skeleton del modal de búsqueda (components/search-modal.twig).
+ * Mismo mecanismo que archive-shell: el skeleton REEMPLAZA los resultados
+ * en el flujo del documento (nada absoluto, nada tapado). HTMX añade la
+ * clase `htmx-request` al form mientras el fetch vuela, y esa clase
+ * alterna los dos hijos de #search-results en el flujo — el marcador
+ * "empieza a escribir" queda oculto siempre para que nunca se asome bajo
+ * el skeleton.
+ */
+#search-skeleton {
+  display: none;
+}
+
+#search-results.htmx-request #search-skeleton {
+  display: block;
+}
+
+#search-results.htmx-request .rs-search-placeholder {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #search-skeleton .rs-skeleton::after {
+    animation: none;
+  }
+}

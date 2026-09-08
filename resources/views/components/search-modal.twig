@@ -48,7 +48,7 @@
                           hx-get="{{ site.url }}/wp-admin/admin-ajax.php?action=rs_live_search"
                           hx-trigger="input changed delay:300ms from:find input[name='s']"
                           hx-target="#search-results"
-                          hx-indicator="#search-loading">
+                          hx-indicator="#search-results">
                         <input x-ref="searchInput"
                                type="text"
                                name="s"
@@ -56,16 +56,30 @@
                                class="w-full pl-12 pr-4 py-3 text-lg font-medium text-ink placeholder-ink-faint border-none focus:ring-0"
                                @focus="htmx.process($el.closest('form'))">
                     </form>
-
-                    <div id="search-loading" class="htmx-indicator absolute right-6 top-1/2 -translate-y-1/2">
-                        <div class="animate-spin rounded-full h-5 w-5 border-2 border-brand-600 border-t-transparent"></div>
-                    </div>
                 </div>
 
-                <!-- Results Area (el fragmento reemplaza solo este nodo) -->
+                <!-- Results Area (el fragmento reemplaza solo este nodo).
+                     Mientras el fetch vuela, HTMX añade `htmx-request` aquí:
+                     el skeleton de filas reemplaza al placeholder EN FLUJO
+                     (mismo mecanismo in-flow que archive-shell, sin overlay). -->
                 <div id="search-results" class="bg-surface min-h-[100px]">
-                    <div class="p-8 text-center text-ink-faint">
+                    <div class="rs-search-placeholder p-8 text-center text-ink-faint">
                         Empieza a escribir para ver resultados...
+                    </div>
+
+                    {# Skeleton en flujo: filas gemelas de las filas reales
+                       (thumb 48px + dos líneas), visible solo con htmx-request #}
+                    <div id="search-skeleton" aria-hidden="true" role="presentation">
+                        {% for i in 1..6 %}
+                            <div class="flex items-center gap-4 p-4 border-b border-line last:border-b-0">
+                                <div class="rs-skeleton w-12 h-12 rounded-lg shrink-0"></div>
+                                <div class="min-w-0 flex-1 space-y-2 py-1">
+                                    <div class="rs-skeleton h-3.5 w-2/3 rounded"></div>
+                                    <div class="rs-skeleton h-3 w-5/6 rounded"></div>
+                                </div>
+                                <div class="rs-skeleton w-4 h-4 rounded shrink-0"></div>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
 
