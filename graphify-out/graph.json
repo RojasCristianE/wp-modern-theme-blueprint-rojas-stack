@@ -16332,7 +16332,7 @@
       "node_kind": "heading",
       "norm_label": "10. plan de documentacion",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L351"
+      "source_location": "L354"
     },
     {
       "id": "rojas_starter_spec_11_1_distribuci\u00f3n",
@@ -16344,7 +16344,7 @@
       "node_kind": "heading",
       "norm_label": "11.1 distribucion",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L366"
+      "source_location": "L369"
     },
     {
       "id": "rojas_starter_spec_11_2_licencia",
@@ -16356,7 +16356,7 @@
       "node_kind": "heading",
       "norm_label": "11.2 licencia",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L371"
+      "source_location": "L374"
     },
     {
       "id": "rojas_starter_spec_11_distribuci\u00f3n_y_licenciamiento",
@@ -16368,7 +16368,7 @@
       "node_kind": "heading",
       "norm_label": "11. distribucion y licenciamiento",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L364"
+      "source_location": "L367"
     },
     {
       "id": "rojas_starter_spec_12_1_desviaciones_de_la_implementaci\u00f3n_respecto_a_este_plan",
@@ -16380,7 +16380,7 @@
       "node_kind": "heading",
       "norm_label": "12.1 desviaciones de la implementacion respecto a este plan",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L396"
+      "source_location": "L400"
     },
     {
       "id": "rojas_starter_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
@@ -16392,7 +16392,7 @@
       "node_kind": "heading",
       "norm_label": "12. ruta de migracion desde el blueprint actual",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L377"
+      "source_location": "L380"
     },
     {
       "id": "rojas_starter_spec_13_preguntas_abiertas_y_supuestos",
@@ -16404,7 +16404,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L427"
+      "source_location": "L431"
     },
     {
       "id": "rojas_starter_spec_14_criterios_de_\u00e9xito",
@@ -16416,7 +16416,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L437"
+      "source_location": "L441"
     },
     {
       "id": "rojas_starter_spec_1_1_prop\u00f3sito",
@@ -16756,13 +16756,13 @@
     },
     {
       "id": "rojas_starter_spec_9_3_tests_e2e",
-      "label": "9.3 Tests E2E",
+      "label": "9.3 Tests E2E \u2705",
       "_origin": "ast",
       "community": 3,
       "community_name": "Especificaci\u00f3n del Rojas Starter Theme",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "9.3 tests e2e",
+      "norm_label": "9.3 tests e2e \u2705",
       "source_file": "rojas-starter-spec.md",
       "source_location": "L336"
     },
@@ -16776,7 +16776,7 @@
       "node_kind": "heading",
       "norm_label": "9.4 git hooks",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L345"
+      "source_location": "L348"
     },
     {
       "id": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
@@ -63989,7 +63989,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L366",
+      "source_location": "L369",
       "weight": 1.0
     },
     {
@@ -64000,7 +64000,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L371",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -64011,7 +64011,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L396",
+      "source_location": "L400",
       "weight": 1.0
     },
     {
@@ -64286,7 +64286,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L345",
+      "source_location": "L348",
       "weight": 1.0
     },
     {
@@ -64363,7 +64363,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L351",
+      "source_location": "L354",
       "weight": 1.0
     },
     {
@@ -64374,7 +64374,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L364",
+      "source_location": "L367",
       "weight": 1.0
     },
     {
@@ -64385,7 +64385,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L377",
+      "source_location": "L380",
       "weight": 1.0
     },
     {
@@ -64396,7 +64396,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L427",
+      "source_location": "L431",
       "weight": 1.0
     },
     {
@@ -64407,7 +64407,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L437",
+      "source_location": "L441",
       "weight": 1.0
     },
     {
@@ -67383,5 +67383,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "228d73c575a2bdd9094f0e0a84afefdfee58d5fb"
+  "built_at_commit": "9ec111f2a600dccc58b74877db7e622d27365ad9"
 }
