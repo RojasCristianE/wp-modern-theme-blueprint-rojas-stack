@@ -69,7 +69,7 @@
   "67": "Angular Testing with Playwright",
   "68": "Patterns",
   "69": "GitHub Actions for Playwright",
-  "70": "GitLab CI/CD Configuration",
+  "70": "Patterns",
   "71": "RouteServiceProvider",
   "72": "Patterns",
   "73": "Tailwind CSS Development Patterns",
@@ -217,5 +217,6 @@
   "215": "Vite-Specific Hooks",
   "216": "vite/SKILL.md",
   "217": "main.js",
-  "218": "seed-demo-content.sh"
+  "218": "seed-demo-content.sh",
+  "219": "Patterns"
 }

@@ -487,7 +487,7 @@
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L37"
+      "source_location": "L40"
     },
     {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller_register",
@@ -679,7 +679,7 @@
       "file_type": "code",
       "norm_label": ".add_theme_supports()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L128"
+      "source_location": "L131"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_to_context",
@@ -691,7 +691,7 @@
       "file_type": "code",
       "norm_label": ".add_to_context()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L154"
+      "source_location": "L157"
     },
     {
       "id": "app_setup_themesetup_themesetup_construct",
@@ -715,7 +715,7 @@
       "file_type": "code",
       "norm_label": ".enabled()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L90"
+      "source_location": "L93"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_core_fields",
@@ -727,7 +727,7 @@
       "file_type": "code",
       "norm_label": ".register_core_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L100"
+      "source_location": "L103"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_hooks",
@@ -739,7 +739,7 @@
       "file_type": "code",
       "norm_label": ".register_hooks()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L116"
+      "source_location": "L119"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_menus",
@@ -751,7 +751,7 @@
       "file_type": "code",
       "norm_label": ".register_menus()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L139"
+      "source_location": "L142"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_pages_fields",
@@ -763,7 +763,7 @@
       "file_type": "code",
       "norm_label": ".register_pages_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L108"
+      "source_location": "L111"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
@@ -1051,7 +1051,7 @@
       "file_type": "code",
       "norm_label": ".add_route()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L37"
+      "source_location": "L43"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
@@ -1063,7 +1063,19 @@
       "file_type": "code",
       "norm_label": ".dispatch_routes()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L50"
+      "source_location": "L56"
+    },
+    {
+      "id": "app_providers_routeserviceprovider_routeserviceprovider_match_route",
+      "label": ".match_route()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "RouteServiceProvider",
+      "file_type": "code",
+      "norm_label": ".match_route()",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L97"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_register",
@@ -1075,7 +1087,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L42"
+      "source_location": "L48"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
@@ -1087,7 +1099,7 @@
       "file_type": "code",
       "norm_label": ".serve_as_found()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L85"
+      "source_location": "L124"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_terminate",
@@ -1099,7 +1111,7 @@
       "file_type": "code",
       "norm_label": ".terminate()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L100"
+      "source_location": "L139"
     },
     {
       "id": "tests_unit_routeserviceprovidertest_render_page",
@@ -12851,6 +12863,17 @@
       "source_location": "L1"
     },
     {
+      "id": "e2e_blog_pagination_spec",
+      "label": "blog-pagination.spec.js",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "@playwright/test",
+      "file_type": "code",
+      "norm_label": "blog-pagination.spec.js",
+      "source_file": "e2e/blog-pagination.spec.js",
+      "source_location": "L1"
+    },
+    {
       "id": "e2e_blog_spec",
       "label": "blog.spec.js",
       "_origin": "ast",
@@ -13961,6 +13984,234 @@
       "norm_label": "wp()",
       "source_file": "bin/seed-demo-content.sh",
       "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L297"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
+      "label": "CLI Commands",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cli commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L278"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
+      "label": "Dynamic Shard Count",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dynamic shard count",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
+      "label": "Merged report missing results",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report missing results",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L331"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
+      "label": "Merging Shard Reports",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merging shard reports",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
+      "label": "More workers = Slower",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more workers = slower",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L364"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
+      "label": "\"No tests found\" in some shards",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"no tests found\" in some shards",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L323"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
+      "label": "Sharding Across CI Machines",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding across ci machines",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
+      "label": "Sharding and Parallel Execution",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding and parallel execution",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
+      "label": "Test Isolation for Parallelism",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "test isolation for parallelism",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L187"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
+      "label": "Tests pass solo but fail together",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests pass solo but fail together",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L312"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
+      "label": "Worker Configuration",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker configuration",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
+      "label": "Worker-scoped fixture not working",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixture not working",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L348"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
+      "label": "Worker-Scoped Fixtures",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixtures",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L144"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -24536,6 +24787,150 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab",
+      "label": "gitlab.md",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "gitlab.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L319"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_browser_launch_fails_failed_to_launch_browser",
+      "label": "Browser launch fails: \"Failed to launch browser\"",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "browser launch fails: \"failed to launch browser\"",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L332"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L307"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_gitlab_ci_cd_configuration",
+      "label": "GitLab CI/CD Configuration",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "gitlab ci/cd configuration",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_key_commands",
+      "label": "Key Commands",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "key commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_merged_report_is_empty_after_sharded_run",
+      "label": "Merged report is empty after sharded run",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report is empty after sharded run",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L385"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_pipeline_runs_on_every_push_not_just_merge_requests",
+      "label": "Pipeline runs on every push, not just merge requests",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "pipeline runs on every push, not just merge requests",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L358"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_services_postgres_redis_not_reachable_from_tests",
+      "label": "Services (Postgres/Redis) not reachable from tests",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "services (postgres/redis) not reachable from tests",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L370"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_tests_hang_in_gitlab_runner_navigation_timeout_exceeded",
+      "label": "Tests hang in GitLab runner: \"Navigation timeout exceeded\"",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests hang in gitlab runner: \"navigation timeout exceeded\"",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L343"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L330"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_other_providers",
       "label": "other-providers.md",
       "_origin": "ast",
@@ -24546,234 +24941,6 @@
       "norm_label": "other-providers.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/other-providers.md",
       "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L297"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
-      "label": "CLI Commands",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "cli commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L278"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
-      "label": "Dynamic Shard Count",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dynamic shard count",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L229"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
-      "label": "Merged report missing results",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merged report missing results",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L331"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
-      "label": "Merging Shard Reports",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merging shard reports",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L103"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
-      "label": "More workers = Slower",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more workers = slower",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L364"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
-      "label": "\"No tests found\" in some shards",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"no tests found\" in some shards",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L323"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L32"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
-      "label": "Sharding Across CI Machines",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding across ci machines",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L78"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
-      "label": "Sharding and Parallel Execution",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding and parallel execution",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
-      "label": "Test Isolation for Parallelism",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "test isolation for parallelism",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L187"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
-      "label": "Tests pass solo but fail together",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests pass solo but fail together",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L312"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L310"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
-      "label": "Worker Configuration",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker configuration",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L34"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
-      "label": "Worker-scoped fixture not working",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixture not working",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L348"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
-      "label": "Worker-Scoped Fixtures",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixtures",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L144"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_performance",
@@ -28481,35 +28648,11 @@
       "source_location": "L172"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab",
-      "label": "gitlab.md",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "gitlab.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L319"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_basic_pipeline_configuration",
       "label": "Basic Pipeline Configuration",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "basic pipeline configuration",
@@ -28517,35 +28660,11 @@
       "source_location": "L24"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_browser_launch_fails_failed_to_launch_browser",
-      "label": "Browser launch fails: \"Failed to launch browser\"",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "browser launch fails: \"failed to launch browser\"",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L332"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L307"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_environment_variables_and_secrets",
       "label": "Environment Variables and Secrets",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "environment variables and secrets",
@@ -28553,47 +28672,11 @@
       "source_location": "L147"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_gitlab_ci_cd_configuration",
-      "label": "GitLab CI/CD Configuration",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "gitlab ci/cd configuration",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_key_commands",
-      "label": "Key Commands",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "key commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_merged_report_is_empty_after_sharded_run",
-      "label": "Merged report is empty after sharded run",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merged report is empty after sharded run",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L385"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_multi_browser_matrix",
       "label": "Multi-Browser Matrix",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "multi-browser matrix",
@@ -28605,7 +28688,7 @@
       "label": "Patterns",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "patterns",
@@ -28613,23 +28696,11 @@
       "source_location": "L22"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_pipeline_runs_on_every_push_not_just_merge_requests",
-      "label": "Pipeline runs on every push, not just merge requests",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "pipeline runs on every push, not just merge requests",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L358"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_scheduled_nightly_regression",
       "label": "Scheduled Nightly Regression",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scheduled nightly regression",
@@ -28641,7 +28712,7 @@
       "label": "Services Integration (Database, Cache)",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "services integration (database, cache)",
@@ -28649,64 +28720,16 @@
       "source_location": "L245"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_services_postgres_redis_not_reachable_from_tests",
-      "label": "Services (Postgres/Redis) not reachable from tests",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "services (postgres/redis) not reachable from tests",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L370"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_sharded_parallel_execution",
       "label": "Sharded Parallel Execution",
       "_origin": "ast",
       "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
+      "community_name": "Patterns",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "sharded parallel execution",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
       "source_location": "L74"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_tests_hang_in_gitlab_runner_navigation_timeout_exceeded",
-      "label": "Tests hang in GitLab runner: \"Navigation timeout exceeded\"",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests hang in gitlab runner: \"navigation timeout exceeded\"",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L343"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L330"
     },
     {
       "id": "app_providers_routeserviceprovider",
@@ -35161,6 +35184,18 @@
     },
     {
       "source": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_match_route",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
       "target": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
       "relation": "calls",
       "_origin": "ast",
@@ -35168,7 +35203,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L64",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -35180,7 +35215,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -35312,7 +35347,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L56",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -35324,7 +35359,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L63",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -35336,7 +35371,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L73",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -35348,7 +35383,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L81",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -35360,7 +35395,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L102",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -35372,7 +35407,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L110",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -35996,6 +36031,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "e2e/archive-pagination.spec.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "e2e_blog_pagination_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "e2e/blog-pagination.spec.js",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -64781,7 +64828,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L37",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -65061,13 +65108,24 @@
     },
     {
       "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
       "target": "app_providers_routeserviceprovider_routeserviceprovider_terminate",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L100",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -65078,7 +65136,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L37",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -65089,7 +65147,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L42",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -65100,18 +65158,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L50",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
       "source": "app_providers_routeserviceprovider_routeserviceprovider",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_match_route",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L85",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -65177,7 +65235,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L100",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -65188,7 +65246,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L108",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -65199,7 +65257,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L116",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -65210,7 +65268,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L128",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -65221,7 +65279,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L139",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -65232,7 +65290,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L154",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -65254,7 +65312,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L90",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -67660,5 +67718,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "aef446601e4454e9938b9276d196ebd4d7569f1f"
+  "built_at_commit": "5d9212c6ee990679e4f024326519a7ee18815f0e"
 }
