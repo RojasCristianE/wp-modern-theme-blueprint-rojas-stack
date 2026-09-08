@@ -1015,7 +1015,7 @@
       "file_type": "code",
       "norm_label": "init()",
       "source_file": "resources/scripts/main.js",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "app_controllers_blogcontroller_blogcontroller_construct",
@@ -64270,7 +64270,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/scripts/main.js",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -67741,5 +67741,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "90321f02bd2794bd13763338fe3b5d13f29c3830"
+  "built_at_commit": "8538209c32fcc21a072bdf2941a96d663299fb66"
 }
