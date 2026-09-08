@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { v4wp } from '@kucrut/vite-for-wp';
 import { dev_server } from '@kucrut/vite-for-wp/plugins';
 import liveReload from 'vite-plugin-live-reload';
+import tailwindcss from '@tailwindcss/postcss';
 import path from 'node:path';
 
 /*
@@ -24,6 +25,14 @@ export default defineConfig({
       path.resolve(__dirname, './resources/views/**/*.twig'),
     ]),
   ],
+
+  // PostCSS inlined (Tailwind v4 vía @tailwindcss/postcss): evita un
+  // postcss.config.js más en la raíz — la config de build vive aquí.
+  css: {
+    postcss: {
+      plugins: [tailwindcss()],
+    },
+  },
 
   // Servidor de desarrollo optimizado para DDEV/Docker.
   // host/port son normalizados por dev_server (origin + HMR + strictPort).

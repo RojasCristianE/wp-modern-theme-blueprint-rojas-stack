@@ -1,5 +1,5 @@
 parameters:
-	# Subir progresivamente según madure el starter (ver rojas-starter-spec.md §9.1)
+	# Subir progresivamente según madure el starter (ver docs/spec.md §9.1)
 	level: 6
 	paths:
 		- app

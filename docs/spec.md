@@ -151,10 +151,8 @@ rojas-starter/
 ├── composer.json                # Dependencias PHP
 ├── functions.php                # Bootstrap del tema
 ├── package.json                 # Dependencias Node/Bun
-├── postcss.config.js            # Configuración PostCSS
 ├── style.css                    # Cabecera oficial del tema
-├── tailwind.config.js           # Configuración Tailwind (si aplica para v4)
-├── vite.config.js               # Configuración Vite
+├── vite.config.js               # Configuración Vite (PostCSS/Tailwind inline)
 ├── app/
 │   ├── Config/
 │   │   └── features.php         # Configuración central de módulos

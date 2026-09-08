@@ -7,7 +7,7 @@
 
 Starter theme WordPress **monolítico moderno, 100% code-first**: PHP estricto + Twig (Timber), Vite con HMR, Tailwind v4 con dark mode automático, HTMX + AlpineJS, y un sistema de módulos activables desde un solo archivo de configuración. Sin Gutenberg, sin page builders, sin plugins de UI.
 
-> **Documentación completa:** [Arquitectura](docs/ARCHITECTURE.md) · [Componentes y tokens](docs/COMPONENTS.md) · [Guía para agentes de IA](AGENTS.md) · [Spec](rojas-starter-spec.md)
+> **Documentación completa:** [Arquitectura](docs/ARCHITECTURE.md) · [Componentes y tokens](docs/COMPONENTS.md) · [Guía para agentes de IA](AGENTS.md) · [Spec](docs/spec.md)
 
 ## **✨ Características**
 
@@ -29,24 +29,40 @@ Starter theme WordPress **monolítico moderno, 100% code-first**: PHP estricto +
 
 ## **📂 Estructura**
 
+> Esto NO es un tema de WordPress tradicional: los archivos PHP en raíz
+> son solo las puertas obligatorias de WP; el código real vive en
+> directorios dedicados. Los archivos/puntos que aparecen solo al correr
+> el entorno se listan al final.
+
 ```text
-├── app/
+├── app/                      # Lógica PHP estricta (la mayor parte del tema)
 │   ├── Config/features.php   # ← Única fuente de verdad de módulos
-│   ├── Controllers/          # Orquestan datos → Twig (Blog, Form, DesignSystem)
+│   ├── Contracts/            # Interfaces (SearchEngineInterface...)
+│   ├── Controllers/          # Orquestan datos → Twig (Blog, Form, Search, Archive)
 │   ├── Fields/               # Carbon Fields code-first (ThemeOptions, PageFields)
 │   ├── Providers/            # Hooks WP (Assets, Menus, Router, SEO, ExampleCpt)
+│   ├── Services/             # Integraciones (Meilisearch client + indexer)
 │   └── Setup/ThemeSetup.php  # Orquestador: core + módulos habilitados
 ├── resources/
 │   ├── scripts/main.js       # Alpine + HTMX (importa main.css)
-│   ├── styles/main.css       # Tailwind v4 + tokens semánticos
+│   ├── styles/main.css       # Tailwind v4 (@theme) + tokens semánticos
 │   └── views/                # Twig: base, index, blog, single, contact,
 │       └── components/       #   button, card, input, alert, header, footer...
-├── docs/                     # ARCHITECTURE.md, COMPONENTS.md
+├── bin/                      # Scripts de mantenimiento (reindex Meilisearch, seed)
+├── docs/                     # ARCHITECTURE.md, COMPONENTS.md, spec.md
 ├── e2e/                      # Playwright (smoke tests)
+├── infra/                    # Config de servidor para deploy (wp-config.example.php)
 ├── tests/Unit/               # Pest (sin WordPress real)
 ├── functions.php             # Bootstrap: autoload, .env, Timber, Carbon, ThemeSetup
-└── style.css                 # Cabecera oficial del tema
+├── index.php                 # Fallback WP → resuelve la jerarquía Twig
+├── search.php / single.php   # Controladores de la jerarquía (búsqueda, single)
+├── style.css                 # Cabecera oficial del tema (sin CSS real)
+└── vite.config.js            # Build: Tailwind v4 inline + vite-for-wp
 ```
+
+**Aparecen al correr (gitignored, no hace falta entenderlos):**
+`dist/` (build), `node_modules/` + `vendor/` (deps), `wp-config.php` +
+`wp-config-ddev.php` (los escribe DDEV), `.cache/`, `test-results/`.
 
 ## **🚀 Inicio rápido**
 

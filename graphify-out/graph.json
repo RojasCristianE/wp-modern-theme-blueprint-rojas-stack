@@ -2936,6 +2936,18 @@
       "source_location": "L8"
     },
     {
+      "id": "agents_skills_vite_references_core_config_build_target",
+      "label": "build.target",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Vite Configuration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "build.target",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L125"
+    },
+    {
       "id": "agents_skills_vite_references_core_config_conditional_config",
       "label": "Conditional Config",
       "_origin": "ast",
@@ -2946,6 +2958,66 @@
       "norm_label": "conditional config",
       "source_file": ".agents/skills/vite/references/core-config.md",
       "source_location": "L21"
+    },
+    {
+      "id": "agents_skills_vite_references_core_config_define_global_constants",
+      "label": "define (Global Constants)",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Vite Configuration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "define (global constants)",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L84"
+    },
+    {
+      "id": "agents_skills_vite_references_core_config_key_config_options",
+      "label": "Key Config Options",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Vite Configuration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "key config options",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "agents_skills_vite_references_core_config_plugins",
+      "label": "plugins",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Vite Configuration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "plugins",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "agents_skills_vite_references_core_config_resolve_alias",
+      "label": "resolve.alias",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Vite Configuration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "resolve.alias",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "agents_skills_vite_references_core_config_server_proxy",
+      "label": "server.proxy",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Vite Configuration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "server.proxy",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L109"
     },
     {
       "id": "agents_skills_vite_references_core_config_typescript_intellisense",
@@ -2984,11 +3056,75 @@
       "source_location": "L6"
     },
     {
+      "id": "agents_skills_vite_references_environment_api",
+      "label": "environment-api.md",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite-environment-api",
+        "description": "Vite 6+ Environment API for multiple runtime environments"
+      },
+      "node_kind": "page",
+      "norm_label": "environment-api.md",
+      "source_file": ".agents/skills/vite/references/environment-api.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_vite_references_rolldown_migration",
+      "label": "rolldown-migration.md",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite-rolldown",
+        "description": "Vite 8 Rolldown bundler and Oxc transformer migration"
+      },
+      "node_kind": "page",
+      "norm_label": "rolldown-migration.md",
+      "source_file": ".agents/skills/vite/references/rolldown-migration.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_vite_skill",
+      "label": "vite/SKILL.md",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite",
+        "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite."
+      },
+      "node_kind": "page",
+      "norm_label": "vite/skill.md",
+      "source_file": ".agents/skills/vite/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api",
+      "label": "core-plugin-api.md",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite-plugin-api",
+        "description": "Vite plugin authoring with Vite-specific hooks"
+      },
+      "node_kind": "page",
+      "norm_label": "core-plugin-api.md",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_vite_skill_advanced",
       "label": "Advanced",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "advanced",
@@ -3000,7 +3136,7 @@
       "label": "Build & SSR",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "build & ssr",
@@ -3012,7 +3148,7 @@
       "label": "CLI Commands",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "cli commands",
@@ -3024,7 +3160,7 @@
       "label": "Common Config",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "common config",
@@ -3036,7 +3172,7 @@
       "label": "Core",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "core",
@@ -3048,7 +3184,7 @@
       "label": "Official Plugins",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "official plugins",
@@ -3060,7 +3196,7 @@
       "label": "Preferences",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "preferences",
@@ -3072,7 +3208,7 @@
       "label": "Quick Reference",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "quick reference",
@@ -3084,7 +3220,7 @@
       "label": "Vite",
       "_origin": "ast",
       "community": 103,
-      "community_name": "Vite",
+      "community_name": "vite/SKILL.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "vite",
@@ -3128,6 +3264,54 @@
       "source_location": "L168"
     },
     {
+      "id": "agents_skills_vite_references_core_plugin_api_config",
+      "label": "config",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "Vite Plugin API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "config",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api_configresolved",
+      "label": "configResolved",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "Vite Plugin API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "configresolved",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L38"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api_configureserver",
+      "label": "configureServer",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "Vite Plugin API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "configureserver",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L57"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api_handlehotupdate",
+      "label": "handleHotUpdate",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "Vite Plugin API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "handlehotupdate",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L108"
+    },
+    {
       "id": "agents_skills_vite_references_core_plugin_api_plugin_ordering",
       "label": "Plugin Ordering",
       "_origin": "ast",
@@ -3138,6 +3322,18 @@
       "norm_label": "plugin ordering",
       "source_file": ".agents/skills/vite/references/core-plugin-api.md",
       "source_location": "L150"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api_transformindexhtml",
+      "label": "transformIndexHtml",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "Vite Plugin API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "transformindexhtml",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L85"
     },
     {
       "id": "agents_skills_vite_references_core_plugin_api_universal_hooks_from_rolldown",
@@ -3174,6 +3370,18 @@
       "norm_label": "vite plugin api",
       "source_file": ".agents/skills/vite/references/core-plugin-api.md",
       "source_location": "L6"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api_vite_specific_hooks",
+      "label": "Vite-Specific Hooks",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "Vite Plugin API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "vite-specific hooks",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L21"
     },
     {
       "id": "agents_skills_laravel_specialist_references_testing",
@@ -4445,18 +4653,6 @@
       "source_location": "L58"
     },
     {
-      "id": "agents_skills_vite_references_core_features_built_in_constants",
-      "label": "Built-in Constants",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "built-in constants",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L106"
-    },
-    {
       "id": "agents_skills_vite_references_core_features_css_modules",
       "label": "CSS Modules",
       "_origin": "ast",
@@ -4467,54 +4663,6 @@
       "norm_label": "css modules",
       "source_file": ".agents/skills/vite/references/core-features.md",
       "source_location": "L160"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_custom_queries",
-      "label": "Custom Queries",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom queries",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L51"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_custom_variables",
-      "label": "Custom Variables",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom variables",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L116"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_eager_loading",
-      "label": "Eager Loading",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "eager loading",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_environment_variables",
-      "label": "Environment Variables",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "environment variables",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L104"
     },
     {
       "id": "agents_skills_vite_references_core_features_explicit_url",
@@ -4529,18 +4677,6 @@
       "source_location": "L67"
     },
     {
-      "id": "agents_skills_vite_references_core_features_glob_import",
-      "label": "Glob Import",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "glob import",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L8"
-    },
-    {
       "id": "agents_skills_vite_references_core_features_hmr_api",
       "label": "HMR API",
       "_origin": "ast",
@@ -4551,18 +4687,6 @@
       "norm_label": "hmr api",
       "source_file": ".agents/skills/vite/references/core-features.md",
       "source_location": "L183"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_html_replacement",
-      "label": "HTML Replacement",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "html replacement",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L153"
     },
     {
       "id": "agents_skills_vite_references_core_features_inline_no_inline",
@@ -4589,54 +4713,6 @@
       "source_location": "L176"
     },
     {
-      "id": "agents_skills_vite_references_core_features_mode_specific_files",
-      "label": "Mode-specific Files",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mode-specific files",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L131"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_multiple_patterns",
-      "label": "Multiple Patterns",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "multiple patterns",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L39"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_named_imports",
-      "label": "Named Imports",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "named imports",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L30"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_negative_patterns",
-      "label": "Negative Patterns",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "negative patterns",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L45"
-    },
-    {
       "id": "agents_skills_vite_references_core_features_raw_string",
       "label": "Raw String",
       "_origin": "ast",
@@ -4647,18 +4723,6 @@
       "norm_label": "raw string",
       "source_file": ".agents/skills/vite/references/core-features.md",
       "source_location": "L73"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_typescript_support",
-      "label": "TypeScript Support",
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "Vite Features",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "typescript support",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L140"
     },
     {
       "id": "agents_skills_vite_references_core_features_url_import",
@@ -7571,7 +7635,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd16 agentes de ia**",
       "source_file": "README.md",
-      "source_location": "L159"
+      "source_location": "L175"
     },
     {
       "id": "readme_caracter\u00edsticas",
@@ -7595,7 +7659,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos**",
       "source_file": "README.md",
-      "source_location": "L115"
+      "source_location": "L131"
     },
     {
       "id": "readme_componentes",
@@ -7607,7 +7671,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udfa8 componentes**",
       "source_file": "README.md",
-      "source_location": "L135"
+      "source_location": "L151"
     },
     {
       "id": "readme_configuraci\u00f3n_de_m\u00f3dulos",
@@ -7619,7 +7683,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udde9 configuracion de modulos**",
       "source_file": "README.md",
-      "source_location": "L77"
+      "source_location": "L93"
     },
     {
       "id": "readme_despliegue_theme_only",
@@ -7631,7 +7695,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udea2 despliegue (theme-only)**",
       "source_file": "README.md",
-      "source_location": "L149"
+      "source_location": "L165"
     },
     {
       "id": "readme_dise\u00f1ado_por_cristian_rojas_el_arquitecto",
@@ -7643,7 +7707,7 @@
       "node_kind": "heading",
       "norm_label": "**disenado por cristian rojas (el arquitecto)**",
       "source_file": "README.md",
-      "source_location": "L169"
+      "source_location": "L185"
     },
     {
       "id": "readme_estructura",
@@ -7667,7 +7731,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\ude80 inicio rapido**",
       "source_file": "README.md",
-      "source_location": "L51"
+      "source_location": "L67"
     },
     {
       "id": "readme_licencia",
@@ -7679,7 +7743,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcdc licencia**",
       "source_file": "README.md",
-      "source_location": "L163"
+      "source_location": "L179"
     },
     {
       "id": "readme_modo_desarrollo_hmr",
@@ -7691,7 +7755,7 @@
       "node_kind": "heading",
       "norm_label": "**modo desarrollo (hmr)**",
       "source_file": "README.md",
-      "source_location": "L69"
+      "source_location": "L85"
     },
     {
       "id": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
@@ -8692,6 +8756,18 @@
       "source_location": "L1"
     },
     {
+      "id": "docs_spec",
+      "label": "spec.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "spec.md",
+      "source_file": "docs/spec.md",
+      "source_location": "L1"
+    },
+    {
       "id": "readme",
       "label": "README.md",
       "_origin": "ast",
@@ -8701,18 +8777,6 @@
       "node_kind": "page",
       "norm_label": "readme.md",
       "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "rojas_starter_spec",
-      "label": "rojas-starter-spec.md",
-      "_origin": "ast",
-      "community": 144,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "rojas-starter-spec.md",
-      "source_file": "rojas-starter-spec.md",
       "source_location": "L1"
     },
     {
@@ -14019,76 +14083,76 @@
       "source_location": "L430"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_build",
-      "label": "build",
+      "id": "agents_skills_vite_references_core_features_custom_queries",
+      "label": "Custom Queries",
       "_origin": "ast",
       "community": 210,
-      "community_name": "JavaScript API",
+      "community_name": "Glob Import",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "build",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L120"
+      "norm_label": "custom queries",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L51"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_createserver",
-      "label": "createServer",
+      "id": "agents_skills_vite_references_core_features_eager_loading",
+      "label": "Eager Loading",
       "_origin": "ast",
       "community": 210,
-      "community_name": "JavaScript API",
+      "community_name": "Glob Import",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "createserver",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L105"
+      "norm_label": "eager loading",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L23"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_javascript_api",
-      "label": "JavaScript API",
+      "id": "agents_skills_vite_references_core_features_glob_import",
+      "label": "Glob Import",
       "_origin": "ast",
       "community": 210,
-      "community_name": "JavaScript API",
+      "community_name": "Glob Import",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "javascript api",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L103"
+      "norm_label": "glob import",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L8"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_loadenv",
-      "label": "loadEnv",
+      "id": "agents_skills_vite_references_core_features_multiple_patterns",
+      "label": "Multiple Patterns",
       "_origin": "ast",
       "community": 210,
-      "community_name": "JavaScript API",
+      "community_name": "Glob Import",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "loadenv",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L150"
+      "norm_label": "multiple patterns",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L39"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_preview",
-      "label": "preview",
+      "id": "agents_skills_vite_references_core_features_named_imports",
+      "label": "Named Imports",
       "_origin": "ast",
       "community": 210,
-      "community_name": "JavaScript API",
+      "community_name": "Glob Import",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "preview",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L131"
+      "norm_label": "named imports",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L30"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_resolveconfig",
-      "label": "resolveConfig",
+      "id": "agents_skills_vite_references_core_features_negative_patterns",
+      "label": "Negative Patterns",
       "_origin": "ast",
       "community": 210,
-      "community_name": "JavaScript API",
+      "community_name": "Glob Import",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "resolveconfig",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L142"
+      "norm_label": "negative patterns",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L45"
     },
     {
       "id": "agents_1_backend_data_php_composer",
@@ -14364,78 +14428,6 @@
       "norm_label": "wp()",
       "source_file": "bin/seed-demo-content.sh",
       "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_build_target",
-      "label": "build.target",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Key Config Options",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "build.target",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L125"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_define_global_constants",
-      "label": "define (Global Constants)",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Key Config Options",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "define (global constants)",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L84"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_key_config_options",
-      "label": "Key Config Options",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Key Config Options",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "key config options",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L69"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_plugins",
-      "label": "plugins",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Key Config Options",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "plugins",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L97"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_resolve_alias",
-      "label": "resolve.alias",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Key Config Options",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "resolve.alias",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L71"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_server_proxy",
-      "label": "server.proxy",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Key Config Options",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "server.proxy",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L109"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -14777,142 +14769,6 @@
       "norm_label": "when to use",
       "source_file": ".agents/skills/laravel-patterns/SKILL.md",
       "source_location": "L11"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_config",
-      "label": "config",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Vite-Specific Hooks",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "config",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_configresolved",
-      "label": "configResolved",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Vite-Specific Hooks",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "configresolved",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L38"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_configureserver",
-      "label": "configureServer",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Vite-Specific Hooks",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "configureserver",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L57"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_handlehotupdate",
-      "label": "handleHotUpdate",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Vite-Specific Hooks",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "handlehotupdate",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L108"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_transformindexhtml",
-      "label": "transformIndexHtml",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Vite-Specific Hooks",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "transformindexhtml",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L85"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_vite_specific_hooks",
-      "label": "Vite-Specific Hooks",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Vite-Specific Hooks",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "vite-specific hooks",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L21"
-    },
-    {
-      "id": "agents_skills_vite_references_environment_api",
-      "label": "environment-api.md",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite-environment-api",
-        "description": "Vite 6+ Environment API for multiple runtime environments"
-      },
-      "node_kind": "page",
-      "norm_label": "environment-api.md",
-      "source_file": ".agents/skills/vite/references/environment-api.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_vite_references_rolldown_migration",
-      "label": "rolldown-migration.md",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite-rolldown",
-        "description": "Vite 8 Rolldown bundler and Oxc transformer migration"
-      },
-      "node_kind": "page",
-      "norm_label": "rolldown-migration.md",
-      "source_file": ".agents/skills/vite/references/rolldown-migration.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_vite_skill",
-      "label": "vite/SKILL.md",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite",
-        "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite."
-      },
-      "node_kind": "page",
-      "norm_label": "vite/skill.md",
-      "source_file": ".agents/skills/vite/SKILL.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api",
-      "label": "core-plugin-api.md",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite-plugin-api",
-        "description": "Vite plugin authoring with Vite-specific hooks"
-      },
-      "node_kind": "page",
-      "norm_label": "core-plugin-api.md",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L1"
     },
     {
       "id": "bin_meili_reindex",
@@ -16743,7 +16599,7 @@
       "source_location": "L1"
     },
     {
-      "id": "rojas_starter_spec_10_plan_de_documentaci\u00f3n",
+      "id": "docs_spec_10_plan_de_documentaci\u00f3n",
       "label": "10. Plan de documentaci\u00f3n",
       "_origin": "ast",
       "community": 3,
@@ -16751,11 +16607,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "10. plan de documentacion",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L358"
+      "source_file": "docs/spec.md",
+      "source_location": "L356"
     },
     {
-      "id": "rojas_starter_spec_11_1_distribuci\u00f3n",
+      "id": "docs_spec_11_1_distribuci\u00f3n",
       "label": "11.1 Distribuci\u00f3n",
       "_origin": "ast",
       "community": 3,
@@ -16763,11 +16619,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "11.1 distribucion",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L373"
+      "source_file": "docs/spec.md",
+      "source_location": "L371"
     },
     {
-      "id": "rojas_starter_spec_11_2_licencia",
+      "id": "docs_spec_11_2_licencia",
       "label": "11.2 Licencia",
       "_origin": "ast",
       "community": 3,
@@ -16775,11 +16631,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "11.2 licencia",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L378"
+      "source_file": "docs/spec.md",
+      "source_location": "L376"
     },
     {
-      "id": "rojas_starter_spec_11_distribuci\u00f3n_y_licenciamiento",
+      "id": "docs_spec_11_distribuci\u00f3n_y_licenciamiento",
       "label": "11. Distribuci\u00f3n y licenciamiento",
       "_origin": "ast",
       "community": 3,
@@ -16787,11 +16643,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "11. distribucion y licenciamiento",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L371"
+      "source_file": "docs/spec.md",
+      "source_location": "L369"
     },
     {
-      "id": "rojas_starter_spec_12_1_desviaciones_de_la_implementaci\u00f3n_respecto_a_este_plan",
+      "id": "docs_spec_12_1_desviaciones_de_la_implementaci\u00f3n_respecto_a_este_plan",
       "label": "12.1 Desviaciones de la implementaci\u00f3n respecto a este plan",
       "_origin": "ast",
       "community": 3,
@@ -16799,11 +16655,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "12.1 desviaciones de la implementacion respecto a este plan",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L404"
+      "source_file": "docs/spec.md",
+      "source_location": "L402"
     },
     {
-      "id": "rojas_starter_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
+      "id": "docs_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
       "label": "12. Ruta de migraci\u00f3n desde el blueprint actual",
       "_origin": "ast",
       "community": 3,
@@ -16811,11 +16667,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "12. ruta de migracion desde el blueprint actual",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L384"
+      "source_file": "docs/spec.md",
+      "source_location": "L382"
     },
     {
-      "id": "rojas_starter_spec_13_preguntas_abiertas_y_supuestos",
+      "id": "docs_spec_13_preguntas_abiertas_y_supuestos",
       "label": "13. Preguntas abiertas y supuestos",
       "_origin": "ast",
       "community": 3,
@@ -16823,11 +16679,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L494"
+      "source_file": "docs/spec.md",
+      "source_location": "L492"
     },
     {
-      "id": "rojas_starter_spec_14_criterios_de_\u00e9xito",
+      "id": "docs_spec_14_criterios_de_\u00e9xito",
       "label": "14. Criterios de \u00e9xito",
       "_origin": "ast",
       "community": 3,
@@ -16835,11 +16691,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L504"
+      "source_file": "docs/spec.md",
+      "source_location": "L502"
     },
     {
-      "id": "rojas_starter_spec_1_1_prop\u00f3sito",
+      "id": "docs_spec_1_1_prop\u00f3sito",
       "label": "1.1 Prop\u00f3sito",
       "_origin": "ast",
       "community": 3,
@@ -16847,11 +16703,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1.1 proposito",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L13"
     },
     {
-      "id": "rojas_starter_spec_1_2_alcance",
+      "id": "docs_spec_1_2_alcance",
       "label": "1.2 Alcance",
       "_origin": "ast",
       "community": 3,
@@ -16859,11 +16715,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1.2 alcance",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L16"
     },
     {
-      "id": "rojas_starter_spec_1_3_no_est\u00e1_dentro_del_alcance",
+      "id": "docs_spec_1_3_no_est\u00e1_dentro_del_alcance",
       "label": "1.3 No est\u00e1 dentro del alcance",
       "_origin": "ast",
       "community": 3,
@@ -16871,11 +16727,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1.3 no esta dentro del alcance",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L22"
     },
     {
-      "id": "rojas_starter_spec_1_prop\u00f3sito_y_alcance",
+      "id": "docs_spec_1_prop\u00f3sito_y_alcance",
       "label": "1. Prop\u00f3sito y alcance",
       "_origin": "ast",
       "community": 3,
@@ -16883,11 +16739,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. proposito y alcance",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L11"
     },
     {
-      "id": "rojas_starter_spec_2_1_objetivos",
+      "id": "docs_spec_2_1_objetivos",
       "label": "2.1 Objetivos",
       "_origin": "ast",
       "community": 3,
@@ -16895,11 +16751,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2.1 objetivos",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L32"
     },
     {
-      "id": "rojas_starter_spec_2_2_no_objetivos",
+      "id": "docs_spec_2_2_no_objetivos",
       "label": "2.2 No-objetivos",
       "_origin": "ast",
       "community": 3,
@@ -16907,11 +16763,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2.2 no-objetivos",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L40"
     },
     {
-      "id": "rojas_starter_spec_2_objetivos_y_no_objetivos",
+      "id": "docs_spec_2_objetivos_y_no_objetivos",
       "label": "2. Objetivos y no-objetivos",
       "_origin": "ast",
       "community": 3,
@@ -16919,11 +16775,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. objetivos y no-objetivos",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L30"
     },
     {
-      "id": "rojas_starter_spec_3_audiencia_objetivo",
+      "id": "docs_spec_3_audiencia_objetivo",
       "label": "3. Audiencia objetivo",
       "_origin": "ast",
       "community": 3,
@@ -16931,11 +16787,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. audiencia objetivo",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L47"
     },
     {
-      "id": "rojas_starter_spec_4_1_patr\u00f3n_mvc_ligero",
+      "id": "docs_spec_4_1_patr\u00f3n_mvc_ligero",
       "label": "4.1 Patr\u00f3n MVC ligero",
       "_origin": "ast",
       "community": 3,
@@ -16943,11 +16799,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.1 patron mvc ligero",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L58"
     },
     {
-      "id": "rojas_starter_spec_4_2_service_providers",
+      "id": "docs_spec_4_2_service_providers",
       "label": "4.2 Service Providers",
       "_origin": "ast",
       "community": 3,
@@ -16955,11 +16811,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.2 service providers",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L63"
     },
     {
-      "id": "rojas_starter_spec_4_3_estado_e_interacci\u00f3n",
+      "id": "docs_spec_4_3_estado_e_interacci\u00f3n",
       "label": "4.3 Estado e interacci\u00f3n",
       "_origin": "ast",
       "community": 3,
@@ -16967,11 +16823,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.3 estado e interaccion",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L72"
     },
     {
-      "id": "rojas_starter_spec_4_4_metadatos_code_first",
+      "id": "docs_spec_4_4_metadatos_code_first",
       "label": "4.4 Metadatos code-first",
       "_origin": "ast",
       "community": 3,
@@ -16979,11 +16835,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.4 metadatos code-first",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L77"
     },
     {
-      "id": "rojas_starter_spec_4_5_assets_modernos",
+      "id": "docs_spec_4_5_assets_modernos",
       "label": "4.5 Assets modernos",
       "_origin": "ast",
       "community": 3,
@@ -16991,11 +16847,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.5 assets modernos",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L81"
     },
     {
-      "id": "rojas_starter_spec_4_decisiones_de_arquitectura",
+      "id": "docs_spec_4_decisiones_de_arquitectura",
       "label": "4. Decisiones de arquitectura",
       "_origin": "ast",
       "community": 3,
@@ -17003,11 +16859,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. decisiones de arquitectura",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L56"
     },
     {
-      "id": "rojas_starter_spec_5_1_ejemplo_de_api_de_configuraci\u00f3n",
+      "id": "docs_spec_5_1_ejemplo_de_api_de_configuraci\u00f3n",
       "label": "5.1 Ejemplo de API de configuraci\u00f3n",
       "_origin": "ast",
       "community": 3,
@@ -17015,11 +16871,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5.1 ejemplo de api de configuracion",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L102"
     },
     {
-      "id": "rojas_starter_spec_5_m\u00f3dulos_y_funcionalidades",
+      "id": "docs_spec_5_m\u00f3dulos_y_funcionalidades",
       "label": "5. M\u00f3dulos y funcionalidades",
       "_origin": "ast",
       "community": 3,
@@ -17027,11 +16883,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. modulos y funcionalidades",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L88"
     },
     {
-      "id": "rojas_starter_spec_6_estructura_de_carpetas_propuesta",
+      "id": "docs_spec_6_estructura_de_carpetas_propuesta",
       "label": "6. Estructura de carpetas propuesta",
       "_origin": "ast",
       "community": 3,
@@ -17039,11 +16895,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "6. estructura de carpetas propuesta",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L141"
     },
     {
-      "id": "rojas_starter_spec_7_1_vite_kucrut_vite_for_wp",
+      "id": "docs_spec_7_1_vite_kucrut_vite_for_wp",
       "label": "7.1 Vite + `kucrut/vite-for-wp`",
       "_origin": "ast",
       "community": 3,
@@ -17051,11 +16907,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "7.1 vite + `kucrut/vite-for-wp`",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L217"
+      "source_file": "docs/spec.md",
+      "source_location": "L215"
     },
     {
-      "id": "rojas_starter_spec_7_2_scripts_npm_bun",
+      "id": "docs_spec_7_2_scripts_npm_bun",
       "label": "7.2 Scripts NPM/Bun",
       "_origin": "ast",
       "community": 3,
@@ -17063,11 +16919,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "7.2 scripts npm/bun",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L263"
+      "source_file": "docs/spec.md",
+      "source_location": "L261"
     },
     {
-      "id": "rojas_starter_spec_7_3_tailwind_css_v4",
+      "id": "docs_spec_7_3_tailwind_css_v4",
       "label": "7.3 Tailwind CSS v4",
       "_origin": "ast",
       "community": 3,
@@ -17075,11 +16931,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "7.3 tailwind css v4",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L278"
+      "source_file": "docs/spec.md",
+      "source_location": "L276"
     },
     {
-      "id": "rojas_starter_spec_7_sistema_de_build_y_assets",
+      "id": "docs_spec_7_sistema_de_build_y_assets",
       "label": "7. Sistema de build y assets",
       "_origin": "ast",
       "community": 3,
@@ -17087,11 +16943,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "7. sistema de build y assets",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L215"
+      "source_file": "docs/spec.md",
+      "source_location": "L213"
     },
     {
-      "id": "rojas_starter_spec_8_1_tokens_de_dise\u00f1o",
+      "id": "docs_spec_8_1_tokens_de_dise\u00f1o",
       "label": "8.1 Tokens de dise\u00f1o",
       "_origin": "ast",
       "community": 3,
@@ -17099,11 +16955,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "8.1 tokens de diseno",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L287"
+      "source_file": "docs/spec.md",
+      "source_location": "L285"
     },
     {
-      "id": "rojas_starter_spec_8_2_dark_mode",
+      "id": "docs_spec_8_2_dark_mode",
       "label": "8.2 Dark mode",
       "_origin": "ast",
       "community": 3,
@@ -17111,11 +16967,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "8.2 dark mode",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L302"
+      "source_file": "docs/spec.md",
+      "source_location": "L300"
     },
     {
-      "id": "rojas_starter_spec_8_3_componentes_twig_base",
+      "id": "docs_spec_8_3_componentes_twig_base",
       "label": "8.3 Componentes Twig base",
       "_origin": "ast",
       "community": 3,
@@ -17123,11 +16979,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "8.3 componentes twig base",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L316"
+      "source_file": "docs/spec.md",
+      "source_location": "L314"
     },
     {
-      "id": "rojas_starter_spec_8_4_design_system_route",
+      "id": "docs_spec_8_4_design_system_route",
       "label": "8.4 Design system route",
       "_origin": "ast",
       "community": 3,
@@ -17135,11 +16991,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "8.4 design system route",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L324"
+      "source_file": "docs/spec.md",
+      "source_location": "L322"
     },
     {
-      "id": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
+      "id": "docs_spec_8_sistema_de_dise\u00f1o",
       "label": "8. Sistema de dise\u00f1o",
       "_origin": "ast",
       "community": 3,
@@ -17147,11 +17003,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "8. sistema de diseno",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L285"
+      "source_file": "docs/spec.md",
+      "source_location": "L283"
     },
     {
-      "id": "rojas_starter_spec_9_1_static_analysis_y_linting",
+      "id": "docs_spec_9_1_static_analysis_y_linting",
       "label": "9.1 Static analysis y linting",
       "_origin": "ast",
       "community": 3,
@@ -17159,11 +17015,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "9.1 static analysis y linting",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L331"
+      "source_file": "docs/spec.md",
+      "source_location": "L329"
     },
     {
-      "id": "rojas_starter_spec_9_2_tests_unitarios",
+      "id": "docs_spec_9_2_tests_unitarios",
       "label": "9.2 Tests unitarios",
       "_origin": "ast",
       "community": 3,
@@ -17171,11 +17027,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "9.2 tests unitarios",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L336"
+      "source_file": "docs/spec.md",
+      "source_location": "L334"
     },
     {
-      "id": "rojas_starter_spec_9_3_tests_e2e",
+      "id": "docs_spec_9_3_tests_e2e",
       "label": "9.3 Tests E2E \u2705",
       "_origin": "ast",
       "community": 3,
@@ -17183,11 +17039,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "9.3 tests e2e \u2705",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L340"
+      "source_file": "docs/spec.md",
+      "source_location": "L338"
     },
     {
-      "id": "rojas_starter_spec_9_4_git_hooks",
+      "id": "docs_spec_9_4_git_hooks",
       "label": "9.4 Git hooks",
       "_origin": "ast",
       "community": 3,
@@ -17195,11 +17051,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "9.4 git hooks",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L352"
+      "source_file": "docs/spec.md",
+      "source_location": "L350"
     },
     {
-      "id": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
+      "id": "docs_spec_9_estrategia_de_calidad_y_testing",
       "label": "9. Estrategia de calidad y testing",
       "_origin": "ast",
       "community": 3,
@@ -17207,11 +17063,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "9. estrategia de calidad y testing",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L329"
+      "source_file": "docs/spec.md",
+      "source_location": "L327"
     },
     {
-      "id": "rojas_starter_spec_encolado_en_php",
+      "id": "docs_spec_encolado_en_php",
       "label": "Encolado en PHP",
       "_origin": "ast",
       "community": 3,
@@ -17219,11 +17075,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "encolado en php",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L247"
+      "source_file": "docs/spec.md",
+      "source_location": "L245"
     },
     {
-      "id": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "id": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
       "label": "Especificaci\u00f3n del Rojas Starter Theme",
       "_origin": "ast",
       "community": 3,
@@ -17231,11 +17087,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "especificacion del rojas starter theme",
-      "source_file": "rojas-starter-spec.md",
+      "source_file": "docs/spec.md",
       "source_location": "L1"
     },
     {
-      "id": "rojas_starter_spec_instalaci\u00f3n",
+      "id": "docs_spec_instalaci\u00f3n",
       "label": "Instalaci\u00f3n",
       "_origin": "ast",
       "community": 3,
@@ -17243,11 +17099,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "instalacion",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L220"
+      "source_file": "docs/spec.md",
+      "source_location": "L218"
     },
     {
-      "id": "rojas_starter_spec_vite_config_js",
+      "id": "docs_spec_vite_config_js",
       "label": "`vite.config.js`",
       "_origin": "ast",
       "community": 3,
@@ -17255,8 +17111,8 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "`vite.config.js`",
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L226"
+      "source_file": "docs/spec.md",
+      "source_location": "L224"
     },
     {
       "id": "infra_wp_config_example",
@@ -17270,15 +17126,232 @@
       "source_location": "L1"
     },
     {
-      "id": "postcss_config",
-      "label": "postcss.config.js",
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
       "_origin": "ast",
       "community": 31,
-      "community_name": "postcss.config.js",
-      "file_type": "code",
-      "norm_label": "postcss.config.js",
-      "source_file": "postcss.config.js",
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L297"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
+      "label": "CLI Commands",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cli commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L278"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
+      "label": "Dynamic Shard Count",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dynamic shard count",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
+      "label": "Merged report missing results",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report missing results",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L331"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
+      "label": "Merging Shard Reports",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merging shard reports",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
+      "label": "More workers = Slower",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more workers = slower",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L364"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
+      "label": "\"No tests found\" in some shards",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"no tests found\" in some shards",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L323"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
+      "label": "Sharding Across CI Machines",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding across ci machines",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
+      "label": "Sharding and Parallel Execution",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding and parallel execution",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
+      "label": "Test Isolation for Parallelism",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "test isolation for parallelism",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L187"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
+      "label": "Tests pass solo but fail together",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests pass solo but fail together",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L312"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
+      "label": "Worker Configuration",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker configuration",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
+      "label": "Worker-scoped fixture not working",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixture not working",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L348"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
+      "label": "Worker-Scoped Fixtures",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixtures",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L144"
     },
     {
       "id": "agents_skills_playwright_best_practices_core_projects_dependencies_advanced_patterns",
@@ -17951,26 +18024,76 @@
       "source_location": "L1"
     },
     {
-      "id": "tailwindcss",
-      "label": "tailwindcss",
+      "id": "agents_skills_vite_references_core_features_built_in_constants",
+      "label": "Built-in Constants",
       "_origin": "ast",
       "community": 36,
-      "community_name": "tailwind.config.js",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "tailwindcss"
+      "community_name": "Environment Variables",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "built-in constants",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L106"
     },
     {
-      "id": "tailwind_config",
-      "label": "tailwind.config.js",
+      "id": "agents_skills_vite_references_core_features_custom_variables",
+      "label": "Custom Variables",
       "_origin": "ast",
       "community": 36,
-      "community_name": "tailwind.config.js",
-      "file_type": "code",
-      "norm_label": "tailwind.config.js",
-      "source_file": "tailwind.config.js",
-      "source_location": "L1"
+      "community_name": "Environment Variables",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom variables",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L116"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_environment_variables",
+      "label": "Environment Variables",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Environment Variables",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "environment variables",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L104"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_html_replacement",
+      "label": "HTML Replacement",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Environment Variables",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "html replacement",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L153"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_mode_specific_files",
+      "label": "Mode-specific Files",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Environment Variables",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "mode-specific files",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_typescript_support",
+      "label": "TypeScript Support",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "Environment Variables",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "typescript support",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L140"
     },
     {
       "id": "agents_skills_playwright_best_practices_testing_patterns_accessibility_a11y_as_ci_gate",
@@ -24995,234 +25118,6 @@
       "norm_label": "other-providers.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/other-providers.md",
       "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L297"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
-      "label": "CLI Commands",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "cli commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L278"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
-      "label": "Dynamic Shard Count",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dynamic shard count",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L229"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
-      "label": "Merged report missing results",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merged report missing results",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L331"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
-      "label": "Merging Shard Reports",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merging shard reports",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L103"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
-      "label": "More workers = Slower",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more workers = slower",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L364"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
-      "label": "\"No tests found\" in some shards",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"no tests found\" in some shards",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L323"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L32"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
-      "label": "Sharding Across CI Machines",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding across ci machines",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L78"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
-      "label": "Sharding and Parallel Execution",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding and parallel execution",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
-      "label": "Test Isolation for Parallelism",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "test isolation for parallelism",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L187"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
-      "label": "Tests pass solo but fail together",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests pass solo but fail together",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L312"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L310"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
-      "label": "Worker Configuration",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker configuration",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L34"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
-      "label": "Worker-scoped fixture not working",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixture not working",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L348"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
-      "label": "Worker-Scoped Fixtures",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixtures",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L144"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_performance",
@@ -34527,7 +34422,7 @@
       "label": "build-and-ssr.md",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "frontmatter": {
         "name": "vite-build-ssr",
@@ -34539,11 +34434,23 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_vite_references_build_and_ssr_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "build",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L120"
+    },
+    {
       "id": "agents_skills_vite_references_build_and_ssr_build_and_ssr",
       "label": "Build and SSR",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "build and ssr",
@@ -34551,11 +34458,35 @@
       "source_location": "L6"
     },
     {
+      "id": "agents_skills_vite_references_build_and_ssr_createserver",
+      "label": "createServer",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "createserver",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L105"
+    },
+    {
+      "id": "agents_skills_vite_references_build_and_ssr_javascript_api",
+      "label": "JavaScript API",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "javascript api",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L103"
+    },
+    {
       "id": "agents_skills_vite_references_build_and_ssr_library_mode",
       "label": "Library Mode",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "library mode",
@@ -34563,11 +34494,23 @@
       "source_location": "L8"
     },
     {
+      "id": "agents_skills_vite_references_build_and_ssr_loadenv",
+      "label": "loadEnv",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "loadenv",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L150"
+    },
+    {
       "id": "agents_skills_vite_references_build_and_ssr_multi_page_app",
       "label": "Multi-Page App",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "multi-page app",
@@ -34579,7 +34522,7 @@
       "label": "Multiple Entries",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "multiple entries",
@@ -34591,7 +34534,7 @@
       "label": "Output Formats",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "output formats",
@@ -34603,7 +34546,7 @@
       "label": "Package.json Setup",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "package.json setup",
@@ -34611,11 +34554,35 @@
       "source_location": "L56"
     },
     {
+      "id": "agents_skills_vite_references_build_and_ssr_preview",
+      "label": "preview",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "preview",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "agents_skills_vite_references_build_and_ssr_resolveconfig",
+      "label": "resolveConfig",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "resolveconfig",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L142"
+    },
+    {
       "id": "agents_skills_vite_references_build_and_ssr_ssr_development",
       "label": "SSR Development",
       "_origin": "ast",
       "community": 97,
-      "community_name": "Build and SSR",
+      "community_name": "JavaScript API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "ssr development",
@@ -36878,6 +36845,18 @@
       "context": "import",
       "source_file": "vite.config.js",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config",
+      "target": "ref_tailwindcss_postcss",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "vite.config.js",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -64582,6 +64561,479 @@
       "weight": 1.0
     },
     {
+      "source": "docs_spec",
+      "target": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_11_distribuci\u00f3n_y_licenciamiento",
+      "target": "docs_spec_11_1_distribuci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L371",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_11_distribuci\u00f3n_y_licenciamiento",
+      "target": "docs_spec_11_2_licencia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L376",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
+      "target": "docs_spec_12_1_desviaciones_de_la_implementaci\u00f3n_respecto_a_este_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L402",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_1_prop\u00f3sito_y_alcance",
+      "target": "docs_spec_1_1_prop\u00f3sito",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_1_prop\u00f3sito_y_alcance",
+      "target": "docs_spec_1_2_alcance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_1_prop\u00f3sito_y_alcance",
+      "target": "docs_spec_1_3_no_est\u00e1_dentro_del_alcance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_2_objetivos_y_no_objetivos",
+      "target": "docs_spec_2_1_objetivos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_2_objetivos_y_no_objetivos",
+      "target": "docs_spec_2_2_no_objetivos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_4_decisiones_de_arquitectura",
+      "target": "docs_spec_4_1_patr\u00f3n_mvc_ligero",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_4_decisiones_de_arquitectura",
+      "target": "docs_spec_4_2_service_providers",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_4_decisiones_de_arquitectura",
+      "target": "docs_spec_4_3_estado_e_interacci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_4_decisiones_de_arquitectura",
+      "target": "docs_spec_4_4_metadatos_code_first",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_4_decisiones_de_arquitectura",
+      "target": "docs_spec_4_5_assets_modernos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_5_m\u00f3dulos_y_funcionalidades",
+      "target": "docs_spec_5_1_ejemplo_de_api_de_configuraci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_7_1_vite_kucrut_vite_for_wp",
+      "target": "docs_spec_instalaci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_7_1_vite_kucrut_vite_for_wp",
+      "target": "docs_spec_vite_config_js",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_7_1_vite_kucrut_vite_for_wp",
+      "target": "docs_spec_encolado_en_php",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_7_sistema_de_build_y_assets",
+      "target": "docs_spec_7_1_vite_kucrut_vite_for_wp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_7_sistema_de_build_y_assets",
+      "target": "docs_spec_7_2_scripts_npm_bun",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_7_sistema_de_build_y_assets",
+      "target": "docs_spec_7_3_tailwind_css_v4",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L276",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_8_sistema_de_dise\u00f1o",
+      "target": "docs_spec_8_1_tokens_de_dise\u00f1o",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L285",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_8_sistema_de_dise\u00f1o",
+      "target": "docs_spec_8_2_dark_mode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L300",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_8_sistema_de_dise\u00f1o",
+      "target": "docs_spec_8_3_componentes_twig_base",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L314",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_8_sistema_de_dise\u00f1o",
+      "target": "docs_spec_8_4_design_system_route",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L322",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_9_estrategia_de_calidad_y_testing",
+      "target": "docs_spec_9_1_static_analysis_y_linting",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L329",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_9_estrategia_de_calidad_y_testing",
+      "target": "docs_spec_9_2_tests_unitarios",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L334",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_9_estrategia_de_calidad_y_testing",
+      "target": "docs_spec_9_3_tests_e2e",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L338",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_9_estrategia_de_calidad_y_testing",
+      "target": "docs_spec_9_4_git_hooks",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_1_prop\u00f3sito_y_alcance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_6_estructura_de_carpetas_propuesta",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_7_sistema_de_build_y_assets",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_8_sistema_de_dise\u00f1o",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L283",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_2_objetivos_y_no_objetivos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_9_estrategia_de_calidad_y_testing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L327",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_10_plan_de_documentaci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_11_distribuci\u00f3n_y_licenciamiento",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L369",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L382",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_3_audiencia_objetivo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_13_preguntas_abiertas_y_supuestos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L492",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_14_criterios_de_\u00e9xito",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L502",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_4_decisiones_de_arquitectura",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_spec_especificaci\u00f3n_del_rojas_starter_theme",
+      "target": "docs_spec_5_m\u00f3dulos_y_funcionalidades",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/spec.md",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
       "source": "e2e_design_system_spec",
       "target": "e2e_design_system_spec_wpenv",
       "relation": "contains",
@@ -64908,7 +65360,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L69",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -64919,18 +65371,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
-      "target": "readme_comandos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -64946,13 +65387,24 @@
     },
     {
       "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_comandos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
       "target": "readme_componentes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L135",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -64963,7 +65415,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L149",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -64974,7 +65426,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L159",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -64985,7 +65437,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L163",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -65018,7 +65470,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -65029,7 +65481,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L77",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -65041,479 +65493,6 @@
       "confidence_score": 1.0,
       "source_file": "resources/scripts/main.js",
       "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec",
-      "target": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_11_distribuci\u00f3n_y_licenciamiento",
-      "target": "rojas_starter_spec_11_1_distribuci\u00f3n",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L373",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_11_distribuci\u00f3n_y_licenciamiento",
-      "target": "rojas_starter_spec_11_2_licencia",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L378",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
-      "target": "rojas_starter_spec_12_1_desviaciones_de_la_implementaci\u00f3n_respecto_a_este_plan",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L404",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_1_prop\u00f3sito_y_alcance",
-      "target": "rojas_starter_spec_1_1_prop\u00f3sito",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_1_prop\u00f3sito_y_alcance",
-      "target": "rojas_starter_spec_1_2_alcance",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_1_prop\u00f3sito_y_alcance",
-      "target": "rojas_starter_spec_1_3_no_est\u00e1_dentro_del_alcance",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_2_objetivos_y_no_objetivos",
-      "target": "rojas_starter_spec_2_1_objetivos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_2_objetivos_y_no_objetivos",
-      "target": "rojas_starter_spec_2_2_no_objetivos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_4_decisiones_de_arquitectura",
-      "target": "rojas_starter_spec_4_1_patr\u00f3n_mvc_ligero",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L58",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_4_decisiones_de_arquitectura",
-      "target": "rojas_starter_spec_4_2_service_providers",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L63",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_4_decisiones_de_arquitectura",
-      "target": "rojas_starter_spec_4_3_estado_e_interacci\u00f3n",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L72",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_4_decisiones_de_arquitectura",
-      "target": "rojas_starter_spec_4_4_metadatos_code_first",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_4_decisiones_de_arquitectura",
-      "target": "rojas_starter_spec_4_5_assets_modernos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L81",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_5_m\u00f3dulos_y_funcionalidades",
-      "target": "rojas_starter_spec_5_1_ejemplo_de_api_de_configuraci\u00f3n",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L102",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_7_1_vite_kucrut_vite_for_wp",
-      "target": "rojas_starter_spec_instalaci\u00f3n",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L220",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_7_1_vite_kucrut_vite_for_wp",
-      "target": "rojas_starter_spec_vite_config_js",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L226",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_7_1_vite_kucrut_vite_for_wp",
-      "target": "rojas_starter_spec_encolado_en_php",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L247",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_7_sistema_de_build_y_assets",
-      "target": "rojas_starter_spec_7_1_vite_kucrut_vite_for_wp",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L217",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_7_sistema_de_build_y_assets",
-      "target": "rojas_starter_spec_7_2_scripts_npm_bun",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L263",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_7_sistema_de_build_y_assets",
-      "target": "rojas_starter_spec_7_3_tailwind_css_v4",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L278",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
-      "target": "rojas_starter_spec_8_1_tokens_de_dise\u00f1o",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L287",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
-      "target": "rojas_starter_spec_8_2_dark_mode",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L302",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
-      "target": "rojas_starter_spec_8_3_componentes_twig_base",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L316",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
-      "target": "rojas_starter_spec_8_4_design_system_route",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L324",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
-      "target": "rojas_starter_spec_9_1_static_analysis_y_linting",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L331",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
-      "target": "rojas_starter_spec_9_2_tests_unitarios",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L336",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
-      "target": "rojas_starter_spec_9_3_tests_e2e",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L340",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
-      "target": "rojas_starter_spec_9_4_git_hooks",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L352",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_1_prop\u00f3sito_y_alcance",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_6_estructura_de_carpetas_propuesta",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L141",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_7_sistema_de_build_y_assets",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L215",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_8_sistema_de_dise\u00f1o",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L285",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_2_objetivos_y_no_objetivos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L30",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_9_estrategia_de_calidad_y_testing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L329",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_10_plan_de_documentaci\u00f3n",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L358",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_11_distribuci\u00f3n_y_licenciamiento",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L371",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_12_ruta_de_migraci\u00f3n_desde_el_blueprint_actual",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L384",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_3_audiencia_objetivo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_13_preguntas_abiertas_y_supuestos",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L494",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_14_criterios_de_\u00e9xito",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L504",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_4_decisiones_de_arquitectura",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L56",
-      "weight": 1.0
-    },
-    {
-      "source": "rojas_starter_spec_especificaci\u00f3n_del_rojas_starter_theme",
-      "target": "rojas_starter_spec_5_m\u00f3dulos_y_funcionalidades",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "rojas-starter-spec.md",
-      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -65603,15 +65582,6 @@
       "source_file": "bin/seed-demo-content.sh",
       "source_location": "L13",
       "weight": 1.0
-    },
-    {
-      "source": "tailwind_config",
-      "target": "tailwindcss",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tailwind.config.js"
     },
     {
       "source": "app_services_meilisearchclient_meilisearchclient",
@@ -68706,7 +68676,7 @@
     },
     {
       "source": "readme",
-      "target": "rojas_starter_spec",
+      "target": "docs_spec",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -68797,5 +68767,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "6b02cb618a2128335b9e4f8a381b772f4fd6ce37"
+  "built_at_commit": "8b5e9efa88f4593db6caa88aa64b0ce195bfa53e"
 }
