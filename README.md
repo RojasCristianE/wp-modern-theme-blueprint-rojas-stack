@@ -3,7 +3,7 @@
 [![CI](https://github.com/cristian-rojas/wp-modern-theme-blueprint/actions/workflows/ci.yml/badge.svg)](https://github.com/cristian-rojas/wp-modern-theme-blueprint/actions/workflows/ci.yml)
 [![PHP](https://img.shields.io/badge/PHP-8.5%2B-777bb4)](composer.json)
 [![Timber](https://img.shields.io/badge/Timber-Twig-93c47d)](https://timber.github.io/timber/)
-[![License](https://img.shields.io/badge/License-MIT-green)](rojas-starter-spec.md)
+[![License](https://img.shields.io/badge/License-GPL_v2-blue)](LICENSE)
 
 Starter theme WordPress **monolítico moderno, 100% code-first**: PHP estricto + Twig (Timber), Vite con HMR, Tailwind v4 con dark mode automático, HTMX + AlpineJS, y un sistema de módulos activables desde un solo archivo de configuración. Sin Gutenberg, sin page builders, sin plugins de UI.
 
@@ -157,7 +157,7 @@ La arquitectura está optimizada para colaboración humano-agente: [`AGENTS.md`]
 
 ## **📜 Licencia**
 
-MIT (el archivo `LICENSE` se añade en el paso de publicación — spec paso 11).
+**GPL v2 o posterior** — ver [LICENSE](LICENSE). El tema es una obra derivada de WordPress (GPL) y la licencia hereda; la palabra "or-later" deja a los usuarios la opción de usarlo bajo GPL v3.
 
 ---
 

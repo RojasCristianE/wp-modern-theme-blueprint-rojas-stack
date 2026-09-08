@@ -2,7 +2,7 @@
     "name": "cristian-rojas/wp-modern-theme-blueprint",
     "description": "Rojas Stack: Modern Theme Architecture for WordPress (AI-First)",
     "type": "wordpress-theme",
-    "license": "MIT",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Cristian Rojas",

@@ -370,6 +370,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 ### 11.2 Licencia
 - **GPL v2 o v3** para compatibilidad con WordPress y comunidad open source.
+- **Decisión (2026-09-08):** `GPL-2.0-or-later` (SPDX) — texto oficial de GPL v2 en `LICENSE`, headers de `composer.json` y `style.css` alineados. Motivo: un tema de WP es obra derivada de WordPress (GPL) y hereda su licencia; "or-later" preserva la opción v3.
 
 ---
 
@@ -390,7 +391,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 8. ~~**Configurar testing:** crear `tests/Unit/` y `tests/E2E/`, agregar Pest y Playwright.~~ ✅ (Pest + Brain Monkey + Patchwork; Playwright con Chrome del sistema)
 9. ~~**Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.~~ ✅ (`lefthook.yml`: biome + phpstan + pest por archivos staged)
 10. ~~**Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`.~~ ✅ (README reescrito, `docs/ARCHITECTURE.md`, `docs/COMPONENTS.md`, catálogo vivo en `/__components`)
-11. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜
+11. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜ (LICENSE GPL-2.0-or-later añadido + headers alineados; pendiente: GitHub Template y Packagist)
 
 ### 12.1 Desviaciones de la implementación respecto a este plan
 
