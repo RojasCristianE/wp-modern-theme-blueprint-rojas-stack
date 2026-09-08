@@ -467,6 +467,22 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      visibles previos a Alpine no usan `x-cloak` (evita flash vacío).
      Verificación e2e: fetch ralentizado artificialmente, skeleton
      visible en vuelo, `.absolute` = 0 dentro del shell, sin recarga.
+  4. **Motor de búsqueda enchufable (Meilisearch, post-plan):** la
+     búsqueda nativa DB (LIKE) no da typo-tolerance; se añadió
+     `SearchEngineInterface` con implementación `MeilisearchClient`
+     (REST de Meilisearch vía `wp_remote_*`, cero deps Composer
+     nuevas). `SearchController` consulta **engine-first con fallback
+     DB automático** (sin credenciales, motor caído o
+     `MEILI_ENABLED=false`) — el endpoint, el fragmento y el modal no
+     cambian. Sincronización por hooks nativos (`save_post`/
+     `delete_post` vía `MeilisearchIndexer`) y bulk con
+     `bin/meili-reindex.sh`. Local: servicio DDEV
+     (`.ddev/docker-compose.meilisearch.yaml`). Gotcha real: WP HTTP
+     defaultea `Content-Type: x-www-form-urlencoded` con body string y
+     Meilisearch responde 415 — el cliente fija
+     `Content-Type: application/json` siempre. Tiempo de typos del
+     motor: palabras de 5–8 chars toleran 1 typo (`Deployr` →
+     «Deployer»), ≥9 toleran 2.
 
 ---
 

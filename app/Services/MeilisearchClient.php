@@ -1,0 +1,134 @@
+<?php
+
+declare(strict_types=1);
+
+namespace RojasStack\Services;
+
+use RojasStack\Contracts\SearchEngineInterface;
+
+/**
+ * MeilisearchClient
+ *
+ * Implementación de SearchEngineInterface sobre la API REST de
+ * Meilisearch usando wp_remote_* — cero dependencias Composer nuevas
+ * (soberanía: un binario en Docker + HTTP nativo de WP).
+ *
+ * Credenciales por .env: MEILI_HOST + MEILI_API_KEY (write key o master).
+ * Si faltan o el motor no responde, is_available() devuelve false y el
+ * SearchController cae a la búsqueda nativa — nunca rompe el render.
+ *
+ * Timeout corto (1500 ms): una búsqueda en vivo no puede colgar más
+ * que eso; el fallback nativo es invisible para el usuario.
+ */
+class MeilisearchClient implements SearchEngineInterface
+{
+    private const TIMEOUT_SECONDS = 1.5;
+
+    private string $host;
+    private string $api_key;
+    private string $index_uid;
+
+    public function __construct(
+        ?string $host = null,
+        ?string $api_key = null,
+        string $index_uid = 'posts',
+    ) {
+        $this->host      = rtrim((string) ($host ?? ($_ENV['MEILI_HOST'] ?? $_SERVER['MEILI_HOST'] ?? '')), '/');
+        $this->api_key   = (string) ($api_key ?? ($_ENV['MEILI_API_KEY'] ?? $_SERVER['MEILI_API_KEY'] ?? ''));
+        $this->index_uid = $index_uid;
+    }
+
+    public function search(string $query, int $limit = 6): array
+    {
+        if ($query === '' || ! $this->is_available()) {
+            return [];
+        }
+
+        $response = $this->request(
+            'POST',
+            "/indexes/{$this->index_uid}/search",
+            ['q' => $query, 'limit' => $limit],
+        );
+
+        if (is_wp_error($response)) {
+            return [];
+        }
+
+        $body = json_decode((string) wp_remote_retrieve_body($response), true);
+
+        return is_array($body['hits'] ?? null) ? $body['hits'] : [];
+    }
+
+    public function index(array $documents): bool
+    {
+        if ($documents === [] || ! $this->is_available()) {
+            return false;
+        }
+
+        $response = $this->request(
+            'POST',
+            "/indexes/{$this->index_uid}/documents",
+            $documents,
+            ['Content-Type' => 'application/json'],
+        );
+
+        return ! is_wp_error($response)
+            && wp_remote_retrieve_response_code($response) < 300;
+    }
+
+    public function delete(int $post_id): bool
+    {
+        if (! $this->is_available()) {
+            return false;
+        }
+
+        $response = $this->request(
+            'DELETE',
+            "/indexes/{$this->index_uid}/documents/{$post_id}",
+        );
+
+        return ! is_wp_error($response)
+            && wp_remote_retrieve_response_code($response) < 300;
+    }
+
+    public function is_available(): bool
+    {
+        if ($this->host === '' || $this->api_key === '') {
+            return false;
+        }
+
+        // Health check barato: GET /health no requiere auth en Meilisearch,
+        // pero lo mandamos con key por si el deployment la exige.
+        $response = $this->request('GET', '/health');
+
+        return ! is_wp_error($response)
+            && wp_remote_retrieve_response_code($response) < 300;
+    }
+
+    /**
+     * HTTP wrapper común (auth + timeouts + error silencioso).
+     *
+     * @param  array<array-key, mixed>|null $payload
+     * @param  array<string, string>        $extra_headers
+     * @return array<string, mixed>|\WP_Error
+     */
+    private function request(string $method, string $path, ?array $payload = null, array $extra_headers = [])
+    {
+        $args = [
+            'method'  => $method,
+            'timeout' => self::TIMEOUT_SECONDS,
+            'headers' => array_merge([
+                'Authorization' => 'Bearer ' . $this->api_key,
+                // Obligatorio: WP HTTP defaultea x-www-form-urlencoded cuando
+                // el body es string y Meilisearch rechaza con HTTP 415.
+                'Content-Type'  => 'application/json',
+            ], $extra_headers),
+        ];
+
+        if ($payload !== null) {
+            $args['body'] = (string) json_encode($payload, JSON_UNESCAPED_UNICODE);
+        }
+
+        return wp_remote_request($this->host . $path, $args);
+    }
+}

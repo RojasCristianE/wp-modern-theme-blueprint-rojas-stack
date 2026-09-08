@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
 
 ## Corpus Check
-- 218 files · ~146,114 words
+- 222 files · ~148,820 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2890 nodes · 3003 edges · 221 communities (183 shown, 24 thin omitted)
+- 2923 nodes · 3056 edges · 223 communities (181 shown, 28 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8538209c`
+- Built from commit: `bd495b63`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,7 +66,6 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
-- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -78,7 +77,7 @@
 - Angular Testing with Playwright
 - Patterns
 - GitHub Actions for Playwright
-- Patterns
+- GitLab CI/CD Configuration
 - RouteServiceProvider
 - Patterns
 - Tailwind CSS Development Patterns
@@ -105,13 +104,13 @@
 - Patterns
 - Tailwind CSS Accessibility Guidelines
 - Tailwind CSS Configuration
-- Build and SSR
+- JavaScript API
 - Procedure
 - **🚀 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**
 - Routing & API Resources
 - Choosing Test Types: E2E, Component, or API
 - Vite Configuration
-- Vite
+- vite/SKILL.md
 - Vite Plugin API
 - Testing
 - Async PHP Patterns
@@ -150,9 +149,9 @@
 - triage.schema.json
 - WP Project Triage
 - Responses and Fields (summary)
-- Timber\Timber
+- BlogController
 - Arquitectura del Rojas Stack
-- Brain\Monkey
+- WP_Error
 - `block.json` (metadata) guidance
 - perf_inspect.mjs
 - Custom Content Types (summary)
@@ -211,17 +210,20 @@
 - @playwright/test
 - scripts
 - ArchiveController
-- JavaScript API
+- Container-Based Testing
 - AssetServiceProvider
 - **🛠 Stack Tecnológico (The Dream Team)**
 - 4. Flujo de datos
-- Key Config Options
+- SearchEngineInterface
 - ExampleCptServiceProvider
-- Vite-Specific Hooks
+- MeilisearchIndexer
+- MeilisearchClient
 - main.js
 - seed-demo-content.sh
 - Patterns
-- BlogController
+- Environment Variables
+- Glob Import
+- meili-reindex.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `Examples` - 24 edges
@@ -236,8 +238,12 @@
 10. `Debugging & Troubleshooting` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `MeilisearchClient` --implements--> `SearchEngineInterface`  [EXTRACTED]
+  app/Services/MeilisearchClient.php → app/Contracts/SearchEngineInterface.php
 - `Rojas Stack Architecture` --rationale_for--> `Phantom WP Core Volume`  [INFERRED]
   .ddev/config.yaml → .ddev/docker-compose.wpcore.yaml
+- `SearchController` --references--> `SearchEngineInterface`  [EXTRACTED]
+  app/Controllers/SearchController.php → app/Contracts/SearchEngineInterface.php
 - `Rojas Stack Architecture` --rationale_for--> `Valkey Caching Service`  [EXTRACTED]
   .ddev/config.yaml → .ddev/docker-compose.valkey.yaml
 
@@ -247,7 +253,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (221 total, 24 thin omitted)
+## Communities (223 total, 28 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -449,10 +455,6 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
 
-### Community 58 - "playwright-best-practices/SKILL.md"
-Cohesion: 0.06
-Nodes (26): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+18 more)
-
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
 Nodes (21): Anti-Patterns to Avoid, Basic Popup, Close All Tabs Except One, Different Users in Different Windows, Google OAuth Popup, Handle Blocked Popups, Intercept New Tab, Link Opens in New Tab (+13 more)
@@ -497,9 +499,9 @@ Nodes (19): Anti-Patterns, Component Testing (Experimental), CRA vs Vite Differe
 Cohesion: 0.11
 Nodes (19): Basic Workflow, Browser launch fails: "Missing dependencies", CLI Commands, Common Mistakes, Container-Based Execution, Environment Secrets, GitHub Actions for Playwright, No PR annotations (+11 more)
 
-### Community 70 - "Patterns"
-Cohesion: 0.29
-Nodes (7): Basic Pipeline Configuration, Environment Variables and Secrets, Multi-Browser Matrix, Patterns, Scheduled Nightly Regression, Services Integration (Database, Cache), Sharded Parallel Execution
+### Community 70 - "GitLab CI/CD Configuration"
+Cohesion: 0.11
+Nodes (18): Anti-Patterns, Basic Pipeline Configuration, Browser launch fails: "Failed to launch browser", Decision Guide, Environment Variables and Secrets, GitLab CI/CD Configuration, Key Commands, Merged report is empty after sharded run (+10 more)
 
 ### Community 71 - "RouteServiceProvider"
 Cohesion: 0.23
@@ -605,9 +607,9 @@ Nodes (13): Accessibility Checklist, Alert Dialog, ARIA Patterns with Tailwind, 
 Cohesion: 0.14
 Nodes (13): Advanced v4.1 Features, Creating a Reusable Preset, CSS-First Configuration (v4.1+), Custom Plugin Example, Custom Utilities, Enhanced Arbitrary Values, JavaScript Configuration (Legacy), Native CSS Custom Properties (+5 more)
 
-### Community 97 - "Build and SSR"
-Cohesion: 0.25
-Nodes (7): Build and SSR, Library Mode, Multi-Page App, Multiple Entries, Output Formats, Package.json Setup, SSR Development
+### Community 97 - "JavaScript API"
+Cohesion: 0.14
+Nodes (13): build, Build and SSR, createServer, JavaScript API, Library Mode, loadEnv, Multi-Page App, Multiple Entries (+5 more)
 
 ### Community 98 - "Procedure"
 Cohesion: 0.14
@@ -626,16 +628,16 @@ Cohesion: 0.15
 Nodes (13): API Layer (60% of tests), API Tests, Choosing Test Types: E2E, Component, or API, Common Mistakes, Component Layer (30% of tests), Component Tests, Decision Matrix, E2E Layer (10% of tests) (+5 more)
 
 ### Community 102 - "Vite Configuration"
-Cohesion: 0.29
-Nodes (6): Async Config, Basic Setup, Conditional Config, TypeScript Intellisense, Using Environment Variables in Config, Vite Configuration
+Cohesion: 0.15
+Nodes (12): Async Config, Basic Setup, build.target, Conditional Config, define (Global Constants), Key Config Options, plugins, resolve.alias (+4 more)
 
-### Community 103 - "Vite"
-Cohesion: 0.22
+### Community 103 - "vite/SKILL.md"
+Cohesion: 0.15
 Nodes (9): Advanced, Build & SSR, CLI Commands, Common Config, Core, Official Plugins, Preferences, Quick Reference (+1 more)
 
 ### Community 104 - "Vite Plugin API"
-Cohesion: 0.29
-Nodes (7): Basic Structure, Client-Server Communication, Conditional Application, Plugin Ordering, Universal Hooks (from Rolldown), Virtual Modules, Vite Plugin API
+Cohesion: 0.15
+Nodes (13): Basic Structure, Client-Server Communication, Conditional Application, config, configResolved, configureServer, handleHotUpdate, Plugin Ordering (+5 more)
 
 ### Community 105 - "Testing"
 Cohesion: 0.17
@@ -674,8 +676,8 @@ Cohesion: 0.18
 Nodes (10): Basic Dark Mode Support, Container Queries (v4.1+), Dark Mode, Dark Mode Best Practices, Dark Mode Toggle (React), Mobile-First Responsive Layout, Responsive Card Component, Responsive Design Patterns (+2 more)
 
 ### Community 114 - "Vite Features"
-Cohesion: 0.09
-Nodes (22): Asset Import Queries, Built-in Constants, CSS Modules, Custom Queries, Custom Variables, Eager Loading, Environment Variables, Explicit URL (+14 more)
+Cohesion: 0.18
+Nodes (10): Asset Import Queries, CSS Modules, Explicit URL, HMR API, Inline/No-Inline, JSON Import, Raw String, URL Import (+2 more)
 
 ### Community 115 - "project"
 Cohesion: 0.18
@@ -785,9 +787,9 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
-### Community 142 - "Timber\Timber"
-Cohesion: 0.20
-Nodes (3): DesignSystemController, Rakit\Validation\Validator, Timber\Timber
+### Community 142 - "BlogController"
+Cohesion: 0.15
+Nodes (3): BlogController, DesignSystemController, Timber\Timber
 
 ### Community 143 - "Arquitectura del Rojas Stack"
 Cohesion: 0.22
@@ -953,13 +955,9 @@ Nodes (3): envFile, wpEnv, @playwright/test
 Cohesion: 0.25
 Nodes (8): scripts, build, dev, fix, lint, prepare, preview, test:e2e
 
-### Community 208 - "ArchiveController"
-Cohesion: 0.15
-Nodes (3): ArchiveController, SearchController, Brain\Monkey\Functions
-
-### Community 209 - "JavaScript API"
-Cohesion: 0.33
-Nodes (6): build, createServer, JavaScript API, loadEnv, preview, resolveConfig
+### Community 209 - "Container-Based Testing"
+Cohesion: 0.12
+Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 211 - "**🛠 Stack Tecnológico (The Dream Team)**"
 Cohesion: 0.40
@@ -969,34 +967,34 @@ Nodes (5): **1. Backend & Data (PHP & Composer)**, **2. Frontend & Interacción 
 Cohesion: 0.40
 Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4.4 Lectura (búsqueda en vivo), 4. Flujo de datos
 
-### Community 213 - "Key Config Options"
-Cohesion: 0.33
-Nodes (6): build.target, define (Global Constants), Key Config Options, plugins, resolve.alias, server.proxy
-
-### Community 215 - "Vite-Specific Hooks"
-Cohesion: 0.33
-Nodes (6): config, configResolved, configureServer, handleHotUpdate, transformIndexHtml, Vite-Specific Hooks
-
 ### Community 219 - "Patterns"
 Cohesion: 0.11
 Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
 
+### Community 220 - "Environment Variables"
+Cohesion: 0.33
+Nodes (6): Built-in Constants, Custom Variables, Environment Variables, HTML Replacement, Mode-specific Files, TypeScript Support
+
+### Community 221 - "Glob Import"
+Cohesion: 0.33
+Nodes (6): Custom Queries, Eager Loading, Glob Import, Multiple Patterns, Named Imports, Negative Patterns
+
 ## Knowledge Gaps
-- **1959 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1954 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2105 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1960 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1955 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2118 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `playwright-best-practices/SKILL.md`?**
+- **Why does `Debugging & Troubleshooting` connect `Debugging & Troubleshooting` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Test Annotations & Organization` connect `Test Annotations & Organization` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `Browser Extension Testing` connect `Browser Extension Testing` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `Mobile & Responsive Testing` connect `Mobile & Responsive Testing` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+- **Why does `Angular Testing with Playwright` connect `Angular Testing with Playwright` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1959 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1960 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**

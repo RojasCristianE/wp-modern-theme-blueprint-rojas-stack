@@ -17,6 +17,27 @@ use Brain\Monkey;
 const FIXTURE_THEME = __DIR__ . '/fixtures/theme';
 const THEME_URI     = 'http://theme.test/wp-content/themes/blueprint';
 
+// Stub mínimo de WP_Error para clientes HTTP (MeilisearchClient): la
+// suite no carga WordPress real. Los helpers asociados (is_wp_error,
+// wp_remote_retrieve_body, wp_remote_retrieve_response_code) se stubbean
+// con Brain Monkey en los tests que los necesitan — una función real
+// aquí quedaría congelada ANTES de Patchwork (DefinedTooEarly).
+if (! class_exists('WP_Error')) {
+    class WP_Error
+    {
+        public function __construct(
+            private readonly string $code = '',
+            private readonly string $message = '',
+        ) {
+        }
+
+        public function get_error_message(): string
+        {
+            return $this->message;
+        }
+    }
+}
+
 beforeEach(function () {
     Monkey\setUp();
 });

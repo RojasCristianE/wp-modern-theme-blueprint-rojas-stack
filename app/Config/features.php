@@ -25,6 +25,17 @@ return [
     // el valor global de arriba.
     'posts_per_page' => $posts_per_page,
 
+    // Motor de búsqueda (SearchEngineInterface). Meilisearch se activa
+    // SOLO si hay credenciales en .env (MEILI_HOST + MEILI_API_KEY);
+    // sin ellas (o con MEILI_ENABLED=false) el SearchController usa la
+    // búsqueda nativa DB. Con el motor activo y caído, el fallback es
+    // automático e invisible. Nota: el índice es EVENTUAL — edits recientes
+    // pueden tardar en aparecer hasta la próxima sincronización.
+    'search' => [
+        'enabled' => ($_ENV['MEILI_HOST'] ?? $_SERVER['MEILI_HOST'] ?? '') !== ''
+            && ($_ENV['MEILI_ENABLED'] ?? $_SERVER['MEILI_ENABLED'] ?? 'true') !== 'false',
+    ],
+
     'blog' => [
         'enabled' => true,
         'posts_per_page' => $posts_per_page,

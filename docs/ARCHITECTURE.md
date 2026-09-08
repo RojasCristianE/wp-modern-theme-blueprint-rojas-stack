@@ -109,10 +109,17 @@ El nonce se inyecta globalmente: toda petición HTMX hacia la REST API/admin-aja
 Input del modal (HTMX, hx-get, delay 300ms)
   → admin-ajax.php  action=rs_live_search  (GET de solo lectura)
   → SearchController::render_fragment()
-      ├─ término vacío → fragmento en estado inicial (sin tocar la DB)
-      └─ término       → Timber::get_posts(s) → partials/search-results.twig
+      ├─ término vacío → fragmento en estado inicial (sin tocar nada)
+      └─ término
+          ├─ engine disponible → MeilisearchClient::search()
+          │    → hits (IDs ordenados por relevancia, fuzzy/typo-tolerance)
+          │    → Timber::get_posts(post__in, orderby=post__in)  [rehidratación]
+          └─ engine NO disponible → Timber::get_posts(s)  [fallback DB nativa]
+          → partials/search-results.twig
   → HTMX hace hx-swap en #search-results del modal
 ```
+
+**Motor de búsqueda enchufable (`SearchEngineInterface`):** con `MEILI_HOST` + `MEILI_API_KEY` en `.env`, `SearchController` consulta **Meilisearch primero** (typo-tolerance: 1–2 typos según longitud de palabra, orden de relevancia preservado con `orderby=post__in`). Sin credenciales, con el motor caído o con `MEILI_ENABLED=false`, cae automáticamente a la búsqueda nativa DB — el tema nunca depende duramente del motor. Los datos entran al índice por hooks nativos (`save_post`/`delete_post` vía `MeilisearchIndexer`, respetando la regla de escritura §1); el bulk inicial corre con `bash bin/meili-reindex.sh`. El índice es **eventual**: los edits pueden tardar unos ms en verse. Local: servicio DDEV en `.ddev/docker-compose.meilisearch.yaml`.
 
 La búsqueda tradicional (`/?s=`) sigue la jerarquía de plantillas (`search.php` → `search.twig`) y renderiza la página completa: cada superficie tiene un único camino.
 

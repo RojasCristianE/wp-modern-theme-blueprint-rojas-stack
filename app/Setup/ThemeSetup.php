@@ -14,6 +14,8 @@ use RojasStack\Providers\ExampleCptServiceProvider;
 use RojasStack\Providers\MenuServiceProvider;
 use RojasStack\Providers\RouteServiceProvider;
 use RojasStack\Providers\SeoServiceProvider;
+use RojasStack\Services\MeilisearchClient;
+use RojasStack\Services\MeilisearchIndexer;
 
 /**
  * ThemeSetup
@@ -39,7 +41,16 @@ class ThemeSetup
 
         // Búsqueda en vivo (core): endpoint del fragmento para HTMX (spec §9.3).
         // Mismo posts_per_page global que blog y archives (POSTS_PER_PAGE).
-        (new SearchController((int) ($features['posts_per_page'] ?? 6)))->register();
+        // Con Meilisearch configurado (.env: MEILI_HOST + MEILI_API_KEY),
+        // el controller busca engine-first (fuzzy) con fallback DB automático.
+        $search_engine = null;
+
+        if (self::enabled($features, 'search')) {
+            $search_engine = new MeilisearchClient();
+            (new MeilisearchIndexer())->register();
+        }
+
+        (new SearchController((int) ($features['posts_per_page'] ?? 6), $search_engine))->register();
 
         // Paginación de archives (core): fragmento grid+paginación para HTMX.
         // Mismo posts_per_page que el blog: una sola fuente de verdad

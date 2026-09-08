@@ -1,0 +1,25 @@
+# Meilisearch para el Rojas Stack — motor de búsqueda fuzzy (typo-tolerance)
+# Servicio opcional: sin MEILI_HOST en .env, el tema usa búsqueda nativa DB.
+services:
+  meilisearch:
+    container_name: ddev-${DDEV_SITENAME}-meilisearch
+    image: getmeili/meilisearch:latest
+    restart: "no"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    networks:
+      default:
+        aliases:
+          - ${DDEV_SITENAME}-meilisearch
+    ports:
+      - "7700"
+    environment:
+      # Dev: master key simple (prod: usar keys dedicadas search/write).
+      MEILI_MASTER_KEY: "rs-dev-master-key"
+      MEILI_NO_ANALYTICS: "true"
+    volumes:
+      - meili_data:/meili_data
+
+volumes:
+  meili_data:

@@ -123,6 +123,7 @@ Todo se activa/parametriza en `app/Config/features.php`:
 | Análisis estático (PHPStan 6) | `ddev exec composer analyze` |
 | Lint JS/CSS (Biome) | `bun run lint` (auto-fix: `bun run fix`) |
 | Tests E2E (Playwright) | `bun run test:e2e` |
+| Reindexar búsqueda (Meilisearch) | `bash bin/meili-reindex.sh` |
 | Desplegar a producción | `ddev exec dep deploy production` |
 
 Los E2E corren contra el sitio DDEV activo y usan el Chrome del sistema. Para apuntar a otro entorno:
