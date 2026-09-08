@@ -106,6 +106,52 @@ class MeilisearchClient implements SearchEngineInterface
     }
 
     /**
+     * Configura el ranking del índice: los atributos buscables se
+     * declaran EN ORDEN DE PESO (título > excerpt > contenido, el resto
+     * sin peso custom) y el desempate de relevancia idéntica va de lo
+     * más reciente a lo más viejo. Idempotente y asíncrono: devuelve el
+     * taskUID de Meilisearch o null si falla.
+     *
+     * @return array{taskUid: int}|null
+     */
+    public function configure(): ?array
+    {
+        if (! $this->is_available()) {
+            return null;
+        }
+
+        $response = $this->request(
+            'PATCH',
+            "/indexes/{$this->index_uid}/settings",
+            [
+                'searchableAttributes' => [
+                    'title',
+                    'excerpt',
+                    'content',
+                    'type',
+                ],
+                'rankingRules' => [
+                    'words',
+                    'typo',
+                    'proximity',
+                    'attribute',
+                    'sort',
+                    'exactness',
+                    'published_at:desc',
+                ],
+            ],
+        );
+
+        if (is_wp_error($response)) {
+            return null;
+        }
+
+        $body = json_decode(wp_remote_retrieve_body($response), true);
+
+        return is_array($body) ? $body : null;
+    }
+
+    /**
      * HTTP wrapper común (auth + timeouts + error silencioso).
      *
      * @param  array<array-key, mixed>|null $payload

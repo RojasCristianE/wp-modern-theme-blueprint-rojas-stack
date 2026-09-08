@@ -35,6 +35,14 @@ if (! $engine->is_available()) {
     WP_CLI::error('Meilisearch no responde en ' . $host);
 }
 
+// Ranking: título > excerpt > contenido (peso por orden de declaración)
+// + desempate por fecha. Requiere clave con permisos de escritura.
+$task = $engine->configure();
+if ($task === null) {
+    WP_CLI::error('No se pudieron aplicar los settings del índice.');
+}
+WP_CLI::log('Settings enviados (taskUid: ' . ($task['taskUid'] ?? '?') . ').');
+
 $query = new WP_Query([
     'post_type'           => 'any',
     'post_status'         => 'publish',
@@ -60,4 +68,4 @@ if ($engine->index($docs)) {
 }
 PHP
 
-echo "→ OK. Verifica con: curl $MEILI_HOST/indexes/posts/stats"
+echo "→ OK. Verifica con: curl $MEILI_HOST/indexes/posts/settings"

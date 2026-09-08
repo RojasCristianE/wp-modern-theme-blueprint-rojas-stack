@@ -482,7 +482,12 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      Meilisearch responde 415 — el cliente fija
      `Content-Type: application/json` siempre. Tiempo de typos del
      motor: palabras de 5–8 chars toleran 1 typo (`Deployr` →
-     «Deployer»), ≥9 toleran 2.
+     «Deployer»), ≥9 toleran 2. **Ranking con pesos** (verificado en
+     vivo): `searchableAttributes` declarados en orden
+     `title > excerpt > content > type` — un término en el título de
+     un post rankea sobre el mismo término en el contenido de otro —
+     y `published_at:desc` como desempate final de relevancia
+     idéntica.
 
 ---
 

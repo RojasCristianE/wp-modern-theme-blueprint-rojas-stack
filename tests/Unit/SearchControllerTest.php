@@ -220,6 +220,37 @@ it('SearchController usa el motor y conserva el orden de relevancia', function (
         ->and($rendered[1]['posts'])->toBe(['POST_17', 'POST_16']);
 });
 
+it('MeilisearchClient::configure declara título > excerpt > contenido como pesos', function () {
+    $captured = [];
+
+    when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$captured) {
+        $captured[] = [$url, $args];
+
+        return ['body' => '{"taskUid":1}'];
+    });
+
+    $client = new MeilisearchClient('http://meili.test:7700', 'write-key');
+    $task = $client->configure();
+
+    // captured[0] = health check (is_available), captured[1] = settings PATCH.
+    $settingsCall = $captured[1];
+    $payload = json_decode((string) $settingsCall[1]['body'], true);
+
+    expect($task)->toBe(['taskUid' => 1])
+        ->and($settingsCall[0])->toBe('http://meili.test:7700/indexes/posts/settings')
+        ->and($settingsCall[1]['method'])->toBe('PATCH')
+        ->and($payload['searchableAttributes'])->toBe(['title', 'excerpt', 'content', 'type'])
+        ->and($payload['rankingRules'])->toContain('published_at:desc');
+});
+
+it('MeilisearchClient::configure devuelve null si el motor no responde', function () {
+    when('wp_remote_request')->alias(fn () => new WP_Error('http_request_failed', 'down'));
+
+    $client = new MeilisearchClient('http://meili.test:7700', 'write-key');
+
+    expect($client->configure())->toBeNull();
+});
+
 it('SearchController cae a la búsqueda DB si el motor no está disponible', function () {
     when('wp_unslash')->returnArg();
     when('sanitize_text_field')->returnArg();

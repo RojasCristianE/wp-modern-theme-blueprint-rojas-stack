@@ -98,6 +98,19 @@
       "source_location": "L25"
     },
     {
+      "id": "app_providers_assetserviceprovider_assetserviceprovider",
+      "label": "AssetServiceProvider",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": "assetserviceprovider",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L16"
+    },
+    {
       "id": "app_setup_themesetup_themesetup",
       "label": "ThemeSetup",
       "_callable": true,
@@ -148,19 +161,6 @@
       "norm_label": "archivecontroller",
       "source_file": "app/Controllers/ArchiveController.php",
       "source_location": "L20"
-    },
-    {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider",
-      "label": "AssetServiceProvider",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": "assetserviceprovider",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L16"
     },
     {
       "id": "app_contracts_searchengineinterface_searchengineinterface",
@@ -746,6 +746,30 @@
       "source_location": "L122"
     },
     {
+      "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
+      "label": ".enqueue_assets()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": ".enqueue_assets()",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_providers_assetserviceprovider_assetserviceprovider_register",
+      "label": ".register()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": ".register()",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L25"
+    },
+    {
       "id": "app_setup_themesetup_themesetup_add_theme_supports",
       "label": ".add_theme_supports()",
       "_callable": true,
@@ -1070,30 +1094,6 @@
       "source_location": "L180"
     },
     {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
-      "label": ".enqueue_assets()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": ".enqueue_assets()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L33"
-    },
-    {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_register",
-      "label": ".register()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 210,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": ".register()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L25"
-    },
-    {
       "id": "app_contracts_searchengineinterface_searchengineinterface_delete",
       "label": ".delete()",
       "_callable": true,
@@ -1298,6 +1298,18 @@
       "source_location": "L74"
     },
     {
+      "id": "app_services_meilisearchclient_meilisearchclient_configure",
+      "label": ".configure()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 216,
+      "community_name": "MeilisearchClient",
+      "file_type": "code",
+      "norm_label": ".configure()",
+      "source_file": "app/Services/MeilisearchClient.php",
+      "source_location": "L117"
+    },
+    {
       "id": "app_services_meilisearchclient_meilisearchclient_construct",
       "label": ".__construct()",
       "_callable": true,
@@ -1355,7 +1367,7 @@
       "file_type": "code",
       "norm_label": ".request()",
       "source_file": "app/Services/MeilisearchClient.php",
-      "source_location": "L115"
+      "source_location": "L161"
     },
     {
       "id": "app_services_meilisearchclient_meilisearchclient_search",
@@ -2924,18 +2936,6 @@
       "source_location": "L8"
     },
     {
-      "id": "agents_skills_vite_references_core_config_build_target",
-      "label": "build.target",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Vite Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "build.target",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L125"
-    },
-    {
       "id": "agents_skills_vite_references_core_config_conditional_config",
       "label": "Conditional Config",
       "_origin": "ast",
@@ -2946,66 +2946,6 @@
       "norm_label": "conditional config",
       "source_file": ".agents/skills/vite/references/core-config.md",
       "source_location": "L21"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_define_global_constants",
-      "label": "define (Global Constants)",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Vite Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "define (global constants)",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L84"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_key_config_options",
-      "label": "Key Config Options",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Vite Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "key config options",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L69"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_plugins",
-      "label": "plugins",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Vite Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "plugins",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L97"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_resolve_alias",
-      "label": "resolve.alias",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Vite Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "resolve.alias",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L71"
-    },
-    {
-      "id": "agents_skills_vite_references_core_config_server_proxy",
-      "label": "server.proxy",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Vite Configuration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "server.proxy",
-      "source_file": ".agents/skills/vite/references/core-config.md",
-      "source_location": "L109"
     },
     {
       "id": "agents_skills_vite_references_core_config_typescript_intellisense",
@@ -3044,75 +2984,11 @@
       "source_location": "L6"
     },
     {
-      "id": "agents_skills_vite_references_environment_api",
-      "label": "environment-api.md",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite-environment-api",
-        "description": "Vite 6+ Environment API for multiple runtime environments"
-      },
-      "node_kind": "page",
-      "norm_label": "environment-api.md",
-      "source_file": ".agents/skills/vite/references/environment-api.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_vite_references_rolldown_migration",
-      "label": "rolldown-migration.md",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite-rolldown",
-        "description": "Vite 8 Rolldown bundler and Oxc transformer migration"
-      },
-      "node_kind": "page",
-      "norm_label": "rolldown-migration.md",
-      "source_file": ".agents/skills/vite/references/rolldown-migration.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_vite_skill",
-      "label": "vite/SKILL.md",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite",
-        "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite."
-      },
-      "node_kind": "page",
-      "norm_label": "vite/skill.md",
-      "source_file": ".agents/skills/vite/SKILL.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api",
-      "label": "core-plugin-api.md",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "vite/SKILL.md",
-      "file_type": "document",
-      "frontmatter": {
-        "name": "vite-plugin-api",
-        "description": "Vite plugin authoring with Vite-specific hooks"
-      },
-      "node_kind": "page",
-      "norm_label": "core-plugin-api.md",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_vite_skill_advanced",
       "label": "Advanced",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "advanced",
@@ -3124,7 +3000,7 @@
       "label": "Build & SSR",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "build & ssr",
@@ -3136,7 +3012,7 @@
       "label": "CLI Commands",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "cli commands",
@@ -3148,7 +3024,7 @@
       "label": "Common Config",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "common config",
@@ -3160,7 +3036,7 @@
       "label": "Core",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "core",
@@ -3172,7 +3048,7 @@
       "label": "Official Plugins",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "official plugins",
@@ -3184,7 +3060,7 @@
       "label": "Preferences",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "preferences",
@@ -3196,7 +3072,7 @@
       "label": "Quick Reference",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "quick reference",
@@ -3208,7 +3084,7 @@
       "label": "Vite",
       "_origin": "ast",
       "community": 103,
-      "community_name": "vite/SKILL.md",
+      "community_name": "Vite",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "vite",
@@ -3252,54 +3128,6 @@
       "source_location": "L168"
     },
     {
-      "id": "agents_skills_vite_references_core_plugin_api_config",
-      "label": "config",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "Vite Plugin API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "config",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_configresolved",
-      "label": "configResolved",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "Vite Plugin API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "configresolved",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L38"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_configureserver",
-      "label": "configureServer",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "Vite Plugin API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "configureserver",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L57"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_handlehotupdate",
-      "label": "handleHotUpdate",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "Vite Plugin API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "handlehotupdate",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L108"
-    },
-    {
       "id": "agents_skills_vite_references_core_plugin_api_plugin_ordering",
       "label": "Plugin Ordering",
       "_origin": "ast",
@@ -3310,18 +3138,6 @@
       "norm_label": "plugin ordering",
       "source_file": ".agents/skills/vite/references/core-plugin-api.md",
       "source_location": "L150"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_transformindexhtml",
-      "label": "transformIndexHtml",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "Vite Plugin API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "transformindexhtml",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L85"
     },
     {
       "id": "agents_skills_vite_references_core_plugin_api_universal_hooks_from_rolldown",
@@ -3358,18 +3174,6 @@
       "norm_label": "vite plugin api",
       "source_file": ".agents/skills/vite/references/core-plugin-api.md",
       "source_location": "L6"
-    },
-    {
-      "id": "agents_skills_vite_references_core_plugin_api_vite_specific_hooks",
-      "label": "Vite-Specific Hooks",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "Vite Plugin API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "vite-specific hooks",
-      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
-      "source_location": "L21"
     },
     {
       "id": "agents_skills_laravel_specialist_references_testing",
@@ -4641,6 +4445,18 @@
       "source_location": "L58"
     },
     {
+      "id": "agents_skills_vite_references_core_features_built_in_constants",
+      "label": "Built-in Constants",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "built-in constants",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L106"
+    },
+    {
       "id": "agents_skills_vite_references_core_features_css_modules",
       "label": "CSS Modules",
       "_origin": "ast",
@@ -4651,6 +4467,54 @@
       "norm_label": "css modules",
       "source_file": ".agents/skills/vite/references/core-features.md",
       "source_location": "L160"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_custom_queries",
+      "label": "Custom Queries",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom queries",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L51"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_custom_variables",
+      "label": "Custom Variables",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom variables",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L116"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_eager_loading",
+      "label": "Eager Loading",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "eager loading",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_environment_variables",
+      "label": "Environment Variables",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "environment variables",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L104"
     },
     {
       "id": "agents_skills_vite_references_core_features_explicit_url",
@@ -4665,6 +4529,18 @@
       "source_location": "L67"
     },
     {
+      "id": "agents_skills_vite_references_core_features_glob_import",
+      "label": "Glob Import",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "glob import",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L8"
+    },
+    {
       "id": "agents_skills_vite_references_core_features_hmr_api",
       "label": "HMR API",
       "_origin": "ast",
@@ -4675,6 +4551,18 @@
       "norm_label": "hmr api",
       "source_file": ".agents/skills/vite/references/core-features.md",
       "source_location": "L183"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_html_replacement",
+      "label": "HTML Replacement",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "html replacement",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L153"
     },
     {
       "id": "agents_skills_vite_references_core_features_inline_no_inline",
@@ -4701,6 +4589,54 @@
       "source_location": "L176"
     },
     {
+      "id": "agents_skills_vite_references_core_features_mode_specific_files",
+      "label": "Mode-specific Files",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "mode-specific files",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_multiple_patterns",
+      "label": "Multiple Patterns",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "multiple patterns",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L39"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_named_imports",
+      "label": "Named Imports",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "named imports",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_negative_patterns",
+      "label": "Negative Patterns",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "negative patterns",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L45"
+    },
+    {
       "id": "agents_skills_vite_references_core_features_raw_string",
       "label": "Raw String",
       "_origin": "ast",
@@ -4711,6 +4647,18 @@
       "norm_label": "raw string",
       "source_file": ".agents/skills/vite/references/core-features.md",
       "source_location": "L73"
+    },
+    {
+      "id": "agents_skills_vite_references_core_features_typescript_support",
+      "label": "TypeScript Support",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "Vite Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "typescript support",
+      "source_file": ".agents/skills/vite/references/core-features.md",
+      "source_location": "L140"
     },
     {
       "id": "agents_skills_vite_references_core_features_url_import",
@@ -9507,6 +9455,28 @@
       "source_location": ""
     },
     {
+      "id": "app_providers_assetserviceprovider",
+      "label": "AssetServiceProvider.php",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": "assetserviceprovider.php",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_unit_assetserviceprovidertest",
+      "label": "AssetServiceProviderTest.php",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": "assetserviceprovidertest.php",
+      "source_file": "tests/Unit/AssetServiceProviderTest.php",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_wordpress_router_references_decision_tree",
       "label": "decision-tree.md",
       "_origin": "ast",
@@ -14049,26 +14019,76 @@
       "source_location": "L430"
     },
     {
-      "id": "app_providers_assetserviceprovider",
-      "label": "AssetServiceProvider.php",
+      "id": "agents_skills_vite_references_build_and_ssr_build",
+      "label": "build",
       "_origin": "ast",
       "community": 210,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": "assetserviceprovider.php",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L1"
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "build",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L120"
     },
     {
-      "id": "tests_unit_assetserviceprovidertest",
-      "label": "AssetServiceProviderTest.php",
+      "id": "agents_skills_vite_references_build_and_ssr_createserver",
+      "label": "createServer",
       "_origin": "ast",
       "community": 210,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": "assetserviceprovidertest.php",
-      "source_file": "tests/Unit/AssetServiceProviderTest.php",
-      "source_location": "L1"
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "createserver",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L105"
+    },
+    {
+      "id": "agents_skills_vite_references_build_and_ssr_javascript_api",
+      "label": "JavaScript API",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "javascript api",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "agents_skills_vite_references_build_and_ssr_loadenv",
+      "label": "loadEnv",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "loadenv",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L150"
+    },
+    {
+      "id": "agents_skills_vite_references_build_and_ssr_preview",
+      "label": "preview",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "preview",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "agents_skills_vite_references_build_and_ssr_resolveconfig",
+      "label": "resolveConfig",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "JavaScript API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "resolveconfig",
+      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
+      "source_location": "L142"
     },
     {
       "id": "agents_1_backend_data_php_composer",
@@ -14346,232 +14366,76 @@
       "source_location": "L13"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
+      "id": "agents_skills_vite_references_core_config_build_target",
+      "label": "build.target",
       "_origin": "ast",
       "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
+      "community_name": "Key Config Options",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L297"
+      "norm_label": "build.target",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L125"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
-      "label": "CLI Commands",
+      "id": "agents_skills_vite_references_core_config_define_global_constants",
+      "label": "define (Global Constants)",
       "_origin": "ast",
       "community": 219,
-      "community_name": "Patterns",
+      "community_name": "Key Config Options",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "cli commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L13"
+      "norm_label": "define (global constants)",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L84"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
-      "label": "Decision Guide",
+      "id": "agents_skills_vite_references_core_config_key_config_options",
+      "label": "Key Config Options",
       "_origin": "ast",
       "community": 219,
-      "community_name": "Patterns",
+      "community_name": "Key Config Options",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L278"
+      "norm_label": "key config options",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L69"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
-      "label": "Dynamic Shard Count",
+      "id": "agents_skills_vite_references_core_config_plugins",
+      "label": "plugins",
       "_origin": "ast",
       "community": 219,
-      "community_name": "Patterns",
+      "community_name": "Key Config Options",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "dynamic shard count",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L229"
+      "norm_label": "plugins",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L97"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
-      "label": "Merged report missing results",
+      "id": "agents_skills_vite_references_core_config_resolve_alias",
+      "label": "resolve.alias",
       "_origin": "ast",
       "community": 219,
-      "community_name": "Patterns",
+      "community_name": "Key Config Options",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "merged report missing results",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L331"
+      "norm_label": "resolve.alias",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L71"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
-      "label": "Merging Shard Reports",
+      "id": "agents_skills_vite_references_core_config_server_proxy",
+      "label": "server.proxy",
       "_origin": "ast",
       "community": 219,
-      "community_name": "Patterns",
+      "community_name": "Key Config Options",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "merging shard reports",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L103"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
-      "label": "More workers = Slower",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more workers = slower",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L364"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
-      "label": "\"No tests found\" in some shards",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"no tests found\" in some shards",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L323"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L32"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
-      "label": "Sharding Across CI Machines",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding across ci machines",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L78"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
-      "label": "Sharding and Parallel Execution",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding and parallel execution",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
-      "label": "Test Isolation for Parallelism",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "test isolation for parallelism",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L187"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
-      "label": "Tests pass solo but fail together",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests pass solo but fail together",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L312"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L310"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
-      "label": "Worker Configuration",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker configuration",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L34"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
-      "label": "Worker-scoped fixture not working",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixture not working",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L348"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
-      "label": "Worker-Scoped Fixtures",
-      "_origin": "ast",
-      "community": 219,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixtures",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L144"
+      "norm_label": "server.proxy",
+      "source_file": ".agents/skills/vite/references/core-config.md",
+      "source_location": "L109"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -14915,148 +14779,140 @@
       "source_location": "L11"
     },
     {
-      "id": "agents_skills_vite_references_core_features_built_in_constants",
-      "label": "Built-in Constants",
+      "id": "agents_skills_vite_references_core_plugin_api_config",
+      "label": "config",
       "_origin": "ast",
       "community": 220,
-      "community_name": "Environment Variables",
+      "community_name": "Vite-Specific Hooks",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "built-in constants",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L106"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_custom_variables",
-      "label": "Custom Variables",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Environment Variables",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom variables",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L116"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_environment_variables",
-      "label": "Environment Variables",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Environment Variables",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "environment variables",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L104"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_html_replacement",
-      "label": "HTML Replacement",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Environment Variables",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "html replacement",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L153"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_mode_specific_files",
-      "label": "Mode-specific Files",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Environment Variables",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mode-specific files",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L131"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_typescript_support",
-      "label": "TypeScript Support",
-      "_origin": "ast",
-      "community": 220,
-      "community_name": "Environment Variables",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "typescript support",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L140"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_custom_queries",
-      "label": "Custom Queries",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "Glob Import",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom queries",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L51"
-    },
-    {
-      "id": "agents_skills_vite_references_core_features_eager_loading",
-      "label": "Eager Loading",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "Glob Import",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "eager loading",
-      "source_file": ".agents/skills/vite/references/core-features.md",
+      "norm_label": "config",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
       "source_location": "L23"
     },
     {
-      "id": "agents_skills_vite_references_core_features_glob_import",
-      "label": "Glob Import",
+      "id": "agents_skills_vite_references_core_plugin_api_configresolved",
+      "label": "configResolved",
       "_origin": "ast",
-      "community": 221,
-      "community_name": "Glob Import",
+      "community": 220,
+      "community_name": "Vite-Specific Hooks",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "glob import",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L8"
+      "norm_label": "configresolved",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L38"
     },
     {
-      "id": "agents_skills_vite_references_core_features_multiple_patterns",
-      "label": "Multiple Patterns",
+      "id": "agents_skills_vite_references_core_plugin_api_configureserver",
+      "label": "configureServer",
       "_origin": "ast",
-      "community": 221,
-      "community_name": "Glob Import",
+      "community": 220,
+      "community_name": "Vite-Specific Hooks",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "multiple patterns",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L39"
+      "norm_label": "configureserver",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L57"
     },
     {
-      "id": "agents_skills_vite_references_core_features_named_imports",
-      "label": "Named Imports",
+      "id": "agents_skills_vite_references_core_plugin_api_handlehotupdate",
+      "label": "handleHotUpdate",
       "_origin": "ast",
-      "community": 221,
-      "community_name": "Glob Import",
+      "community": 220,
+      "community_name": "Vite-Specific Hooks",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "named imports",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L30"
+      "norm_label": "handlehotupdate",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L108"
     },
     {
-      "id": "agents_skills_vite_references_core_features_negative_patterns",
-      "label": "Negative Patterns",
+      "id": "agents_skills_vite_references_core_plugin_api_transformindexhtml",
+      "label": "transformIndexHtml",
       "_origin": "ast",
-      "community": 221,
-      "community_name": "Glob Import",
+      "community": 220,
+      "community_name": "Vite-Specific Hooks",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "negative patterns",
-      "source_file": ".agents/skills/vite/references/core-features.md",
-      "source_location": "L45"
+      "norm_label": "transformindexhtml",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api_vite_specific_hooks",
+      "label": "Vite-Specific Hooks",
+      "_origin": "ast",
+      "community": 220,
+      "community_name": "Vite-Specific Hooks",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "vite-specific hooks",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "agents_skills_vite_references_environment_api",
+      "label": "environment-api.md",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite-environment-api",
+        "description": "Vite 6+ Environment API for multiple runtime environments"
+      },
+      "node_kind": "page",
+      "norm_label": "environment-api.md",
+      "source_file": ".agents/skills/vite/references/environment-api.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_vite_references_rolldown_migration",
+      "label": "rolldown-migration.md",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite-rolldown",
+        "description": "Vite 8 Rolldown bundler and Oxc transformer migration"
+      },
+      "node_kind": "page",
+      "norm_label": "rolldown-migration.md",
+      "source_file": ".agents/skills/vite/references/rolldown-migration.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_vite_skill",
+      "label": "vite/SKILL.md",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite",
+        "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite."
+      },
+      "node_kind": "page",
+      "norm_label": "vite/skill.md",
+      "source_file": ".agents/skills/vite/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_vite_references_core_plugin_api",
+      "label": "core-plugin-api.md",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "vite/SKILL.md",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "vite-plugin-api",
+        "description": "Vite plugin authoring with Vite-specific hooks"
+      },
+      "node_kind": "page",
+      "norm_label": "core-plugin-api.md",
+      "source_file": ".agents/skills/vite/references/core-plugin-api.md",
+      "source_location": "L1"
     },
     {
       "id": "bin_meili_reindex",
@@ -16968,7 +16824,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L489"
+      "source_location": "L494"
     },
     {
       "id": "rojas_starter_spec_14_criterios_de_\u00e9xito",
@@ -16980,7 +16836,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L499"
+      "source_location": "L504"
     },
     {
       "id": "rojas_starter_spec_1_1_prop\u00f3sito",
@@ -25139,6 +24995,234 @@
       "norm_label": "other-providers.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/other-providers.md",
       "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L297"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
+      "label": "CLI Commands",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cli commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L278"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
+      "label": "Dynamic Shard Count",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dynamic shard count",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
+      "label": "Merged report missing results",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report missing results",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L331"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
+      "label": "Merging Shard Reports",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merging shard reports",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
+      "label": "More workers = Slower",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more workers = slower",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L364"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
+      "label": "\"No tests found\" in some shards",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"no tests found\" in some shards",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L323"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
+      "label": "Sharding Across CI Machines",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding across ci machines",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
+      "label": "Sharding and Parallel Execution",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding and parallel execution",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
+      "label": "Test Isolation for Parallelism",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "test isolation for parallelism",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L187"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
+      "label": "Tests pass solo but fail together",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests pass solo but fail together",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L312"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
+      "label": "Worker Configuration",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker configuration",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
+      "label": "Worker-scoped fixture not working",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixture not working",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L348"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
+      "label": "Worker-Scoped Fixtures",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixtures",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L144"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_performance",
@@ -34443,7 +34527,7 @@
       "label": "build-and-ssr.md",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "frontmatter": {
         "name": "vite-build-ssr",
@@ -34455,23 +34539,11 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "JavaScript API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "build",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L120"
-    },
-    {
       "id": "agents_skills_vite_references_build_and_ssr_build_and_ssr",
       "label": "Build and SSR",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "build and ssr",
@@ -34479,35 +34551,11 @@
       "source_location": "L6"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_createserver",
-      "label": "createServer",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "JavaScript API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "createserver",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L105"
-    },
-    {
-      "id": "agents_skills_vite_references_build_and_ssr_javascript_api",
-      "label": "JavaScript API",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "JavaScript API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "javascript api",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L103"
-    },
-    {
       "id": "agents_skills_vite_references_build_and_ssr_library_mode",
       "label": "Library Mode",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "library mode",
@@ -34515,23 +34563,11 @@
       "source_location": "L8"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_loadenv",
-      "label": "loadEnv",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "JavaScript API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "loadenv",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L150"
-    },
-    {
       "id": "agents_skills_vite_references_build_and_ssr_multi_page_app",
       "label": "Multi-Page App",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "multi-page app",
@@ -34543,7 +34579,7 @@
       "label": "Multiple Entries",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "multiple entries",
@@ -34555,7 +34591,7 @@
       "label": "Output Formats",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "output formats",
@@ -34567,7 +34603,7 @@
       "label": "Package.json Setup",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "package.json setup",
@@ -34575,35 +34611,11 @@
       "source_location": "L56"
     },
     {
-      "id": "agents_skills_vite_references_build_and_ssr_preview",
-      "label": "preview",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "JavaScript API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "preview",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L131"
-    },
-    {
-      "id": "agents_skills_vite_references_build_and_ssr_resolveconfig",
-      "label": "resolveConfig",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "JavaScript API",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "resolveconfig",
-      "source_file": ".agents/skills/vite/references/build-and-ssr.md",
-      "source_location": "L142"
-    },
-    {
       "id": "agents_skills_vite_references_build_and_ssr_ssr_development",
       "label": "SSR Development",
       "_origin": "ast",
       "community": 97,
-      "community_name": "JavaScript API",
+      "community_name": "Build and SSR",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "ssr development",
@@ -35666,6 +35678,30 @@
       "context": "call",
       "source_file": "app/Providers/SeoServiceProvider.php",
       "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "app_services_meilisearchclient_meilisearchclient_configure",
+      "target": "app_services_meilisearchclient_meilisearchclient_is_available",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Services/MeilisearchClient.php",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "app_services_meilisearchclient_meilisearchclient_configure",
+      "target": "app_services_meilisearchclient_meilisearchclient_request",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Services/MeilisearchClient.php",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -65444,7 +65480,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L489",
+      "source_location": "L494",
       "weight": 1.0
     },
     {
@@ -65455,7 +65491,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L499",
+      "source_location": "L504",
       "weight": 1.0
     },
     {
@@ -65521,7 +65557,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L230",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -65532,7 +65568,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L235",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -65543,7 +65579,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L240",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -65554,7 +65590,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L245",
+      "source_location": "L276",
       "weight": 1.0
     },
     {
@@ -66107,13 +66143,24 @@
     },
     {
       "source": "app_services_meilisearchclient_meilisearchclient",
+      "target": "app_services_meilisearchclient_meilisearchclient_configure",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Services/MeilisearchClient.php",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "app_services_meilisearchclient_meilisearchclient",
       "target": "app_services_meilisearchclient_meilisearchclient_request",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Services/MeilisearchClient.php",
-      "source_location": "L115",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -68750,5 +68797,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "bd495b6378b318fec37aceeaeae95ee6156fb1aa"
+  "built_at_commit": "6b02cb618a2128335b9e4f8a381b772f4fd6ce37"
 }
