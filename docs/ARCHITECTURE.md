@@ -103,6 +103,19 @@ Usuario envía (HTMX, hx-post)
 
 El nonce se inyecta globalmente: toda petición HTMX hacia la REST API/admin-ajax incluye `X-WP-Nonce` vía el evento `htmx:configRequest` (regla §2 del stack).
 
+### 4.4 Lectura (búsqueda en vivo)
+
+```text
+Input del modal (HTMX, hx-get, delay 300ms)
+  → admin-ajax.php  action=rs_live_search  (GET de solo lectura)
+  → SearchController::render_fragment()
+      ├─ término vacío → fragmento en estado inicial (sin tocar la DB)
+      └─ término       → Timber::get_posts(s) → partials/search-results.twig
+  → HTMX hace hx-swap en #search-results del modal
+```
+
+La búsqueda tradicional (`/?s=`) sigue la jerarquía de plantillas (`search.php` → `search.twig`) y renderiza la página completa: cada superficie tiene un único camino.
+
 **Gestión de estado:** el estado persistente (filtros, paginación) vive en el servidor; **AlpineJS queda reservado para micro-interacciones efímeras** (dropdowns, modales).
 
 ## 5. Assets (Vite + vite-for-wp)

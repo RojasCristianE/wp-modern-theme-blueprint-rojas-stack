@@ -176,7 +176,7 @@ el controller debe pasar `'paged' => max(1, (int) get_query_var('paged'))` a `Ti
 
 ## Componentes de layout (no del catálogo)
 
-`components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda con Alpine. No son componentes de propósito general — se incluyen desde `base.twig`.
+`components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda (Alpine abre/cierra, HTMX consulta `admin-ajax?action=rs_live_search` y hace `hx-swap` de `partials/search-results.twig` en `#search-results`). No son componentes de propósito general — se incluyen desde `base.twig`.
 
 ## Extender el catálogo
 

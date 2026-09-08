@@ -5,6 +5,7 @@ namespace RojasStack\Setup;
 use RojasStack\Controllers\BlogController;
 use RojasStack\Controllers\DesignSystemController;
 use RojasStack\Controllers\FormController;
+use RojasStack\Controllers\SearchController;
 use RojasStack\Fields\PageFields;
 use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
@@ -34,6 +35,9 @@ class ThemeSetup
         $router->register();
 
         (new MenuServiceProvider())->register();
+
+        // Búsqueda en vivo (core): endpoint del fragmento para HTMX (spec §9.3).
+        (new SearchController())->register();
 
         $this->register_hooks();
         $this->register_core_fields();

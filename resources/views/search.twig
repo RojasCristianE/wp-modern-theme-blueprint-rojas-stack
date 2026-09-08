@@ -1,0 +1,43 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="py-16 bg-page min-h-[50vh]">
+    <div class="container mx-auto px-4">
+
+        <header class="mb-10">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">Resultados de búsqueda</p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink">
+                {{ search_query ? '“' ~ search_query ~ '”' : 'Buscar' }}
+            </h1>
+            <p class="text-ink-muted mt-3">
+                {{ posts.found_posts }} resultado{{ posts.found_posts == 1 ? '' : 's' }}
+            </p>
+        </header>
+
+        {% if posts|length > 0 %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for post in posts %}
+                    {% include 'components/card.twig' with {
+                        title: post.title,
+                        url: post.link,
+                        excerpt: post.preview.length(20),
+                        image: post.thumbnail ? post.thumbnail.src|resize(600, 400) : null,
+                        meta: post.date|date('d M, Y'),
+                    } only %}
+                {% endfor %}
+            </div>
+
+            {% include 'components/pagination.twig' with { posts: posts } only %}
+        {% else %}
+            <div class="max-w-md">
+                {% include 'components/alert.twig' with {
+                    variant: 'info',
+                    title: 'Sin resultados',
+                    message: 'No encontramos nada para tu búsqueda. Prueba con otros términos.',
+                } %}
+            </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endblock %}
