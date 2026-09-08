@@ -5,6 +5,13 @@ declare(strict_types=1);
 use RojasStack\Controllers\BlogController;
 use function Brain\Monkey\Functions\when;
 
+// render_page() resuelve la base bonita del contrato HTMX en CADA
+// invocación: stub local explícito en vez de depender de fugas entre
+// archivos de test (el orden alfabético las hacía frágiles).
+beforeEach(function () {
+    when('home_url')->alias(fn (string $p = '') => 'http://theme.test' . $p);
+});
+
 it('renderiza blog.twig con título y posts en el contexto', function () {
     when('__')->returnArg();
     when('get_query_var')->justReturn(0); // sin ?paged= → página 1
@@ -73,7 +80,6 @@ it('propaga la página actual del query a los args de posts (paginación)', func
 it('usa la página explícita de la ruta virtual y expone el contrato HTMX', function () {
     when('__')->returnArg();
     when('get_query_var')->justReturn(0);
-    when('home_url')->alias(fn (string $p = '') => 'http://theme.test' . $p);
 
     $captured  = null;
     $postsArgs = null;

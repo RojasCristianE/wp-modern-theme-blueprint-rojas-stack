@@ -56,6 +56,9 @@ class BlogController
         $context['archive_term'] = '';
         $context['htmx_base']    = home_url('/blog/');
 
+        // partials/archive-shell.twig: cards del skeleton = tamaño de página.
+        $context['posts_per_page'] = (int) ($this->config['posts_per_page'] ?? 6);
+
         Timber::render('blog.twig', $context);
     }
 }

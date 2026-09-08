@@ -1,0 +1,52 @@
+{#
+  Shell del grid de archives: scope Alpine + skeleton de carga.
+
+  Envuelve a partials/archive-grid.twig (el nodo swappeable). El shell
+  NO se swappea: sobrevive a cada página y orquesta la transición:
+    - requestCount > 0 (HTMX en vuelo) → overlay .rs-skeleton visible,
+      grid real a opacity-0 (el layout no salta: el overlay es absolute).
+    - swap listo → skeleton fuera, flash de entrada del grid fresco
+      (Web Animations API en el componente archiveView de main.js).
+
+  Parámetros:
+  - posts:            PostQuery de Timber (con .pagination).
+  - cards:            Cantidad de tarjetas skeleton (default 6 —
+                      coincide con POSTS_PER_PAGE default).
+  - archive_taxonomy: taxonomy del término paginado (para HTMX).
+  - archive_term:     slug del término; '' = home del blog.
+  - htmx_endpoint:    URL absoluta de admin-ajax.
+  - htmx_base:        URL bonita del archive (para hx-push-url).
+#}
+{% set cards = cards|default(6) %}
+{% set shell_id = 'archive-shell-' ~ random(100000, 999999) %}
+
+<div x-data="archiveView" data-archive-shell id="{{ shell_id }}" class="relative w-full">
+    {# Overlay skeleton: absoluto sobre el grid real, mismo shape de cards #}
+    <div x-cloak x-show="requestCount > 0" aria-hidden="true" class="absolute inset-0 z-10 pointer-events-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for i in 1..cards %}
+                <div class="bg-surface rounded-2xl border border-line shadow-sm overflow-hidden">
+                    <div class="rs-skeleton w-full h-48"></div>
+                    <div class="p-6 space-y-3">
+                        <div class="rs-skeleton h-3 w-24 rounded"></div>
+                        <div class="rs-skeleton h-5 w-3/4 rounded"></div>
+                        <div class="rs-skeleton h-3 w-full rounded"></div>
+                        <div class="rs-skeleton h-3 w-5/6 rounded"></div>
+                        <div class="rs-skeleton h-3 w-20 rounded"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="transition-opacity duration-150" :class="{ 'opacity-0 pointer-events-none': requestCount > 0 }">
+        {% include 'partials/archive-grid.twig' with {
+            posts: posts,
+            htmx_enabled: true,
+            archive_taxonomy: archive_taxonomy|default('category'),
+            archive_term: archive_term|default(''),
+            htmx_endpoint: htmx_endpoint|default('/wp-admin/admin-ajax.php'),
+            htmx_base: htmx_base|default(''),
+        } only %}
+    </div>
+</div>

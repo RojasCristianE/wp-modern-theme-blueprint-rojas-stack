@@ -73,3 +73,48 @@ body {
 .htmx-request.htmx-indicator {
   display: block;
 }
+
+/* x-cloak: evita el flash de markup de Alpine antes de inicializar.
+   El !important es parte de la receta oficial de Alpine (la regla debe
+   ganarle a cualquier display hasta que Alpine elimina el atributo). */
+[x-cloak] {
+  /* biome-ignore lint/complexity/noImportantStyles: requerido por la receta oficial de x-cloak de Alpine */
+  display: none !important;
+}
+
+/*
+ * Skeleton de carga del grid de archives (partials/archive-shell.twig).
+ * Shimmer "wave": un highlight translúcido barre el bloque mientras HTMX
+ * trae el fragmento — usa los tokens del tema (line/surface).
+ */
+@keyframes rs-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.rs-skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--rs-line);
+}
+
+.rs-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--rs-surface) 60%, transparent),
+    transparent
+  );
+  animation: rs-shimmer 1.4s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rs-skeleton::after {
+    animation: none;
+  }
+}

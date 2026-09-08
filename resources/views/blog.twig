@@ -18,16 +18,14 @@
             <a href="#" class="text-brand-600 font-bold text-sm hover:underline">Ver todos &rarr;</a>
         </div>
 
-        <div class="transition-opacity duration-150" :class="{ 'opacity-50 pointer-events-none': loading }" x-data="archiveView">
-            {% include 'partials/archive-grid.twig' with {
-                posts: posts,
-                htmx_enabled: true,
-                archive_taxonomy: 'category',
-                archive_term: archive_term|default(''),
-                htmx_endpoint: site.url ~ '/wp-admin/admin-ajax.php',
-                htmx_base: htmx_base|default(site.url ~ '/blog/'),
-            } only %}
-        </div>
+        {% include 'partials/archive-shell.twig' with {
+            posts: posts,
+            cards: posts_per_page|default(6),
+            archive_taxonomy: 'category',
+            archive_term: archive_term|default(''),
+            htmx_endpoint: site.url ~ '/wp-admin/admin-ajax.php',
+            htmx_base: htmx_base|default(site.url ~ '/blog/'),
+        } only %}
     </div>
 </section>
 {% endblock %}

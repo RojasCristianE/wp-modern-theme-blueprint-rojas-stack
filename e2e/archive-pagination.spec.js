@@ -63,3 +63,37 @@ test('la carga directa de una página profunda renderiza server-side', async ({
   await expect(page.locator('[data-archive-grid] article')).toHaveCount(4);
   await expect(page.locator('[aria-current="page"]')).toHaveText('2');
 });
+
+test('el skeleton cubre el grid mientras HTMX trae el fragmento', async ({
+  page,
+}) => {
+  // Ralentizamos artificialmente el fetch del fragmento (400 ms) para
+  // poder observar el overlay .rs-skeleton entre request y swap.
+  await page.route(/rs_archive_page/, async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 400));
+    await route.continue();
+  });
+
+  await page.goto('/category/rojas-stack/');
+  const grid = page.locator('[data-archive-grid]').first();
+  const skeleton = page.locator(
+    '[data-archive-shell] [x-show="requestCount > 0"]',
+  );
+
+  // Estado inicial: sin skeleton.
+  await expect(skeleton).toBeHidden();
+  await page.evaluate(() => {
+    window.__noReloadMarker = true;
+  });
+
+  await grid.locator('a[aria-label="Página siguiente"]').click();
+
+  // Durante el fetch: skeleton visible, grid real oculto (sin saltos de layout).
+  await expect(skeleton).toBeVisible();
+
+  // Tras el swap: skeleton fuera, grid fresco, sin recarga.
+  await expect(skeleton).toBeHidden({ timeout: 5_000 });
+  await expect(grid.locator('article')).toHaveCount(4);
+  await expect(page.locator('[x-data="archiveView"]')).toHaveCount(1);
+  expect(await page.evaluate(() => window.__noReloadMarker)).toBe(true);
+});

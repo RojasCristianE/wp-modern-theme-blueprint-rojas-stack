@@ -9,18 +9,20 @@ window.htmx = htmx;
 // vive en el servidor — regla §3 del stack).
 //
 // archiveView: acompaña a partials/archive-grid.twig en las páginas de
-// archive (categoría/etiqueta). El wrapper con x-data queda fuera del
+// archive (categoría/etiqueta/blog). El shell con x-data queda fuera del
 // nodo que HTMX reemplaza, así que el componente sobrevive a cada swap:
-//   - loading:  dim del grid mientras vuela la petición del fragmento.
+//   - requestCount: peticiones HTMX del grid en vuelo → el shell muestra
+//     el overlay skeleton (partials/archive-shell.twig) y oculta el grid
+//     real; soporta peticiones concurrentes sin parpadear.
 //   - scroll:   vuelve al inicio del grid al cambiar de página.
 //   - flash:    fade-in del grid fresco (Web Animations API).
 Alpine.data('archiveView', () => ({
-  loading: false,
+  requestCount: 0,
 
   init() {
     document.body.addEventListener('htmx:beforeRequest', (e) => {
       if (e.detail?.elt?.closest?.('[data-archive-grid]')) {
-        this.loading = true;
+        this.requestCount += 1;
       }
     });
 
@@ -30,7 +32,7 @@ Alpine.data('archiveView', () => ({
         return;
       }
 
-      this.loading = false;
+      this.requestCount = 0;
 
       // Volver al inicio del grid si la paginación quedó fuera de vista.
       const top = grid.getBoundingClientRect().top + window.scrollY - 96;
@@ -39,8 +41,8 @@ Alpine.data('archiveView', () => ({
       }
 
       // Flash de entrada del contenido fresco.
-      grid.animate?.([{ opacity: 0.4 }, { opacity: 1 }], {
-        duration: 220,
+      grid.animate?.([{ opacity: 0.25 }, { opacity: 1 }], {
+        duration: 260,
         easing: 'ease-out',
       });
     });
