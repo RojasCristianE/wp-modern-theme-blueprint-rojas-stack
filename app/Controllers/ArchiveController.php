@@ -19,6 +19,16 @@ use Timber\Timber;
  */
 class ArchiveController
 {
+    /**
+     * Posts por página del fragmento (mismo valor que el blog).
+     */
+    private int $per_page;
+
+    public function __construct(int $per_page = 6)
+    {
+        $this->per_page = max(1, $per_page);
+    }
+
     public function register(): void
     {
         // El grid es contenido público: sin login y con login.
@@ -46,7 +56,7 @@ class ArchiveController
 
         $args = [
             'post_type'           => 'post',
-            'posts_per_page'      => (int) get_option('posts_per_page'),
+            'posts_per_page'      => $this->per_page,
             'paged'               => $paged,
             'ignore_sticky_posts' => true,
         ];

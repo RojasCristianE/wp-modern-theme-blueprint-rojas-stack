@@ -38,7 +38,6 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
     when('sanitize_title')->returnArg();
     when('esc_url_raw')->returnArg();
     when('get_object_taxonomies')->justReturn(['category', 'post_tag', 'post_format']);
-    when('get_option')->alias(fn (string $k, mixed $d = false) => $k === 'posts_per_page' ? 5 : $d);
     when('admin_url')->alias(fn (string $p = '') => 'http://theme.test/wp-admin/' . $p);
     when('get_term_link')->alias(fn (mixed $t, ?string $tax = null) => 'http://theme.test/tag/' . $t);
     when('home_url')->alias(fn (string $p = '') => 'http://theme.test/' . $p);
@@ -64,7 +63,7 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
     $_GET = ['taxonomy' => 'post_tag', 'term' => 'htmx', 'paged' => '2'];
 
     try {
-        (new ArchiveController())->render_fragment();
+        (new ArchiveController(3))->render_fragment();
         $this->fail('wp_die() debería haber terminado la ejecución');
     } catch (RuntimeException $e) {
         expect($e->getMessage())->toBe('WP_DIE');
@@ -72,7 +71,7 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
 
     expect($postsArgs['post_type'])->toBe('post')
         ->and($postsArgs['paged'])->toBe(2)
-        ->and($postsArgs['posts_per_page'])->toBe(5)
+        ->and($postsArgs['posts_per_page'])->toBe(3)
         ->and($postsArgs['tax_query'][0]['taxonomy'])->toBe('post_tag')
         ->and($postsArgs['tax_query'][0]['field'])->toBe('slug')
         ->and($postsArgs['tax_query'][0]['terms'])->toBe('htmx')
@@ -89,7 +88,6 @@ it('cae a category y no filtra por término con GET inválido o ausente', functi
     when('sanitize_title')->returnArg();
     when('esc_url_raw')->returnArg();
     when('get_object_taxonomies')->justReturn(['category', 'post_tag', 'post_format']);
-    when('get_option')->alias(fn (string $k, mixed $d = false) => $k === 'posts_per_page' ? 5 : $d);
     when('admin_url')->alias(fn (string $p = '') => 'http://theme.test/wp-admin/' . $p);
     when('home_url')->alias(fn (string $p = '') => 'http://theme.test/' . $p);
     when('is_wp_error')->justReturn(false);
@@ -116,5 +114,6 @@ it('cae a category y no filtra por término con GET inválido o ausente', functi
     }
 
     expect($postsArgs['tax_query'] ?? null)->toBeNull()
-        ->and($postsArgs['paged'])->toBe(1);
+        ->and($postsArgs['paged'])->toBe(1)
+        ->and($postsArgs['posts_per_page'])->toBe(6);
 });

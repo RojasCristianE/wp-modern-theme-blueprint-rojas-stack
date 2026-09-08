@@ -106,9 +106,13 @@ Todos los módulos se activan/desactivan desde un archivo de configuración cent
 // app/Config/features.php
 
 return [
+    // Posts por página global: variable de entorno POSTS_PER_PAGE
+    // (default 6), una sola fuente para blog y archives.
+    'posts_per_page' => 6,
+
     'blog' => [
         'enabled' => true,
-        'posts_per_page' => 12,
+        'posts_per_page' => 6,
         'show_author' => true,
         'show_categories' => true,
     ],

@@ -79,9 +79,13 @@ Los assets se sirven desde el dev server de Vite con hot reload de JS y Twig/PHP
 Todo se activa/parametriza en `app/Config/features.php`:
 
 ```php
+// El valor global POSTS_PER_PAGE (.env, default 6) alimenta todos los
+// feeds; cada módulo puede overridearlo por instancia:
+'posts_per_page' => 6,
+
 'blog' => [
     'enabled' => true,
-    'posts_per_page' => 12,
+    'posts_per_page' => 6,
 ],
 
 'forms' => [

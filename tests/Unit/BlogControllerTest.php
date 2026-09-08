@@ -28,7 +28,7 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
         ->and($captured[1]['title'])->toBe('Blog')
         ->and($captured[1]['posts'])->toBe(['POST_A', 'POST_B'])
         ->and($captured[1]['site_url'])->toBe('http://site.test')
-        ->and($postsArgs['posts_per_page'])->toBe(12)
+        ->and($postsArgs['posts_per_page'])->toBe(6)
         ->and($postsArgs['paged'])->toBe(1);
 });
 

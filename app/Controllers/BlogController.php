@@ -47,7 +47,7 @@ class BlogController
         $page = max(1, $paged ?: (int) get_query_var('paged'));
 
         $context['posts'] = Timber::get_posts([
-            'posts_per_page' => (int) ($this->config['posts_per_page'] ?? 12),
+            'posts_per_page' => (int) ($this->config['posts_per_page'] ?? 6),
             'paged'          => $page,
         ]);
 

@@ -41,7 +41,9 @@ class ThemeSetup
         (new SearchController())->register();
 
         // Paginación de archives (core): fragmento grid+paginación para HTMX.
-        (new ArchiveController())->register();
+        // Mismo posts_per_page que el blog: una sola fuente de verdad
+        // (POSTS_PER_PAGE en .env, top-level de features.php).
+        (new ArchiveController((int) ($features['posts_per_page'] ?? 6)))->register();
 
         $this->register_hooks();
         $this->register_core_fields();

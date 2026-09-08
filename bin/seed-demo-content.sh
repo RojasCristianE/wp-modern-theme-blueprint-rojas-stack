@@ -2,9 +2,9 @@
 #
 # Seed de contenido demo para verificar la paginación HTMX de archives
 # (categoría y etiqueta). Crea 15 posts con distribución de términos
-# pensada para que haya varias páginas: con posts_per_page=5 la home
-# del blog queda en 4 páginas, la categoría 'rojas-stack' en 2 y la
-# etiqueta 'htmx' en 2.
+# pensada para que haya varias páginas: con POSTS_PER_PAGE=6 la home
+# del blog queda en 3 páginas, la categoría 'rojas-stack' en 2 (6+4) y
+# la etiqueta 'htmx' en 2 (6+1).
 #
 # Uso:  bash bin/seed-demo-content.sh   (idempotente: aborta si ya corrió)
 
