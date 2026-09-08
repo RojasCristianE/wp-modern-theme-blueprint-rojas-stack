@@ -1,12 +1,12 @@
 {#
-  Shell del grid de archives: scope Alpine + skeleton de carga.
+  Shell del grid de archives: scope Alpine + skeleton en flujo normal.
 
   Envuelve a partials/archive-grid.twig (el nodo swappeable). El shell
-  NO se swappea: sobrevive a cada página y orquesta la transición:
-    - requestCount > 0 (HTMX en vuelo) → overlay .rs-skeleton visible,
-      grid real a opacity-0 (el layout no salta: el overlay es absolute).
-    - swap listo → skeleton fuera, flash de entrada del grid fresco
-      (Web Animations API en el componente archiveView de main.js).
+  NO se swappea: sobrevive a cada página. Durante el fetch de HTMX el
+  skeleton REEMPLAZA al grid real en el flujo del documento (x-show
+  mutuamente excluyentes — sin position:absolute, sin solapamientos con
+  paginación ni footer); al llegar el swap, el grid real vuelve y el
+  flash de entrada lo maneja archiveView (main.js).
 
   Parámetros:
   - posts:            PostQuery de Timber (con .pagination).
@@ -20,26 +20,24 @@
 {% set cards = cards|default(6) %}
 {% set shell_id = 'archive-shell-' ~ random(100000, 999999) %}
 
-<div x-data="archiveView" data-archive-shell id="{{ shell_id }}" class="relative w-full">
-    {# Overlay skeleton: absoluto sobre el grid real, mismo shape de cards #}
-    <div x-cloak x-show="requestCount > 0" aria-hidden="true" class="absolute inset-0 z-10 pointer-events-none">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for i in 1..cards %}
-                <div class="bg-surface rounded-2xl border border-line shadow-sm overflow-hidden">
-                    <div class="rs-skeleton w-full h-48"></div>
-                    <div class="p-6 space-y-3">
-                        <div class="rs-skeleton h-3 w-24 rounded"></div>
-                        <div class="rs-skeleton h-5 w-3/4 rounded"></div>
-                        <div class="rs-skeleton h-3 w-full rounded"></div>
-                        <div class="rs-skeleton h-3 w-5/6 rounded"></div>
-                        <div class="rs-skeleton h-3 w-20 rounded"></div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+<div x-data="archiveView" data-archive-shell id="{{ shell_id }}" class="w-full">
+    {# Skeleton en flujo normal: visible SOLO mientras el fetch vuela #}
+    <div x-cloak x-show="requestCount > 0" aria-hidden="true"
+         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for i in 1..cards %}
+            {# Sin placeholder de imagen: el card real no lleva thumbnail #}
+            <div class="bg-surface rounded-2xl border border-line shadow-sm p-6 flex flex-col">
+                <div class="rs-skeleton h-3 w-24 rounded"></div>
+                <div class="rs-skeleton h-5 w-3/4 rounded mt-3"></div>
+                <div class="rs-skeleton h-3 w-full rounded mt-2"></div>
+                <div class="rs-skeleton h-3 w-5/6 rounded"></div>
+                <div class="rs-skeleton h-3 w-20 rounded mt-4"></div>
+            </div>
+        {% endfor %}
     </div>
 
-    <div class="transition-opacity duration-150" :class="{ 'opacity-0 pointer-events-none': requestCount > 0 }">
+    {# Sin x-cloak: visible desde el render inicial (antes de Alpine) #}
+    <div x-show="requestCount === 0">
         {% include 'partials/archive-grid.twig' with {
             posts: posts,
             htmx_enabled: true,

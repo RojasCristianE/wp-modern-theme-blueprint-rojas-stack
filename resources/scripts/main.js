@@ -11,9 +11,9 @@ window.htmx = htmx;
 // archiveView: acompaña a partials/archive-grid.twig en las páginas de
 // archive (categoría/etiqueta/blog). El shell con x-data queda fuera del
 // nodo que HTMX reemplaza, así que el componente sobrevive a cada swap:
-//   - requestCount: peticiones HTMX del grid en vuelo → el shell muestra
-//     el overlay skeleton (partials/archive-shell.twig) y oculta el grid
-//     real; soporta peticiones concurrentes sin parpadear.
+//   - requestCount: peticiones HTMX del grid en vuelo → archive-shell
+//     muestra el skeleton EN FLUJO (reemplaza al grid real; sin overlay
+//     absoluto) y oculta el grid hasta el swap.
 //   - scroll:   vuelve al inicio del grid al cambiar de página.
 //   - flash:    fade-in del grid fresco (Web Animations API).
 Alpine.data('archiveView', () => ({

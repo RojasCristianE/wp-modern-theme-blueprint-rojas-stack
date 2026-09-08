@@ -64,11 +64,13 @@ test('la carga directa de una página profunda renderiza server-side', async ({
   await expect(page.locator('[aria-current="page"]')).toHaveText('2');
 });
 
-test('el skeleton cubre el grid mientras HTMX trae el fragmento', async ({
+test('el skeleton reemplaza al grid en el flujo mientras HTMX trae el fragmento', async ({
   page,
 }) => {
   // Ralentizamos artificialmente el fetch del fragmento (400 ms) para
-  // poder observar el overlay .rs-skeleton entre request y swap.
+  // poder observar el skeleton .rs-skeleton entre request y swap. El
+  // skeleton va EN FLUJO (x-show mutuamente excluyentes con el grid):
+  // sin position:absolute no tapa paginación ni footer.
   await page.route(/rs_archive_page/, async (route) => {
     await new Promise((resolve) => setTimeout(resolve, 400));
     await route.continue();
@@ -76,9 +78,8 @@ test('el skeleton cubre el grid mientras HTMX trae el fragmento', async ({
 
   await page.goto('/category/rojas-stack/');
   const grid = page.locator('[data-archive-grid]').first();
-  const skeleton = page.locator(
-    '[data-archive-shell] [x-show="requestCount > 0"]',
-  );
+  const shell = page.locator('[data-archive-shell]').first();
+  const skeleton = shell.locator('[x-show="requestCount > 0"]');
 
   // Estado inicial: sin skeleton.
   await expect(skeleton).toBeHidden();
@@ -88,8 +89,12 @@ test('el skeleton cubre el grid mientras HTMX trae el fragmento', async ({
 
   await grid.locator('a[aria-label="Página siguiente"]').click();
 
-  // Durante el fetch: skeleton visible, grid real oculto (sin saltos de layout).
+  // Durante el fetch: skeleton visible en flujo y grid real oculto
+  // (reemplazo, no overlay).
   await expect(skeleton).toBeVisible();
+  await expect(shell.locator('[x-show="requestCount === 0"]')).toBeHidden();
+  // Sin posicionamiento absoluto: nada flota sobre paginación ni footer.
+  await expect(shell.locator('.absolute')).toHaveCount(0);
 
   // Tras el swap: skeleton fuera, grid fresco, sin recarga.
   await expect(skeleton).toBeHidden({ timeout: 5_000 });
