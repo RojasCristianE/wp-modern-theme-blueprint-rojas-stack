@@ -16434,7 +16434,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L431"
+      "source_location": "L455"
     },
     {
       "id": "rojas_starter_spec_14_criterios_de_\u00e9xito",
@@ -16446,7 +16446,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L441"
+      "source_location": "L465"
     },
     {
       "id": "rojas_starter_spec_1_1_prop\u00f3sito",
@@ -64687,7 +64687,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L431",
+      "source_location": "L455",
       "weight": 1.0
     },
     {
@@ -64698,7 +64698,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "rojas-starter-spec.md",
-      "source_location": "L441",
+      "source_location": "L465",
       "weight": 1.0
     },
     {
@@ -67718,5 +67718,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "5d9212c6ee990679e4f024326519a7ee18815f0e"
+  "built_at_commit": "a85059d5b2824799b8d54e369f73bccf83a4617a"
 }
