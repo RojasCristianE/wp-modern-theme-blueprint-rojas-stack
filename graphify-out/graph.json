@@ -7313,100 +7313,160 @@
       "source_location": "L1"
     },
     {
-      "id": "readme",
-      "label": "README.md",
+      "id": "readme_agentes_de_ia",
+      "label": "**\ud83e\udd16 Agentes de IA**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme_caracter\u00edsticas_principales",
-      "label": "**\ud83c\udf1f Caracter\u00edsticas Principales**",
-      "_origin": "ast",
-      "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "**\ud83c\udf1f caracteristicas principales**",
+      "norm_label": "**\ud83e\udd16 agentes de ia**",
       "source_file": "README.md",
-      "source_location": "L9"
+      "source_location": "L154"
+    },
+    {
+      "id": "readme_caracter\u00edsticas",
+      "label": "**\u2728 Caracter\u00edsticas**",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\u2728 caracteristicas**",
+      "source_file": "README.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "readme_comandos",
+      "label": "**\u26a1 Comandos**",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\u26a1 comandos**",
+      "source_file": "README.md",
+      "source_location": "L111"
+    },
+    {
+      "id": "readme_componentes",
+      "label": "**\ud83c\udfa8 Componentes**",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\ud83c\udfa8 componentes**",
+      "source_file": "README.md",
+      "source_location": "L130"
+    },
+    {
+      "id": "readme_configuraci\u00f3n_de_m\u00f3dulos",
+      "label": "**\ud83e\udde9 Configuraci\u00f3n de m\u00f3dulos**",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\ud83e\udde9 configuracion de modulos**",
+      "source_file": "README.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "readme_despliegue_theme_only",
+      "label": "**\ud83d\udea2 Despliegue (theme-only)**",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\ud83d\udea2 despliegue (theme-only)**",
+      "source_file": "README.md",
+      "source_location": "L144"
     },
     {
       "id": "readme_dise\u00f1ado_por_cristian_rojas_el_arquitecto",
       "label": "**Dise\u00f1ado por Cristian Rojas (El Arquitecto)**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "**disenado por cristian rojas (el arquitecto)**",
       "source_file": "README.md",
-      "source_location": "L65"
+      "source_location": "L164"
     },
     {
-      "id": "readme_estructura_del_proyecto",
-      "label": "**\ud83d\udcc2 Estructura del Proyecto**",
+      "id": "readme_estructura",
+      "label": "**\ud83d\udcc2 Estructura**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "**\ud83d\udcc2 estructura del proyecto**",
+      "norm_label": "**\ud83d\udcc2 estructura**",
       "source_file": "README.md",
-      "source_location": "L27"
+      "source_location": "L30"
     },
     {
       "id": "readme_inicio_r\u00e1pido",
-      "label": "**\ud83d\ude80 Inicio R\u00e1pido**",
+      "label": "**\ud83d\ude80 Inicio r\u00e1pido**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "**\ud83d\ude80 inicio rapido**",
       "source_file": "README.md",
-      "source_location": "L43"
+      "source_location": "L51"
     },
     {
-      "id": "readme_reglas_de_oro",
-      "label": "**\ud83e\udd1d Reglas de Oro**",
+      "id": "readme_licencia",
+      "label": "**\ud83d\udcdc Licencia**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "**\ud83e\udd1d reglas de oro**",
+      "norm_label": "**\ud83d\udcdc licencia**",
       "source_file": "README.md",
-      "source_location": "L57"
+      "source_location": "L158"
     },
     {
-      "id": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
-      "label": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "id": "readme_modo_desarrollo_hmr",
+      "label": "**Modo desarrollo (HMR)**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "**\ud83d\ude80 rojas stack: modern theme architecture for wordpress**",
+      "norm_label": "**modo desarrollo (hmr)**",
+      "source_file": "README.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "label": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\ud83d\ude80 rojas stack \u2014 starter theme wordpress moderno (ai-first)**",
       "source_file": "README.md",
       "source_location": "L1"
     },
     {
-      "id": "readme_stack_tecnol\u00f3gico",
-      "label": "**\ud83d\udee0 Stack Tecnol\u00f3gico**",
+      "id": "readme_stack",
+      "label": "**\ud83d\udee0 Stack**",
       "_origin": "ast",
       "community": 136,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress**",
+      "community_name": "**\ud83d\ude80 Rojas Stack \u2014 Starter Theme WordPress Moderno (AI-First)**",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "**\ud83d\udee0 stack tecnologico**",
+      "norm_label": "**\ud83d\udee0 stack**",
       "source_file": "README.md",
-      "source_location": "L17"
+      "source_location": "L21"
     },
     {
       "id": "agents_skills_wp_block_development_references_debugging",
@@ -8237,6 +8297,174 @@
       "norm_label": "timber\\timber",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "docs_architecture_1_filosof\u00eda",
+      "label": "1. Filosof\u00eda",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. filosofia",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "docs_architecture_2_capas_y_responsabilidades",
+      "label": "2. Capas y responsabilidades",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. capas y responsabilidades",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "docs_architecture_3_flujo_de_una_petici\u00f3n",
+      "label": "3. Flujo de una petici\u00f3n",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. flujo de una peticion",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L52"
+    },
+    {
+      "id": "docs_architecture_5_assets_vite_vite_for_wp",
+      "label": "5. Assets (Vite + vite-for-wp)",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. assets (vite + vite-for-wp)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L106"
+    },
+    {
+      "id": "docs_architecture_6_sistema_de_dise\u00f1o",
+      "label": "6. Sistema de dise\u00f1o",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. sistema de diseno",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L113"
+    },
+    {
+      "id": "docs_architecture_7_calidad_y_testing",
+      "label": "7. Calidad y testing",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. calidad y testing",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L133"
+    },
+    {
+      "id": "docs_architecture_8_despliegue_theme_only",
+      "label": "8. Despliegue (theme-only)",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. despliegue (theme-only)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L146"
+    },
+    {
+      "id": "docs_architecture_9_decisiones_registradas_adrs_breves",
+      "label": "9. Decisiones registradas (ADRs breves)",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. decisiones registradas (adrs breves)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L154"
+    },
+    {
+      "id": "docs_architecture_arquitectura_del_rojas_stack",
+      "label": "Arquitectura del Rojas Stack",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Arquitectura del Rojas Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "arquitectura del rojas stack",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents",
+      "label": "AGENTS.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "agents.md",
+      "source_file": "AGENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_architecture",
+      "label": "ARCHITECTURE.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "architecture.md",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_components",
+      "label": "COMPONENTS.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "components.md",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "rojas_starter_spec",
+      "label": "rojas-starter-spec.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "rojas-starter-spec.md",
+      "source_file": "rojas-starter-spec.md",
+      "source_location": "L1"
     },
     {
       "id": "brain_monkey",
@@ -11283,6 +11511,18 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_playwright_best_practices_testing_patterns_electron",
+      "label": "electron.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "Electron Testing",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "electron.md",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/electron.md",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_testing_patterns_electron_access_electron_apis",
       "label": "Access Electron APIs",
       "_origin": "ast",
@@ -13466,6 +13706,114 @@
       "source_location": "L33"
     },
     {
+      "id": "agents_1_backend_data_php_composer",
+      "label": "**1. Backend & Data (PHP & Composer)**",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**1. backend & data (php & composer)**",
+      "source_file": "AGENTS.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "agents_2_frontend_interacci\u00f3n_bun_vite",
+      "label": "**2. Frontend & Interacci\u00f3n (Bun & Vite)**",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**2. frontend & interaccion (bun & vite)**",
+      "source_file": "AGENTS.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "agents_3_ci_cd_despliegue_del_tema",
+      "label": "**3. CI/CD & Despliegue del Tema**",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**3. ci/cd & despliegue del tema**",
+      "source_file": "AGENTS.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "agents_4_qa_debugging",
+      "label": "**4. QA & Debugging**",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**4. qa & debugging**",
+      "source_file": "AGENTS.md",
+      "source_location": "L36"
+    },
+    {
+      "id": "agents_stack_tecnol\u00f3gico_the_dream_team",
+      "label": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**\ud83d\udee0 stack tecnologico (the dream team)**",
+      "source_file": "AGENTS.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "docs_architecture_4_1_lectura_orm_read_only",
+      "label": "4.1 Lectura (ORM read-only)",
+      "_origin": "ast",
+      "community": 212,
+      "community_name": "4. Flujo de datos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4.1 lectura (orm read-only)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L75"
+    },
+    {
+      "id": "docs_architecture_4_2_metadatos_code_first",
+      "label": "4.2 Metadatos (code-first)",
+      "_origin": "ast",
+      "community": 212,
+      "community_name": "4. Flujo de datos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4.2 metadatos (code-first)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L82"
+    },
+    {
+      "id": "docs_architecture_4_3_escritura_formularios",
+      "label": "4.3 Escritura (formularios)",
+      "_origin": "ast",
+      "community": 212,
+      "community_name": "4. Flujo de datos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4.3 escritura (formularios)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "docs_architecture_4_flujo_de_datos",
+      "label": "4. Flujo de datos",
+      "_origin": "ast",
+      "community": 212,
+      "community_name": "4. Flujo de datos",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. flujo de datos",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L73"
+    },
+    {
       "id": "agents_skills_vite_references_core_features_custom_queries",
       "label": "Custom Queries",
       "_origin": "ast",
@@ -14573,18 +14921,6 @@
       "source_location": "L309"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Patterns",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
       "label": "Anti-Patterns",
       "_origin": "ast",
@@ -14799,6 +15135,18 @@
       "norm_label": "worker-scoped fixtures",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L144"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_browser_apis_iframes",
+      "label": "iframes.md",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "iFrame Testing",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "iframes.md",
+      "source_file": ".agents/skills/playwright-best-practices/browser-apis/iframes.md",
+      "source_location": "L1"
     },
     {
       "id": "agents_skills_playwright_best_practices_browser_apis_iframes_accessing_cross_origin_content",
@@ -15781,18 +16129,6 @@
       "file_type": "code",
       "norm_label": "index.php",
       "source_file": "index.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "rojas_starter_spec",
-      "label": "rojas-starter-spec.md",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Especificaci\u00f3n del Rojas Starter Theme",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "rojas-starter-spec.md",
-      "source_file": "rojas-starter-spec.md",
       "source_location": "L1"
     },
     {
@@ -17348,6 +17684,18 @@
       "norm_label": "table of contents",
       "source_file": ".agents/skills/playwright-best-practices/testing-patterns/accessibility.md",
       "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_testing_patterns_canvas_webgl",
+      "label": "canvas-webgl.md",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Canvas & WebGL Testing",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "canvas-webgl.md",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/canvas-webgl.md",
+      "source_location": "L1"
     },
     {
       "id": "agents_skills_playwright_best_practices_testing_patterns_canvas_webgl_anti_patterns_to_avoid",
@@ -23714,18 +24062,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_playwright_best_practices_architecture_pom_vs_fixtures",
-      "label": "pom-vs-fixtures.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "pom-vs-fixtures.md",
-      "source_file": ".agents/skills/playwright-best-practices/architecture/pom-vs-fixtures.md",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_architecture_test_architecture",
       "label": "test-architecture.md",
       "_origin": "ast",
@@ -23738,18 +24074,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_playwright_best_practices_architecture_when_to_mock",
-      "label": "when-to-mock.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "when-to-mock.md",
-      "source_file": ".agents/skills/playwright-best-practices/architecture/when-to-mock.md",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_browser_apis_browser_apis",
       "label": "browser-apis.md",
       "_origin": "ast",
@@ -23759,18 +24083,6 @@
       "node_kind": "page",
       "norm_label": "browser-apis.md",
       "source_file": ".agents/skills/playwright-best-practices/browser-apis/browser-apis.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_browser_apis_iframes",
-      "label": "iframes.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "iframes.md",
-      "source_file": ".agents/skills/playwright-best-practices/browser-apis/iframes.md",
       "source_location": "L1"
     },
     {
@@ -23880,6 +24192,210 @@
       "norm_label": "page-object-model.md",
       "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
       "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_basic_structure",
+      "label": "Basic Structure",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "basic structure",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_best_practices",
+      "label": "Best Practices",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "best practices",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L245"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_component_objects",
+      "label": "Component Objects",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "component objects",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_composition_patterns",
+      "label": "Composition Patterns",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "composition patterns",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L146"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_directory_structure",
+      "label": "Directory Structure",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "directory structure",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L262"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_do",
+      "label": "Do",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "do",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L247"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_don_t",
+      "label": "Don't",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "don't",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L255"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_factory_functions",
+      "label": "Factory Functions",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "factory functions",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L213"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_overview",
+      "label": "Overview",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "overview",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_class",
+      "label": "Page Class",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "page class",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_navigation",
+      "label": "Page Navigation",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "page navigation",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L178"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_object_model_pom",
+      "label": "Page Object Model (POM)",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "page object model (pom)",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_with_components",
+      "label": "Page with Components",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "page with components",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L148"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_related_references",
+      "label": "Related References",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "related references",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L311"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_usage_in_tests",
+      "label": "Usage in Tests",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "usage in tests",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L59"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_core_page_object_model_using_with_fixtures",
+      "label": "Using with Fixtures",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "using with fixtures",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": "L282"
     },
     {
       "id": "agents_skills_playwright_best_practices_core_projects_dependencies",
@@ -24038,186 +24554,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L211"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_browsertype_launch_executable_doesn_t_exist",
-      "label": "\"browserType.launch: Executable doesn't exist\"",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"browsertype.launch: executable doesn't exist\"",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L223"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_ci_container_jobs",
-      "label": "CI Container Jobs",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ci container jobs",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L127"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_container_based_testing",
-      "label": "Container-Based Testing",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "container-based testing",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_custom_dockerfile",
-      "label": "Custom Dockerfile",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "custom dockerfile",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L200"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_dev_container_setup",
-      "label": "Dev Container Setup",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dev container setup",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L176"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_docker_compose_stack",
-      "label": "Docker Compose Stack",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker compose stack",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L72"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_net_err_connection_refused_in_docker_compose",
-      "label": "\"net::ERR_CONNECTION_REFUSED\" in docker-compose",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"net::err_connection_refused\" in docker-compose",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L232"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_official_image_usage",
-      "label": "Official Image Usage",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "official image usage",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_permission_denied_on_mounted_volumes",
-      "label": "Permission denied on mounted volumes",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "permission denied on mounted volumes",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L252"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_slow_container_tests_on_macos_windows",
-      "label": "Slow container tests on macOS/Windows",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "slow container tests on macos/windows",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L263"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
-      "source_location": "L221"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_github_actions",
       "label": "github-actions.md",
       "_origin": "ast",
@@ -24230,6 +24566,18 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab",
+      "label": "gitlab.md",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "gitlab.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_other_providers",
       "label": "other-providers.md",
       "_origin": "ast",
@@ -24239,6 +24587,18 @@
       "node_kind": "page",
       "norm_label": "other-providers.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/other-providers.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "playwright-best-practices/SKILL.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
       "source_location": "L1"
     },
     {
@@ -24314,18 +24674,6 @@
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_playwright_best_practices_testing_patterns_canvas_webgl",
-      "label": "canvas-webgl.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "canvas-webgl.md",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/canvas-webgl.md",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_testing_patterns_component_testing",
       "label": "component-testing.md",
       "_origin": "ast",
@@ -24335,18 +24683,6 @@
       "node_kind": "page",
       "norm_label": "component-testing.md",
       "source_file": ".agents/skills/playwright-best-practices/testing-patterns/component-testing.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_testing_patterns_electron",
-      "label": "electron.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "electron.md",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/electron.md",
       "source_location": "L1"
     },
     {
@@ -27947,18 +28283,6 @@
       "source_location": "L172"
     },
     {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab",
-      "label": "gitlab.md",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "GitLab CI/CD Configuration",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "gitlab.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/gitlab.md",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_gitlab_anti_patterns",
       "label": "Anti-Patterns",
       "_origin": "ast",
@@ -28919,6 +29243,18 @@
       "source_location": "L7"
     },
     {
+      "id": "agents_skills_playwright_best_practices_architecture_when_to_mock",
+      "label": "when-to-mock.md",
+      "_origin": "ast",
+      "community": 76,
+      "community_name": "Mocking Strategy: Real vs Mock Services",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "when-to-mock.md",
+      "source_file": ".agents/skills/playwright-best-practices/architecture/when-to-mock.md",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_architecture_when_to_mock_anti_patterns",
       "label": "Anti-Patterns",
       "_origin": "ast",
@@ -29133,6 +29469,186 @@
       "norm_label": "validating mock accuracy",
       "source_file": ".agents/skills/playwright-best-practices/architecture/when-to-mock.md",
       "source_location": "L347"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L211"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_browsertype_launch_executable_doesn_t_exist",
+      "label": "\"browserType.launch: Executable doesn't exist\"",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"browsertype.launch: executable doesn't exist\"",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L223"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_ci_container_jobs",
+      "label": "CI Container Jobs",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ci container jobs",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L127"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_container_based_testing",
+      "label": "Container-Based Testing",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "container-based testing",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_custom_dockerfile",
+      "label": "Custom Dockerfile",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "custom dockerfile",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L40"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_dev_container_setup",
+      "label": "Dev Container Setup",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dev container setup",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L176"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_docker_compose_stack",
+      "label": "Docker Compose Stack",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker compose stack",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_net_err_connection_refused_in_docker_compose",
+      "label": "\"net::ERR_CONNECTION_REFUSED\" in docker-compose",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"net::err_connection_refused\" in docker-compose",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L232"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_official_image_usage",
+      "label": "Official Image Usage",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "official image usage",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_permission_denied_on_mounted_volumes",
+      "label": "Permission denied on mounted volumes",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "permission denied on mounted volumes",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L252"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_slow_container_tests_on_macos_windows",
+      "label": "Slow container tests on macOS/Windows",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "slow container tests on macos/windows",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L263"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_docker_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 77,
+      "community_name": "Container-Based Testing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/docker.md",
+      "source_location": "L221"
     },
     {
       "id": "agents_skills_tailwind_css_patterns_references_layout_patterns",
@@ -30174,208 +30690,124 @@
       "source_location": "L32"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_basic_structure",
-      "label": "Basic Structure",
+      "id": "docs_components_alert_twig",
+      "label": "`alert.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "basic structure",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L20"
+      "norm_label": "`alert.twig`",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L105"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_best_practices",
-      "label": "Best Practices",
+      "id": "docs_components_button_twig",
+      "label": "`button.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "best practices",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L245"
+      "norm_label": "`button.twig`",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L33"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_component_objects",
-      "label": "Component Objects",
+      "id": "docs_components_card_twig",
+      "label": "`card.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "component objects",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L83"
+      "norm_label": "`card.twig`",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L80"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_composition_patterns",
-      "label": "Composition Patterns",
+      "id": "docs_components_cat\u00e1logo",
+      "label": "Cat\u00e1logo",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "composition patterns",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L146"
+      "norm_label": "catalogo",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L31"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_directory_structure",
-      "label": "Directory Structure",
+      "id": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
+      "label": "Componentes de layout (no del cat\u00e1logo)",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "directory structure",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L262"
+      "norm_label": "componentes de layout (no del catalogo)",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L129"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_do",
-      "label": "Do",
+      "id": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "label": "Componentes Twig y tokens de dise\u00f1o",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "do",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L247"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_don_t",
-      "label": "Don't",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "don't",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L255"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_factory_functions",
-      "label": "Factory Functions",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "factory functions",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L213"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_overview",
-      "label": "Overview",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "overview",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_class",
-      "label": "Page Class",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "page class",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L22"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_navigation",
-      "label": "Page Navigation",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "page navigation",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L178"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_object_model_pom",
-      "label": "Page Object Model (POM)",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "page object model (pom)",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "norm_label": "componentes twig y tokens de diseno",
+      "source_file": "docs/COMPONENTS.md",
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_page_with_components",
-      "label": "Page with Components",
+      "id": "docs_components_convenciones",
+      "label": "Convenciones",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "page with components",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L148"
+      "norm_label": "convenciones",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L6"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_related_references",
-      "label": "Related References",
+      "id": "docs_components_extender_el_cat\u00e1logo",
+      "label": "Extender el cat\u00e1logo",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "related references",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L311"
+      "norm_label": "extender el catalogo",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L133"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_table_of_contents",
-      "label": "Table of Contents",
+      "id": "docs_components_input_twig",
+      "label": "`input.twig`",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L3"
+      "norm_label": "`input.twig`",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L55"
     },
     {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_usage_in_tests",
-      "label": "Usage in Tests",
+      "id": "docs_components_tokens_sem\u00e1nticos",
+      "label": "Tokens sem\u00e1nticos",
       "_origin": "ast",
       "community": 81,
-      "community_name": "Page Object Model (POM)",
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "usage in tests",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L59"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_core_page_object_model_using_with_fixtures",
-      "label": "Using with Fixtures",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Page Object Model (POM)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "using with fixtures",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": "L282"
+      "norm_label": "tokens semanticos",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L14"
     },
     {
       "id": "agents_skills_wp_performance_skill",
@@ -32604,6 +33036,18 @@
       "source_location": "L93"
     },
     {
+      "id": "agents_skills_playwright_best_practices_architecture_pom_vs_fixtures",
+      "label": "pom-vs-fixtures.md",
+      "_origin": "ast",
+      "community": 92,
+      "community_name": "Organizing Reusable Test Code",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "pom-vs-fixtures.md",
+      "source_file": ".agents/skills/playwright-best-practices/architecture/pom-vs-fixtures.md",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_playwright_best_practices_architecture_pom_vs_fixtures_anti_patterns",
       "label": "Anti-Patterns",
       "_origin": "ast",
@@ -33789,66 +34233,6 @@
       "source_location": "L7"
     },
     {
-      "id": "agents",
-      "label": "AGENTS.md",
-      "_origin": "ast",
-      "community": 99,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "agents.md",
-      "source_file": "AGENTS.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_1_backend_data_php_composer",
-      "label": "**1. Backend & Data (PHP & Composer)**",
-      "_origin": "ast",
-      "community": 99,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "**1. backend & data (php & composer)**",
-      "source_file": "AGENTS.md",
-      "source_location": "L15"
-    },
-    {
-      "id": "agents_2_frontend_interacci\u00f3n_bun_vite",
-      "label": "**2. Frontend & Interacci\u00f3n (Bun & Vite)**",
-      "_origin": "ast",
-      "community": 99,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "**2. frontend & interaccion (bun & vite)**",
-      "source_file": "AGENTS.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "agents_3_ci_cd_despliegue_del_tema",
-      "label": "**3. CI/CD & Despliegue del Tema**",
-      "_origin": "ast",
-      "community": 99,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "**3. ci/cd & despliegue del tema**",
-      "source_file": "AGENTS.md",
-      "source_location": "L28"
-    },
-    {
-      "id": "agents_4_qa_debugging",
-      "label": "**4. QA & Debugging**",
-      "_origin": "ast",
-      "community": 99,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "**4. qa & debugging**",
-      "source_file": "AGENTS.md",
-      "source_location": "L34"
-    },
-    {
       "id": "agents_arquitectura_macro_infraestructura_del_servidor",
       "label": "**\ud83c\udf10 Arquitectura Macro (Infraestructura del Servidor)**",
       "_origin": "ast",
@@ -33858,7 +34242,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udf10 arquitectura macro (infraestructura del servidor)**",
       "source_file": "AGENTS.md",
-      "source_location": "L40"
+      "source_location": "L42"
     },
     {
       "id": "agents_comandos_de_desarrollo_despliegue",
@@ -33870,7 +34254,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos de desarrollo & despliegue**",
       "source_file": "AGENTS.md",
-      "source_location": "L79"
+      "source_location": "L81"
     },
     {
       "id": "agents_estructura_del_tema_app_y_resources",
@@ -33882,7 +34266,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcc2 estructura del tema (`app/` y `resources/`)**",
       "source_file": "AGENTS.md",
-      "source_location": "L46"
+      "source_location": "L48"
     },
     {
       "id": "agents_filosof\u00eda_del_stack",
@@ -33894,7 +34278,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udde0 filosofia del stack**",
       "source_file": "AGENTS.md",
-      "source_location": "L5"
+      "source_location": "L7"
     },
     {
       "id": "agents_graphify",
@@ -33906,7 +34290,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L91"
+      "source_location": "L93"
     },
     {
       "id": "agents_reglas_de_integraci\u00f3n_front_back_safe_rules",
@@ -33918,7 +34302,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd1d reglas de integracion front-back (safe rules)**",
       "source_file": "AGENTS.md",
-      "source_location": "L71"
+      "source_location": "L73"
     },
     {
       "id": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
@@ -33931,18 +34315,6 @@
       "norm_label": "**\ud83d\ude80 rojas stack: modern theme architecture for wordpress (ai-first)**",
       "source_file": "AGENTS.md",
       "source_location": "L1"
-    },
-    {
-      "id": "agents_stack_tecnol\u00f3gico_the_dream_team",
-      "label": "**\ud83d\udee0 Stack Tecnol\u00f3gico (The Dream Team)**",
-      "_origin": "ast",
-      "community": 99,
-      "community_name": "**\ud83d\ude80 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "**\ud83d\udee0 stack tecnologico (the dream team)**",
-      "source_file": "AGENTS.md",
-      "source_location": "L13"
     },
     {
       "id": "ddev_docker_compose_valkey_valkey_service",
@@ -35556,7 +35928,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -35567,7 +35939,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -35578,7 +35950,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L46",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -35589,7 +35961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -35600,7 +35972,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L71",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -35611,7 +35983,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L79",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -35622,7 +35994,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L91",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -62066,7 +62438,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -62077,7 +62449,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -62088,7 +62460,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -62099,7 +62471,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L34",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -62873,6 +63245,259 @@
       "weight": 1.0
     },
     {
+      "source": "docs_architecture",
+      "target": "docs_architecture_arquitectura_del_rojas_stack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_4_flujo_de_datos",
+      "target": "docs_architecture_4_1_lectura_orm_read_only",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_4_flujo_de_datos",
+      "target": "docs_architecture_4_2_metadatos_code_first",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_4_flujo_de_datos",
+      "target": "docs_architecture_4_3_escritura_formularios",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_5_assets_vite_vite_for_wp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_6_sistema_de_dise\u00f1o",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_7_calidad_y_testing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_8_despliegue_theme_only",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_9_decisiones_registradas_adrs_breves",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_2_capas_y_responsabilidades",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_3_flujo_de_una_petici\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_1_filosof\u00eda",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_del_rojas_stack",
+      "target": "docs_architecture_4_flujo_de_datos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components",
+      "target": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_alert_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_button_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_input_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_card_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_extender_el_cat\u00e1logo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_tokens_sem\u00e1nticos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_cat\u00e1logo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
+      "target": "docs_components_convenciones",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "e2e_design_system_spec",
       "target": "e2e_design_system_spec_wpenv",
       "relation": "contains",
@@ -63237,7 +63862,7 @@
     },
     {
       "source": "readme",
-      "target": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
+      "target": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -63247,69 +63872,135 @@
       "weight": 1.0
     },
     {
-      "source": "readme_reglas_de_oro",
+      "source": "readme_inicio_r\u00e1pido",
+      "target": "readme_modo_desarrollo_hmr",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_licencia",
       "target": "readme_dise\u00f1ado_por_cristian_rojas_el_arquitecto",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L65",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
-      "source": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
-      "target": "readme_stack_tecnol\u00f3gico",
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_comandos",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L17",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
-      "source": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
-      "target": "readme_estructura_del_proyecto",
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_caracter\u00edsticas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L27",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
-      "source": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_componentes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_despliegue_theme_only",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_agentes_de_ia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_licencia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_stack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_estructura",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
       "target": "readme_inicio_r\u00e1pido",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L43",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
-      "source": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
-      "target": "readme_reglas_de_oro",
+      "source": "readme_rojas_stack_starter_theme_wordpress_moderno_ai_first",
+      "target": "readme_configuraci\u00f3n_de_m\u00f3dulos",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L57",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_rojas_stack_modern_theme_architecture_for_wordpress",
-      "target": "readme_caracter\u00edsticas_principales",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L9",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -64287,6 +64978,28 @@
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
       "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
+      "target": "docs_architecture",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
+      "target": "docs_components",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -66534,6 +67247,61 @@
       "weight": 1.0
     },
     {
+      "source": "docs_architecture",
+      "target": "docs_components",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "agents",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "docs_architecture",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "docs_components",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "rojas_starter_spec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "ddev_config_rojas_stack",
       "target": "ddev_docker_compose_valkey_valkey_service",
       "relation": "rationale_for",
@@ -66615,5 +67383,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "b9716fbb028452c5c1402f6fb522c0d486241532"
+  "built_at_commit": "81d8e50bf13ec22509ce4c3f719533ce3d71c22f"
 }
