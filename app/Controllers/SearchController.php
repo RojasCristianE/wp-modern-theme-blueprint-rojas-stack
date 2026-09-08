@@ -23,7 +23,7 @@ class SearchController
      */
     private int $per_page;
 
-    public function __construct(int $per_page = 5)
+    public function __construct(int $per_page = 6)
     {
         $this->per_page = $per_page;
     }

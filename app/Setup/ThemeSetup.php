@@ -38,7 +38,8 @@ class ThemeSetup
         (new MenuServiceProvider())->register();
 
         // Búsqueda en vivo (core): endpoint del fragmento para HTMX (spec §9.3).
-        (new SearchController())->register();
+        // Mismo posts_per_page global que blog y archives (POSTS_PER_PAGE).
+        (new SearchController((int) ($features['posts_per_page'] ?? 6)))->register();
 
         // Paginación de archives (core): fragmento grid+paginación para HTMX.
         // Mismo posts_per_page que el blog: una sola fuente de verdad

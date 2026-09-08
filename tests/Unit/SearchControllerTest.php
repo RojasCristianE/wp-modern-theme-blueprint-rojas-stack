@@ -92,7 +92,7 @@ it('busca posts y renderiza el fragmento con el término saneado', function () {
     (new SearchController())->render_fragment();
 
     expect($postsArgs['s'])->toBe('podman')
-        ->and($postsArgs['posts_per_page'])->toBe(5)
+        ->and($postsArgs['posts_per_page'])->toBe(6)
         ->and($rendered[0])->toBe('partials/search-results.twig')
         ->and($rendered[1]['search_query'])->toBe('podman');
 });
