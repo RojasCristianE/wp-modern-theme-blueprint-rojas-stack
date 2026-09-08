@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
 
 ## Corpus Check
-- 213 files · ~143,132 words
+- 217 files · ~144,860 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2877 nodes · 2986 edges · 215 communities (178 shown, 23 thin omitted)
+- 2887 nodes · 2999 edges · 219 communities (182 shown, 23 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9ec111f2`
+- Built from commit: `aef44660`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,7 +39,7 @@
 - Examples
 - Test Annotations & Organization
 - Global Setup & Teardown
-- Patterns
+- devDependencies
 - iFrame Testing
 - Service Worker Testing
 - Fixtures & Hooks
@@ -66,6 +66,7 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
+- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -104,13 +105,13 @@
 - Patterns
 - Tailwind CSS Accessibility Guidelines
 - Tailwind CSS Configuration
-- JavaScript API
+- Build and SSR
 - Procedure
 - **🚀 Rojas Stack: Modern Theme Architecture for WordPress (AI-First)**
 - Routing & API Resources
 - Choosing Test Types: E2E, Component, or API
 - Vite Configuration
-- vite/SKILL.md
+- Vite
 - Vite Plugin API
 - Testing
 - Async PHP Patterns
@@ -149,7 +150,7 @@
 - triage.schema.json
 - WP Project Triage
 - Responses and Fields (summary)
-- DesignSystemController
+- BlogController
 - Arquitectura del Rojas Stack
 - Brain\Monkey
 - `block.json` (metadata) guidance
@@ -207,15 +208,18 @@
 - settings-api.md
 - install-bun.sh
 - package.json
-- Container-Based Testing
-- Environment Variables
+- @playwright/test
+- scripts
 - SearchController
-- BlogController
+- JavaScript API
 - AssetServiceProvider
 - **🛠 Stack Tecnológico (The Dream Team)**
 - 4. Flujo de datos
-- Glob Import
+- Key Config Options
 - ExampleCptServiceProvider
+- Vite-Specific Hooks
+- main.js
+- seed-demo-content.sh
 
 ## God Nodes (most connected - your core abstractions)
 1. `Examples` - 24 edges
@@ -241,7 +245,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (215 total, 23 thin omitted)
+## Communities (219 total, 23 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -335,9 +339,9 @@ Nodes (28): Add Annotations, Annotation Fixture, Annotation Helper, Anti-Pattern
 Cohesion: 0.07
 Nodes (28): Access Config in Global Setup, Anti-Patterns to Avoid, Basic Global Setup, Basic Global Teardown, Combining Both, Common Parallel Pitfall, Conditional Teardown, Configure Global Setup (+20 more)
 
-### Community 25 - "Patterns"
-Cohesion: 0.11
-Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
+### Community 25 - "devDependencies"
+Cohesion: 0.15
+Nodes (13): devDependencies, alpinejs, @biomejs/biome, htmx.org, @kucrut/vite-for-wp, lefthook, @playwright/test, postcss (+5 more)
 
 ### Community 26 - "iFrame Testing"
 Cohesion: 0.07
@@ -442,6 +446,10 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 ### Community 57 - "Browser Console & JavaScript Error Handling"
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
+
+### Community 58 - "playwright-best-practices/SKILL.md"
+Cohesion: 0.06
+Nodes (33): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+25 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -595,9 +603,9 @@ Nodes (13): Accessibility Checklist, Alert Dialog, ARIA Patterns with Tailwind, 
 Cohesion: 0.14
 Nodes (13): Advanced v4.1 Features, Creating a Reusable Preset, CSS-First Configuration (v4.1+), Custom Plugin Example, Custom Utilities, Enhanced Arbitrary Values, JavaScript Configuration (Legacy), Native CSS Custom Properties (+5 more)
 
-### Community 97 - "JavaScript API"
-Cohesion: 0.14
-Nodes (13): build, Build and SSR, createServer, JavaScript API, Library Mode, loadEnv, Multi-Page App, Multiple Entries (+5 more)
+### Community 97 - "Build and SSR"
+Cohesion: 0.25
+Nodes (7): Build and SSR, Library Mode, Multi-Page App, Multiple Entries, Output Formats, Package.json Setup, SSR Development
 
 ### Community 98 - "Procedure"
 Cohesion: 0.14
@@ -616,16 +624,16 @@ Cohesion: 0.15
 Nodes (13): API Layer (60% of tests), API Tests, Choosing Test Types: E2E, Component, or API, Common Mistakes, Component Layer (30% of tests), Component Tests, Decision Matrix, E2E Layer (10% of tests) (+5 more)
 
 ### Community 102 - "Vite Configuration"
-Cohesion: 0.15
-Nodes (12): Async Config, Basic Setup, build.target, Conditional Config, define (Global Constants), Key Config Options, plugins, resolve.alias (+4 more)
+Cohesion: 0.29
+Nodes (6): Async Config, Basic Setup, Conditional Config, TypeScript Intellisense, Using Environment Variables in Config, Vite Configuration
 
-### Community 103 - "vite/SKILL.md"
-Cohesion: 0.15
+### Community 103 - "Vite"
+Cohesion: 0.22
 Nodes (9): Advanced, Build & SSR, CLI Commands, Common Config, Core, Official Plugins, Preferences, Quick Reference (+1 more)
 
 ### Community 104 - "Vite Plugin API"
-Cohesion: 0.15
-Nodes (13): Basic Structure, Client-Server Communication, Conditional Application, config, configResolved, configureServer, handleHotUpdate, Plugin Ordering (+5 more)
+Cohesion: 0.29
+Nodes (7): Basic Structure, Client-Server Communication, Conditional Application, Plugin Ordering, Universal Hooks (from Rolldown), Virtual Modules, Vite Plugin API
 
 ### Community 105 - "Testing"
 Cohesion: 0.17
@@ -664,8 +672,8 @@ Cohesion: 0.18
 Nodes (10): Basic Dark Mode Support, Container Queries (v4.1+), Dark Mode, Dark Mode Best Practices, Dark Mode Toggle (React), Mobile-First Responsive Layout, Responsive Card Component, Responsive Design Patterns (+2 more)
 
 ### Community 114 - "Vite Features"
-Cohesion: 0.18
-Nodes (10): Asset Import Queries, CSS Modules, Explicit URL, HMR API, Inline/No-Inline, JSON Import, Raw String, URL Import (+2 more)
+Cohesion: 0.09
+Nodes (22): Asset Import Queries, Built-in Constants, CSS Modules, Custom Queries, Custom Variables, Eager Loading, Environment Variables, Explicit URL (+14 more)
 
 ### Community 115 - "project"
 Cohesion: 0.18
@@ -775,9 +783,9 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
-### Community 142 - "DesignSystemController"
-Cohesion: 0.20
-Nodes (3): DesignSystemController, Rakit\Validation\Validator, Timber\Timber
+### Community 142 - "BlogController"
+Cohesion: 0.15
+Nodes (3): BlogController, DesignSystemController, Timber\Timber
 
 ### Community 143 - "Arquitectura del Rojas Stack"
 Cohesion: 0.22
@@ -932,16 +940,24 @@ Cohesion: 0.83
 Nodes (3): main(), parseArgs(), runWp()
 
 ### Community 204 - "package.json"
-Cohesion: 0.04
-Nodes (39): envFile, wpEnv, devDependencies, alpinejs, @biomejs/biome, htmx.org, @kucrut/vite-for-wp, lefthook (+31 more)
+Cohesion: 0.15
+Nodes (13): name, private, type, version, @biomejs/biome, @kucrut/vite-for-wp, lefthook, postcss (+5 more)
 
-### Community 206 - "Container-Based Testing"
-Cohesion: 0.12
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
+### Community 206 - "@playwright/test"
+Cohesion: 0.20
+Nodes (3): envFile, wpEnv, @playwright/test
 
-### Community 207 - "Environment Variables"
+### Community 207 - "scripts"
+Cohesion: 0.25
+Nodes (8): scripts, build, dev, fix, lint, prepare, preview, test:e2e
+
+### Community 208 - "SearchController"
+Cohesion: 0.17
+Nodes (3): ArchiveController, SearchController, Brain\Monkey\Functions
+
+### Community 209 - "JavaScript API"
 Cohesion: 0.33
-Nodes (6): Built-in Constants, Custom Variables, Environment Variables, HTML Replacement, Mode-specific Files, TypeScript Support
+Nodes (6): build, createServer, JavaScript API, loadEnv, preview, resolveConfig
 
 ### Community 211 - "**🛠 Stack Tecnológico (The Dream Team)**"
 Cohesion: 0.40
@@ -951,13 +967,17 @@ Nodes (5): **1. Backend & Data (PHP & Composer)**, **2. Frontend & Interacción 
 Cohesion: 0.40
 Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4.4 Lectura (búsqueda en vivo), 4. Flujo de datos
 
-### Community 213 - "Glob Import"
+### Community 213 - "Key Config Options"
 Cohesion: 0.33
-Nodes (6): Custom Queries, Eager Loading, Glob Import, Multiple Patterns, Named Imports, Negative Patterns
+Nodes (6): build.target, define (Global Constants), Key Config Options, plugins, resolve.alias, server.proxy
+
+### Community 215 - "Vite-Specific Hooks"
+Cohesion: 0.33
+Nodes (6): config, configResolved, configureServer, handleHotUpdate, transformIndexHtml, Vite-Specific Hooks
 
 ## Knowledge Gaps
 - **1959 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1954 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2099 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2103 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -965,7 +985,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Next.js Testing Patterns` connect `Next.js Testing Patterns` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
+- **Why does `Test Annotations & Organization` connect `Test Annotations & Organization` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `Multi-User & Collaboration Testing` connect `Multi-User & Collaboration Testing` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
