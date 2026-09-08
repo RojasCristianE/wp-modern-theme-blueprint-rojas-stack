@@ -333,14 +333,17 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 - **Pest/PHPUnit** bajo `tests/Unit/`.
 - Cubrir al menos lógica de providers, helpers y validadores de formularios.
 
-### 9.3 Tests E2E
-- **Playwright** bajo `tests/E2E/`.
-- Escenarios mínimos:
-  - Carga de home.
-  - Navegación del menú.
-  - Envío de formulario de contacto vía HTMX.
-  - Búsqueda en tiempo real.
-  - Dark mode visual correcto.
+### 9.3 Tests E2E ✅
+- **Playwright** bajo `e2e/` (el spec original decía `tests/E2E/`; la
+  ubicación real es `e2e/` en la raíz, junto a `playwright.config.js`).
+- Escenarios mínimos (el estado de cada uno se mantiene como parte viva
+  de este documento):
+  - ~~Carga de home.~~ ✅ (`e2e/home.spec.js`)
+  - ~~Navegación del menú.~~ ✅ (cubierto en `e2e/home.spec.js` + nav del header en la suite)
+  - ~~Envío de formulario de contacto vía HTMX.~~ ✅ (envío del form engine vía HTMX)
+  - ~~Búsqueda en tiempo real.~~ ✅ (2026-09-08, commit `228d73c`: endpoint `admin-ajax?action=rs_live_search` → fragmento `partials/search-results.twig` con `hx-swap`; e2e en `e2e/search.spec.js` — resultado con enlace, estado sin resultados y término vacío sin tocar la DB)
+  - ~~Dark mode visual correcto.~~ ✅ (`e2e/dark-mode.spec.js`, tokens semánticos por `prefers-color-scheme`)
+  - *(Adicional, fuera del mínimo del spec: `e2e/design-system.spec.js` — catálogo `/__components`; `e2e/blog.spec.js` — archive con paginación)*
 
 ### 9.4 Git hooks
 - **Lefthook** para ejecutar linting y tests rápidos pre-commit.
@@ -376,8 +379,8 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 ## 12. Ruta de migración desde el blueprint actual
 
-> **Estado (2026-09-08):** pasos 1–10 completados y verificados
-> (21 tests Pest, 5 smoke tests Playwright, CI en GitHub Actions,
+> **Estado (2026-09-08):** pasos 1–11 completados y verificados
+> (25 tests Pest, 7 escenarios e2e Playwright, CI en GitHub Actions,
 > Lefthook pre-commit). La implementación real difiere de este plan
 > en los puntos documentados en §12.1.
 
@@ -389,9 +392,10 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 6. ~~**Crear Example CPT:** añadir un custom post type de ejemplo desactivado por defecto.~~ ✅ (`ExampleCptServiceProvider` + `archive-podcast.twig` / `single-podcast.twig`)
 7. ~~**Evolucionar contacto a form engine:** generalizar `ContactController` a `FormServiceProvider` o `FormController` configurable.~~ ✅ (`FormController` genérico: cada formulario es una entrada en `features.php` con ruta, campos/reglas Rakit, destinatario y fragmento HTMX)
 8. ~~**Configurar testing:** crear `tests/Unit/` y `tests/E2E/`, agregar Pest y Playwright.~~ ✅ (Pest + Brain Monkey + Patchwork; Playwright con Chrome del sistema)
-9. ~~**Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.~~ ✅ (`lefthook.yml`: biome + phpstan + pest por archivos staged)
-10. ~~**Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`.~~ ✅ (README reescrito, `docs/ARCHITECTURE.md`, `docs/COMPONENTS.md`, catálogo vivo en `/__components`)
-11. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜ (LICENSE GPL-2.0-or-later añadido + headers alineados; pendiente: GitHub Template y Packagist)
+9. ~~**Búsqueda en vivo HTMX:** endpoint de fragmento para el modal de búsqueda (§9.3).~~ ✅ (2026-09-08, commit `228d73c`: `SearchController` + `partials/search-results.twig`; `search.php` queda full-page-only — un solo camino por contrato de fragmentos)
+10. ~~**Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.~~ ✅ (`lefthook.yml`: biome + phpstan + pest por archivos staged)
+11. ~~**Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`.~~ ✅ (README reescrito, `docs/ARCHITECTURE.md` con flujo de búsqueda en §4.4, `docs/COMPONENTS.md`, catálogo vivo en `/__components`)
+12. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜ (LICENSE GPL-2.0-or-later añadido + headers alineados; pendiente: GitHub Template y Packagist)
 
 ### 12.1 Desviaciones de la implementación respecto a este plan
 
@@ -436,9 +440,9 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 ## 14. Criterios de éxito
 
-- [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos.
+- [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos. *(verificado manualmente desde clone limpio en la pre-publish sweep; pendiente la mecánica de GitHub Template/Packagist)*
 - [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
-- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (15 tests Pest + 4 smoke E2E + PHPStan nivel 6 + Biome).
+- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (25 tests Pest + 7 e2e Playwright + PHPStan nivel 6 + Biome).
 - [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).
 - [x] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
 
