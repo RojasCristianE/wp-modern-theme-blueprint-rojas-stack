@@ -380,7 +380,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 ## 12. Ruta de migración desde el blueprint actual
 
 > **Estado (2026-09-08):** pasos 1–11 completados y verificados
-> (25 tests Pest, 7 escenarios e2e Playwright, CI en GitHub Actions,
+> (31 tests Pest, 12 escenarios e2e Playwright, CI en GitHub Actions,
 > Lefthook pre-commit). La implementación real difiere de este plan
 > en los puntos documentados en §12.1.
 
@@ -392,7 +392,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 6. ~~**Crear Example CPT:** añadir un custom post type de ejemplo desactivado por defecto.~~ ✅ (`ExampleCptServiceProvider` + `archive-podcast.twig` / `single-podcast.twig`)
 7. ~~**Evolucionar contacto a form engine:** generalizar `ContactController` a `FormServiceProvider` o `FormController` configurable.~~ ✅ (`FormController` genérico: cada formulario es una entrada en `features.php` con ruta, campos/reglas Rakit, destinatario y fragmento HTMX)
 8. ~~**Configurar testing:** crear `tests/Unit/` y `tests/E2E/`, agregar Pest y Playwright.~~ ✅ (Pest + Brain Monkey + Patchwork; Playwright con Chrome del sistema)
-9. ~~**Búsqueda en vivo HTMX:** endpoint de fragmento para el modal de búsqueda (§9.3).~~ ✅ (2026-09-08, commit `228d73c`: `SearchController` + `partials/search-results.twig`; `search.php` queda full-page-only — un solo camino por contrato de fragmentos)
+9. ~~**Búsqueda en vivo HTMX:** endpoint de fragmento para el modal de búsqueda (§9.3).~~ ✅ (2026-09-08, commit `228d73c`: `SearchController` + `partials/search-results.twig`; `search.php` queda full-page-only — un solo camino por contrato de fragmentos. Extendido post-plan con la **paginación HTMX de archives** — ver §12.1)
 10. ~~**Configurar git hooks:** añadir `.lefthook.yml` con linting y tests.~~ ✅ (`lefthook.yml`: biome + phpstan + pest por archivos staged)
 11. ~~**Documentar:** expandir `README.md`, crear/actualizar `AGENTS.md`, docs de componentes y ruta `/__components`.~~ ✅ (README reescrito, `docs/ARCHITECTURE.md` con flujo de búsqueda en §4.4, `docs/COMPONENTS.md`, catálogo vivo en `/__components`)
 12. **Publicar:** configurar GitHub Template y Packagist, añadir `LICENSE` GPL. ⬜ (LICENSE GPL-2.0-or-later añadido + headers alineados; pendiente: GitHub Template y Packagist)
@@ -425,6 +425,30 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
   `jgrossi/corcel` (sin uso en el código y con su dependencia
   `hautelook/phpass 0.3.4` yanked en Packagist) y `lucatume/wp-browser`
   (sin uso, bloqueaba estructuralmente Pest 5).
+- **Router con placeholders + paginación HTMX de archives (post-plan):**
+  la capacidad no estaba en esta ruta de migración; nació de la
+  verificación en vivo (el usuario detectó que `/blog/page/2/` caía a
+  la portada). Dos piezas:
+  1. **`RouteServiceProvider` acepta patrones con `{param}`** (p.ej.
+     `/blog/page/{paged}`): cada placeholder captura 1+ caracteres sin
+     `/` y llega al callback como argumento posicional (string — el
+     método destino coacciona al tipo declarado). Sin esto, las rutas
+     virtuales solo matcheaban slugs exactos y la paginación de `/blog/`
+     era imposible server-side (WP la derivaba a `is_home()`).
+  2. **Contrato de fragmento de archives:** `ArchiveController`
+     (`admin-ajax?action=rs_archive_page`) responde SOLO
+     `partials/archive-grid.twig` (grid + paginación HTMX interior).
+     `hx-push-url` lleva la **URL bonita de la jerarquía**
+     (`base/page/N/`, no la del fetch a admin-ajax): la base viaja
+     auto-descriptiva en el request (validada contra `home_url()` para
+     que no se suplante), así el mismo endpoint sirve a taxonomías
+     (`term.link`) y a la ruta virtual `/blog/` sin casos especiales.
+     El scope Alpine `archiveView` envuelve (no contiene) el nodo
+     swappeado: dim de carga, scroll y flash sobreviven a cada página.
+     Los `<a>` conservan `href` real — `/category/slug/page/N/` y
+     `/blog/page/N/` renderizan server-side sin JS (jerarquía y router
+     respectivamente). Fixture reproducible: `bin/seed-demo-content.sh`
+     (15 posts demo, categorías y tags multipágina).
 
 ---
 
