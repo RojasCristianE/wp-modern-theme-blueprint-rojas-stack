@@ -23,7 +23,7 @@ Este documento define la arquitectura y filosofía del **Rojas Stack**, un entor
 
 ### **2. Frontend & Interacción (Bun & Vite)**
 * **Vite + vite-plugin-live-reload:** Bundler con HMR total.
-* **Tailwind CSS + Flowbite:** Diseño atómico y accesible.
+* **Tailwind CSS v4:** Diseño atómico y accesible con tokens semánticos.
 * **HTMX + AlpineJS:** Interactividad reactiva sin la complejidad de SPAs.
 
 ### **3. CI/CD & Despliegue del Tema**

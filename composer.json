@@ -12,11 +12,8 @@
     "require": {
         "php": ">=8.5",
         "htmlburger/carbon-fields": "^3.6",
-        "illuminate/http": "^13.31",
         "kucrut/vite-for-wp": "^0.12.0",
-        "nesbot/carbon": "^3.13",
         "rakit/validation": "^1.4",
-        "resend/resend-php": "^1.13",
         "spatie/schema-org": "^5.0",
         "timber/timber": "^2.5",
         "vlucas/phpdotenv": "^5.7"

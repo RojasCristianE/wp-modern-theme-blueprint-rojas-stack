@@ -1,8 +1,21 @@
 {
   "name": "wp-modern-theme-blueprint",
-  "private": true,
   "version": "1.0.0",
-  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "latest",
+    "@kucrut/vite-for-wp": "^0.12.0",
+    "@playwright/test": "latest",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/typography": "latest",
+    "alpinejs": "latest",
+    "htmx.org": "latest",
+    "lefthook": "^2.1.12",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "vite": "latest",
+    "vite-plugin-live-reload": "latest"
+  },
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,24 +25,5 @@
     "test:e2e": "playwright test",
     "prepare": "npx skilld prepare || true"
   },
-  "devDependencies": {
-    "@biomejs/biome": "latest",
-    "@kucrut/vite-for-wp": "^0.12.0",
-    "@playwright/test": "latest",
-    "@tailwindcss/forms": "latest",
-    "@tailwindcss/postcss": "^4.3.3",
-    "@tailwindcss/typography": "latest",
-    "alpinejs": "latest",
-    "autoprefixer": "latest",
-    "flowbite": "latest",
-    "htmx.org": "latest",
-    "lefthook": "^2.1.12",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "vite": "latest",
-    "vite-plugin-live-reload": "latest"
-  },
-  "dependencies": {
-    "lucide-static": "latest"
-  }
+  "type": "module"
 }
