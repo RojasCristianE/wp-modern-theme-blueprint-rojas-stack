@@ -83,7 +83,7 @@ Tres capas ejecutan la misma batería: Lefthook en cada commit local, CI en cada
 Requisitos: **Docker + DDEV**, **Bun** y **Composer** en el host (PHP 8.5 vive en el contenedor DDEV).
 
 ```bash
-# 1. Entorno (MariaDB, Valkey, Mailpit, web)
+# 1. Entorno (MariaDB, Valkey, Mailpit, Meilisearch)
 ddev start
 
 # 2. Dependencias
@@ -92,6 +92,11 @@ bun install
 
 # 3. Build de assets (o modo dev con HMR)
 bun run build
+
+# 4. (Opcional) Contenido demo: 15 posts con categorías/etiquetas
+# para que la paginación (blog + archives) tenga varias páginas.
+# Idempotente; necesario para los e2e de paginación en installs frescos.
+bash bin/seed-demo-content.sh
 ```
 
 El sitio queda en `https://<nombre-proyecto>.ddev.site`. El "core fantasma" de WordPress (core fuera del repo, tema enlazado) se detecta y activa automáticamente en `ddev start`.
@@ -109,8 +114,10 @@ Los assets se sirven desde el dev server de Vite con hot reload de JS y Twig/PHP
 Todo se activa/parametriza en `app/Config/features.php`:
 
 ```php
-// El valor global POSTS_PER_PAGE (.env, default 6) alimenta todos los
-// feeds; cada módulo puede overridearlo por instancia:
+// El valor global POSTS_PER_PAGE (.env, default 6) alimenta TODAS las
+// superficies: controllers del tema Y archives nativos (categoría,
+// etiqueta y home) vía un hook pre_get_posts — una sola fuente de
+// verdad. Cada módulo puede overridearlo por instancia:
 'posts_per_page' => 6,
 
 'blog' => [
@@ -150,13 +157,14 @@ Todo se activa/parametriza en `app/Config/features.php`:
 | Modo dev (HMR) | `bun run dev` |
 | Build de producción | `bun run build` |
 | Tests unitarios (Pest) | `ddev exec composer test` |
-| Análisis estático (PHPStan 6) | `ddev exec composer analyze` |
+| Análisis estático (PHPStan 10) | `ddev exec composer analyze` |
 | Lint JS/CSS (Biome) | `bun run lint` (auto-fix: `bun run fix`) |
 | Tests E2E (Playwright) | `bun run test:e2e` |
+| Datos demo (paginación) | `bash bin/seed-demo-content.sh` |
 | Reindexar búsqueda (Meilisearch) | `bash bin/meili-reindex.sh` |
 | Desplegar a producción | `ddev exec dep deploy production` |
 
-Los E2E corren contra el sitio DDEV activo y usan el Chrome del sistema. Para apuntar a otro entorno:
+Los E2E corren contra el sitio DDEV activo y usan el Chrome del sistema. Los escenarios de paginación (blog, categoría y etiqueta) requieren el contenido demo: ejecuta `bash bin/seed-demo-content.sh` una vez — el valor de `POSTS_PER_PAGE` del `.env` gobierna también los archives nativos, así que los recuentos de páginas son determinísticos. Para apuntar a otro entorno:
 
 ```bash
 PLAYWRIGHT_BASE_URL=https://staging.example.com bun run test:e2e

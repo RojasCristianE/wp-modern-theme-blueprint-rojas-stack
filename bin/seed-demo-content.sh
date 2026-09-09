@@ -6,6 +6,11 @@
 # del blog queda en 3 páginas, la categoría 'rojas-stack' en 2 (6+4) y
 # la etiqueta 'htmx' en 2 (6+1).
 #
+# POSTS_PER_PAGE (.env) gobierna TODAS las superficies, incluidos los
+# archives nativos (hook pre_get_posts en ThemeSetup): los recuentos
+# de páginas anteriores son válidos para cualquier valor del env (la
+# distribución de términos es la que determina cuántas páginas hay).
+#
 # Uso:  bash bin/seed-demo-content.sh   (idempotente: aborta si ya corrió)
 
 set -euo pipefail
