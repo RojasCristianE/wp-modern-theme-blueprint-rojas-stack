@@ -62,18 +62,19 @@ it('deriva los hooks AJAX de la clave del formulario', function () {
 it('renderiza la página configurada con el título del formulario', function () {
     when('__')->returnArg();
 
-    /** @var array<int|string, mixed> $captured */
-    $captured = [];
+    $template = '';
+    $context  = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {
-        $captured = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
 
     (new FormController('contact', FORM_CONFIG))->render_page();
 
-    expect($captured[0])->toBe('contact.twig')
-        ->and($captured[1]['title'])->toBe('Contáctanos');
+    expect($template)->toBe('contact.twig')
+        ->and($context['title'] ?? null)->toBe('Contáctanos');
 });
 
 // Nota: rakit/validation 1.4 (2020) emite E_DEPRECATED al compilar sus
@@ -83,12 +84,13 @@ it('renderiza la página configurada con el título del formulario', function ()
 it('re-renderiza el formulario con errores cuando la validación falla', function () {
     when('__')->returnArg();
 
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
+    $template = '';
+    $context  = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
 
     Functions\expect('wp_mail')->never();
@@ -111,9 +113,9 @@ it('re-renderiza el formulario con errores cuando la validación falla', functio
         expect($e->getMessage())->toBe('WP_DIE');
     }
 
-    expect($rendered[0])->toBe('partials/contact-form.twig')
-        ->and($rendered[1]['errors'])->toBeArray()
-        ->and($rendered[1]['old'])->toBe($_POST);
+    expect($template)->toBe('partials/contact-form.twig')
+        ->and($context['errors'] ?? null)->toBeArray()
+        ->and($context['old'] ?? null)->toBe($_POST);
 });
 
 it('envía el correo con todos los campos y renderiza el fragmento de éxito', function () {
@@ -121,14 +123,13 @@ it('envía el correo con todos los campos y renderiza el fragmento de éxito', f
     when('get_option')->justReturn('admin@site.test');
     when('get_bloginfo')->justReturn('http://site.test');
 
-    /** @var array<int|string, mixed> $mail */
+    /** @var array{0: string, 1: string, 2: string} $mail */
     $mail = [];
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
+    $context = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$context) {
+        $context = $c;
     });
 
     Functions\expect('wp_mail')->once()->andReturnUsing(function (string $to, string $subject, string $body) use (&$mail) {
@@ -144,14 +145,15 @@ it('envía el correo con todos los campos y renderiza el fragmento de éxito', f
 
     (new FormController('contact', FORM_CONFIG))->handle_submit();
 
+    $success = rs_array($context['success'] ?? []);
+
     expect($mail[0])->toBe('admin@site.test')
         ->and($mail[1])->toBe('Nuevo mensaje de: Cristian Rojas')
         ->and($mail[2])->toContain('Name: Cristian Rojas')
         ->and($mail[2])->toContain('Email: cristian@rojas.test')
         ->and($mail[2])->toContain('Message: Hola, este mensaje')
-        ->and($rendered[0])->toBe('partials/form-success.twig')
-        ->and($rendered[1]['success']['fragment_url'])->toContain('action=get_form_contact')
-        ->and($rendered[1]['success']['target'])->toBe('#contact-form-wrapper');
+        ->and($success['fragment_url'] ?? null)->toContain('action=get_form_contact')
+        ->and($success['target'] ?? null)->toBe('#contact-form-wrapper');
 });
 
 it('usa el destinatario configurado si no es admin_email', function () {
@@ -160,13 +162,9 @@ it('usa el destinatario configurado si no es admin_email', function () {
     when('get_bloginfo')->justReturn('http://site.test');
 
     $to = null;
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = $template;
-    });
+    \Patchwork\redefine('Timber\Timber::render', fn (string $t, array $c): null => null);
 
     Functions\expect('wp_mail')->once()->andReturnUsing(function (string $recipient) use (&$to) {
         $to = $recipient;

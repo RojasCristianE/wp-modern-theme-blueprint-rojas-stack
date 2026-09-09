@@ -3,10 +3,10 @@ includes:
 	- vendor/pestphp/pest-plugin-phpstan/extension.neon
 
 parameters:
-	# Nivel 8: + mixed estricto y verificación exhaustiva de offsets y
-	# callables. La progresión 6 -> 7 -> 8 se cerró junto con strict_types
-	# global (spec §9.1); app/ pasa limpia y tests/ usa centinelas tipados.
-	level: 8
+	# Nivel 10 (máximo): mixed explícito y cero tipos faltantes.
+	# La progresión 6 -> 7 -> 8 -> 9 -> 10 se cerró junto con
+	# strict_types global (spec §12.1 #6).
+	level: 10
 	paths:
 		- app
 		- tests

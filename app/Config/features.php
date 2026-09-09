@@ -18,7 +18,7 @@ declare(strict_types=1);
 // Posts por página en feeds paginados (blog y archives). Una sola
 // fuente de verdad para TODAS las superficies: variable de entorno
 // POSTS_PER_PAGE (ver .env.example), 6 por defecto.
-$posts_per_page = max(1, (int) ($_ENV['POSTS_PER_PAGE'] ?? $_SERVER['POSTS_PER_PAGE'] ?? 6));
+$posts_per_page = max(1, rs_int($_ENV['POSTS_PER_PAGE'] ?? $_SERVER['POSTS_PER_PAGE'] ?? 6, 6));
 
 return [
     // Override por instancia si un módulo lo necesita; si no, hereda

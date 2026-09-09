@@ -33,8 +33,8 @@ class MeilisearchClient implements SearchEngineInterface
         ?string $api_key = null,
         string $index_uid = 'posts',
     ) {
-        $this->host      = rtrim((string) ($host ?? ($_ENV['MEILI_HOST'] ?? $_SERVER['MEILI_HOST'] ?? '')), '/');
-        $this->api_key   = (string) ($api_key ?? ($_ENV['MEILI_API_KEY'] ?? $_SERVER['MEILI_API_KEY'] ?? ''));
+        $this->host      = rtrim(rs_string($host ?? ($_ENV['MEILI_HOST'] ?? $_SERVER['MEILI_HOST'] ?? '')), '/');
+        $this->api_key   = rs_string($api_key ?? ($_ENV['MEILI_API_KEY'] ?? $_SERVER['MEILI_API_KEY'] ?? ''));
         $this->index_uid = $index_uid;
     }
 
@@ -55,8 +55,11 @@ class MeilisearchClient implements SearchEngineInterface
         }
 
         $body = json_decode((string) wp_remote_retrieve_body($response), true);
+        $hits = is_array($body) && is_array($body['hits'] ?? null) ? $body['hits'] : [];
 
-        return is_array($body['hits'] ?? null) ? $body['hits'] : [];
+        /** @var array<int, array<string, mixed>> $hits Meili garantiza
+         * hits como lista de objetos → arrays asociativos string-keyed. */
+        return $hits;
     }
 
     public function index(array $documents): bool

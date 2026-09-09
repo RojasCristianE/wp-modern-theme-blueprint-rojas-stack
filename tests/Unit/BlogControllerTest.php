@@ -16,9 +16,8 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
     when('__')->returnArg();
     when('get_query_var')->justReturn(0); // sin ?paged= → página 1
 
-    /** @var array<int|string, mixed> $captured */
-    $captured = [];
-    /** @var array<int|string, mixed> $postsArgs */
+    $template = '';
+    $context  = [];
     $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => ['site_url' => 'http://site.test']);
@@ -27,18 +26,19 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
 
         return ['POST_A', 'POST_B'];
     });
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {
-        $captured = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
 
     (new BlogController())->render_page();
 
-    expect($captured[0])->toBe('blog.twig')
-        ->and($captured[1]['title'])->toBe('Blog')
-        ->and($captured[1]['posts'])->toBe(['POST_A', 'POST_B'])
-        ->and($captured[1]['site_url'])->toBe('http://site.test')
-        ->and($postsArgs['posts_per_page'])->toBe(6)
-        ->and($postsArgs['paged'])->toBe(1);
+    expect($template)->toBe('blog.twig')
+        ->and($context['title'] ?? null)->toBe('Blog')
+        ->and($context['posts'] ?? null)->toBe(['POST_A', 'POST_B'])
+        ->and($context['site_url'] ?? null)->toBe('http://site.test')
+        ->and($postsArgs['posts_per_page'] ?? null)->toBe(6)
+        ->and($postsArgs['paged'] ?? null)->toBe(1);
 });
 
 it('respeta posts_per_page de la configuración del módulo blog', function () {
@@ -85,9 +85,8 @@ it('usa la página explícita de la ruta virtual y expone el contrato HTMX', fun
     when('__')->returnArg();
     when('get_query_var')->justReturn(0);
 
-    /** @var array<int|string, mixed> $captured */
-    $captured = [];
-    /** @var array<int|string, mixed> $postsArgs */
+    $template = '';
+    $context  = [];
     $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
@@ -96,15 +95,16 @@ it('usa la página explícita de la ruta virtual y expone el contrato HTMX', fun
 
         return [];
     });
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {
-        $captured = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
 
     (new BlogController())->render_page(2);
 
-    expect($postsArgs['paged'])->toBe(2)
-        ->and($captured[1]['archive_term'])->toBe('')
-        ->and($captured[1]['htmx_base'])->toBe('http://theme.test/blog/');
+    expect($postsArgs['paged'] ?? null)->toBe(2)
+        ->and($context['archive_term'] ?? null)->toBe('')
+        ->and($context['htmx_base'] ?? null)->toBe('http://theme.test/blog/');
 });
 
 it('register() es un no-op seguro', function () {

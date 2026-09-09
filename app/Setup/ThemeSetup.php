@@ -21,7 +21,7 @@ use RojasStack\Services\MeilisearchIndexer;
 
 /**
  * ThemeSetup
- * 
+ *
  * Orquestador del tema: registra el núcleo (core: assets, menús, router,
  * hooks y campos globales) y los módulos activables declarados en
  * app/Config/features.php (spec §5). Un módulo deshabilitado no registra
@@ -31,7 +31,10 @@ class ThemeSetup
 {
     public function __construct()
     {
-        $features = require get_template_directory() . '/app/Config/features.php';
+        $loaded_features = require get_template_directory() . '/app/Config/features.php';
+
+        /** @var array<string|int, mixed> $features Contrato de features.php */
+        $features = rs_array($loaded_features);
 
         // --- Core (siempre activo) ---
         (new AssetServiceProvider())->register();
@@ -52,12 +55,12 @@ class ThemeSetup
             (new MeilisearchIndexer())->register();
         }
 
-        (new SearchController((int) ($features['posts_per_page'] ?? 6), $search_engine))->register();
+        (new SearchController(rs_int($features['posts_per_page'] ?? 6, 6), $search_engine))->register();
 
         // Paginación de archives (core): fragmento grid+paginación para HTMX.
         // Mismo posts_per_page que el blog: una sola fuente de verdad
         // (POSTS_PER_PAGE en .env, top-level de features.php).
-        (new ArchiveController((int) ($features['posts_per_page'] ?? 6)))->register();
+        (new ArchiveController(rs_int($features['posts_per_page'] ?? 6, 6)))->register();
 
         $this->register_hooks();
         $this->register_core_fields();
@@ -72,24 +75,33 @@ class ThemeSetup
             // Paginación de la ruta virtual: el placeholder captura el
             // número y el router lo pasa como argumento al controller.
             $router->add_route('/blog/page/{paged}', [BlogController::class, 'render_page']);
-            (new BlogController($features['blog'] ?? []))->register();
+            /** @var array<string, mixed> $blog_config */
+            $blog_config = rs_array($features['blog'] ?? []);
+            (new BlogController($blog_config))->register();
         }
 
         if (self::enabled($features, 'forms')) {
             // Cada formulario definido en features.php es una instancia
             // del FormController genérico (spec paso 7).
-            foreach ($features['forms']['forms'] ?? [] as $key => $form_config) {
-                $form = new FormController((string) $key, is_array($form_config) ? $form_config : []);
+            $forms_module = rs_array($features['forms'] ?? []);
+
+            /** @var array<string, array<string, mixed>> $forms */
+            $forms = rs_array($forms_module['forms'] ?? []);
+
+            foreach ($forms as $key => $form_config) {
+                $form = new FormController($key, $form_config);
                 $form->register();
 
                 if (isset($form_config['route'])) {
-                    $router->add_route((string) $form_config['route'], [$form, 'render_page']);
+                    $router->add_route(rs_string($form_config['route']), [$form, 'render_page']);
                 }
             }
         }
 
         if (self::enabled($features, 'seo')) {
-            (new SeoServiceProvider($features['seo'] ?? []))->register();
+            /** @var array<string, mixed> $seo_config */
+            $seo_config = rs_array($features['seo'] ?? []);
+            (new SeoServiceProvider($seo_config))->register();
         }
 
         if (self::enabled($features, 'design_system')) {
@@ -97,14 +109,16 @@ class ThemeSetup
         }
 
         if (self::enabled($features, 'example_cpt')) {
-            (new ExampleCptServiceProvider($features['example_cpt'] ?? []))->register();
+            /** @var array<string, mixed> $cpt_config */
+            $cpt_config = rs_array($features['example_cpt'] ?? []);
+            (new ExampleCptServiceProvider($cpt_config))->register();
         }
     }
 
     /**
      * Un módulo está habilitado si su llave 'enabled' es truthy.
      *
-     * @param array<string, mixed> $features
+     * @param array<string|int, mixed> $features
      */
     private static function enabled(array $features, string $module): bool
     {

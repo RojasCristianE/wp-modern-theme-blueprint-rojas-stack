@@ -39,12 +39,17 @@ class MenuServiceProvider
     public function inject_menu_to_context(array $context): array
     {
         // Generamos un objeto de menú "falso" pero estructurado como Timber espera
+        $wp           = $GLOBALS['wp'] ?? null;
+        $request_path = $wp instanceof \WP ? rs_string($wp->request) : '';
+
         $context['menu'] = (object) [
-            'items' => array_map(function($data, $index) {
+            'items' => array_map(function($data, $index) use ($request_path) {
+                $url = rs_string($data['url'] ?? '');
+
                 return (object) [
-                    'title'    => $data['title'],
-                    'link'     => $data['url'],
-                    'current'  => (trailingslashit($data['url']) === trailingslashit(home_url(add_query_arg([], $GLOBALS['wp']->request)))),
+                    'title'    => rs_string($data['title'] ?? ''),
+                    'link'     => $url,
+                    'current'  => (trailingslashit($url) === trailingslashit(home_url(add_query_arg([], $request_path)))),
                     'children' => [],
                     'id'       => $index + 1000
                 ];

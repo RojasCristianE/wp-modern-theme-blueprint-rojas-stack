@@ -33,8 +33,8 @@ Este documento define la arquitectura y filosofía del **Rojas Stack**, un entor
 * **vlucas/phpdotenv:** Gestión de secretos mediante `$_ENV`.
 
 ### **4. QA & Debugging**
-* **Política de tipado (no negociable):** `declare(strict_types=1)` en TODO archivo PHP de `app/` y `tests/`. El router convierte placeholders numéricos a int|float en el límite (`dispatch_routes`) — ningún handler debe depender de coerción silenciosa.
-* **PHPStan nivel 8** sobre `app/` + `tests/` (extensión `pestphp/pest-plugin-phpstan`): mixed estricto y verificación exhaustiva de offsets/callables.
+* **Política de tipado (no negociable):** `declare(strict_types=1)` en TODO archivo PHP de `app/` y `tests/`. El router convierte placeholders numéricos a int|float en el límite (`dispatch_routes`) — ningún handler debe depender de coerción silenciosa. Los valores `mixed` de superglobales y arrays de WP se normalizan en la frontera con las guardas `rs_string()` / `rs_int()` / `rs_array()` de `app/helpers.php` — nunca cast ciego sobre `mixed`.
+* **PHPStan nivel 10 (máximo)** sobre `app/` + `tests/` (extensión `pestphp/pest-plugin-phpstan`): `mixed` explícito y cero tipos faltantes. Prohibido `baseline` y suppressions.
 * **Biome:** linting y formateo de JS/CSS.
 * **Playwright:** E2E Testing moderno.
 * **Spatie Ignition & Clockwork:** Debugging profundo.

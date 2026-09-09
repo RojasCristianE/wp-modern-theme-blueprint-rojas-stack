@@ -43,9 +43,9 @@ class ExampleCptServiceProvider
     public function register_post_type(): void
     {
         /** @var non-empty-lowercase-string $slug */
-        $slug     = (string) ($this->config['slug'] ?? 'podcast');
-        $singular = (string) ($this->config['singular'] ?? 'Podcast');
-        $plural   = (string) ($this->config['plural'] ?? 'Podcasts');
+        $slug     = rs_string($this->config['slug'] ?? 'podcast', 'podcast');
+        $singular = rs_string($this->config['singular'] ?? 'Podcast', 'Podcast');
+        $plural   = rs_string($this->config['plural'] ?? 'Podcasts', 'Podcasts');
 
         register_post_type($slug, [
             'labels' => [

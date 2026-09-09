@@ -57,7 +57,8 @@ class RouteServiceProvider
      */
     public function dispatch_routes(): void
     {
-        $uri = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+        $request_uri = rs_string($_SERVER['REQUEST_URI'] ?? '/', '/');
+        $uri         = strtok($request_uri, '?');
 
         // strtok devuelve false solo con input vacío (URI ausente en CLI):
         // caemos a '/' y la normalización de Home de abajo cubre el resto.

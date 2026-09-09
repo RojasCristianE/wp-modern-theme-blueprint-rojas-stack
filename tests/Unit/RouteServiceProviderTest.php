@@ -50,7 +50,8 @@ it('ejecuta el callback de la ruta que coincide y re-marca la respuesta como fou
     when('nocache_headers')->justReturn();
 
     // Doble de $wp_query: el router solo asigna el flag is_404.
-    $GLOBALS['wp_query'] = new WP_Query();
+    $wp_query_double = new WP_Query();
+    $GLOBALS['wp_query'] = $wp_query_double;
 
     $_SERVER['REQUEST_URI'] = '/blog?utm_source=test';
 
@@ -73,7 +74,7 @@ it('ejecuta el callback de la ruta que coincide y re-marca la respuesta como fou
 
     expect($hit)->toBeTrue()
         ->and($status)->toBe(200)
-        ->and($GLOBALS['wp_query']->is_404)->toBeFalse();
+        ->and($wp_query_double->is_404)->toBeFalse();
 });
 
 it('normaliza el trailing slash y el query string al comparar rutas', function () {

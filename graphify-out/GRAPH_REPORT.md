@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-09)
 
 ## Corpus Check
-- 220 files · ~150,360 words
+- 220 files · ~151,129 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2922 nodes · 3060 edges · 220 communities (181 shown, 27 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
+- 2925 nodes · 3084 edges · 218 communities (183 shown, 24 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f5cf9fe0`
+- Built from commit: `d93eacbf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -151,7 +151,7 @@
 - triage.schema.json
 - WP Project Triage
 - Responses and Fields (summary)
-- BlogController
+- SeoServiceProvider
 - Arquitectura del Rojas Stack
 - WP_Error
 - `block.json` (metadata) guidance
@@ -159,7 +159,7 @@
 - Custom Content Types (summary)
 - Schema and Argument Validation (summary)
 - Safe `wp search-replace`
-- FormController
+- rs_string
 - .__construct
 - Router decision tree (v1)
 - Creating new blocks (scaffolding)
@@ -180,7 +180,6 @@
 - Multisite targeting
 - Safety rules (WP-CLI)
 - MenuServiceProvider
-- SeoServiceProvider
 - Perceivable
 - Common issues by impact
 - Attributes and serialization
@@ -211,7 +210,7 @@
 - package.json
 - @playwright/test
 - scripts
-- ArchiveController
+- SearchControllerTest.php
 - Container-Based Testing
 - Glob Import
 - **🛠 Stack Tecnológico (The Dream Team)**
@@ -229,12 +228,12 @@
 2. `Tailwind CSS Documentation` - 17 edges
 3. `Angular Testing with Playwright` - 16 edges
 4. `main()` - 15 edges
-5. `Especificación del Rojas Starter Theme` - 15 edges
-6. `Queue System` - 14 edges
-7. `Node.js Best Practices` - 14 edges
-8. `Next.js Testing Patterns` - 14 edges
-9. `MeilisearchClient` - 13 edges
-10. `Livewire Components` - 13 edges
+5. `rs_string()` - 15 edges
+6. `Especificación del Rojas Starter Theme` - 15 edges
+7. `Queue System` - 14 edges
+8. `Node.js Best Practices` - 14 edges
+9. `Next.js Testing Patterns` - 14 edges
+10. `MeilisearchClient` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `MeilisearchClient` --implements--> `SearchEngineInterface`  [EXTRACTED]
@@ -252,7 +251,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (220 total, 27 thin omitted)
+## Communities (218 total, 24 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -719,8 +718,8 @@ Cohesion: 0.20
 Nodes (10): const, type, name, tool, version, additionalProperties, properties, required (+2 more)
 
 ### Community 123 - "ThemeSetup.php"
-Cohesion: 0.22
-Nodes (4): PageFields, ThemeOptions, Carbon_Fields\Container, Carbon_Fields\Field
+Cohesion: 0.14
+Nodes (5): PageFields, ThemeOptions, AssetServiceProvider, Carbon_Fields\Container, Carbon_Fields\Field
 
 ### Community 124 - "Accessibility Code Patterns"
 Cohesion: 0.22
@@ -794,9 +793,9 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
-### Community 142 - "BlogController"
-Cohesion: 0.15
-Nodes (3): BlogController, DesignSystemController, Timber\Timber
+### Community 142 - "SeoServiceProvider"
+Cohesion: 0.12
+Nodes (5): DesignSystemController, SeoServiceProvider, Rakit\Validation\Validator, Spatie\SchemaOrg\Schema, Timber\Timber
 
 ### Community 143 - "Arquitectura del Rojas Stack"
 Cohesion: 0.22
@@ -821,6 +820,14 @@ Nodes (5): Formats and types, JSON Schema in WordPress, Schema and Argument Vali
 ### Community 150 - "Safe `wp search-replace`"
 Cohesion: 0.33
 Nodes (5): Common flags, Multisite notes, Recommended workflow, Safe `wp search-replace`, Serialization caution
+
+### Community 151 - "rs_string"
+Cohesion: 0.32
+Nodes (3): FormController, rs_array(), rs_string()
+
+### Community 152 - ".__construct"
+Cohesion: 0.13
+Nodes (4): ArchiveController, BlogController, rs_int(), ThemeSetup
 
 ### Community 153 - "Router decision tree (v1)"
 Cohesion: 0.40
@@ -980,8 +987,8 @@ Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escr
 
 ## Knowledge Gaps
 - **1960 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1955 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2115 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2108 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -990,13 +997,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `Mobile & Responsive Testing` connect `Mobile & Responsive Testing` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Angular Testing with Playwright` connect `Angular Testing with Playwright` to `playwright-best-practices/SKILL.md`?**
+- **Why does `Multi-User & Collaboration Testing` connect `Multi-User & Collaboration Testing` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Are the 14 inferred relationships involving `rs_string()` (e.g. with `.render_fragment()` and `.handle_submit()`) actually correct?**
+  _`rs_string()` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
   _1960 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
-- **Should `Especificación del Rojas Starter Theme` be split into smaller, more focused modules?**
-  _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._

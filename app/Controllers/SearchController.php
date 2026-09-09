@@ -54,7 +54,7 @@ class SearchController
      */
     public function render_fragment(): void
     {
-        $search = sanitize_text_field(wp_unslash($_GET['s'] ?? ''));
+        $search = sanitize_text_field(rs_string(wp_unslash($_GET['s'] ?? '')));
 
         if ($search === '') {
             // Término vacío: estado inicial del modal, sin consultar nada.
@@ -87,7 +87,7 @@ class SearchController
         if ($this->engine !== null && $this->engine->is_available()) {
             $hits = $this->engine->search($search, $this->per_page);
             $ids  = array_values(array_filter(
-                array_map(static fn ($hit): int => (int) ($hit['id'] ?? 0), $hits),
+                array_map(static fn ($hit): int => rs_int($hit['id'] ?? 0, 0), $hits),
             ));
 
             if ($ids !== []) {

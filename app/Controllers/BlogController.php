@@ -46,10 +46,10 @@ class BlogController
 
         // Página explícita de la ruta virtual; si no llega, el query var
         // ('paged' alimenta components/pagination.twig).
-        $page = max(1, $paged ?: (int) get_query_var('paged'));
+        $page = max(1, $paged ?: rs_int(get_query_var('paged'), 0));
 
         $context['posts'] = Timber::get_posts([
-            'posts_per_page' => (int) ($this->config['posts_per_page'] ?? 6),
+            'posts_per_page' => rs_int($this->config['posts_per_page'] ?? 6, 6),
             'paged'          => $page,
         ]);
 
@@ -59,7 +59,7 @@ class BlogController
         $context['htmx_base']    = home_url('/blog/');
 
         // partials/archive-shell.twig: cards del skeleton = tamaño de página.
-        $context['posts_per_page'] = (int) ($this->config['posts_per_page'] ?? 6);
+        $context['posts_per_page'] = rs_int($this->config['posts_per_page'] ?? 6, 6);
 
         Timber::render('blog.twig', $context);
     }

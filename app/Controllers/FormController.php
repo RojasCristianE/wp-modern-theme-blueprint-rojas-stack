@@ -65,9 +65,9 @@ class FormController
     public function render_page(): void
     {
         $context          = Timber::context();
-        $context['title'] = $this->config['title'] ?? ucfirst($this->key);
+        $context['title'] = rs_string($this->config['title'] ?? ucfirst($this->key));
 
-        Timber::render((string) $this->config['page_template'], $context);
+        Timber::render(rs_string($this->config['page_template']), $context);
     }
 
     /**
@@ -75,15 +75,17 @@ class FormController
      */
     public function render_fragment(): void
     {
-        Timber::render((string) $this->config['form_template'], Timber::context());
+        Timber::render(rs_string($this->config['form_template']), Timber::context());
         wp_die();
     }
 
     public function handle_submit(): void
     {
         // 1. Validar los datos con Rakit según las reglas declaradas
+        $fields = rs_array($this->config['fields'] ?? []);
+
         $validator  = new Validator;
-        $validation = $validator->make($_POST, $this->config['fields'] ?? []);
+        $validation = $validator->make($_POST, $fields);
 
         $validation->validate();
 
@@ -91,27 +93,29 @@ class FormController
             // Si falla, devolvemos el formulario con errores
             $context           = Timber::context();
             $context['errors'] = $validation->errors()->firstOfAll();
-            $context['old']    = $_POST;
+            $context['old']    = rs_array($_POST);
 
-            Timber::render((string) $this->config['form_template'], $context);
+            Timber::render(rs_string($this->config['form_template']), $context);
             wp_die();
         }
 
         // 2. Si es válido, enviar el correo (capturado por Mailpit en dev)
-        $data = $validation->getValidData();
+        /** @var array<string, mixed> $data */
+        $data = rs_array($validation->getValidData());
 
         $this->send($data);
 
         // 3. Devolver fragmento de éxito (usa el componente alert vía HTMX)
+        $success = rs_array($this->config['success'] ?? []);
         $context           = Timber::context();
         $context['success'] = [
-            'title'        => $this->config['success']['title'] ?? __('¡Mensaje Enviado!', 'rojas-stack'),
-            'message'      => $this->config['success']['message'] ?? '',
+            'title'        => rs_string($success['title'] ?? null, '¡Mensaje Enviado!'),
+            'message'      => rs_string($success['message'] ?? null),
             'fragment_url' => get_bloginfo('url') . '/wp-admin/admin-ajax.php?action=get_form_' . $this->key,
-            'target'       => $this->config['success']['target'] ?? '#contact-form-wrapper',
+            'target'       => rs_string($success['target'] ?? null, '#contact-form-wrapper'),
         ];
 
-        Timber::render((string) $this->config['success_template'], $context);
+        Timber::render(rs_string($this->config['success_template']), $context);
 
         wp_die();
     }
@@ -125,9 +129,9 @@ class FormController
     {
         $body = "Has recibido un nuevo mensaje desde el Rojas Stack Blueprint:\n\n";
 
-        foreach (array_keys($this->config['fields'] ?? []) as $field) {
-            $label = ucfirst(str_replace('_', ' ', (string) $field));
-            $body .= "{$label}: " . ($data[$field] ?? '') . "\n";
+        foreach (array_keys(rs_array($this->config['fields'] ?? [])) as $field) {
+            $label = ucfirst(str_replace('_', ' ', rs_string($field)));
+            $body .= "{$label}: " . rs_string($data[$field] ?? '', '—') . "\n";
         }
 
         wp_mail($this->resolve_recipient(), $this->resolve_subject($data), $body);
@@ -145,7 +149,7 @@ class FormController
             return $recipient;
         }
 
-        return (string) get_option('admin_email');
+        return rs_string(get_option('admin_email'));
     }
 
     /**
@@ -155,11 +159,13 @@ class FormController
      */
     private function resolve_subject(array $data): string
     {
-        $subject = $this->config['subject']
-            ?? sprintf(__('Nuevo mensaje por el formulario: %s', 'rojas-stack'), ucfirst($this->key));
+        $subject = rs_string(
+            $this->config['subject']
+            ?? sprintf(__('Nuevo mensaje por el formulario: %s', 'rojas-stack'), ucfirst($this->key))
+        );
 
         if (str_contains($subject, ':name')) {
-            $subject = str_replace(':name', (string) ($data['name'] ?? ''), $subject);
+            $subject = str_replace(':name', rs_string($data['name'] ?? ''), $subject);
         }
 
         return $subject;

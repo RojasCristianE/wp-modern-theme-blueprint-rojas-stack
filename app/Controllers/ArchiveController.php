@@ -48,13 +48,13 @@ class ArchiveController
      */
     public function render_fragment(): void
     {
-        $taxonomy = sanitize_key(wp_unslash($_GET['taxonomy'] ?? 'category'));
+        $taxonomy = sanitize_key(rs_string(wp_unslash($_GET['taxonomy'] ?? 'category')));
         if (!\in_array($taxonomy, get_object_taxonomies('post'), true)) {
             $taxonomy = 'category';
         }
 
-        $term  = sanitize_title(wp_unslash($_GET['term'] ?? ''));
-        $paged = max(1, (int) ($_GET['paged'] ?? 1));
+        $term  = sanitize_title(rs_string(wp_unslash($_GET['term'] ?? '')));
+        $paged = max(1, rs_int($_GET['paged'] ?? 1, 1));
 
         $args = [
             'post_type'           => 'post',
@@ -86,7 +86,7 @@ class ArchiveController
         // paginación la manda en el request (p.ej. /blog/ para la ruta
         // virtual) y el endpoint la hace eco; sin base válida, se deriva
         // del término (o home). El prefijo home_url() evita bases ajenas.
-        $base = esc_url_raw(wp_unslash($_GET['base'] ?? ''));
+        $base = esc_url_raw(rs_string(wp_unslash($_GET['base'] ?? '')));
         if ($base === '' || !str_starts_with($base, home_url())) {
             $base = is_wp_error($term_link) ? home_url('/') : $term_link;
         }

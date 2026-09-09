@@ -27,7 +27,7 @@ it('registra el CPT con slug, labels y archive de features.php', function () {
     when('update_option')->justReturn(true);
     when('flush_rewrite_rules')->justReturn(null);
 
-    /** @var array<int|string, mixed> $registered */
+    /** @var array{0: string, 1: array<string, mixed>} $registered */
     $registered = [];
 
     when('register_post_type')->alias(function (string $slug, array $args = []) use (&$registered) {
@@ -40,13 +40,16 @@ it('registra el CPT con slug, labels y archive de features.php', function () {
         'plural'   => 'Podcasts',
     ]))->register_post_type();
 
+    $labels  = rs_array($registered[1]['labels'] ?? []);
+    $rewrite = rs_array($registered[1]['rewrite'] ?? []);
+
     expect($registered[0])->toBe('podcast')
-        ->and($registered[1]['has_archive'])->toBeTrue()
-        ->and($registered[1]['public'])->toBeTrue()
-        ->and($registered[1]['rewrite']['slug'])->toBe('podcast')
-        ->and($registered[1]['labels']['name'])->toBe('Podcasts')
-        ->and($registered[1]['labels']['singular_name'])->toBe('Podcast')
-        ->and($registered[1]['menu_icon'])->toBe('dashicons-microphone');
+        ->and($registered[1]['has_archive'] ?? null)->toBeTrue()
+        ->and($registered[1]['public'] ?? null)->toBeTrue()
+        ->and($rewrite['slug'] ?? null)->toBe('podcast')
+        ->and($labels['name'] ?? null)->toBe('Podcasts')
+        ->and($labels['singular_name'] ?? null)->toBe('Podcast')
+        ->and($registered[1]['menu_icon'] ?? null)->toBe('dashicons-microphone');
 });
 
 it('ejecuta el flush de rewrites una sola vez', function () {

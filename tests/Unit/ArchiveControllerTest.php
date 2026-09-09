@@ -42,7 +42,7 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
     when('esc_url_raw')->returnArg();
     when('get_object_taxonomies')->justReturn(['category', 'post_tag', 'post_format']);
     when('admin_url')->alias(fn (string $p = '') => 'http://theme.test/wp-admin/' . $p);
-    when('get_term_link')->alias(fn (mixed $t, ?string $tax = null) => 'http://theme.test/tag/' . $t);
+    when('get_term_link')->alias(fn (string $t, ?string $tax = null): string => 'http://theme.test/tag/' . $t);
     when('home_url')->alias(fn (string $p = '') => 'http://theme.test/' . $p);
     when('is_wp_error')->justReturn(false);
     when('__')->returnArg();
@@ -51,18 +51,19 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
         throw new RuntimeException('WP_DIE');
     });
 
-    /** @var array<int|string, mixed> $postsArgs */
+    /** @var array<string, mixed> $postsArgs */
     $postsArgs = [];
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
+    $template = '';
+    $context  = [];
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
         $postsArgs = $args;
 
         return [];
     });
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
 
     $_GET = ['taxonomy' => 'post_tag', 'term' => 'htmx', 'paged' => '2'];
@@ -74,17 +75,20 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
         expect($e->getMessage())->toBe('WP_DIE');
     }
 
-    expect($postsArgs['post_type'])->toBe('post')
-        ->and($postsArgs['paged'])->toBe(2)
-        ->and($postsArgs['posts_per_page'])->toBe(3)
-        ->and($postsArgs['tax_query'][0]['taxonomy'])->toBe('post_tag')
-        ->and($postsArgs['tax_query'][0]['field'])->toBe('slug')
-        ->and($postsArgs['tax_query'][0]['terms'])->toBe('htmx')
-        ->and($rendered[0])->toBe('partials/archive-grid.twig')
-        ->and($rendered[1]['htmx_enabled'])->toBeTrue()
-        ->and($rendered[1]['archive_taxonomy'])->toBe('post_tag')
-        ->and($rendered[1]['archive_term'])->toBe('htmx')
-        ->and($rendered[1]['htmx_endpoint'])->toContain('admin-ajax.php');
+    $taxQuery = rs_array($postsArgs['tax_query'] ?? []);
+    $taxRow    = rs_array($taxQuery[0] ?? []);
+
+    expect($postsArgs['post_type'] ?? null)->toBe('post')
+        ->and($postsArgs['paged'] ?? null)->toBe(2)
+        ->and($postsArgs['posts_per_page'] ?? null)->toBe(3)
+        ->and($taxRow['taxonomy'] ?? null)->toBe('post_tag')
+        ->and($taxRow['field'] ?? null)->toBe('slug')
+        ->and($taxRow['terms'] ?? null)->toBe('htmx')
+        ->and($template)->toBe('partials/archive-grid.twig')
+        ->and($context['htmx_enabled'] ?? null)->toBeTrue()
+        ->and($context['archive_taxonomy'] ?? null)->toBe('post_tag')
+        ->and($context['archive_term'] ?? null)->toBe('htmx')
+        ->and(rs_string($context['htmx_endpoint'] ?? ''))->toContain('admin-ajax.php');
 });
 
 it('cae a category y no filtra por término con GET inválido o ausente', function () {
@@ -100,7 +104,7 @@ it('cae a category y no filtra por término con GET inválido o ausente', functi
         throw new RuntimeException('WP_DIE');
     });
 
-    /** @var array<int|string, mixed> $postsArgs */
+    /** @var array<string, mixed> $postsArgs */
     $postsArgs = [];
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {

@@ -16,16 +16,19 @@ beforeEach(function () {
     // WP real): por test vía Brain Monkey, NO como funciones reales en
     // Pest.php (Patchwork exige definirlos en runtime).
     when('wp_remote_retrieve_response_code')->alias(
-        fn ($response) => is_array($response) && isset($response['response']['code'])
-            ? (int) $response['response']['code']
-            : 0,
+        fn (mixed $response) => is_array($response)
+            && isset($response['response'])
+            && is_array($response['response'])
+            && isset($response['response']['code'])
+                ? rs_int($response['response']['code'])
+                : 0,
     );
     when('wp_remote_retrieve_body')->alias(
-        fn ($response) => is_array($response) && isset($response['body'])
-            ? (string) $response['body']
+        fn (mixed $response) => is_array($response) && isset($response['body'])
+            ? rs_string($response['body'])
             : '',
     );
-    when('is_wp_error')->alias(fn ($thing) => $thing instanceof WP_Error);
+    when('is_wp_error')->alias(fn (mixed $thing): bool => $thing instanceof WP_Error);
 });
 
 /*
@@ -67,11 +70,12 @@ it('no consulta la DB si el término está vacío', function () {
         throw new RuntimeException('WP_DIE');
     });
 
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
+    $template = '';
+    $context  = [];
     $postsArgs = 'NO_CALLED';
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
         $postsArgs = $args;
@@ -89,9 +93,9 @@ it('no consulta la DB si el término está vacío', function () {
     }
 
     expect($postsArgs)->toBe('NO_CALLED', 'no debería consultarse la DB con término vacío')
-        ->and($rendered[0])->toBe('partials/search-results.twig')
-        ->and($rendered[1]['posts'])->toBe([])
-        ->and($rendered[1]['search_query'])->toBe('');
+        ->and($template)->toBe('partials/search-results.twig')
+        ->and($context['posts'] ?? null)->toBe([])
+        ->and($context['search_query'] ?? null)->toBe('');
 });
 
 it('busca posts y renderiza el fragmento con el término saneado', function () {
@@ -100,10 +104,9 @@ it('busca posts y renderiza el fragmento con el término saneado', function () {
     when('__')->returnArg();
     Functions\expect('wp_die')->once();
 
-    /** @var array<int|string, mixed> $postsArgs */
     $postsArgs = [];
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
+    $template = '';
+    $context  = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -111,18 +114,19 @@ it('busca posts y renderiza el fragmento con el término saneado', function () {
 
         return ['POST_A', 'POST_B'];
     });
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$template, &$context) {
+        $template = $t;
+        $context  = $c;
     });
 
     $_GET['s'] = '  podman  ';
 
     (new SearchController())->render_fragment();
 
-    expect($postsArgs['s'])->toBe('podman')
-        ->and($postsArgs['posts_per_page'])->toBe(6)
-        ->and($rendered[0])->toBe('partials/search-results.twig')
-        ->and($rendered[1]['search_query'])->toBe('podman');
+    expect($postsArgs['s'] ?? null)->toBe('podman')
+        ->and($postsArgs['posts_per_page'] ?? null)->toBe(6)
+        ->and($template)->toBe('partials/search-results.twig')
+        ->and($context['search_query'] ?? null)->toBe('podman');
 });
 
 /*
@@ -139,22 +143,26 @@ it('MeilisearchClient sin credenciales no está disponible y no busca', function
 });
 
 it('MeilisearchClient con credenciales consulta /health', function () {
-    /** @var array<int|string, mixed> $captured */
-    $captured = [];
+    $capturedUrl = '';
+    $capturedArgs = [];
 
-    when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$captured) {
-        $captured = [$url, $args];
+    when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$capturedUrl, &$capturedArgs) {
+        $capturedUrl = $url;
+        $capturedArgs = $args;
 
         return ['body' => '{"status":"available"}'];
     });
 
     $client = new MeilisearchClient('http://meili.test:7700/', 'secret-key');
+    $available = $client->is_available();
 
-    expect($client->is_available())->toBeTrue()
-        ->and($captured[0])->toBe('http://meili.test:7700/health')
-        ->and($captured[1]['headers']['Authorization'] ?? null)->toBe('Bearer secret-key')
-        ->and($captured[1]['headers']['Content-Type'] ?? null)->toBe('application/json')
-        ->and($captured[1]['timeout'] ?? null)->toBe(1.5);
+    $headers = rs_array($capturedArgs['headers'] ?? []);
+
+    expect($available)->toBeTrue()
+        ->and($capturedUrl)->toBe('http://meili.test:7700/health')
+        ->and($headers['Authorization'] ?? null)->toBe('Bearer secret-key')
+        ->and($headers['Content-Type'] ?? null)->toBe('application/json')
+        ->and($capturedArgs['timeout'] ?? null)->toBe(1.5);
 });
 
 it('MeilisearchClient::search parsea los hits del motor', function () {
@@ -205,10 +213,8 @@ it('SearchController usa el motor y conserva el orden de relevancia', function (
         }
     };
 
-    /** @var array<int|string, mixed> $postsArgs */
     $postsArgs = [];
-    /** @var array<int|string, mixed> $rendered */
-    $rendered = [];
+    $context  = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -216,25 +222,24 @@ it('SearchController usa el motor y conserva el orden de relevancia', function (
 
         return ['POST_17', 'POST_16'];
     });
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
+    \Patchwork\redefine('Timber\Timber::render', function (string $t, array $c) use (&$context) {
+        $context = $c;
     });
 
     $_GET['s'] = 'deployr';
 
     (new SearchController(6, $engine))->render_fragment();
 
-    expect($postsArgs['post__in'])->toBe([17, 16])
-        ->and($postsArgs['orderby'])->toBe('post__in')
-        ->and($rendered[1]['posts'])->toBe(['POST_17', 'POST_16']);
+    expect($postsArgs['post__in'] ?? null)->toBe([17, 16])
+        ->and($postsArgs['orderby'] ?? null)->toBe('post__in')
+        ->and($context['posts'] ?? null)->toBe(['POST_17', 'POST_16']);
 });
 
 it('MeilisearchClient::configure declara título > excerpt > contenido como pesos', function () {
-    /** @var array<int|string, mixed> $captured */
-    $captured = [];
+    $calls = [];
 
-    when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$captured) {
-        $captured[] = [$url, $args];
+    when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$calls) {
+        $calls[] = [$url, $args];
 
         return ['body' => '{"taskUid":1}'];
     });
@@ -242,15 +247,19 @@ it('MeilisearchClient::configure declara título > excerpt > contenido como peso
     $client = new MeilisearchClient('http://meili.test:7700', 'write-key');
     $task = $client->configure();
 
-    // captured[0] = health check (is_available), captured[1] = settings PATCH.
-    $settingsCall = $captured[1];
-    $payload = json_decode((string) $settingsCall[1]['body'], true);
+    // calls[0] = health check (is_available), calls[1] = settings PATCH.
+    $settingsCall = count($calls) > 1 ? $calls[1] : null;
+    assert(is_array($settingsCall));
+
+    $settingsArgs = $settingsCall[1];
+    $payload = json_decode(rs_string($settingsArgs['body'] ?? ''), true);
+    $payload = is_array($payload) ? $payload : [];
 
     expect($task)->toBe(['taskUid' => 1])
         ->and($settingsCall[0])->toBe('http://meili.test:7700/indexes/posts/settings')
-        ->and($settingsCall[1]['method'])->toBe('PATCH')
-        ->and($payload['searchableAttributes'])->toBe(['title', 'excerpt', 'content', 'type'])
-        ->and($payload['rankingRules'])->toContain('published_at:desc');
+        ->and($settingsArgs['method'] ?? null)->toBe('PATCH')
+        ->and($payload['searchableAttributes'] ?? null)->toBe(['title', 'excerpt', 'content', 'type'])
+        ->and($payload['rankingRules'] ?? null)->toContain('published_at:desc');
 });
 
 it('MeilisearchClient::configure devuelve null si el motor no responde', function () {
@@ -289,7 +298,6 @@ it('SearchController cae a la búsqueda DB si el motor no está disponible', fun
         }
     };
 
-    /** @var array<int|string, mixed> $postsArgs */
     $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
@@ -298,14 +306,12 @@ it('SearchController cae a la búsqueda DB si el motor no está disponible', fun
 
         return ['NATIVE_POST'];
     });
-    \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
-        $rendered = [$template, $context];
-    });
+    \Patchwork\redefine('Timber\Timber::render', fn (string $t, array $c): null => null);
 
     $_GET['s'] = 'vite';
 
     (new SearchController(6, $engine))->render_fragment();
 
-    expect($postsArgs['s'])->toBe('vite')
+    expect($postsArgs['s'] ?? null)->toBe('vite')
         ->and(array_key_exists('post__in', $postsArgs))->toBeFalse();
 });

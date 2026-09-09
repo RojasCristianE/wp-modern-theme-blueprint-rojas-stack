@@ -55,19 +55,23 @@ class SeoServiceProvider
     {
         // Prioridad: features.php → Carbon Fields → bloginfo
         $company_name = $this->config['organization_name'] ?? null;
-        $company_name = ($company_name !== null && $company_name !== '')
-            ? (string) $company_name
-            : (carbon_get_theme_option('rs_company_name') ?: get_bloginfo('name'));
+        $company_name = (is_string($company_name) && $company_name !== '')
+            ? $company_name
+            : rs_string(carbon_get_theme_option('rs_company_name') ?: get_bloginfo('name'));
         $logo_url     = carbon_get_theme_option('rs_logo');
         $social_links = carbon_get_theme_option('rs_social_links') ?: [];
-        
-        $social_urls = array_map(fn($item) => $item['url'] ?? '', $social_links);
+
+        /** @var array<int, array<string, mixed>> $social_links */
+        $social_urls = array_map(
+            static fn (array $item): string => rs_string($item['url'] ?? ''),
+            $social_links
+        );
 
         $schema = Schema::organization()
             ->name($company_name)
             ->url(get_bloginfo('url'))
-            ->logo($logo_url)
-            ->sameAs(array_filter($social_urls));
+            ->logo(is_string($logo_url) && $logo_url !== '' ? $logo_url : '')
+            ->sameAs(array_values(array_filter($social_urls)));
 
         echo $schema->toScript();
     }

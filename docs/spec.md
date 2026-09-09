@@ -523,9 +523,18 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      hallazgos de L8 fueron inferencia en tests (centinelas de
      captura con uniones array|null / array|string), resueltos con
      `@var array<int|string, mixed>` explícito por centinela, sin
-     tocar lógica de tests. L9/L10 se descartan deliberadamente:
-     exigir `explicit mixed` en cada callback de WP es ceremonia sin
-     señal a esta escala (decisión documentada, no pendiente).
+     tocar lógica de tests. **Continuación (2026-09-09): la subida a
+     L9 → L10 (máximo) también se completó**, revirtiendo el juicio
+     previo de que sería ceremonia: 93 errores (L9) y 139 (L10)
+     destaparon trabajo real — los superglobales y arrays de WP son
+     `mixed` y L10 exige validación explícita en cada frontera. El
+     resultado son las **guardas `rs_string` / `rs_int` / `rs_array`
+     en `app/helpers.php`** (strings que no truncan arrays, ints sin
+     coerción silenciosa), la eliminación de todo cast ciego a lo
+     largo del código y los aliases de WP en tests con params
+     tipados. Cero suppressions: cada sitio se resolvió con narrowing
+     real o `@var` local honesto. `app/` y `tests/` quedan limpios en
+     el nivel máximo de PHPStan.
 
 ---
 
@@ -543,7 +552,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 - [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos. *(verificado manualmente desde clone limpio en la pre-publish sweep; pendiente la mecánica de GitHub Template/Packagist)*
 - [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
-- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (41 tests Pest + 14 e2e Playwright + PHPStan nivel 8 sobre app/ y tests/ + Biome).
+- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (41 tests Pest + 14 e2e Playwright + PHPStan nivel 10 —máximo— sobre app/ y tests/ + Biome).
 - [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).
 - [x] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
 
