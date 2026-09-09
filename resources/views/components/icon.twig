@@ -1,37 +1,27 @@
 {#
-  Icono SVG inline (spec §8.3, trazo estilo lucide) (búsqueda: 'rojas-icon').
+  Icono SVG inline (búsqueda: 'rs-icons-service').
 
-  El mapa vive en código: las rutas son de la librería lucide (ISC),
-  incrustadas para no depender de paquetes npm ni de icon fonts.
-  `|raw` es seguro: el contenido del mapa es estático, nunca input de usuario.
+  Fuente: resources/icons/ — sets sincronizados por bin/sync-icons.sh
+  (spec §12.1, entrada 8). El render vive en app/Services/IconService.php;
+  esta vista es una envoltura compatible con la API histórica y añade
+  data-rs-icon para aserciones de e2e.
+
+  Sets: 'line-md' (primario, animado), 'material' (estático, respaldo),
+  'spinner' (carga). La resolución hace fallback en cadena entre sets.
 
   Parámetros:
-  - name:    Clave del mapa (desconocida → no renderiza nada).
+  - name:    'search' (set primario) o 'set:name' (p. ej. 'material:home').
+             Desconocido → no renderiza nada.
   - classes: Clases del <svg>. Default: 'w-5 h-5'.
-  - stroke:  Grosor del trazo. Default: 2.
+  - stroke:  DEPRECADO — el trazo (2, round) viene de los archivos fuente.
+             Se ignora; se mantiene en la firma por compatibilidad.
 
   Ejemplos:
     {% include 'components/icon.twig' with { name: 'search' } %}
     {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
+    {% include 'components/icon.twig' with { name: 'spinner:12-dots-scale-rotate', classes: 'w-8 h-8' } only %}
 #}
-{% set icons = {
-    'search': '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
-    'close': '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
-    'check': '<path d="M20 6 9 17l-5-5"/>',
-    'check-circle': '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
-    'x-circle': '<circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/>',
-    'alert-triangle': '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
-    'info': '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
-    'arrow-right': '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
-    'mail': '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
-    'file-text': '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>',
-    'calendar': '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
-} %}
-
-{% set path = icons[name] ?? '' %}
-
-{% if path %}
-    <svg class="{{ classes ?? 'w-5 h-5' }}" fill="none" stroke="currentColor"
-         stroke-width="{{ stroke ?? 2 }}" stroke-linecap="round" stroke-linejoin="round"
-         viewBox="0 0 24 24" aria-hidden="true">{{ path|raw }}</svg>
-{% endif %}
+{{ rs_icon(name, {
+    class: classes ?? 'w-5 h-5',
+    'data-rs-icon': name,
+}) }}

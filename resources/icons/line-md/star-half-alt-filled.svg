@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><style>.a0m25c {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.bsgi6p {
+  d: path('M12 3l-2.35 5.76l-6.21 0.46l4.76 4.02l-1.49 6.04l5.29 -3.28');
+}
+
+.dc-b3s {
+  d: path('M12 3l-2.35 5.76l-6.21 0.46l4.76 4.02l-1.49 6.04l5.29 -3.28Z');
+  fill: currentColor;
+}
+
+.vwcgvo {
+  d: path('M12 3v13');
+}
+
+@media not (prefers-reduced-motion) {
+  .bsgi6p {
+    stroke-dasharray: 34;
+    animation: 0.5s linear forwards so-from-34;
+  }
+
+  .dc-b3s {
+    fill-opacity: 0;
+    animation: 0.4s linear 0.5s forwards fill-to-1;
+  }
+
+  .vwcgvo {
+    stroke-dasharray: 16;
+    animation: 0.5s linear forwards so-from-16;
+  }
+}
+
+@keyframes fill-to-1 {
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes so-from-34 {
+  0% {
+    stroke-dashoffset: 34;
+  }
+}
+
+@keyframes so-from-16 {
+  0% {
+    stroke-dashoffset: 16;
+  }
+}
+</style><path class="dc-b3s"/><path class="a0m25c bsgi6p"/><path class="a0m25c vwcgvo"/></svg>

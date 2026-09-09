@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><style>.eoxhsr {
+  cx: 11.5px;
+  cy: 12.5px;
+  r: 1.5px;
+}
+
+.jhjq8f {
+  cx: 16.5px;
+  cy: 14.5px;
+  r: 1.5px;
+}
+
+.l9xg5d {
+  d: path('M12 4c-4.42 0 -8 3.58 -8 8c0 4.42 3.58 8 8 8c4.42 0 8 -3.58 8 -8v-1h-2c-0.55 0 -1 -0.45 -1 -1v-1h-2c-0.55 0 -1 -0.45 -1 -1v-1h-1c-0.55 0 -1 -0.45 -1 -1Z');
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+  stroke-width: 2px;
+  fill-opacity: 0.3;
+}
+
+.mzhj7m {
+  cx: 11px;
+  cy: 17.5px;
+  r: 1.5px;
+}
+
+.qi810h {
+  cx: 6.5px;
+  cy: 11.5px;
+  r: 1.5px;
+}
+
+.ul5pkm {
+  cx: 9.5px;
+  cy: 7.5px;
+  r: 1.5px;
+}
+
+.ydovum {
+  fill: currentColor;
+}
+
+@media not (prefers-reduced-motion) {
+  .eoxhsr {
+    opacity: 0;
+    animation: 0.1s linear 1.25s forwards fade-to-1;
+  }
+
+  .jhjq8f {
+    opacity: 0;
+    animation: 0.1s linear 1.15s forwards fade-to-1;
+  }
+
+  .l9xg5d {
+    stroke-dasharray: 56;
+    animation: 0s forwards fill-to-0, 0.6s linear forwards so-from-56, 0.15s linear 0.6s forwards fill-to-0_3;
+  }
+
+  .mzhj7m {
+    opacity: 0;
+    animation: 0.1s linear 0.95s forwards fade-to-1;
+  }
+
+  .qi810h {
+    opacity: 0;
+    animation: 0.1s linear 1.05s forwards fade-to-1;
+  }
+
+  .ul5pkm {
+    opacity: 0;
+    animation: 0.1s linear 0.85s forwards fade-to-1;
+  }
+}
+
+@keyframes fill-to-0 {
+  100% {
+    fill-opacity: 0;
+  }
+}
+
+@keyframes so-from-56 {
+  0% {
+    stroke-dashoffset: 56;
+  }
+}
+
+@keyframes fill-to-0_3 {
+  100% {
+    fill-opacity: 0.3;
+  }
+}
+
+@keyframes fade-to-1 {
+  100% {
+    opacity: 1;
+  }
+}
+</style><path class="l9xg5d ydovum"/><circle class="ul5pkm ydovum"/><circle class="mzhj7m ydovum"/><circle class="qi810h ydovum"/><circle class="jhjq8f ydovum"/><circle class="eoxhsr ydovum"/></svg>

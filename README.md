@@ -161,6 +161,7 @@ Todo se activa/parametriza en `app/Config/features.php`:
 | Lint JS/CSS (Biome) | `bun run lint` (auto-fix: `bun run fix`) |
 | Tests E2E (Playwright) | `bun run test:e2e` |
 | Datos demo (paginación) | `bash bin/seed-demo-content.sh` |
+| Sincronizar iconos (tras actualizar sets) | `bun run icons:sync` |
 | Reindexar búsqueda (Meilisearch) | `bash bin/meili-reindex.sh` |
 | Desplegar a producción | `ddev exec dep deploy production` |
 

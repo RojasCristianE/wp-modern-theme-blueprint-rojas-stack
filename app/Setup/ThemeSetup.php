@@ -13,6 +13,7 @@ use RojasStack\Fields\PageFields;
 use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
 use RojasStack\Providers\ExampleCptServiceProvider;
+use RojasStack\Providers\IconServiceProvider;
 use RojasStack\Providers\MenuServiceProvider;
 use RojasStack\Providers\RouteServiceProvider;
 use RojasStack\Providers\SeoServiceProvider;
@@ -45,6 +46,10 @@ class ThemeSetup
         $this->posts_per_page = rs_int($features['posts_per_page'] ?? 6, 6);
 
         // --- Core (siempre activo) ---
+        // Iconos: sets sincronizados a resources/icons/ vía bin/sync-icons.sh
+        // (spec §12.1, entrada 8). Función Twig global rs_icon().
+        (new IconServiceProvider())->register();
+
         (new AssetServiceProvider())->register();
 
         $router = new RouteServiceProvider();

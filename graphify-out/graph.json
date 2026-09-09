@@ -46,30 +46,30 @@
       "source_location": "L15"
     },
     {
+      "id": "app_controllers_blogcontroller_blogcontroller",
+      "label": "BlogController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": "blogcontroller",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L14"
+    },
+    {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller",
       "label": "DesignSystemController",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "designsystemcontroller",
       "source_file": "app/Controllers/DesignSystemController.php",
       "source_location": "L15"
-    },
-    {
-      "id": "app_providers_seoserviceprovider_seoserviceprovider",
-      "label": "SeoServiceProvider",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": "seoserviceprovider",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L16"
     },
     {
       "id": "tests_pest_wp_error",
@@ -98,30 +98,17 @@
       "source_location": "L27"
     },
     {
-      "id": "app_controllers_archivecontroller_archivecontroller",
-      "label": "ArchiveController",
+      "id": "app_providers_assetserviceprovider_assetserviceprovider",
+      "label": "AssetServiceProvider",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 152,
       "community_name": ".__construct",
       "file_type": "code",
-      "norm_label": "archivecontroller",
-      "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L22"
-    },
-    {
-      "id": "app_controllers_blogcontroller_blogcontroller",
-      "label": "BlogController",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 152,
-      "community_name": ".__construct",
-      "file_type": "code",
-      "norm_label": "blogcontroller",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L14"
+      "norm_label": "assetserviceprovider",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L18"
     },
     {
       "id": "app_setup_themesetup_themesetup",
@@ -134,7 +121,7 @@
       "file_type": "code",
       "norm_label": "themesetup",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider",
@@ -148,6 +135,32 @@
       "norm_label": "menuserviceprovider",
       "source_file": "app/Providers/MenuServiceProvider.php",
       "source_location": "L13"
+    },
+    {
+      "id": "app_controllers_archivecontroller_archivecontroller",
+      "label": "ArchiveController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "ArchiveController",
+      "file_type": "code",
+      "norm_label": "archivecontroller",
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L22"
+    },
+    {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider",
+      "label": "SeoServiceProvider",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": "seoserviceprovider",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L16"
     },
     {
       "id": "app_contracts_searchengineinterface_searchengineinterface",
@@ -215,17 +228,30 @@
       "source_location": "L23"
     },
     {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider",
-      "label": "AssetServiceProvider",
+      "id": "app_providers_iconserviceprovider_iconserviceprovider",
+      "label": "IconServiceProvider",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 70,
-      "community_name": "AssetServiceProvider",
+      "community_name": "IconService",
       "file_type": "code",
-      "norm_label": "assetserviceprovider",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L18"
+      "norm_label": "iconserviceprovider",
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L22"
+    },
+    {
+      "id": "app_services_iconservice_iconservice",
+      "label": "IconService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": "iconservice",
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L28"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider",
@@ -506,12 +532,36 @@
       "source_location": "L15"
     },
     {
+      "id": "app_controllers_blogcontroller_blogcontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L26"
+    },
+    {
+      "id": "app_controllers_blogcontroller_blogcontroller_register",
+      "label": ".register()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "BlogController",
+      "file_type": "code",
+      "norm_label": ".register()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L31"
+    },
+    {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller_register",
       "label": ".register()",
       "_callable": true,
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/DesignSystemController.php",
@@ -523,71 +573,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/DesignSystemController.php",
       "source_location": "L26"
-    },
-    {
-      "id": "app_providers_seoserviceprovider_seoserviceprovider_construct",
-      "label": ".__construct()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": ".__construct()",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L28"
-    },
-    {
-      "id": "app_providers_seoserviceprovider_seoserviceprovider_register",
-      "label": ".register()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": ".register()",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L33"
-    },
-    {
-      "id": "app_providers_seoserviceprovider_seoserviceprovider_render_article_schema",
-      "label": ".render_article_schema()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": ".render_article_schema()",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L82"
-    },
-    {
-      "id": "app_providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
-      "label": ".render_organization_schema()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": ".render_organization_schema()",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L54"
-    },
-    {
-      "id": "app_providers_seoserviceprovider_seoserviceprovider_render_schemas",
-      "label": ".render_schemas()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": ".render_schemas()",
-      "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L38"
     },
     {
       "id": "tests_pest_wp_error_construct",
@@ -672,6 +662,30 @@
       "norm_label": "runwp()",
       "source_file": ".agents/skills/wp-performance/scripts/perf_inspect.mjs",
       "source_location": "L25"
+    },
+    {
+      "id": "app_controllers_archivecontroller_archivecontroller_render_fragment",
+      "label": ".render_fragment()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "rs_string",
+      "file_type": "code",
+      "norm_label": ".render_fragment()",
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L49"
+    },
+    {
+      "id": "app_controllers_blogcontroller_blogcontroller_render_page",
+      "label": ".render_page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "rs_string",
+      "file_type": "code",
+      "norm_label": ".render_page()",
+      "source_file": "app/Controllers/BlogController.php",
+      "source_location": "L42"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_construct",
@@ -782,6 +796,18 @@
       "source_location": "L47"
     },
     {
+      "id": "app_helpers_rs_int",
+      "label": "rs_int()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "rs_string",
+      "file_type": "code",
+      "norm_label": "rs_int()",
+      "source_file": "app/helpers.php",
+      "source_location": "L57"
+    },
+    {
       "id": "app_helpers_rs_string",
       "label": "rs_string()",
       "_callable": true,
@@ -794,19 +820,19 @@
       "source_location": "L22"
     },
     {
-      "id": "app_controllers_archivecontroller_archivecontroller_construct",
-      "label": ".__construct()",
+      "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
+      "label": ".enqueue_assets()",
       "_callable": true,
       "_origin": "ast",
       "community": 152,
       "community_name": ".__construct",
       "file_type": "code",
-      "norm_label": ".__construct()",
-      "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L29"
+      "norm_label": ".enqueue_assets()",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L35"
     },
     {
-      "id": "app_controllers_archivecontroller_archivecontroller_register",
+      "id": "app_providers_assetserviceprovider_assetserviceprovider_register",
       "label": ".register()",
       "_callable": true,
       "_origin": "ast",
@@ -814,68 +840,8 @@
       "community_name": ".__construct",
       "file_type": "code",
       "norm_label": ".register()",
-      "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L34"
-    },
-    {
-      "id": "app_controllers_archivecontroller_archivecontroller_render_fragment",
-      "label": ".render_fragment()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 152,
-      "community_name": ".__construct",
-      "file_type": "code",
-      "norm_label": ".render_fragment()",
-      "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L49"
-    },
-    {
-      "id": "app_controllers_blogcontroller_blogcontroller_construct",
-      "label": ".__construct()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 152,
-      "community_name": ".__construct",
-      "file_type": "code",
-      "norm_label": ".__construct()",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L26"
-    },
-    {
-      "id": "app_controllers_blogcontroller_blogcontroller_register",
-      "label": ".register()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 152,
-      "community_name": ".__construct",
-      "file_type": "code",
-      "norm_label": ".register()",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L31"
-    },
-    {
-      "id": "app_controllers_blogcontroller_blogcontroller_render_page",
-      "label": ".render_page()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 152,
-      "community_name": ".__construct",
-      "file_type": "code",
-      "norm_label": ".render_page()",
-      "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L42"
-    },
-    {
-      "id": "app_helpers_rs_int",
-      "label": "rs_int()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 152,
-      "community_name": ".__construct",
-      "file_type": "code",
-      "norm_label": "rs_int()",
-      "source_file": "app/helpers.php",
-      "source_location": "L57"
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L27"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_theme_supports",
@@ -887,7 +853,7 @@
       "file_type": "code",
       "norm_label": ".add_theme_supports()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L174"
+      "source_location": "L179"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_to_context",
@@ -899,7 +865,7 @@
       "file_type": "code",
       "norm_label": ".add_to_context()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L216"
+      "source_location": "L221"
     },
     {
       "id": "app_setup_themesetup_themesetup_construct",
@@ -911,7 +877,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L39"
+      "source_location": "L40"
     },
     {
       "id": "app_setup_themesetup_themesetup_enabled",
@@ -923,7 +889,7 @@
       "file_type": "code",
       "norm_label": ".enabled()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L131"
+      "source_location": "L136"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_core_fields",
@@ -935,7 +901,7 @@
       "file_type": "code",
       "norm_label": ".register_core_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L141"
+      "source_location": "L146"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_hooks",
@@ -947,7 +913,7 @@
       "file_type": "code",
       "norm_label": ".register_hooks()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L157"
+      "source_location": "L162"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_menus",
@@ -959,7 +925,7 @@
       "file_type": "code",
       "norm_label": ".register_menus()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L185"
+      "source_location": "L190"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_pages_fields",
@@ -971,7 +937,7 @@
       "file_type": "code",
       "norm_label": ".register_pages_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L149"
+      "source_location": "L154"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
@@ -1058,12 +1024,36 @@
       "source_location": "L31"
     },
     {
+      "id": "app_controllers_archivecontroller_archivecontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "ArchiveController",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L29"
+    },
+    {
+      "id": "app_controllers_archivecontroller_archivecontroller_register",
+      "label": ".register()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "ArchiveController",
+      "file_type": "code",
+      "norm_label": ".register()",
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L34"
+    },
+    {
       "id": "tests_unit_searchcontrollertest_delete",
       "label": "delete()",
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "delete()",
       "source_file": "tests/Unit/SearchControllerTest.php",
@@ -1075,7 +1065,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "index()",
       "source_file": "tests/Unit/SearchControllerTest.php",
@@ -1087,7 +1077,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "is_available()",
       "source_file": "tests/Unit/SearchControllerTest.php",
@@ -1099,11 +1089,71 @@
       "_callable": true,
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "search()",
       "source_file": "tests/Unit/SearchControllerTest.php",
       "source_location": "L195"
+    },
+    {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L28"
+    },
+    {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider_register",
+      "label": ".register()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": ".register()",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider_render_article_schema",
+      "label": ".render_article_schema()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": ".render_article_schema()",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L82"
+    },
+    {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
+      "label": ".render_organization_schema()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": ".render_organization_schema()",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L54"
+    },
+    {
+      "id": "app_providers_seoserviceprovider_seoserviceprovider_render_schemas",
+      "label": ".render_schemas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": ".render_schemas()",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L38"
     },
     {
       "id": "app_contracts_searchengineinterface_searchengineinterface_delete",
@@ -1406,28 +1456,88 @@
       "source_location": "L22"
     },
     {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
-      "label": ".enqueue_assets()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "AssetServiceProvider",
-      "file_type": "code",
-      "norm_label": ".enqueue_assets()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L35"
-    },
-    {
-      "id": "app_providers_assetserviceprovider_assetserviceprovider_register",
+      "id": "app_providers_iconserviceprovider_iconserviceprovider_register",
       "label": ".register()",
       "_callable": true,
       "_origin": "ast",
       "community": 70,
-      "community_name": "AssetServiceProvider",
+      "community_name": "IconService",
       "file_type": "code",
       "norm_label": ".register()",
-      "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L27"
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L24"
+    },
+    {
+      "id": "app_providers_iconserviceprovider_iconserviceprovider_register_icon_function",
+      "label": ".register_icon_function()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": ".register_icon_function()",
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L36"
+    },
+    {
+      "id": "app_providers_iconserviceprovider_iconserviceprovider_render_icon",
+      "label": ".render_icon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": ".render_icon()",
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L51"
+    },
+    {
+      "id": "app_services_iconservice_iconservice_load",
+      "label": ".load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": ".load()",
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L127"
+    },
+    {
+      "id": "app_services_iconservice_iconservice_normalize",
+      "label": ".normalize()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": ".normalize()",
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L100"
+    },
+    {
+      "id": "app_services_iconservice_iconservice_path",
+      "label": ".path()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": ".path()",
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L152"
+    },
+    {
+      "id": "app_services_iconservice_iconservice_render",
+      "label": ".render()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": ".render()",
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L54"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_add_route",
@@ -1511,7 +1621,7 @@
       "file_type": "code",
       "norm_label": ".enforce_posts_per_page()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L200"
+      "source_location": "L205"
     },
     {
       "id": "tests_unit_routeserviceprovidertest_render_page",
@@ -2168,7 +2278,7 @@
       "node_kind": "heading",
       "norm_label": "componentes de layout (no del catalogo)",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L197"
+      "source_location": "L206"
     },
     {
       "id": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
@@ -2204,7 +2314,7 @@
       "node_kind": "heading",
       "norm_label": "daisyui 5 (2026-09-09)",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L201"
+      "source_location": "L210"
     },
     {
       "id": "docs_components_extender_el_cat\u00e1logo",
@@ -2216,7 +2326,7 @@
       "node_kind": "heading",
       "norm_label": "extender el catalogo",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L210"
+      "source_location": "L219"
     },
     {
       "id": "docs_components_tokens_sem\u00e1nticos",
@@ -7695,7 +7805,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd16 agentes de ia**",
       "source_file": "README.md",
-      "source_location": "L197"
+      "source_location": "L198"
     },
     {
       "id": "readme_caracter\u00edsticas",
@@ -7731,7 +7841,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udfa8 componentes**",
       "source_file": "README.md",
-      "source_location": "L173"
+      "source_location": "L174"
     },
     {
       "id": "readme_configuraci\u00f3n_de_m\u00f3dulos",
@@ -7755,7 +7865,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udea2 despliegue (theme-only)**",
       "source_file": "README.md",
-      "source_location": "L187"
+      "source_location": "L188"
     },
     {
       "id": "readme_dise\u00f1ado_por_cristian_rojas_el_arquitecto",
@@ -7767,7 +7877,7 @@
       "node_kind": "heading",
       "norm_label": "**disenado por cristian rojas (el arquitecto)**",
       "source_file": "README.md",
-      "source_location": "L207"
+      "source_location": "L208"
     },
     {
       "id": "readme_estructura",
@@ -7803,7 +7913,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcdc licencia**",
       "source_file": "README.md",
-      "source_location": "L201"
+      "source_location": "L202"
     },
     {
       "id": "readme_modo_desarrollo_hmr",
@@ -8618,22 +8728,11 @@
       "source_location": "L1"
     },
     {
-      "id": "app_controllers_archivecontroller",
-      "label": "ArchiveController.php",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "SeoServiceProvider",
-      "file_type": "code",
-      "norm_label": "archivecontroller.php",
-      "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L1"
-    },
-    {
       "id": "app_controllers_blogcontroller",
       "label": "BlogController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "blogcontroller.php",
       "source_file": "app/Controllers/BlogController.php",
@@ -8644,7 +8743,7 @@
       "label": "DesignSystemController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "designsystemcontroller.php",
       "source_file": "app/Controllers/DesignSystemController.php",
@@ -8655,21 +8754,21 @@
       "label": "FormController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "formcontroller.php",
       "source_file": "app/Controllers/FormController.php",
       "source_location": "L1"
     },
     {
-      "id": "app_providers_seoserviceprovider",
-      "label": "SeoServiceProvider.php",
+      "id": "app_controllers_searchcontroller",
+      "label": "SearchController.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
-      "norm_label": "seoserviceprovider.php",
-      "source_file": "app/Providers/SeoServiceProvider.php",
+      "norm_label": "searchcontroller.php",
+      "source_file": "app/Controllers/SearchController.php",
       "source_location": "L1"
     },
     {
@@ -8677,29 +8776,29 @@
       "label": "Rakit\\Validation\\Validator",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "rakit\\validation\\validator",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "spatie_schemaorg_schema",
-      "label": "Spatie\\SchemaOrg\\Schema",
+      "id": "tests_unit_blogcontrollertest",
+      "label": "BlogControllerTest.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
-      "norm_label": "spatie\\schemaorg\\schema",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "blogcontrollertest.php",
+      "source_file": "tests/Unit/BlogControllerTest.php",
+      "source_location": "L1"
     },
     {
       "id": "tests_unit_designsystemcontrollertest",
       "label": "DesignSystemControllerTest.php",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "designsystemcontrollertest.php",
       "source_file": "tests/Unit/DesignSystemControllerTest.php",
@@ -8710,7 +8809,7 @@
       "label": "Timber\\Timber",
       "_origin": "ast",
       "community": 142,
-      "community_name": "SeoServiceProvider",
+      "community_name": "BlogController",
       "file_type": "code",
       "norm_label": "timber\\timber",
       "source_file": "",
@@ -9613,14 +9712,25 @@
       "source_location": "L1"
     },
     {
-      "id": "tests_unit_blogcontrollertest",
-      "label": "BlogControllerTest.php",
+      "id": "app_providers_assetserviceprovider",
+      "label": "AssetServiceProvider.php",
       "_origin": "ast",
       "community": 152,
       "community_name": ".__construct",
       "file_type": "code",
-      "norm_label": "blogcontrollertest.php",
-      "source_file": "tests/Unit/BlogControllerTest.php",
+      "norm_label": "assetserviceprovider.php",
+      "source_file": "app/Providers/AssetServiceProvider.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_unit_assetserviceprovidertest",
+      "label": "AssetServiceProviderTest.php",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": ".__construct",
+      "file_type": "code",
+      "norm_label": "assetserviceprovidertest.php",
+      "source_file": "tests/Unit/AssetServiceProviderTest.php",
       "source_location": "L1"
     },
     {
@@ -13650,7 +13760,7 @@
       "file_type": "code",
       "norm_label": "private",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L22"
     },
     {
       "id": "package_type",
@@ -13661,7 +13771,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L33"
     },
     {
       "id": "package_version",
@@ -13705,7 +13815,7 @@
       "file_type": "concept",
       "norm_label": "daisyui",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "ref_kucrut_vite_for_wp",
@@ -13727,7 +13837,29 @@
       "file_type": "concept",
       "norm_label": "lefthook",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L14"
+    },
+    {
+      "id": "ref_line_md",
+      "label": "line-md",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "line-md",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "ref_material_design_icons_svg",
+      "label": "@material-design-icons/svg",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@material-design-icons/svg",
+      "source_file": "package.json",
+      "source_location": "L7"
     },
     {
       "id": "ref_postcss",
@@ -13738,7 +13870,18 @@
       "file_type": "concept",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L16"
+    },
+    {
+      "id": "ref_svg_spinners",
+      "label": "svg-spinners",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "svg-spinners",
+      "source_file": "package.json",
+      "source_location": "L17"
     },
     {
       "id": "ref_tailwindcss",
@@ -13749,7 +13892,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L18"
     },
     {
       "id": "ref_tailwindcss_postcss",
@@ -13760,7 +13903,7 @@
       "file_type": "concept",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L8"
+      "source_location": "L9"
     },
     {
       "id": "ref_tailwindcss_typography",
@@ -13771,7 +13914,7 @@
       "file_type": "concept",
       "norm_label": "@tailwindcss/typography",
       "source_file": "package.json",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "ref_vite",
@@ -13782,7 +13925,7 @@
       "file_type": "concept",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L19"
     },
     {
       "id": "ref_vite_plugin_live_reload",
@@ -13793,7 +13936,7 @@
       "file_type": "concept",
       "norm_label": "vite-plugin-live-reload",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L20"
     },
     {
       "id": "tests_unit_featuresconfigtest",
@@ -13925,7 +14068,7 @@
       "file_type": "concept",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "package_scripts",
@@ -13936,7 +14079,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L23"
     },
     {
       "id": "package_scripts_build",
@@ -13947,7 +14090,7 @@
       "file_type": "code",
       "norm_label": "build",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L25"
     },
     {
       "id": "package_scripts_dev",
@@ -13958,7 +14101,7 @@
       "file_type": "code",
       "norm_label": "dev",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L24"
     },
     {
       "id": "package_scripts_fix",
@@ -13969,7 +14112,18 @@
       "file_type": "code",
       "norm_label": "fix",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L28"
+    },
+    {
+      "id": "package_scripts_icons_sync",
+      "label": "icons:sync",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "icons:sync",
+      "source_file": "package.json",
+      "source_location": "L29"
     },
     {
       "id": "package_scripts_lint",
@@ -13980,7 +14134,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L27"
     },
     {
       "id": "package_scripts_prepare",
@@ -13991,7 +14145,7 @@
       "file_type": "code",
       "norm_label": "prepare",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L31"
     },
     {
       "id": "package_scripts_preview",
@@ -14002,7 +14156,7 @@
       "file_type": "code",
       "norm_label": "preview",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L26"
     },
     {
       "id": "package_scripts_test_e2e",
@@ -14013,14 +14167,25 @@
       "file_type": "code",
       "norm_label": "test:e2e",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L30"
+    },
+    {
+      "id": "app_controllers_archivecontroller",
+      "label": "ArchiveController.php",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "ArchiveController",
+      "file_type": "code",
+      "norm_label": "archivecontroller.php",
+      "source_file": "app/Controllers/ArchiveController.php",
+      "source_location": "L1"
     },
     {
       "id": "brain_monkey_functions",
       "label": "Brain\\Monkey\\Functions",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "brain\\monkey\\functions",
       "source_file": "",
@@ -14031,7 +14196,7 @@
       "label": "ArchiveControllerTest.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "archivecontrollertest.php",
       "source_file": "tests/Unit/ArchiveControllerTest.php",
@@ -14042,7 +14207,7 @@
       "label": "FormControllerTest.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "formcontrollertest.php",
       "source_file": "tests/Unit/FormControllerTest.php",
@@ -14053,7 +14218,7 @@
       "label": "SearchControllerTest.php",
       "_origin": "ast",
       "community": 208,
-      "community_name": "SearchControllerTest.php",
+      "community_name": "ArchiveController",
       "file_type": "code",
       "norm_label": "searchcontrollertest.php",
       "source_file": "tests/Unit/SearchControllerTest.php",
@@ -14600,6 +14765,28 @@
       "source_location": "L430"
     },
     {
+      "id": "app_providers_seoserviceprovider",
+      "label": "SeoServiceProvider.php",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": "seoserviceprovider.php",
+      "source_file": "app/Providers/SeoServiceProvider.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "spatie_schemaorg_schema",
+      "label": "Spatie\\SchemaOrg\\Schema",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "SeoServiceProvider",
+      "file_type": "code",
+      "norm_label": "spatie\\schemaorg\\schema",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "agents_1_backend_data_php_composer",
       "label": "**1. Backend & Data (PHP & Composer)**",
       "_origin": "ast",
@@ -14731,17 +14918,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_controllers_searchcontroller",
-      "label": "SearchController.php",
-      "_origin": "ast",
-      "community": 213,
-      "community_name": "SearchEngineInterface",
-      "file_type": "code",
-      "norm_label": "searchcontroller.php",
-      "source_file": "app/Controllers/SearchController.php",
-      "source_location": "L1"
-    },
-    {
       "id": "app_services_meilisearchclient",
       "label": "MeilisearchClient.php",
       "_origin": "ast",
@@ -14816,7 +14992,7 @@
       "file_type": "concept",
       "norm_label": "alpinejs",
       "source_file": "package.json",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "ref_htmx_org",
@@ -14827,7 +15003,7 @@
       "file_type": "concept",
       "norm_label": "htmx.org",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "bin_seed_demo_content",
@@ -14873,6 +15049,66 @@
       "norm_label": "wp()",
       "source_file": "bin/seed-demo-content.sh",
       "source_location": "L18"
+    },
+    {
+      "id": "bin_sync_icons",
+      "label": "sync-icons.sh",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "sync-icons.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "norm_label": "sync-icons.sh",
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "bin_sync_icons_fail",
+      "label": "fail()",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "sync-icons.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "norm_label": "fail()",
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L25"
+    },
+    {
+      "id": "bin_sync_icons_sh__entry",
+      "label": "sync-icons.sh script",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "sync-icons.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "norm_label": "sync-icons.sh script",
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "bin_sync_icons_sync_set",
+      "label": "sync_set()",
+      "_origin": "ast",
+      "community": 219,
+      "community_name": "sync-icons.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "norm_label": "sync_set()",
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L32"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -15937,7 +16173,7 @@
       "file_type": "code",
       "norm_label": "alpinejs",
       "source_file": "package.json",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "package_devdependencies_biomejs_biome",
@@ -15959,7 +16195,7 @@
       "file_type": "code",
       "norm_label": "daisyui",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "package_devdependencies_htmx_org",
@@ -15970,7 +16206,7 @@
       "file_type": "code",
       "norm_label": "htmx.org",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "package_devdependencies_kucrut_vite_for_wp",
@@ -15992,7 +16228,29 @@
       "file_type": "code",
       "norm_label": "lefthook",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L14"
+    },
+    {
+      "id": "package_devdependencies_line_md",
+      "label": "line-md",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "line-md",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "package_devdependencies_material_design_icons_svg",
+      "label": "@material-design-icons/svg",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@material-design-icons/svg",
+      "source_file": "package.json",
+      "source_location": "L7"
     },
     {
       "id": "package_devdependencies_playwright_test",
@@ -16003,7 +16261,7 @@
       "file_type": "code",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "package_devdependencies_postcss",
@@ -16014,7 +16272,18 @@
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L16"
+    },
+    {
+      "id": "package_devdependencies_svg_spinners",
+      "label": "svg-spinners",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "svg-spinners",
+      "source_file": "package.json",
+      "source_location": "L17"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -16025,7 +16294,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L18"
     },
     {
       "id": "package_devdependencies_tailwindcss_postcss",
@@ -16036,7 +16305,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L8"
+      "source_location": "L9"
     },
     {
       "id": "package_devdependencies_tailwindcss_typography",
@@ -16047,7 +16316,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/typography",
       "source_file": "package.json",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "package_devdependencies_vite",
@@ -16058,7 +16327,7 @@
       "file_type": "code",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L19"
     },
     {
       "id": "package_devdependencies_vite_plugin_live_reload",
@@ -16069,7 +16338,7 @@
       "file_type": "code",
       "norm_label": "vite-plugin-live-reload",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L20"
     },
     {
       "id": "agents_skills_playwright_best_practices_browser_apis_iframes_accessing_cross_origin_content",
@@ -17136,7 +17405,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "docs/spec.md",
-      "source_location": "L579"
+      "source_location": "L604"
     },
     {
       "id": "docs_spec_14_criterios_de_\u00e9xito",
@@ -17148,7 +17417,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "docs/spec.md",
-      "source_location": "L589"
+      "source_location": "L614"
     },
     {
       "id": "docs_spec_1_1_prop\u00f3sito",
@@ -29125,26 +29394,48 @@
       "source_location": "L172"
     },
     {
-      "id": "app_providers_assetserviceprovider",
-      "label": "AssetServiceProvider.php",
+      "id": "app_providers_iconserviceprovider",
+      "label": "IconServiceProvider.php",
       "_origin": "ast",
       "community": 70,
-      "community_name": "AssetServiceProvider",
+      "community_name": "IconService",
       "file_type": "code",
-      "norm_label": "assetserviceprovider.php",
-      "source_file": "app/Providers/AssetServiceProvider.php",
+      "norm_label": "iconserviceprovider.php",
+      "source_file": "app/Providers/IconServiceProvider.php",
       "source_location": "L1"
     },
     {
-      "id": "tests_unit_assetserviceprovidertest",
-      "label": "AssetServiceProviderTest.php",
+      "id": "app_services_iconservice",
+      "label": "IconService.php",
       "_origin": "ast",
       "community": 70,
-      "community_name": "AssetServiceProvider",
+      "community_name": "IconService",
       "file_type": "code",
-      "norm_label": "assetserviceprovidertest.php",
-      "source_file": "tests/Unit/AssetServiceProviderTest.php",
+      "norm_label": "iconservice.php",
+      "source_file": "app/Services/IconService.php",
       "source_location": "L1"
+    },
+    {
+      "id": "tests_unit_iconservicetest",
+      "label": "IconServiceTest.php",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": "iconservicetest.php",
+      "source_file": "tests/Unit/IconServiceTest.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "timber_twig",
+      "label": "Timber\\Twig",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "IconService",
+      "file_type": "code",
+      "norm_label": "timber\\twig",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "app_providers_routeserviceprovider",
@@ -31193,7 +31484,7 @@
       "file_type": "code",
       "norm_label": "source",
       "source_file": "biome.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "biome_assist",
@@ -31204,7 +31495,7 @@
       "file_type": "code",
       "norm_label": "assist",
       "source_file": "biome.json",
-      "source_location": "L29"
+      "source_location": "L30"
     },
     {
       "id": "biome_assist_actions",
@@ -31215,7 +31506,7 @@
       "file_type": "code",
       "norm_label": "actions",
       "source_file": "biome.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "biome_css",
@@ -31226,7 +31517,7 @@
       "file_type": "code",
       "norm_label": "css",
       "source_file": "biome.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "biome_css_parser",
@@ -31237,7 +31528,7 @@
       "file_type": "code",
       "norm_label": "parser",
       "source_file": "biome.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "biome_files",
@@ -31270,7 +31561,7 @@
       "file_type": "code",
       "norm_label": "formatter",
       "source_file": "biome.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "biome_formatter_indentstyle",
@@ -31281,7 +31572,7 @@
       "file_type": "code",
       "norm_label": "indentstyle",
       "source_file": "biome.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "biome_formatter_indentwidth",
@@ -31292,7 +31583,7 @@
       "file_type": "code",
       "norm_label": "indentwidth",
       "source_file": "biome.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "biome_formatter_quotestyle",
@@ -31303,7 +31594,7 @@
       "file_type": "code",
       "norm_label": "quotestyle",
       "source_file": "biome.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "biome_javascript",
@@ -31314,7 +31605,7 @@
       "file_type": "code",
       "norm_label": "javascript",
       "source_file": "biome.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "biome_javascript_formatter",
@@ -31325,7 +31616,7 @@
       "file_type": "code",
       "norm_label": "formatter",
       "source_file": "biome.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "biome_parser_tailwinddirectives",
@@ -31336,7 +31627,7 @@
       "file_type": "code",
       "norm_label": "tailwinddirectives",
       "source_file": "biome.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "biome_schema",
@@ -31358,7 +31649,7 @@
       "file_type": "code",
       "norm_label": "organizeimports",
       "source_file": "biome.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "docs_components_alert_twig",
@@ -31370,7 +31661,7 @@
       "node_kind": "heading",
       "norm_label": "`alert.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L121"
+      "source_location": "L130"
     },
     {
       "id": "docs_components_badge_twig",
@@ -31382,7 +31673,7 @@
       "node_kind": "heading",
       "norm_label": "`badge.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L145"
+      "source_location": "L154"
     },
     {
       "id": "docs_components_button_twig",
@@ -31394,7 +31685,7 @@
       "node_kind": "heading",
       "norm_label": "`button.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L49"
+      "source_location": "L58"
     },
     {
       "id": "docs_components_card_twig",
@@ -31406,7 +31697,7 @@
       "node_kind": "heading",
       "norm_label": "`card.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L96"
+      "source_location": "L105"
     },
     {
       "id": "docs_components_cat\u00e1logo",
@@ -31442,7 +31733,7 @@
       "node_kind": "heading",
       "norm_label": "`input.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L71"
+      "source_location": "L80"
     },
     {
       "id": "docs_components_pagination_twig",
@@ -31454,7 +31745,7 @@
       "node_kind": "heading",
       "norm_label": "`pagination.twig`",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L160"
+      "source_location": "L169"
     },
     {
       "id": "agents_skills_wp_performance_skill",
@@ -35681,6 +35972,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_providers_iconserviceprovider_iconserviceprovider_render_icon",
+      "target": "app_services_iconservice_iconservice",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
       "source": "app_providers_menuserviceprovider_menuserviceprovider_inject_menu_to_context",
       "target": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
       "relation": "calls",
@@ -35929,7 +36232,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L100",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -35941,7 +36244,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L112",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -35953,7 +36256,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L122",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -35965,7 +36280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L48",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -35977,7 +36292,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L50",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -35989,7 +36304,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L53",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -36001,7 +36316,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L62",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -36013,7 +36328,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L63",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -36025,7 +36340,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L66",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -36037,7 +36352,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L71",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -36049,7 +36364,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L73",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -36061,7 +36376,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L74",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -36073,7 +36388,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L78",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -36085,7 +36400,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L88",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -36097,7 +36412,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L143",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -36109,7 +36424,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L151",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -36122,6 +36437,30 @@
       "context": "call",
       "source_file": "bin/seed-demo-content.sh",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "bin_sync_icons_sh__entry",
+      "target": "bin_sync_icons_fail",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "bin_sync_icons_sh__entry",
+      "target": "bin_sync_icons_sync_set",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -36269,6 +36608,30 @@
       "weight": 1.0
     },
     {
+      "source": "app_providers_iconserviceprovider",
+      "target": "app_services_iconservice_iconservice",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_iconserviceprovider",
+      "target": "timber_twig",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
       "source": "app_providers_routeserviceprovider",
       "target": "closure",
       "relation": "imports",
@@ -36402,7 +36765,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_menuserviceprovider_menuserviceprovider",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36414,7 +36777,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_menuserviceprovider_menuserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36426,7 +36789,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_seoserviceprovider_seoserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36438,7 +36801,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_services_meilisearchclient_meilisearchclient",
+      "target": "app_providers_seoserviceprovider_seoserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36450,7 +36813,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_services_meilisearchindexer_meilisearchindexer",
+      "target": "app_services_meilisearchclient_meilisearchclient",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36462,7 +36825,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "tests_unit_routeserviceprovidertest_wp_query",
+      "target": "app_services_meilisearchindexer_meilisearchindexer",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36470,6 +36833,18 @@
       "context": "import",
       "source_file": "app/Setup/ThemeSetup.php",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "tests_unit_routeserviceprovidertest_wp_query",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -36510,7 +36885,7 @@
     },
     {
       "source": "package",
-      "target": "ref_alpinejs",
+      "target": "ref_tailwindcss_typography",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36522,7 +36897,7 @@
     },
     {
       "source": "package",
-      "target": "ref_daisyui",
+      "target": "ref_alpinejs",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36534,7 +36909,7 @@
     },
     {
       "source": "package",
-      "target": "ref_htmx_org",
+      "target": "ref_daisyui",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36546,7 +36921,7 @@
     },
     {
       "source": "package",
-      "target": "ref_lefthook",
+      "target": "ref_htmx_org",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36558,7 +36933,7 @@
     },
     {
       "source": "package",
-      "target": "ref_postcss",
+      "target": "ref_lefthook",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36570,7 +36945,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_line_md",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36582,7 +36957,7 @@
     },
     {
       "source": "package",
-      "target": "ref_vite",
+      "target": "ref_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36594,7 +36969,7 @@
     },
     {
       "source": "package",
-      "target": "ref_vite_plugin_live_reload",
+      "target": "ref_svg_spinners",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36602,6 +36977,42 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_tailwindcss",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_vite",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_vite_plugin_live_reload",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -36630,7 +37041,7 @@
     },
     {
       "source": "package",
-      "target": "ref_playwright_test",
+      "target": "ref_material_design_icons_svg",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36642,7 +37053,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss_postcss",
+      "target": "ref_playwright_test",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36654,7 +37065,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss_typography",
+      "target": "ref_tailwindcss_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36769,6 +37180,30 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/Unit/FormControllerTest.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_iconservicetest",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/Unit/IconServiceTest.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_iconservicetest",
+      "target": "app_services_iconservice_iconservice",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/Unit/IconServiceTest.php",
       "source_location": "L6",
       "weight": 1.0
     },
@@ -37033,7 +37468,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L200",
+      "source_location": "L205",
       "weight": 1.0
     },
     {
@@ -63745,6 +64180,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_providers_iconserviceprovider",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
       "source": "app_providers_menuserviceprovider",
       "target": "app_providers_menuserviceprovider_menuserviceprovider",
       "relation": "contains",
@@ -63778,6 +64224,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_services_iconservice",
+      "target": "app_services_iconservice_iconservice",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
       "source": "app_services_meilisearchclient",
       "target": "app_services_meilisearchclient_meilisearchclient",
       "relation": "contains",
@@ -63807,7 +64264,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -63833,6 +64290,17 @@
       "weight": 1.0
     },
     {
+      "source": "bin_sync_icons",
+      "target": "bin_sync_icons_sh__entry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "biome",
       "target": "biome_formatter",
       "relation": "contains",
@@ -63840,18 +64308,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "biome",
-      "target": "biome_javascript",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "biome.json",
-      "source_location": "L19",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -63867,24 +64324,24 @@
     },
     {
       "source": "biome",
+      "target": "biome_javascript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "biome.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "biome",
       "target": "biome_css",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L24",
-      "weight": 1.0
-    },
-    {
-      "source": "biome",
-      "target": "biome_assist",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "biome.json",
-      "source_location": "L29",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -63899,6 +64356,17 @@
       "weight": 1.0
     },
     {
+      "source": "biome",
+      "target": "biome_assist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "biome.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
       "source": "biome_actions_source",
       "target": "biome_source_organizeimports",
       "relation": "contains",
@@ -63906,7 +64374,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -63917,7 +64385,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -63928,7 +64396,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -63939,7 +64407,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -63950,7 +64418,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -63972,7 +64440,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -63983,7 +64451,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -63994,7 +64462,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -64005,7 +64473,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "biome.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -64615,13 +65083,24 @@
     },
     {
       "source": "docs_components_cat\u00e1logo",
+      "target": "docs_components_card_twig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_components_cat\u00e1logo",
       "target": "docs_components_alert_twig",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L121",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -64632,7 +65111,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L145",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -64643,7 +65122,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L160",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -64665,7 +65144,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L49",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -64676,18 +65155,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L71",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_components_cat\u00e1logo",
-      "target": "docs_components_card_twig",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/COMPONENTS.md",
-      "source_location": "L96",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -64698,7 +65166,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L201",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -64720,7 +65188,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L197",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -64731,7 +65199,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L210",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -65204,7 +65672,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L579",
+      "source_location": "L604",
       "weight": 1.0
     },
     {
@@ -65215,7 +65683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L589",
+      "source_location": "L614",
       "weight": 1.0
     },
     {
@@ -65264,17 +65732,6 @@
     },
     {
       "source": "package",
-      "target": "package_private",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
       "target": "package_name",
       "relation": "contains",
       "_origin": "ast",
@@ -65286,24 +65743,24 @@
     },
     {
       "source": "package",
+      "target": "package_private",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "package_scripts",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "package_type",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -65319,6 +65776,17 @@
     },
     {
       "source": "package",
+      "target": "package_type",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "package_devdependencies",
       "relation": "contains",
       "_origin": "ast",
@@ -65330,7 +65798,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_alpinejs",
+      "target": "package_devdependencies_tailwindcss_typography",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65341,7 +65809,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_daisyui",
+      "target": "package_devdependencies_alpinejs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65352,7 +65820,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_htmx_org",
+      "target": "package_devdependencies_daisyui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65363,7 +65831,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_lefthook",
+      "target": "package_devdependencies_htmx_org",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65374,7 +65842,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_postcss",
+      "target": "package_devdependencies_lefthook",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65385,7 +65853,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_line_md",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65396,7 +65864,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite",
+      "target": "package_devdependencies_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65407,13 +65875,46 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite_plugin_live_reload",
+      "target": "package_devdependencies_svg_spinners",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite_plugin_live_reload",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -65440,7 +65941,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_playwright_test",
+      "target": "package_devdependencies_material_design_icons_svg",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65451,7 +65952,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
+      "target": "package_devdependencies_playwright_test",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65462,7 +65963,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_typography",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65479,7 +65980,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -65490,7 +65991,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -65501,7 +66002,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -65512,7 +66013,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -65523,7 +66024,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_icons_sync",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -65534,7 +66046,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -65545,7 +66057,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -65578,7 +66090,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L207",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -65622,7 +66134,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L173",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -65633,7 +66145,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L187",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -65644,7 +66156,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L197",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
@@ -65655,7 +66167,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L201",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -65799,6 +66311,28 @@
       "confidence_score": 1.0,
       "source_file": "bin/seed-demo-content.sh",
       "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "bin_sync_icons",
+      "target": "bin_sync_icons_fail",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "bin_sync_icons",
+      "target": "bin_sync_icons_sync_set",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bin/sync-icons.sh",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -66176,6 +66710,39 @@
       "weight": 1.0
     },
     {
+      "source": "app_providers_iconserviceprovider_iconserviceprovider",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider_register",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_iconserviceprovider_iconserviceprovider",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider_register_icon_function",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_iconserviceprovider_iconserviceprovider",
+      "target": "app_providers_iconserviceprovider_iconserviceprovider_render_icon",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/IconServiceProvider.php",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
       "source": "app_providers_menuserviceprovider_menuserviceprovider",
       "target": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
       "relation": "method",
@@ -66330,6 +66897,50 @@
       "weight": 1.0
     },
     {
+      "source": "app_services_iconservice_iconservice",
+      "target": "app_services_iconservice_iconservice_normalize",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "app_services_iconservice_iconservice",
+      "target": "app_services_iconservice_iconservice_load",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "app_services_iconservice_iconservice",
+      "target": "app_services_iconservice_iconservice_path",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "app_services_iconservice_iconservice",
+      "target": "app_services_iconservice_iconservice_render",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Services/IconService.php",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
       "source": "app_services_meilisearchclient_meilisearchclient",
       "target": "app_services_meilisearchclient_meilisearchclient_configure",
       "relation": "method",
@@ -66480,7 +67091,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L131",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -66491,7 +67102,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L141",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -66502,7 +67113,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L149",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -66513,7 +67124,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L157",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -66524,7 +67135,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L174",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -66535,7 +67146,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L185",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
@@ -66546,7 +67157,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L200",
+      "source_location": "L205",
       "weight": 1.0
     },
     {
@@ -66557,7 +67168,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L216",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -66568,7 +67179,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -69139,7 +69750,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L104",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -69151,7 +69762,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -69163,7 +69774,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -69248,5 +69859,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "d80bebf30a08bc19b6001a2ec121a9cf41b861e6"
+  "built_at_commit": "3165c4c7e66116f4136d452415b19b0c2c8d657f"
 }

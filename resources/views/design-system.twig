@@ -83,12 +83,27 @@
         {# ---------- Iconos ---------- #}
         <section class="mb-8 bg-surface p-8 rounded-2xl border border-line">
             <h2 class="text-xl font-bold text-ink mb-6">Iconos</h2>
-            <p class="text-sm text-ink-muted mb-4">SVG inline vía <code class="text-xs bg-page px-2 py-0.5 rounded">components/icon.twig</code> — sin dependencias de iconos en runtime.</p>
+            <p class="text-sm text-ink-muted mb-4">SVG inline vía <code class="text-xs bg-page px-2 py-0.5 rounded">components/icon.twig</code> / <code class="text-xs bg-page px-2 py-0.5 rounded">rs_icon()</code> — sets sincronizados con <code class="text-xs bg-page px-2 py-0.5 rounded">bin/sync-icons.sh</code> (spec §12.1, entrada 8). Animación CSS embebida con guard de prefers-reduced-motion.</p>
             <div class="grid grid-cols-3 sm:grid-cols-5 gap-4 max-w-2xl">
-                {% for name in ['search', 'close', 'check', 'check-circle', 'x-circle', 'alert-triangle', 'info', 'arrow-right', 'mail', 'calendar'] %}
+                {% for entry in [
+                    { name: 'search', label: 'search' },
+                    { name: 'close', label: 'close' },
+                    { name: 'menu', label: 'menu' },
+                    { name: 'arrow-right', label: 'arrow-right' },
+                    { name: 'calendar', label: 'calendar' },
+                    { name: 'info', label: 'info' },
+                    { name: 'material:check_circle', label: 'material:check_circle' },
+                    { name: 'material:cancel', label: 'material:cancel' },
+                    { name: 'material:error', label: 'material:error' },
+                    { name: 'mail', label: 'mail' },
+                    { name: 'place', label: 'place' },
+                    { name: 'schedule', label: 'schedule' },
+                    { name: 'spinner:180-ring', label: 'spinner:180-ring' },
+                    { name: 'spinner:12-dots-scale-rotate', label: 'spinner:12-dots' },
+                ] %}
                     <div class="flex flex-col items-center gap-2 p-4 rounded-xl border border-line bg-page">
-                        {% include 'components/icon.twig' with { name: name, classes: 'w-6 h-6 text-ink' } only %}
-                        <span class="text-[10px] font-mono text-ink-faint">{{ name }}</span>
+                        {% include 'components/icon.twig' with { name: entry.name, classes: 'w-6 h-6 text-ink' } only %}
+                        <span class="text-[10px] font-mono text-ink-faint">{{ entry.label }}</span>
                     </div>
                 {% endfor %}
             </div>

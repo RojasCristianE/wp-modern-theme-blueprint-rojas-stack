@@ -32,19 +32,28 @@ Definidos en `resources/styles/main.css`. Variables CSS en runtime puenteadas a 
 
 ### `icon.twig`
 
-SVG inline con trazo estilo lucide. El mapa de rutas vive en el propio archivo (licencia ISC de lucide) — sin dependencias de iconos en runtime.
+SVG inline desde el árbol versionado `resources/icons/` (spec §12.1, entrada 8). Los sets se sincronizan desde npm con `bin/sync-icons.sh` y quedan commiteados: producción nunca lee `node_modules` y el diff de cada sync muestra exactamente qué cambió.
+
+| Set | Fuente | Contenido | Licencia |
+|---|---|---|---|
+| `line-md` (primario) | npm `line-md` | ~1.200 iconos Material Line **animados** — CSS embebida con guard nativo de `prefers-reduced-motion` | MIT |
+| `material` (respaldo) | npm `@material-design-icons/svg` (variante `round`) | ~2.100 iconos Material estáticos, misma geometría que line-md | Apache-2.0 |
+| `spinner` | npm `svg-spinners` | 46 spinners (CSS embebida) | MIT |
 
 | Prop | Tipo | Default | Descripción |
 |---|---|---|---|
-| `name` | string | — | Clave del mapa (`search`, `close`, `check`, `check-circle`, `x-circle`, `alert-triangle`, `info`, `arrow-right`, `mail`, `calendar`). Desconocida → no renderiza nada |
+| `name` | string | — | `'name'` (set primario) o `'set:name'` (`'material:mail'`, `'spinner:180-ring'`). Desconocido → no renderiza nada. Si el icono falta en el set pedido, hay **fallback en cadena** al resto del registro |
 | `classes` | string | `w-5 h-5` | Clases del `<svg>` |
-| `stroke` | int | `2` | Grosor del trazo |
+| `stroke` | int | — | DEPRECADO — el trazo (2, round) viene de los archivos fuente; se ignora |
 
 ```twig
 {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
+{% include 'components/icon.twig' with { name: 'spinner:12-dots-scale-rotate', classes: 'w-8 h-8' } only %}
+{# o directamente la función Twig: #}
+{{ rs_icon('material:home', { class: 'w-6 h-6' }) }}
 ```
 
-> Para añadir un icono: copia el `<path>` desde [lucide.dev](https://lucide.dev) y añádelo al mapa. Los iconos son la excepción documentada al uso de tokens: heredan `currentColor`.
+> Para añadir un icono: búscalo en [line-md](https://icon-sets.iconify.design/line-md/) o [Material Symbols](https://fonts.google.com/icons), usa `set:nombre` — si existe en `resources/icons/<set>/`, se renderiza. Actualizar sets: `bun update line-md @material-design-icons/svg svg-spinners && bun run icons:sync`. Cada SVG lleva `data-rs-icon` y los iconos heredan `currentColor`.
 
 ### `button.twig`
 
@@ -120,7 +129,7 @@ Tarjeta para blog/portfolio con CTA.
 
 ### `alert.twig`
 
-Alerta semántica con icono (vía `icon.twig`: `check-circle`, `x-circle`, `alert-triangle`, `info`). Dos modos de uso:
+Alerta semántica con icono (vía `icon.twig`: `material:check_circle`, `material:cancel`, `material:error`, `info`). Dos modos de uso:
 
 ```twig
 {# Simple (include): message como texto #}

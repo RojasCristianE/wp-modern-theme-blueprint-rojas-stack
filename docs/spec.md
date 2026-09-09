@@ -573,6 +573,31 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      con Alpine y el theming — segunda vez), shadcn/Chakra
      (React-only), HeadlessUI (React/Vue), Pines (snippets sin
      sistema).
+  9. **Sistema de iconos sincronizado (2026-09-09):** los iconos
+     migran del mapa Twig de paths lucide incrustados a mano a un
+     pipeline reproducible: `bin/sync-icons.sh` copia los sets
+     desde npm hacia `resources/icons/` (versionados en el repo —
+     producción nunca lee `node_modules`, el diff del sync muestra
+     qué cambió y las eliminaciones upstream se propagan). Sets:
+     **line-md** (primario, ~1.200 iconos Material Line animados
+     vía CSS embebida con guard nativo de `prefers-reduced-motion`,
+     MIT — coherencia de lenguaje: line-md ES "Material Line"),
+     **@material-design-icons/svg round** (respaldo estático,
+     misma geometría Material, Apache-2.0) y **svg-spinners**
+     (estados de carga, MIT). Evaluados y descartados:
+     lucide-static (la razón original de salida del stack: iconos
+     que piden animación), lucide-animated/heroicons-animated
+     (componentes React+Motion, requieren runtime JS), Lordicon/
+     Lottie (runtime propietario), fuentes de iconos (regla "SVG
+     1 archivo por icono"). Resolución en render: `'name'` usa el
+     set primario, `'set:name'` fuerza set con **fallback en
+     cadena** al resto del registro; `rs_icon()` queda expuesta
+     como función Twig global y `components/icon.twig` se conserva
+     como envoltura con la API histórica (+ `data-rs-icon` para
+     e2e). Los SVGs sueltos en header/contact/contact-form migran
+     al sistema — todo icono del tema pasa por un solo pipeline.
+     Cobertura: 7 tests Pest (render, fallback, traversal guard,
+     registro Twig) + aserciones e2e en el catálogo.
 
 ---
 

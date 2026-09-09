@@ -48,4 +48,13 @@ test('el catálogo de componentes renderiza todas las secciones', async ({
   // Badges y catálogo de iconos
   await expect(page.getByText('Brand', { exact: true })).toBeVisible();
   await expect(page.locator('svg[aria-hidden="true"]').first()).toBeAttached();
+
+  // Catálogo de iconos sincronizados (spec §12.1, entrada 9): el atributo
+  // refleja el nombre pedido — 'mail' resuelve vía fallback a material,
+  // 'spinner:180-ring' es set explícito
+  await expect(page.locator('[data-rs-icon="search"]').first()).toBeAttached();
+  await expect(page.locator('[data-rs-icon="mail"]').first()).toBeAttached();
+  await expect(
+    page.locator('[data-rs-icon="spinner:180-ring"]').first(),
+  ).toBeAttached();
 });

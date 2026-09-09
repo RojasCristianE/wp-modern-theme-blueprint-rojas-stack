@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><style>.fao72i {
+  d: path('M3 14v-9h18v14h-18v-5');
+  stroke-width: 2px;
+}
+
+.i5u07d {
+  d: path('M3 16l4 -3l3 2l6 -5l5 4');
+}
+
+.pun1do {
+  d: path('M3 16l4 -3l3 2l6 -5l5 4v5h-18Z');
+}
+
+.qa-o7h {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+  fill: none;
+}
+
+.ydovum {
+  fill: currentColor;
+}
+
+.z24blz {
+  cx: 7.5px;
+  cy: 9.5px;
+  r: 1.5px;
+}
+
+@media not (prefers-reduced-motion) {
+  .fao72i {
+    stroke-dasharray: 66;
+    animation: 0.6s linear forwards so-from-66;
+  }
+
+  .i5u07d {
+    stroke-dasharray: 26;
+    stroke-dashoffset: 26;
+    animation: 0.4s linear 0.6s forwards so-to-0;
+  }
+
+  .pun1do {
+    fill-opacity: 0;
+    animation: 0.4s linear 1.2s forwards fill-to-1;
+  }
+
+  .z24blz {
+    opacity: 0;
+    animation: 0.2s linear 1s forwards fade-to-1;
+  }
+}
+
+@keyframes so-from-66 {
+  0% {
+    stroke-dashoffset: 66;
+  }
+}
+
+@keyframes so-to-0 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-to-1 {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fill-to-1 {
+  100% {
+    fill-opacity: 1;
+  }
+}
+</style><path class="fao72i qa-o7h"/><path class="i5u07d qa-o7h"/><circle class="ydovum z24blz"/><path class="pun1do ydovum"/></svg>

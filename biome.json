@@ -9,7 +9,8 @@
       "!.claude",
       "!.continue",
       "!.gemini",
-      "!**/.skilld"
+      "!**/.skilld",
+      "!resources/icons"
     ]
   },
   "formatter": {
