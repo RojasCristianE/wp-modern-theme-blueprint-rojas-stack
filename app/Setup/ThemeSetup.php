@@ -18,6 +18,7 @@ use RojasStack\Providers\RouteServiceProvider;
 use RojasStack\Providers\SeoServiceProvider;
 use RojasStack\Services\MeilisearchClient;
 use RojasStack\Services\MeilisearchIndexer;
+use WP_Query;
 
 /**
  * ThemeSetup
@@ -29,12 +30,19 @@ use RojasStack\Services\MeilisearchIndexer;
  */
 class ThemeSetup
 {
+    /**
+     * Posts por página global (POSTS_PER_PAGE en .env → features.php).
+     * Una sola fuente de verdad para TODAS las superficies (spec §12.1).
+     */
+    private int $posts_per_page;
+
     public function __construct()
     {
         $loaded_features = require get_template_directory() . '/app/Config/features.php';
 
         /** @var array<string|int, mixed> $features Contrato de features.php */
         $features = rs_array($loaded_features);
+        $this->posts_per_page = rs_int($features['posts_per_page'] ?? 6, 6);
 
         // --- Core (siempre activo) ---
         (new AssetServiceProvider())->register();
@@ -55,12 +63,12 @@ class ThemeSetup
             (new MeilisearchIndexer())->register();
         }
 
-        (new SearchController(rs_int($features['posts_per_page'] ?? 6, 6), $search_engine))->register();
+        (new SearchController($this->posts_per_page, $search_engine))->register();
 
         // Paginación de archives (core): fragmento grid+paginación para HTMX.
         // Mismo posts_per_page que el blog: una sola fuente de verdad
         // (POSTS_PER_PAGE en .env, top-level de features.php).
-        (new ArchiveController(rs_int($features['posts_per_page'] ?? 6, 6)))->register();
+        (new ArchiveController($this->posts_per_page))->register();
 
         $this->register_hooks();
         $this->register_core_fields();
@@ -150,7 +158,12 @@ class ThemeSetup
     {
         add_action('after_setup_theme', [$this, 'add_theme_supports']);
         add_action('after_setup_theme', [$this, 'register_menus']);
-        
+
+        // Una sola fuente de verdad: los archives nativos (categoría,
+        // etiqueta, home) también respetan POSTS_PER_PAGE — los
+        // controllers del tema ya lo hacen por constructor.
+        add_action('pre_get_posts', [$this, 'enforce_posts_per_page']);
+
         // Filtros de Timber
         add_filter('timber/context', [$this, 'add_to_context']);
     }
@@ -175,6 +188,22 @@ class ThemeSetup
             'primary_menu' => __('Menú Principal', 'rojas-stack'),
             'footer_menu'  => __('Menú Footer', 'rojas-stack'),
         ]);
+    }
+
+    /**
+     * Impone POSTS_PER_PAGE sobre la main query de WordPress: los
+     * archives nativos (categoría, etiqueta, home) leerían la option
+     * posts_per_page de la DB (default WP: 10), que el stack no
+     * controla. El admin queda excluido (sus listas siguen en su
+     * default) y solo se toca la main query — loops secundarios no.
+     */
+    public function enforce_posts_per_page(WP_Query $query): void
+    {
+        if (is_admin() || ! $query->is_main_query()) {
+            return;
+        }
+
+        $query->set('posts_per_page', $this->posts_per_page);
     }
 
     /**

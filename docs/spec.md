@@ -533,8 +533,30 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      coerción silenciosa), la eliminación de todo cast ciego a lo
      largo del código y los aliases de WP en tests con params
      tipados. Cero suppressions: cada sitio se resolvió con narrowing
-     real o `@var` local honesto. `app/` y `tests/` quedan limpios en
+     real     o `@var` local honesto. `app/` y `tests/` quedan limpios en
      el nivel máximo de PHPStan.
+  7. **Fresh-clone smoke test (post-reorganización):** clone limpio
+     a `/tmp` + DDEV con nombre de proyecto único, simulando "Use
+     this template". JS path desde cero: 12s (`bun install
+     --frozen-lockfile` + lint + build), Composer install: 47s.
+     El ejercicio destapó dos hallazgos reales, invisible desde el
+     proyecto principal: **(a)** `e2e/design-system.spec.js` leía
+     `.env` con `readFileSync` en módulo-scope y lanzaba `ENOENT`
+     en clones limpios (`.env` es gitignored, correcto) — fijado
+     con lectura condicional; el skip del spec de design system en
+     clones es ahora comportamiento legítimo (requiere
+     `WP_ENV=development`). **(b) Hallazgo de arquitectura:**
+     `POSTS_PER_PAGE` del env gobernaba los controllers del tema
+     (blog virtual, búsqueda, fragmento) pero los **archives
+     nativos** (categoría/etiqueta/home) leían la option de la DB
+     — dos fuentes de verdad: un install verdaderamente fresco
+     mostraba el default de WP (10) en archives. Fix: hook
+     `pre_get_posts` en `ThemeSetup` impone el valor del env sobre
+     la main query — la regla "una sola fuente de verdad para TODAS
+     las superficies" pasa de documentada a **enforzada**. Resultado
+     final en el clone: 13 e2e pasan, 1 skip legítimo, 0 fallos
+     (tras `bin/seed-demo-content.sh`, documentado como paso del
+     instalador para datos de paginación).
 
 ---
 
@@ -550,7 +572,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 ## 14. Criterios de éxito
 
-- [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos. *(verificado manualmente desde clone limpio en la pre-publish sweep; pendiente la mecánica de GitHub Template/Packagist)*
+- [x] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos. *(fresh-clone smoke test 2026-09-09: JS path 12s + Composer install 47s + batería completa verde; ver §12.1 entrada 7 — pendiente solo la mecánica de GitHub Template/Packagist)*
 - [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
 - [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (41 tests Pest + 14 e2e Playwright + PHPStan nivel 10 —máximo— sobre app/ y tests/ + Biome).
 - [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).

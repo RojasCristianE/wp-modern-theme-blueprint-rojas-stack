@@ -1,12 +1,17 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
 
 /*
  * Smoke test del catálogo de componentes (/__components).
  * Solo corre cuando el módulo design_system está activo (WP_ENV=development).
+ *
+ * .env es gitignored: en un clone fresco aún no existe (ddev start lo
+ * crea/configura). Se lee de forma defensiva — sin .env, el test se
+ * salta en vez de romper toda la suite.
  */
 
-const envFile = readFileSync(new URL('../.env', import.meta.url), 'utf8');
+const envPath = new URL('../.env', import.meta.url);
+const envFile = existsSync(envPath) ? readFileSync(envPath, 'utf8') : '';
 const wpEnv = envFile.match(/^WP_ENV=(.*)$/m)?.[1]?.trim();
 
 test.skip(wpEnv !== 'development', 'design_system requiere WP_ENV=development');
