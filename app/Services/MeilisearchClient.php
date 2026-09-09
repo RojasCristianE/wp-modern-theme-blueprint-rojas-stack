@@ -148,7 +148,11 @@ class MeilisearchClient implements SearchEngineInterface
 
         $body = json_decode(wp_remote_retrieve_body($response), true);
 
-        return is_array($body) ? $body : null;
+        // Meili responde PATCH /settings con {taskUid, ...}: validamos el
+        // shape en vez de fiarnos de un cast.
+        return is_array($body) && isset($body['taskUid']) && is_int($body['taskUid'])
+            ? ['taskUid' => $body['taskUid']]
+            : null;
     }
 
     /**

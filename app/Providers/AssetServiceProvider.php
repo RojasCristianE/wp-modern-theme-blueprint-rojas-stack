@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RojasStack\Providers;
 
 use function Kucrut\Vite\enqueue_asset;

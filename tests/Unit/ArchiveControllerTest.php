@@ -28,8 +28,11 @@ it('registra el endpoint AJAX para visitantes y usuarios logueados', function ()
     expect($hooks)->toHaveKeys([
         'wp_ajax_rs_archive_page',
         'wp_ajax_nopriv_rs_archive_page',
-    ])
-        ->and($hooks['wp_ajax_rs_archive_page'][1])->toBe('render_fragment');
+    ]);
+
+    $hook = $hooks['wp_ajax_rs_archive_page'] ?? null;
+    expect($hook)->toBeArray()
+        ->and(is_array($hook) ? $hook[1] : null)->toBe('render_fragment');
 });
 
 it('consulta por término y pagina, y renderiza el fragmento HTMX', function () {

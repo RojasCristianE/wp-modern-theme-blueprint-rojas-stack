@@ -1,14 +1,20 @@
+includes:
+	# Pest: registra los helpers test()/expect() para que tests/ sea analizable
+	- vendor/pestphp/pest-plugin-phpstan/extension.neon
+
 parameters:
-	# Subir progresivamente según madure el starter (ver docs/spec.md §9.1)
-	level: 6
+	# Nivel 7: declara tipos de retorno de métodos (L6 no los exigía).
+	# La progresión 6 -> 7 se cerró junto con strict_types global (spec §9.1).
+	level: 7
 	paths:
 		- app
-	# TODO: incluir tests/ cuando se agregue la extensión PHPStan de Pest
-	# (los helpers globales test()/expect() no son analizables sin stubs)
+		- tests
 	# Stubs: WordPress core + funciones globales de Carbon Fields
 	scanFiles:
 		- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
 		- vendor/htmlburger/carbon-fields/core/functions.php
+		# Patchwork (redefine de métodos en tests): expone Patchwork\redefine
+		- vendor/antecedent/patchwork/Patchwork.php
 	# Cache dentro del proyecto: el overlay de Docker (/tmp) vive en la
 	# partición raíz del host y puede quedarse sin espacio
 	tmpDir: .cache/phpstan

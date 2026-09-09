@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RojasStack\Providers;
 
 /**
@@ -40,6 +42,7 @@ class ExampleCptServiceProvider
      */
     public function register_post_type(): void
     {
+        /** @var non-empty-lowercase-string $slug */
         $slug     = (string) ($this->config['slug'] ?? 'podcast');
         $singular = (string) ($this->config['singular'] ?? 'Podcast');
         $plural   = (string) ($this->config['plural'] ?? 'Podcasts');

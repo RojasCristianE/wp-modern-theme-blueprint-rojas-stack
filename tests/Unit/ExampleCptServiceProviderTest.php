@@ -14,8 +14,11 @@ it('registra el hook init al pasar por register()', function () {
 
     (new ExampleCptServiceProvider())->register();
 
-    expect($hooks)->toHaveKey('init')
-        ->and($hooks['init'][1])->toBe('register_post_type');
+    expect($hooks)->toHaveKey('init');
+
+    $hook = $hooks['init'] ?? null;
+    expect($hook)->toBeArray()
+        ->and(is_array($hook) ? $hook[1] : null)->toBe('register_post_type');
 });
 
 it('registra el CPT con slug, labels y archive de features.php', function () {
@@ -56,7 +59,7 @@ it('ejecuta el flush de rewrites una sola vez', function () {
     when('get_option')->alias(function (string $option) use (&$optionsRead, &$flushes) {
         $optionsRead[] = $option;
 
-        return $flushes > 0; // segunda vez: ya fue flusheado
+        return (bool) $flushes; // segunda vez: ya fue flusheado
     });
     when('flush_rewrite_rules')->alias(function () use (&$flushes) {
         $flushes++;

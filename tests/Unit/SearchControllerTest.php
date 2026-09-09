@@ -50,8 +50,11 @@ it('registra el endpoint AJAX para visitantes y usuarios logueados', function ()
     expect($hooks)->toHaveKeys([
         'wp_ajax_rs_live_search',
         'wp_ajax_nopriv_rs_live_search',
-    ])
-        ->and($hooks['wp_ajax_rs_live_search'][1])->toBe('render_fragment');
+    ]);
+
+    $hook = $hooks['wp_ajax_rs_live_search'] ?? null;
+    expect($hook)->toBeArray()
+        ->and(is_array($hook) ? $hook[1] : null)->toBe('render_fragment');
 });
 
 it('no consulta la DB si el término está vacío', function () {
@@ -145,9 +148,9 @@ it('MeilisearchClient con credenciales consulta /health', function () {
 
     expect($client->is_available())->toBeTrue()
         ->and($captured[0])->toBe('http://meili.test:7700/health')
-        ->and($captured[1]['headers']['Authorization'])->toBe('Bearer secret-key')
-        ->and($captured[1]['headers']['Content-Type'])->toBe('application/json')
-        ->and($captured[1]['timeout'])->toBe(1.5);
+        ->and($captured[1]['headers']['Authorization'] ?? null)->toBe('Bearer secret-key')
+        ->and($captured[1]['headers']['Content-Type'] ?? null)->toBe('application/json')
+        ->and($captured[1]['timeout'] ?? null)->toBe(1.5);
 });
 
 it('MeilisearchClient::search parsea los hits del motor', function () {

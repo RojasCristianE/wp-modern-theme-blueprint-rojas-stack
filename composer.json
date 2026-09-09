@@ -23,6 +23,7 @@
         "deployer/deployer": "^8.0",
         "itsgoingd/clockwork": "^5.3",
         "pestphp/pest": "^5.1",
+        "pestphp/pest-plugin-phpstan": "^5.2",
         "php-stubs/wordpress-stubs": "^7.1",
         "phpstan/phpstan": "^2.2",
         "spatie/ignition": "^1.16"

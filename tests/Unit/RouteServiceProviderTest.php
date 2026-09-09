@@ -172,7 +172,7 @@ it('no matchea el patrón cuando falta el segmento variable', function () {
 
     $router->dispatch_routes();
 
-    expect(true)->toBeTrue();
+    expect(true)->toBe(true);
 });
 
 it('no toca nada si ninguna ruta coincide', function () {
@@ -184,5 +184,5 @@ it('no toca nada si ninguna ruta coincide', function () {
     // Sin match: no hay status, no hay exit — la función retorna normal.
     $router->dispatch_routes();
 
-    expect(true)->toBeTrue();
+    expect(true)->toBe(true);
 });

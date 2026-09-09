@@ -105,5 +105,5 @@ it('register() es un no-op seguro', function () {
     (new BlogController())->register();
 
     // register() no registra hooks todavía: no debe lanzar nada.
-    expect(true)->toBeTrue();
+    expect(true)->toBe(true);
 });

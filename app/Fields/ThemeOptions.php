@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RojasStack\Fields;
 
 use Carbon_Fields\Container;

@@ -26,8 +26,8 @@ if (! class_exists('WP_Error')) {
     class WP_Error
     {
         public function __construct(
-            private readonly string $code = '',
-            private readonly string $message = '',
+            public readonly string $code = '',
+            public readonly string $message = '',
         ) {
         }
 

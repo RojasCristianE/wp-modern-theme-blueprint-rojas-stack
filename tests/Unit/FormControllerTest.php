@@ -49,9 +49,14 @@ it('deriva los hooks AJAX de la clave del formulario', function () {
         'wp_ajax_nopriv_submit_contact',
         'wp_ajax_get_form_contact',
         'wp_ajax_nopriv_get_form_contact',
-    ])
-        ->and($hooks['wp_ajax_submit_contact'][1])->toBe('handle_submit')
-        ->and($hooks['wp_ajax_get_form_contact'][1])->toBe('render_fragment');
+    ]);
+    $submit = $hooks['wp_ajax_submit_contact'] ?? null;
+    $render = $hooks['wp_ajax_get_form_contact'] ?? null;
+
+    expect($submit)->toBeArray()
+        ->and(is_array($submit) ? $submit[1] : null)->toBe('handle_submit')
+        ->and($render)->toBeArray()
+        ->and(is_array($render) ? $render[1] : null)->toBe('render_fragment');
 });
 
 it('renderiza la página configurada con el título del formulario', function () {

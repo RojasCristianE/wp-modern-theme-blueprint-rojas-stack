@@ -1,16 +1,16 @@
-# Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-08)
+# Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-09)
 
 ## Corpus Check
-- 220 files · ~149,271 words
+- 220 files · ~149,982 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2921 nodes · 3059 edges · 220 communities (181 shown, 27 thin omitted)
+- 2922 nodes · 3060 edges · 220 communities (181 shown, 27 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8b5e9efa`
+- Built from commit: `71238100`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -256,7 +256,7 @@
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
-Nodes (37): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+29 more)
+Nodes (38): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+30 more)
 
 ### Community 1 - "Componentes Twig y tokens de diseño"
 Cohesion: 0.40
@@ -979,8 +979,8 @@ Cohesion: 0.40
 Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4.4 Lectura (búsqueda en vivo), 4. Flujo de datos
 
 ## Knowledge Gaps
-- **1959 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1954 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2114 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1960 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1955 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2115 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -993,9 +993,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Angular Testing with Playwright` connect `Angular Testing with Playwright` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1959 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1960 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
 - **Should `Especificación del Rojas Starter Theme` be split into smaller, more focused modules?**

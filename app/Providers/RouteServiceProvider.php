@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RojasStack\Providers;
 
 use Closure;
@@ -55,17 +57,33 @@ class RouteServiceProvider
      */
     public function dispatch_routes(): void
     {
-        $current_path = strtok($_SERVER['REQUEST_URI'], '?');
-        $current_path = rtrim($current_path, '/');
+        $uri = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+
+        // strtok devuelve false solo con input vacío (URI ausente en CLI):
+        // caemos a '/' y la normalización de Home de abajo cubre el resto.
+        $current_path = rtrim($uri !== false ? $uri : '/', '/');
 
         // Normalizamos el path vacío para la Home si fuera necesario
-        if (empty($current_path)) $current_path = '/';
+        if ($current_path === '') $current_path = '/';
 
         foreach ($this->routes as $path => $callback) {
             $params = $this->match_route($path, $current_path);
             if ($params === null) {
                 continue;
             }
+
+            // Los placeholders llegan como strings (capturas de regex), pero
+            // los handlers los declaran con su tipo natural (int $paged).
+            // Con strict_types, la coerción silenciosa ya no ocurre: el
+            // router convierte en el límite — segmento numérico => int/float.
+            $params = array_map(
+                static fn (string $value): int|float|string => match (true) {
+                    preg_match('/^-?\d+$/', $value) === 1 => (int) $value,
+                    is_numeric($value) => (float) $value,
+                    default => $value,
+                },
+                $params
+            );
 
             // Ruta encontrada: WP marcó 404 (no existe en la DB) porque
             // interceptamos después de la resolución de la query. Servimos
@@ -79,7 +97,10 @@ class RouteServiceProvider
                 $this->terminate(); // Detenemos WordPress después de renderizar nuestra ruta virtual
             }
 
-            // Par [ControllerClass|instancia, method]
+            // Par [ControllerClass|instancia, method]. El stack solo
+            // registra callables en esta forma (los Closures se consumieron
+            // arriba); el @var local lo declara para el análisis estático.
+            /** @var array{0: class-string|object, 1: string} $callback */
             $controller = is_object($callback[0]) ? $callback[0] : new $callback[0]();
             $method = $callback[1];
 
@@ -93,6 +114,8 @@ class RouteServiceProvider
      *
      * @return array<string, string>|null null si no coincide; los
      *         segmentos capturados por nombre (p.ej. {paged} => '2').
+     *         El dispatcher convierte los numéricos a int|float antes de
+     *         invocar (ver dispatch_routes).
      */
     private function match_route(string $path, string $current_path): ?array
     {

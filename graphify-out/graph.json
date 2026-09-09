@@ -30,7 +30,7 @@
       "file_type": "code",
       "norm_label": "pagefields",
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L13"
+      "source_location": "L15"
     },
     {
       "id": "app_fields_themeoptions_themeoptions",
@@ -43,7 +43,7 @@
       "file_type": "code",
       "norm_label": "themeoptions",
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L13"
+      "source_location": "L15"
     },
     {
       "id": "app_controllers_blogcontroller_blogcontroller",
@@ -56,7 +56,7 @@
       "file_type": "code",
       "norm_label": "blogcontroller",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L12"
+      "source_location": "L14"
     },
     {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller",
@@ -69,7 +69,7 @@
       "file_type": "code",
       "norm_label": "designsystemcontroller",
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L13"
+      "source_location": "L15"
     },
     {
       "id": "tests_pest_wp_error",
@@ -95,7 +95,7 @@
       "file_type": "code",
       "norm_label": "formcontroller",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L25"
+      "source_location": "L27"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider",
@@ -108,7 +108,7 @@
       "file_type": "code",
       "norm_label": "assetserviceprovider",
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "app_setup_themesetup_themesetup",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "themesetup",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L28"
+      "source_location": "L30"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider",
@@ -134,7 +134,7 @@
       "file_type": "code",
       "norm_label": "menuserviceprovider",
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L11"
+      "source_location": "L13"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider",
@@ -147,7 +147,7 @@
       "file_type": "code",
       "norm_label": "seoserviceprovider",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L14"
+      "source_location": "L16"
     },
     {
       "id": "app_controllers_archivecontroller_archivecontroller",
@@ -160,7 +160,7 @@
       "file_type": "code",
       "norm_label": "archivecontroller",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "app_contracts_searchengineinterface_searchengineinterface",
@@ -199,7 +199,7 @@
       "file_type": "code",
       "norm_label": "examplecptserviceprovider",
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "app_services_meilisearchindexer_meilisearchindexer",
@@ -238,7 +238,7 @@
       "file_type": "code",
       "norm_label": "routeserviceprovider",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L21"
+      "source_location": "L23"
     },
     {
       "id": "tests_unit_routeserviceprovidertest_wp_query",
@@ -263,7 +263,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "app_fields_pagefields_pagefields_register_page_fields",
@@ -275,7 +275,7 @@
       "file_type": "code",
       "norm_label": ".register_page_fields()",
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "app_fields_themeoptions_themeoptions_construct",
@@ -287,7 +287,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "app_fields_themeoptions_themeoptions_register_options",
@@ -299,7 +299,7 @@
       "file_type": "code",
       "norm_label": ".register_options()",
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "agents_skills_wp_block_development_scripts_list_blocks_existsdir",
@@ -515,7 +515,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L24"
+      "source_location": "L26"
     },
     {
       "id": "app_controllers_blogcontroller_blogcontroller_register",
@@ -527,7 +527,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L29"
+      "source_location": "L31"
     },
     {
       "id": "app_controllers_blogcontroller_blogcontroller_render_page",
@@ -539,7 +539,7 @@
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L40"
+      "source_location": "L42"
     },
     {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller_register",
@@ -551,7 +551,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "app_controllers_designsystemcontroller_designsystemcontroller_render_page",
@@ -563,7 +563,7 @@
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L24"
+      "source_location": "L26"
     },
     {
       "id": "tests_pest_wp_error_construct",
@@ -659,7 +659,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L43"
+      "source_location": "L45"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_handle_submit",
@@ -671,7 +671,7 @@
       "file_type": "code",
       "norm_label": ".handle_submit()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L80"
+      "source_location": "L82"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_register",
@@ -683,7 +683,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L49"
+      "source_location": "L51"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_render_fragment",
@@ -695,7 +695,7 @@
       "file_type": "code",
       "norm_label": ".render_fragment()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L74"
+      "source_location": "L76"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_render_page",
@@ -707,7 +707,7 @@
       "file_type": "code",
       "norm_label": ".render_page()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L63"
+      "source_location": "L65"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_resolve_recipient",
@@ -719,7 +719,7 @@
       "file_type": "code",
       "norm_label": ".resolve_recipient()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L138"
+      "source_location": "L140"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_resolve_subject",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": ".resolve_subject()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L154"
+      "source_location": "L156"
     },
     {
       "id": "app_controllers_formcontroller_formcontroller_send",
@@ -743,7 +743,7 @@
       "file_type": "code",
       "norm_label": ".send()",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L122"
+      "source_location": "L124"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
@@ -755,7 +755,7 @@
       "file_type": "code",
       "norm_label": ".enqueue_assets()",
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L33"
+      "source_location": "L35"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider_register",
@@ -767,7 +767,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L25"
+      "source_location": "L27"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_theme_supports",
@@ -779,7 +779,7 @@
       "file_type": "code",
       "norm_label": ".add_theme_supports()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L145"
+      "source_location": "L147"
     },
     {
       "id": "app_setup_themesetup_themesetup_add_to_context",
@@ -791,7 +791,7 @@
       "file_type": "code",
       "norm_label": ".add_to_context()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L171"
+      "source_location": "L173"
     },
     {
       "id": "app_setup_themesetup_themesetup_construct",
@@ -803,7 +803,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L30"
+      "source_location": "L32"
     },
     {
       "id": "app_setup_themesetup_themesetup_enabled",
@@ -815,7 +815,7 @@
       "file_type": "code",
       "norm_label": ".enabled()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L107"
+      "source_location": "L109"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_core_fields",
@@ -827,7 +827,7 @@
       "file_type": "code",
       "norm_label": ".register_core_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L117"
+      "source_location": "L119"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_hooks",
@@ -839,7 +839,7 @@
       "file_type": "code",
       "norm_label": ".register_hooks()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L133"
+      "source_location": "L135"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_menus",
@@ -851,7 +851,7 @@
       "file_type": "code",
       "norm_label": ".register_menus()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L156"
+      "source_location": "L158"
     },
     {
       "id": "app_setup_themesetup_themesetup_register_pages_fields",
@@ -863,7 +863,7 @@
       "file_type": "code",
       "norm_label": ".register_pages_fields()",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L125"
+      "source_location": "L127"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_get_primary_menu_definition",
@@ -875,7 +875,7 @@
       "file_type": "code",
       "norm_label": ".get_primary_menu_definition()",
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_inject_menu_to_context",
@@ -887,7 +887,7 @@
       "file_type": "code",
       "norm_label": ".inject_menu_to_context()",
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L37"
+      "source_location": "L39"
     },
     {
       "id": "app_providers_menuserviceprovider_menuserviceprovider_register",
@@ -899,7 +899,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L25"
+      "source_location": "L27"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_construct",
@@ -911,7 +911,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L26"
+      "source_location": "L28"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_register",
@@ -923,7 +923,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L31"
+      "source_location": "L33"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_render_article_schema",
@@ -935,7 +935,7 @@
       "file_type": "code",
       "norm_label": ".render_article_schema()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L76"
+      "source_location": "L78"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_render_organization_schema",
@@ -947,7 +947,7 @@
       "file_type": "code",
       "norm_label": ".render_organization_schema()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L52"
+      "source_location": "L54"
     },
     {
       "id": "app_providers_seoserviceprovider_seoserviceprovider_render_schemas",
@@ -959,7 +959,7 @@
       "file_type": "code",
       "norm_label": ".render_schemas()",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L36"
+      "source_location": "L38"
     },
     {
       "id": "agents_skills_wp_wpcli_and_ops_scripts_wpcli_inspect_main",
@@ -1019,7 +1019,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L27"
+      "source_location": "L29"
     },
     {
       "id": "app_controllers_archivecontroller_archivecontroller_register",
@@ -1031,7 +1031,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L32"
+      "source_location": "L34"
     },
     {
       "id": "app_controllers_archivecontroller_archivecontroller_render_fragment",
@@ -1043,7 +1043,7 @@
       "file_type": "code",
       "norm_label": ".render_fragment()",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L47"
+      "source_location": "L49"
     },
     {
       "id": "tests_unit_searchcontrollertest_delete",
@@ -1055,7 +1055,7 @@
       "file_type": "code",
       "norm_label": "delete()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L190"
+      "source_location": "L193"
     },
     {
       "id": "tests_unit_searchcontrollertest_index",
@@ -1067,7 +1067,7 @@
       "file_type": "code",
       "norm_label": "index()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L185"
+      "source_location": "L188"
     },
     {
       "id": "tests_unit_searchcontrollertest_is_available",
@@ -1079,7 +1079,7 @@
       "file_type": "code",
       "norm_label": "is_available()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L195"
+      "source_location": "L198"
     },
     {
       "id": "tests_unit_searchcontrollertest_search",
@@ -1091,7 +1091,7 @@
       "file_type": "code",
       "norm_label": "search()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L180"
+      "source_location": "L183"
     },
     {
       "id": "app_contracts_searchengineinterface_searchengineinterface_delete",
@@ -1199,7 +1199,7 @@
       "file_type": "code",
       "norm_label": ".__construct()",
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L28"
+      "source_location": "L30"
     },
     {
       "id": "app_providers_examplecptserviceprovider_examplecptserviceprovider_register",
@@ -1211,7 +1211,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L33"
+      "source_location": "L35"
     },
     {
       "id": "app_providers_examplecptserviceprovider_examplecptserviceprovider_register_post_type",
@@ -1223,7 +1223,7 @@
       "file_type": "code",
       "norm_label": ".register_post_type()",
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L41"
+      "source_location": "L43"
     },
     {
       "id": "app_services_meilisearchindexer_meilisearchindexer_document",
@@ -1367,7 +1367,7 @@
       "file_type": "code",
       "norm_label": ".request()",
       "source_file": "app/Services/MeilisearchClient.php",
-      "source_location": "L161"
+      "source_location": "L165"
     },
     {
       "id": "app_services_meilisearchclient_meilisearchclient_search",
@@ -1403,7 +1403,7 @@
       "file_type": "code",
       "norm_label": ".add_route()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L43"
+      "source_location": "L45"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
@@ -1415,7 +1415,7 @@
       "file_type": "code",
       "norm_label": ".dispatch_routes()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L56"
+      "source_location": "L58"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_match_route",
@@ -1427,7 +1427,7 @@
       "file_type": "code",
       "norm_label": ".match_route()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L97"
+      "source_location": "L120"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_register",
@@ -1439,7 +1439,7 @@
       "file_type": "code",
       "norm_label": ".register()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L48"
+      "source_location": "L50"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
@@ -1451,7 +1451,7 @@
       "file_type": "code",
       "norm_label": ".serve_as_found()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L124"
+      "source_location": "L147"
     },
     {
       "id": "app_providers_routeserviceprovider_routeserviceprovider_terminate",
@@ -1463,7 +1463,7 @@
       "file_type": "code",
       "norm_label": ".terminate()",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L139"
+      "source_location": "L162"
     },
     {
       "id": "tests_unit_routeserviceprovidertest_render_page",
@@ -1701,7 +1701,7 @@
       "file_type": "code",
       "norm_label": "composer/installers",
       "source_file": "composer.json",
-      "source_location": "L45"
+      "source_location": "L46"
     },
     {
       "id": "composer_allow_plugins_pestphp_pest_plugin",
@@ -1712,7 +1712,7 @@
       "file_type": "code",
       "norm_label": "pestphp/pest-plugin",
       "source_file": "composer.json",
-      "source_location": "L46"
+      "source_location": "L47"
     },
     {
       "id": "composer_authors",
@@ -1734,7 +1734,7 @@
       "file_type": "code",
       "norm_label": "autoload",
       "source_file": "composer.json",
-      "source_location": "L30"
+      "source_location": "L31"
     },
     {
       "id": "composer_autoload_files",
@@ -1745,7 +1745,7 @@
       "file_type": "code",
       "norm_label": "files",
       "source_file": "composer.json",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "composer_autoload_psr_4",
@@ -1756,7 +1756,7 @@
       "file_type": "code",
       "norm_label": "psr-4",
       "source_file": "composer.json",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "composer_config",
@@ -1767,7 +1767,7 @@
       "file_type": "code",
       "norm_label": "config",
       "source_file": "composer.json",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "composer_config_allow_plugins",
@@ -1778,7 +1778,7 @@
       "file_type": "code",
       "norm_label": "allow-plugins",
       "source_file": "composer.json",
-      "source_location": "L44"
+      "source_location": "L45"
     },
     {
       "id": "composer_config_optimize_autoloader",
@@ -1789,7 +1789,7 @@
       "file_type": "code",
       "norm_label": "optimize-autoloader",
       "source_file": "composer.json",
-      "source_location": "L48"
+      "source_location": "L49"
     },
     {
       "id": "composer_config_sort_packages",
@@ -1800,7 +1800,7 @@
       "file_type": "code",
       "norm_label": "sort-packages",
       "source_file": "composer.json",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "composer_description",
@@ -1833,7 +1833,7 @@
       "file_type": "code",
       "norm_label": "minimum-stability",
       "source_file": "composer.json",
-      "source_location": "L51"
+      "source_location": "L52"
     },
     {
       "id": "composer_name",
@@ -1855,7 +1855,7 @@
       "file_type": "code",
       "norm_label": "prefer-stable",
       "source_file": "composer.json",
-      "source_location": "L52"
+      "source_location": "L53"
     },
     {
       "id": "composer_psr_4_rojasstack",
@@ -1866,7 +1866,7 @@
       "file_type": "code",
       "norm_label": "rojasstack\\\\",
       "source_file": "composer.json",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "composer_require",
@@ -1935,6 +1935,17 @@
       "source_location": "L25"
     },
     {
+      "id": "composer_require_dev_pestphp_pest_plugin_phpstan",
+      "label": "pestphp/pest-plugin-phpstan",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "pestphp/pest-plugin-phpstan",
+      "source_file": "composer.json",
+      "source_location": "L26"
+    },
+    {
       "id": "composer_require_dev_php_stubs_wordpress_stubs",
       "label": "php-stubs/wordpress-stubs",
       "_origin": "ast",
@@ -1943,7 +1954,7 @@
       "file_type": "code",
       "norm_label": "php-stubs/wordpress-stubs",
       "source_file": "composer.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "composer_require_dev_phpstan_phpstan",
@@ -1954,7 +1965,7 @@
       "file_type": "code",
       "norm_label": "phpstan/phpstan",
       "source_file": "composer.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "composer_require_dev_spatie_ignition",
@@ -1965,7 +1976,7 @@
       "file_type": "code",
       "norm_label": "spatie/ignition",
       "source_file": "composer.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "composer_require_htmlburger_carbon_fields",
@@ -2053,7 +2064,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "composer.json",
-      "source_location": "L38"
+      "source_location": "L39"
     },
     {
       "id": "composer_scripts_analyze",
@@ -2064,7 +2075,7 @@
       "file_type": "code",
       "norm_label": "analyze",
       "source_file": "composer.json",
-      "source_location": "L39"
+      "source_location": "L40"
     },
     {
       "id": "composer_scripts_lint",
@@ -2075,7 +2086,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "composer.json",
-      "source_location": "L40"
+      "source_location": "L41"
     },
     {
       "id": "composer_scripts_test",
@@ -2086,7 +2097,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "composer.json",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "composer_type",
@@ -16680,7 +16691,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "docs/spec.md",
-      "source_location": "L492"
+      "source_location": "L512"
     },
     {
       "id": "docs_spec_14_criterios_de_\u00e9xito",
@@ -16692,7 +16703,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "docs/spec.md",
-      "source_location": "L502"
+      "source_location": "L522"
     },
     {
       "id": "docs_spec_1_1_prop\u00f3sito",
@@ -34784,7 +34795,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos de desarrollo & despliegue**",
       "source_file": "AGENTS.md",
-      "source_location": "L80"
+      "source_location": "L89"
     },
     {
       "id": "agents_estructura_del_tema_app_y_resources",
@@ -34820,7 +34831,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L92"
+      "source_location": "L101"
     },
     {
       "id": "agents_reglas_de_integraci\u00f3n_front_back_safe_rules",
@@ -34832,7 +34843,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd1d reglas de integracion front-back (safe rules)**",
       "source_file": "AGENTS.md",
-      "source_location": "L72"
+      "source_location": "L81"
     },
     {
       "id": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
@@ -35536,7 +35547,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L101",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -35548,7 +35559,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L131",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -35560,7 +35571,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L131",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -35584,7 +35595,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L49",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -35596,7 +35607,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L65",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -35608,7 +35619,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L74",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -35620,7 +35631,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L79",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -35632,7 +35643,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -35644,7 +35655,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -35817,19 +35828,19 @@
     },
     {
       "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_providers_assetserviceprovider_assetserviceprovider",
+      "target": "app_providers_examplecptserviceprovider_examplecptserviceprovider",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L35",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
       "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_assetserviceprovider_assetserviceprovider",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35841,6 +35852,18 @@
     },
     {
       "source": "app_setup_themesetup_themesetup_construct",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup_themesetup_construct",
       "target": "app_providers_menuserviceprovider_menuserviceprovider",
       "relation": "calls",
       "_origin": "ast",
@@ -35848,7 +35871,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -35860,7 +35883,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L49",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -35872,7 +35895,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L50",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -35884,7 +35907,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L53",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -35896,7 +35919,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L58",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -35908,7 +35931,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L60",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -35920,7 +35943,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L61",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -35932,7 +35955,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L65",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -35944,7 +35967,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L73",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -35956,7 +35979,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L80",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -35968,19 +35991,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L90",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup_themesetup_construct",
-      "target": "app_providers_examplecptserviceprovider_examplecptserviceprovider",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L98",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -35992,7 +36003,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L119",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
@@ -36004,7 +36015,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L127",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -36040,7 +36051,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36052,7 +36063,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36064,7 +36075,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36076,7 +36087,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36088,7 +36099,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -36124,7 +36135,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36136,7 +36147,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -36148,7 +36159,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36160,7 +36171,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -36172,7 +36183,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36184,7 +36195,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -36196,7 +36207,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -36208,7 +36219,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -36225,7 +36236,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_fields_pagefields_pagefields",
+      "target": "app_controllers_formcontroller_formcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36237,7 +36248,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_fields_themeoptions_themeoptions",
+      "target": "app_controllers_searchcontroller_searchcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36249,7 +36260,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_assetserviceprovider_assetserviceprovider",
+      "target": "app_fields_pagefields_pagefields",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36261,7 +36272,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_examplecptserviceprovider_examplecptserviceprovider",
+      "target": "app_fields_themeoptions_themeoptions",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36273,7 +36284,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_menuserviceprovider_menuserviceprovider",
+      "target": "app_providers_assetserviceprovider_assetserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36285,7 +36296,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_examplecptserviceprovider_examplecptserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36297,7 +36308,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_providers_seoserviceprovider_seoserviceprovider",
+      "target": "app_providers_menuserviceprovider_menuserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36309,7 +36320,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_services_meilisearchclient_meilisearchclient",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36321,7 +36332,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_services_meilisearchindexer_meilisearchindexer",
+      "target": "app_providers_seoserviceprovider_seoserviceprovider",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36333,31 +36344,31 @@
     },
     {
       "source": "app_setup_themesetup",
+      "target": "app_services_meilisearchclient_meilisearchclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
+      "target": "app_services_meilisearchindexer_meilisearchindexer",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Setup/ThemeSetup.php",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setup_themesetup",
       "target": "app_controllers_archivecontroller_archivecontroller",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup",
-      "target": "app_controllers_blogcontroller_blogcontroller",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "app_setup_themesetup",
-      "target": "app_controllers_designsystemcontroller_designsystemcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36369,7 +36380,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_controllers_formcontroller_formcontroller",
+      "target": "app_controllers_blogcontroller_blogcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36381,7 +36392,7 @@
     },
     {
       "source": "app_setup_themesetup",
-      "target": "app_controllers_searchcontroller_searchcontroller",
+      "target": "app_controllers_designsystemcontroller_designsystemcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36908,6 +36919,17 @@
     },
     {
       "source": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
+      "target": "agents_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
       "target": "agents_stack_tecnol\u00f3gico_the_dream_team",
       "relation": "contains",
       "_origin": "ast",
@@ -36958,7 +36980,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L72",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -36969,18 +36991,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L80",
-      "weight": 1.0
-    },
-    {
-      "source": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
-      "target": "agents_graphify",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": "L92",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -63479,7 +63490,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -63490,7 +63501,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -63501,7 +63512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -63512,7 +63523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -63534,7 +63545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -63545,7 +63556,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -63556,7 +63567,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -63567,7 +63578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -63578,7 +63589,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -63589,7 +63600,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -63600,7 +63611,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -63633,7 +63644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -63886,7 +63897,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -63897,7 +63908,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -63919,7 +63930,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -63941,7 +63952,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -63952,7 +63963,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -63974,7 +63985,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -63985,7 +63996,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -63996,7 +64007,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -64007,7 +64018,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -64018,7 +64029,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -64029,7 +64040,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -64040,7 +64051,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -64051,7 +64062,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -64177,7 +64188,7 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_php_stubs_wordpress_stubs",
+      "target": "composer_require_dev_pestphp_pest_plugin_phpstan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -64188,7 +64199,7 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_phpstan_phpstan",
+      "target": "composer_require_dev_php_stubs_wordpress_stubs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -64199,13 +64210,24 @@
     },
     {
       "source": "composer_require_dev",
-      "target": "composer_require_dev_spatie_ignition",
+      "target": "composer_require_dev_phpstan_phpstan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require_dev",
+      "target": "composer_require_dev_spatie_ignition",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -64216,7 +64238,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -64227,7 +64249,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -64238,7 +64260,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -64997,7 +65019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L492",
+      "source_location": "L512",
       "weight": 1.0
     },
     {
@@ -65008,7 +65030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L502",
+      "source_location": "L522",
       "weight": 1.0
     },
     {
@@ -65536,7 +65558,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L261",
+      "source_location": "L264",
       "weight": 1.0
     },
     {
@@ -65547,7 +65569,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L266",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -65558,7 +65580,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L271",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
@@ -65569,7 +65591,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L276",
+      "source_location": "L279",
       "weight": 1.0
     },
     {
@@ -65646,7 +65668,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -65657,7 +65679,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L32",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -65668,7 +65690,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/ArchiveController.php",
-      "source_location": "L47",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -65679,7 +65701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -65690,7 +65712,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L29",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -65701,7 +65723,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/BlogController.php",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -65712,7 +65734,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -65723,7 +65745,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/DesignSystemController.php",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -65734,7 +65756,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L122",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -65745,7 +65767,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L138",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -65756,7 +65778,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L154",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -65767,7 +65789,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -65778,7 +65800,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L49",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -65789,7 +65811,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L63",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -65800,7 +65822,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L74",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -65811,7 +65833,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Controllers/FormController.php",
-      "source_location": "L80",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -65866,7 +65888,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -65877,7 +65899,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Fields/PageFields.php",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -65888,7 +65910,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -65899,7 +65921,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Fields/ThemeOptions.php",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -65910,7 +65932,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -65921,7 +65943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/AssetServiceProvider.php",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -65932,7 +65954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -65943,7 +65965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -65954,7 +65976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/ExampleCptServiceProvider.php",
-      "source_location": "L41",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -65965,7 +65987,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -65976,7 +65998,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -65987,62 +66009,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/MenuServiceProvider.php",
-      "source_location": "L37",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_routeserviceprovider_routeserviceprovider",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L124",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_routeserviceprovider_routeserviceprovider",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider_terminate",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L139",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_routeserviceprovider_routeserviceprovider",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider_add_route",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L43",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_routeserviceprovider_routeserviceprovider",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider_register",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "app_providers_routeserviceprovider_routeserviceprovider",
-      "target": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L56",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -66053,7 +66020,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/RouteServiceProvider.php",
-      "source_location": "L97",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_serve_as_found",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_terminate",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_add_route",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_register",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_routeserviceprovider_routeserviceprovider",
+      "target": "app_providers_routeserviceprovider_routeserviceprovider_dispatch_routes",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Providers/RouteServiceProvider.php",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -66064,7 +66086,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -66075,7 +66097,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -66086,7 +66108,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L36",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -66097,7 +66119,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L52",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -66108,7 +66130,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Providers/SeoServiceProvider.php",
-      "source_location": "L76",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -66130,7 +66152,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Services/MeilisearchClient.php",
-      "source_location": "L161",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -66262,7 +66284,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L107",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -66273,7 +66295,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -66284,7 +66306,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L125",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -66295,7 +66317,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L133",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -66306,7 +66328,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L145",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -66317,7 +66339,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L156",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -66328,7 +66350,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L171",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -66339,7 +66361,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Setup/ThemeSetup.php",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -68767,5 +68789,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "8b5e9efa88f4593db6caa88aa64b0ce195bfa53e"
+  "built_at_commit": "71238100fa51ebd9a8190bcc57b0427415ab5e7f"
 }

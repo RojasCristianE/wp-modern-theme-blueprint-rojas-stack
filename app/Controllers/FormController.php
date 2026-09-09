@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RojasStack\Controllers;
 
 use Rakit\Validation\Validator;

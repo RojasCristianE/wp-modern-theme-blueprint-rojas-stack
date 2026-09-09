@@ -63,8 +63,11 @@ it('registra el hook wp_enqueue_scripts', function () {
 
     (new AssetServiceProvider())->register();
 
-    expect($hooks)->toHaveKey('wp_enqueue_scripts')
-        ->and($hooks['wp_enqueue_scripts'][1])->toBe('enqueue_assets');
+    expect($hooks)->toHaveKey('wp_enqueue_scripts');
+
+    $hook = $hooks['wp_enqueue_scripts'] ?? null;
+    expect($hook)->toBeArray()
+        ->and(is_array($hook) ? $hook[1] : null)->toBe('enqueue_assets');
 });
 
 it('carga el bundle de producción desde dist/manifest.json con su CSS', function () {
