@@ -198,6 +198,15 @@ de la jerarquía, no la del fetch a admin-ajax.
 
 `components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda (Alpine abre/cierra, HTMX consulta `admin-ajax?action=rs_live_search` y hace `hx-swap` de `partials/search-results.twig` en `#search-results`; mientras el fetch vuela, un skeleton de filas gemelas de los resultados reales reemplaza al placeholder en flujo — CSS puro vía la clase `htmx-request` que HTMX añade al indicador, sin Alpine ni overlays). `partials/archive-grid.twig` es el fragmento equivalente de archives: HTMX consulta `admin-ajax?action=rs_archive_page` y swappea grid+paginación dentro del scope Alpine `archiveView` (skeleton de carga, scroll y flash). `partials/archive-shell.twig` envuelve al grid SIN swappearse: lleva el scope `x-data="archiveView"` y mientras el fetch vuela el skeleton de tarjetas `.rs-skeleton` (shimmer con tokens del tema) REEMPLAZA al grid real en el flujo del documento — `x-show` mutuamente excluyentes, sin `position:absolute`: el skeleton nunca tapa paginación ni footer, y como replica el shape del card real (sin placeholder de imagen, como el card) la transición es visualmente estable. Su prop `cards` (default 6 = POSTS_PER_PAGE) define cuántas tarjetas skeleton renderizar. No son componentes de propósito general — se incluyen desde `base.twig`.
 
+### daisyUI 5 (2026-09-09)
+
+Los 4 componentes base (button, card, input, alert) migraron sus **internals a clases daisyUI** (`btn`, `card/card-body`, `input`/`textarea` + `input-error`, `alert` + `alert-soft` + colores por rol): **la API Twig (props, embed, catálogo) no cambió** — ningún caller requirió ajustes.
+
+- **Por qué daisyUI:** componentes 100% CSS (cero JS — HTMX y Alpine siguen siendo los únicos runtimes de comportamiento), plugin nativo de Tailwind v4 (`@plugin "daisyui"`), y generación on-demand: solo las clases presentes en las vistas llegan al bundle.
+- **Theming:** sin temas built-in (`themes: false`). Los temas custom `rojas` (default) y `rojas-dark` (`prefersdark: true` → media query, sin toggle) mapean la MISMA paleta que los tokens `--rs-*` — los roles (`primary`, `base-100`, `error`...) toman los valores del §8.1. Si cambias un color, cámbialo en ambos bloques (refactor futuro: derivar `--rs-*` de los vars daisy).
+- **Nuevos componentes:** para UI nueva prefiere clases daisyUI del catálogo (~60: dropdown, modal, tabs, toast, tooltip, drawer, rating...) antes que inventar CSS custom; envuélvelas en un componente Twig con props cuando se reutilice.
+- **Ronda 1 descartados:** Flowbite (runtime JS propio + pisaba el theming), shadcn/Chakra (React-only), HeadlessUI (React/Vue), Pines (snippets sueltos, sin sistema de theming).
+
 ## Extender el catálogo
 
 1. Crear `resources/views/components/mi-componente.twig` con docblock de parámetros.

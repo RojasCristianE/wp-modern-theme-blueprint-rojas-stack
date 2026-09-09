@@ -1,5 +1,5 @@
 {#
-  Botón base del Rojas Stack (spec §8.3).
+  Botón base del Rojas Stack (spec §8.3). Internals: daisyUI (CSS puro).
 
   Parámetros:
   - label:    Texto del botón (usar embed con block content para contenido rico).
@@ -7,20 +7,21 @@
   - href:     Si se define renderiza <a>; si no, <button>.
   - type:     Tipo del <button>. Default: 'button'.
   - full:     true → ancho completo (para formularios).
-  - disabled: true → opacidad + pointer-events none (+ atributo disabled).
+  - disabled: true → estado deshabilitado (attr disabled en <button>,
+              aria-disabled + btn-disabled en <a>).
   - classes:  Clases extra para personalización puntual.
 #}
 {% set variant_classes = {
-    'primary': 'text-white bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-200',
-    'secondary': 'text-ink bg-surface border border-line hover:bg-page shadow-sm',
-    'ghost': 'text-ink-muted hover:text-brand-600 hover:bg-brand-600/10',
+    'primary': 'btn-primary shadow-lg shadow-brand-200',
+    'secondary': 'btn-outline',
+    'ghost': 'btn-ghost',
 } %}
-{% set base_classes = 'inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all active:scale-95 outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-page' %}
-{% set size_classes = full ? 'w-full px-8 py-4 text-base' : 'px-5 py-2.5 text-sm' %}
-{% set all_classes = base_classes ~ ' ' ~ size_classes ~ ' ' ~ (variant_classes[variant ?? 'primary'] ?? variant_classes.primary) ~ ' ' ~ (disabled ? 'opacity-50 pointer-events-none' : '') ~ ' ' ~ (classes ?? '') %}
+{% set base_classes = 'btn rounded-full font-semibold' %}
+{% set size_classes = full ? 'btn-lg' : '' %}
+{% set all_classes = base_classes ~ ' ' ~ size_classes ~ ' ' ~ (variant_classes[variant ?? 'primary'] ?? variant_classes.primary) ~ ' ' ~ (disabled ? 'btn-disabled' : '') ~ ' ' ~ (classes ?? '') %}
 
 {% if href %}
-    <a href="{{ href }}" class="{{ all_classes }}">{{ label }}</a>
+    <a href="{{ href }}" class="{{ all_classes }}" {{ disabled ? 'aria-disabled="true"' }}>{{ label }}</a>
 {% else %}
     <button type="{{ type ?? 'button' }}" class="{{ all_classes }}" {{ disabled ? 'disabled' }}>{{ label }}</button>
 {% endif %}

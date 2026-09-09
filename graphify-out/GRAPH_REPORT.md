@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-09)
 
 ## Corpus Check
-- 220 files · ~151,669 words
+- 220 files · ~152,146 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2927 nodes · 3088 edges · 218 communities (183 shown, 25 thin omitted)
+- 2930 nodes · 3091 edges · 219 communities (183 shown, 25 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1b27310e`
+- Built from commit: `d80bebf3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -69,7 +69,6 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
-- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -182,6 +181,7 @@
 - Multisite targeting
 - Safety rules (WP-CLI)
 - MenuServiceProvider
+- Patterns
 - Perceivable
 - Common issues by impact
 - Attributes and serialization
@@ -252,15 +252,15 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (218 total, 25 thin omitted)
+## Communities (219 total, 25 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
 Nodes (38): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+30 more)
 
 ### Community 1 - "Componentes Twig y tokens de diseño"
-Cohesion: 0.40
-Nodes (5): Componentes de layout (no del catálogo), Componentes Twig y tokens de diseño, Convenciones, Extender el catálogo, Tokens semánticos
+Cohesion: 0.33
+Nodes (6): Componentes de layout (no del catálogo), Componentes Twig y tokens de diseño, Convenciones, daisyUI 5 (2026-09-09), Extender el catálogo, Tokens semánticos
 
 ### Community 2 - "Complex Authentication Flow Patterns"
 Cohesion: 0.10
@@ -351,8 +351,8 @@ Cohesion: 0.07
 Nodes (28): Access Config in Global Setup, Anti-Patterns to Avoid, Basic Global Setup, Basic Global Teardown, Combining Both, Common Parallel Pitfall, Conditional Teardown, Configure Global Setup (+20 more)
 
 ### Community 25 - "devDependencies"
-Cohesion: 0.15
-Nodes (13): devDependencies, alpinejs, @biomejs/biome, htmx.org, @kucrut/vite-for-wp, lefthook, @playwright/test, postcss (+5 more)
+Cohesion: 0.14
+Nodes (14): devDependencies, alpinejs, @biomejs/biome, daisyui, htmx.org, @kucrut/vite-for-wp, lefthook, @playwright/test (+6 more)
 
 ### Community 26 - "iFrame Testing"
 Cohesion: 0.07
@@ -465,10 +465,6 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 ### Community 57 - "Browser Console & JavaScript Error Handling"
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
-
-### Community 58 - "playwright-best-practices/SKILL.md"
-Cohesion: 0.08
-Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -906,6 +902,10 @@ Nodes (4): Common commands, Guardrails, Key flags, Multisite targeting
 Cohesion: 0.40
 Nodes (4): Golden rules, High-risk commands (require explicit confirmation), Logging, Safety rules (WP-CLI)
 
+### Community 173 - "Patterns"
+Cohesion: 0.11
+Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
+
 ### Community 174 - "Perceivable"
 Cohesion: 0.50
 Nodes (4): Color contrast (1.4.3, 1.4.6), Media alternatives (1.2), Perceivable, Text alternatives (1.1)
@@ -963,8 +963,8 @@ Cohesion: 0.83
 Nodes (3): main(), parseArgs(), runWp()
 
 ### Community 204 - "package.json"
-Cohesion: 0.16
-Nodes (13): name, private, type, version, @biomejs/biome, @kucrut/vite-for-wp, lefthook, postcss (+5 more)
+Cohesion: 0.15
+Nodes (14): name, private, type, version, @biomejs/biome, daisyui, @kucrut/vite-for-wp, lefthook (+6 more)
 
 ### Community 206 - "@playwright/test"
 Cohesion: 0.18
@@ -987,23 +987,23 @@ Cohesion: 0.40
 Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escritura (formularios), 4.4 Lectura (búsqueda en vivo), 4. Flujo de datos
 
 ## Knowledge Gaps
-- **1961 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1956 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2109 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1963 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1958 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2111 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Mobile & Responsive Testing` connect `Mobile & Responsive Testing` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Multi-User & Collaboration Testing` connect `Multi-User & Collaboration Testing` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `Debugging & Troubleshooting` connect `Debugging & Troubleshooting` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Accessibility Testing` connect `Accessibility Testing` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `rs_string()` (e.g. with `.render_fragment()` and `.handle_submit()`) actually correct?**
   _`rs_string()` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1961 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1963 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**

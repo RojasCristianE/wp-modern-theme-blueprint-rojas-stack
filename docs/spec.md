@@ -557,6 +557,22 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      final en el clone: 13 e2e pasan, 1 skip legítimo, 0 fallos
      (tras `bin/seed-demo-content.sh`, documentado como paso del
      instalador para datos de paginación).
+  8. **daisyUI 5 como sistema de componentes (2026-09-09):** para
+     acelerar el desarrollo de UI sin traer runtimes JS, se adopta
+     daisyUI 5 como capa de componentes CSS sobre Tailwind v4
+     (`@plugin "daisyui"`, `themes: false`). Los internos de los 4
+     componentes base (button, card, input, alert) migraron a clases
+     daisyUI **manteniendo intacta la API Twig** (props, embed,
+     catálogo): cero cambios en callers. El tema custom `rojas` /
+     `rojas-dark` (vía `prefersdark`, mismo mecanismo sin toggle de
+     §8.2) mapea la paleta del §8.1 sobre los roles daisy; los
+     tokens `--rs-*` siguen siendo la fuente para las utilidades
+     custom. Componentes nuevos: primero clases daisyUI del catálogo,
+     componente Twig con props solo si se reutiliza. Descartados en
+     la ronda de evaluación: Flowbite (runtime JS propio, chocaba
+     con Alpine y el theming — segunda vez), shadcn/Chakra
+     (React-only), HeadlessUI (React/Vue), Pines (snippets sin
+     sistema).
 
 ---
 

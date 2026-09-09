@@ -2195,6 +2195,18 @@
       "source_location": "L6"
     },
     {
+      "id": "docs_components_daisyui_5_2026_09_09",
+      "label": "daisyUI 5 (2026-09-09)",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Componentes Twig y tokens de dise\u00f1o",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "daisyui 5 (2026-09-09)",
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L201"
+    },
+    {
       "id": "docs_components_extender_el_cat\u00e1logo",
       "label": "Extender el cat\u00e1logo",
       "_origin": "ast",
@@ -2204,7 +2216,7 @@
       "node_kind": "heading",
       "norm_label": "extender el catalogo",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L201"
+      "source_location": "L210"
     },
     {
       "id": "docs_components_tokens_sem\u00e1nticos",
@@ -7683,7 +7695,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd16 agentes de ia**",
       "source_file": "README.md",
-      "source_location": "L189"
+      "source_location": "L197"
     },
     {
       "id": "readme_caracter\u00edsticas",
@@ -7707,7 +7719,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos**",
       "source_file": "README.md",
-      "source_location": "L145"
+      "source_location": "L152"
     },
     {
       "id": "readme_componentes",
@@ -7719,7 +7731,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udfa8 componentes**",
       "source_file": "README.md",
-      "source_location": "L165"
+      "source_location": "L173"
     },
     {
       "id": "readme_configuraci\u00f3n_de_m\u00f3dulos",
@@ -7731,7 +7743,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udde9 configuracion de modulos**",
       "source_file": "README.md",
-      "source_location": "L107"
+      "source_location": "L112"
     },
     {
       "id": "readme_despliegue_theme_only",
@@ -7743,7 +7755,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udea2 despliegue (theme-only)**",
       "source_file": "README.md",
-      "source_location": "L179"
+      "source_location": "L187"
     },
     {
       "id": "readme_dise\u00f1ado_por_cristian_rojas_el_arquitecto",
@@ -7755,7 +7767,7 @@
       "node_kind": "heading",
       "norm_label": "**disenado por cristian rojas (el arquitecto)**",
       "source_file": "README.md",
-      "source_location": "L199"
+      "source_location": "L207"
     },
     {
       "id": "readme_estructura",
@@ -7791,7 +7803,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcdc licencia**",
       "source_file": "README.md",
-      "source_location": "L193"
+      "source_location": "L201"
     },
     {
       "id": "readme_modo_desarrollo_hmr",
@@ -7803,7 +7815,7 @@
       "node_kind": "heading",
       "norm_label": "**modo desarrollo (hmr)**",
       "source_file": "README.md",
-      "source_location": "L99"
+      "source_location": "L104"
     },
     {
       "id": "readme_quality_gates",
@@ -10972,6 +10984,234 @@
       "source_location": "L1"
     },
     {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
+      "label": "parallel-sharding.md",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "parallel-sharding.md",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
+      "label": "Anti-Patterns",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "anti-patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L297"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
+      "label": "CLI Commands",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cli commands",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
+      "label": "Decision Guide",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision guide",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L278"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
+      "label": "Dynamic Shard Count",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dynamic shard count",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
+      "label": "Merged report missing results",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merged report missing results",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L331"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
+      "label": "Merging Shard Reports",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "merging shard reports",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
+      "label": "More workers = Slower",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more workers = slower",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L364"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
+      "label": "\"No tests found\" in some shards",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\"no tests found\" in some shards",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L323"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
+      "label": "Patterns",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "patterns",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
+      "label": "Sharding Across CI Machines",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding across ci machines",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
+      "label": "Sharding and Parallel Execution",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sharding and parallel execution",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
+      "label": "Table of Contents",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "table of contents",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
+      "label": "Test Isolation for Parallelism",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "test isolation for parallelism",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L187"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
+      "label": "Tests pass solo but fail together",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests pass solo but fail together",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L312"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
+      "label": "Troubleshooting",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
+      "label": "Worker Configuration",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker configuration",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
+      "label": "Worker-scoped fixture not working",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixture not working",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L348"
+    },
+    {
+      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
+      "label": "Worker-Scoped Fixtures",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Patterns",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "worker-scoped fixtures",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
+      "source_location": "L144"
+    },
+    {
       "id": "agents_skills_accessibility_skill_color_contrast_1_4_3_1_4_6",
       "label": "Color contrast (1.4.3, 1.4.6)",
       "_origin": "ast",
@@ -13410,7 +13650,7 @@
       "file_type": "code",
       "norm_label": "private",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "package_type",
@@ -13421,7 +13661,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "package_version",
@@ -13457,6 +13697,17 @@
       "source_location": "L5"
     },
     {
+      "id": "ref_daisyui",
+      "label": "daisyui",
+      "_origin": "ast",
+      "community": 204,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "daisyui",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
       "id": "ref_kucrut_vite_for_wp",
       "label": "@kucrut/vite-for-wp",
       "_origin": "ast",
@@ -13476,7 +13727,7 @@
       "file_type": "concept",
       "norm_label": "lefthook",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "ref_postcss",
@@ -13487,7 +13738,7 @@
       "file_type": "concept",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "ref_tailwindcss",
@@ -13498,7 +13749,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "ref_tailwindcss_postcss",
@@ -13531,7 +13782,7 @@
       "file_type": "concept",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "ref_vite_plugin_live_reload",
@@ -13542,7 +13793,7 @@
       "file_type": "concept",
       "norm_label": "vite-plugin-live-reload",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "tests_unit_featuresconfigtest",
@@ -13685,7 +13936,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "package_scripts_build",
@@ -13696,7 +13947,7 @@
       "file_type": "code",
       "norm_label": "build",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_scripts_dev",
@@ -13707,7 +13958,7 @@
       "file_type": "code",
       "norm_label": "dev",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "package_scripts_fix",
@@ -13718,7 +13969,7 @@
       "file_type": "code",
       "norm_label": "fix",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "package_scripts_lint",
@@ -13729,7 +13980,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "package_scripts_prepare",
@@ -13740,7 +13991,7 @@
       "file_type": "code",
       "norm_label": "prepare",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "package_scripts_preview",
@@ -13751,7 +14002,7 @@
       "file_type": "code",
       "norm_label": "preview",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "package_scripts_test_e2e",
@@ -13762,7 +14013,7 @@
       "file_type": "code",
       "norm_label": "test:e2e",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "brain_monkey_functions",
@@ -14576,7 +14827,7 @@
       "file_type": "concept",
       "norm_label": "htmx.org",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "bin_seed_demo_content",
@@ -14621,7 +14872,7 @@
       },
       "norm_label": "wp()",
       "source_file": "bin/seed-demo-content.sh",
-      "source_location": "L13"
+      "source_location": "L18"
     },
     {
       "id": "agents_skills_laravel_patterns_skill",
@@ -15700,6 +15951,17 @@
       "source_location": "L5"
     },
     {
+      "id": "package_devdependencies_daisyui",
+      "label": "daisyui",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "daisyui",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
       "id": "package_devdependencies_htmx_org",
       "label": "htmx.org",
       "_origin": "ast",
@@ -15708,7 +15970,7 @@
       "file_type": "code",
       "norm_label": "htmx.org",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "package_devdependencies_kucrut_vite_for_wp",
@@ -15730,7 +15992,7 @@
       "file_type": "code",
       "norm_label": "lefthook",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "package_devdependencies_playwright_test",
@@ -15752,7 +16014,7 @@
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -15763,7 +16025,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "package_devdependencies_tailwindcss_postcss",
@@ -15796,7 +16058,7 @@
       "file_type": "code",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "package_devdependencies_vite_plugin_live_reload",
@@ -15807,7 +16069,7 @@
       "file_type": "code",
       "norm_label": "vite-plugin-live-reload",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "agents_skills_playwright_best_practices_browser_apis_iframes_accessing_cross_origin_content",
@@ -16874,7 +17136,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "docs/spec.md",
-      "source_location": "L563"
+      "source_location": "L579"
     },
     {
       "id": "docs_spec_14_criterios_de_\u00e9xito",
@@ -16886,7 +17148,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "docs/spec.md",
-      "source_location": "L573"
+      "source_location": "L589"
     },
     {
       "id": "docs_spec_1_1_prop\u00f3sito",
@@ -25156,234 +25418,6 @@
       "norm_label": "other-providers.md",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/other-providers.md",
       "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding",
-      "label": "parallel-sharding.md",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "parallel-sharding.md",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_anti_patterns",
-      "label": "Anti-Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "anti-patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L297"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_cli_commands",
-      "label": "CLI Commands",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "cli commands",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L13"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_decision_guide",
-      "label": "Decision Guide",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decision guide",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L278"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_dynamic_shard_count",
-      "label": "Dynamic Shard Count",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dynamic shard count",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L229"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merged_report_missing_results",
-      "label": "Merged report missing results",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merged report missing results",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L331"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_merging_shard_reports",
-      "label": "Merging Shard Reports",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "merging shard reports",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L103"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_more_workers_slower",
-      "label": "More workers = Slower",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more workers = slower",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L364"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_no_tests_found_in_some_shards",
-      "label": "\"No tests found\" in some shards",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\"no tests found\" in some shards",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L323"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_patterns",
-      "label": "Patterns",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "patterns",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L32"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_across_ci_machines",
-      "label": "Sharding Across CI Machines",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding across ci machines",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L78"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_sharding_and_parallel_execution",
-      "label": "Sharding and Parallel Execution",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "sharding and parallel execution",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_table_of_contents",
-      "label": "Table of Contents",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "table of contents",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_test_isolation_for_parallelism",
-      "label": "Test Isolation for Parallelism",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "test isolation for parallelism",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L187"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_tests_pass_solo_but_fail_together",
-      "label": "Tests pass solo but fail together",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests pass solo but fail together",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L312"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_troubleshooting",
-      "label": "Troubleshooting",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L310"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_configuration",
-      "label": "Worker Configuration",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker configuration",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L34"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixture_not_working",
-      "label": "Worker-scoped fixture not working",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixture not working",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L348"
-    },
-    {
-      "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_parallel_sharding_worker_scoped_fixtures",
-      "label": "Worker-Scoped Fixtures",
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "playwright-best-practices/SKILL.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "worker-scoped fixtures",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md",
-      "source_location": "L144"
     },
     {
       "id": "agents_skills_playwright_best_practices_infrastructure_ci_cd_performance",
@@ -36087,7 +36121,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "bin/seed-demo-content.sh",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -36488,7 +36522,7 @@
     },
     {
       "source": "package",
-      "target": "ref_htmx_org",
+      "target": "ref_daisyui",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36500,7 +36534,7 @@
     },
     {
       "source": "package",
-      "target": "ref_lefthook",
+      "target": "ref_htmx_org",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36512,7 +36546,7 @@
     },
     {
       "source": "package",
-      "target": "ref_postcss",
+      "target": "ref_lefthook",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36524,7 +36558,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36536,7 +36570,7 @@
     },
     {
       "source": "package",
-      "target": "ref_vite",
+      "target": "ref_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36548,7 +36582,7 @@
     },
     {
       "source": "package",
-      "target": "ref_vite_plugin_live_reload",
+      "target": "ref_vite",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -36556,6 +36590,18 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_vite_plugin_live_reload",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -64645,6 +64691,17 @@
       "weight": 1.0
     },
     {
+      "source": "docs_components_componentes_de_layout_no_del_cat\u00e1logo",
+      "target": "docs_components_daisyui_5_2026_09_09",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/COMPONENTS.md",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
       "source": "docs_components_componentes_twig_y_tokens_de_dise\u00f1o",
       "target": "docs_components_tokens_sem\u00e1nticos",
       "relation": "contains",
@@ -64674,7 +64731,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L201",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -65147,7 +65204,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L563",
+      "source_location": "L579",
       "weight": 1.0
     },
     {
@@ -65158,7 +65215,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L573",
+      "source_location": "L589",
       "weight": 1.0
     },
     {
@@ -65213,17 +65270,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "package_scripts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
       "source_location": "L19",
       "weight": 1.0
     },
@@ -65240,13 +65286,24 @@
     },
     {
       "source": "package",
+      "target": "package_scripts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "package_type",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -65284,7 +65341,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_htmx_org",
+      "target": "package_devdependencies_daisyui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65295,7 +65352,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_lefthook",
+      "target": "package_devdependencies_htmx_org",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65306,7 +65363,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_postcss",
+      "target": "package_devdependencies_lefthook",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65317,7 +65374,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65328,7 +65385,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite",
+      "target": "package_devdependencies_tailwindcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65339,13 +65396,24 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite_plugin_live_reload",
+      "target": "package_devdependencies_vite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite_plugin_live_reload",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -65411,7 +65479,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -65422,7 +65490,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -65433,7 +65501,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -65444,7 +65512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -65455,7 +65523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -65466,7 +65534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -65477,7 +65545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -65499,7 +65567,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -65510,7 +65578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L199",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -65521,7 +65589,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -65543,7 +65611,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L145",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -65554,7 +65622,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L165",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -65565,7 +65633,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L179",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -65576,7 +65644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L189",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -65587,7 +65655,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L193",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -65730,7 +65798,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "bin/seed-demo-content.sh",
-      "source_location": "L13",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -69180,5 +69248,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "1b27310e1af399f18762a8d44d0023f83f908e91"
+  "built_at_commit": "d80bebf30a08bc19b6001a2ec121a9cf41b861e6"
 }

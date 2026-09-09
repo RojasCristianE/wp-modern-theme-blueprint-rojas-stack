@@ -4,6 +4,67 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/*
+ * daisyUI 5 (spec §8.3): componentes CSS puros — cero JS, el contrato
+ * HTMX/Alpine queda intacto. Sin temas built-in: el tema "rojas"
+ * (claro, default) y "rojas-dark" (vía prefers-color-scheme, sin toggle)
+ * mapean la MISMA paleta que los tokens --rs-* de abajo, para que los
+ * componentes daisyUI (btn, card, input, alert...) hereden la identidad
+ * visual del stack.
+ */
+@plugin "daisyui" {
+  themes: false;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "rojas";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #f8fafc;
+  --color-base-300: #e2e8f0;
+  --color-base-content: #0f172a;
+  --color-primary: #2563eb;
+  --color-primary-content: #ffffff;
+  --color-neutral: #0f172a;
+  --color-neutral-content: #f8fafc;
+  --color-success: #059669;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #ffffff;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --color-info: #2563eb;
+  --color-info-content: #ffffff;
+  --radius-box: 1rem;
+  --radius-field: 0.75rem;
+}
+
+@plugin "daisyui/theme" {
+  name: "rojas-dark";
+  color-scheme: dark;
+  prefersdark: true;
+  --color-base-100: #1e293b;
+  --color-base-200: #0f172a;
+  --color-base-300: #334155;
+  --color-base-content: #f8fafc;
+  --color-primary: #3b82f6;
+  --color-primary-content: #ffffff;
+  --color-neutral: #f8fafc;
+  --color-neutral-content: #0f172a;
+  --color-success: #10b981;
+  --color-success-content: #0f172a;
+  --color-warning: #f59e0b;
+  --color-warning-content: #0f172a;
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+  --color-info: #3b82f6;
+  --color-info-content: #ffffff;
+  --radius-box: 1rem;
+  --radius-field: 0.75rem;
+}
+
 @theme {
   --color-brand-50: #eff6ff;
   --color-brand-100: #dbeafe;
@@ -23,6 +84,12 @@
  * Se resuelven en runtime: las utilidades (bg-surface, text-ink...)
  * apuntan a estas variables, y el media query de dark mode solo
  * reasigna los valores — sin toggle manual.
+ *
+ * NOTA: daisyUI usa su propio set (--color-base-*, definido en los
+ * bloques @plugin "daisyui/theme" de arriba) con los MISMOS valores;
+ * este sistema --rs-* sigue siendo la fuente para las utilidades
+ * custom del stack. No divergir: cambiar un color = cambiarlo en
+ * AMBOS lugares (o refactor futuro: derivar --rs-* de los vars daisy).
  *
  *   page     → fondo de la página        (light slate-50 / dark slate-900)
  *   surface  → tarjetas, header, modal   (light white    / dark slate-800)

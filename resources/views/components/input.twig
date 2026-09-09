@@ -1,5 +1,5 @@
 {#
-  Input/textarea con label y estado de error (spec §8.3).
+  Input/textarea con label y estado de error (spec §8.3). Internals: daisyUI.
 
   Parámetros:
   - name:        Name del campo (obligatorio; id hereda de aquí).
@@ -13,19 +13,19 @@
 #}
 {% set id = id ?? name %}
 {% set type = type ?? 'text' %}
-{% set state_classes = error ? 'border-red-500 bg-red-500/10' : 'border-line' %}
-{% set field_classes = 'w-full px-4 py-3 rounded-xl border ' ~ state_classes ~ ' focus:ring-2 focus:ring-brand-600 focus:border-brand-600 transition-all outline-none' %}
+{% set state_classes = error ? 'input-error' : '' %}
+{% set field_classes = 'w-full ' ~ state_classes %}
 
 <div>
     <label for="{{ id }}" class="block text-sm font-bold text-ink-muted mb-2">{{ label }}</label>
 
     {% if type == 'textarea' %}
-        <textarea name="{{ name }}" id="{{ id }}" rows="{{ rows ?? 4 }}" placeholder="{{ placeholder ?? '' }}" class="{{ field_classes }}">{{ value ?? '' }}</textarea>
+        <textarea name="{{ name }}" id="{{ id }}" rows="{{ rows ?? 4 }}" placeholder="{{ placeholder ?? '' }}" class="textarea {{ field_classes }}">{{ value ?? '' }}</textarea>
     {% else %}
-        <input type="{{ type }}" name="{{ name }}" id="{{ id }}" value="{{ value ?? '' }}" placeholder="{{ placeholder ?? '' }}" class="{{ field_classes }}">
+        <input type="{{ type }}" name="{{ name }}" id="{{ id }}" value="{{ value ?? '' }}" placeholder="{{ placeholder ?? '' }}" class="input {{ field_classes }}">
     {% endif %}
 
     {% if error %}
-        <p class="mt-2 text-xs font-bold text-red-600 uppercase tracking-tighter">{{ error }}</p>
+        <p class="mt-2 text-xs font-bold text-error uppercase tracking-tighter">{{ error }}</p>
     {% endif %}
 </div>

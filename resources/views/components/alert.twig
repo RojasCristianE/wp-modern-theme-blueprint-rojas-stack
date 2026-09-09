@@ -1,5 +1,6 @@
 {#
-  Alerta semántica (success | error | warning | info).
+  Alerta semántica (success | error | warning | info). Internals: daisyUI
+  (alert + alert-soft, colores por rol del tema: success/error/warning/info).
 
   Uso simple (include):
     {% include 'components/alert.twig' with { variant: 'success', title: '...', message: '...' } %}
@@ -10,23 +11,23 @@
     {% endembed %}
 #}
 {% set variants = {
-    'success': { box: 'bg-emerald-500/10 border-emerald-500/30', title: 'text-emerald-900 dark:text-emerald-100', text: 'text-emerald-700 dark:text-emerald-300', icon: 'bg-emerald-500 text-white', icon_name: 'check-circle' },
-    'error': { box: 'bg-red-500/10 border-red-500/30', title: 'text-red-900 dark:text-red-100', text: 'text-red-700 dark:text-red-300', icon: 'bg-red-500 text-white', icon_name: 'x-circle' },
-    'warning': { box: 'bg-amber-500/10 border-amber-500/30', title: 'text-amber-900 dark:text-amber-100', text: 'text-amber-700 dark:text-amber-300', icon: 'bg-amber-500 text-white', icon_name: 'alert-triangle' },
-    'info': { box: 'bg-brand-600/10 border-brand-600/30', title: 'text-brand-900 dark:text-brand-100', text: 'text-brand-700 dark:text-brand-300', icon: 'bg-brand-600 text-white', icon_name: 'info' },
+    'success': { alert: 'alert-success', icon: 'bg-success text-success-content', icon_name: 'check-circle' },
+    'error': { alert: 'alert-error', icon: 'bg-error text-error-content', icon_name: 'x-circle' },
+    'warning': { alert: 'alert-warning', icon: 'bg-warning text-warning-content', icon_name: 'alert-triangle' },
+    'info': { alert: 'alert-info', icon: 'bg-primary text-primary-content', icon_name: 'info' },
 } %}
 {% set current = variants[variant ?? 'info'] ?? variants.info %}
 
-<div class="p-6 border rounded-2xl text-center shadow-sm {{ current.box }}">
+<div class="alert alert-vertical alert-soft rounded-2xl text-center shadow-sm {{ current.alert }}">
     <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 {{ current.icon }}">
         {% include 'components/icon.twig' with { name: current.icon_name, classes: 'w-6 h-6' } only %}
     </div>
 
     {% if title %}
-        <h3 class="font-bold text-lg mb-1 {{ current.title }}">{{ title }}</h3>
+        <h3 class="font-bold text-lg mb-1">{{ title }}</h3>
     {% endif %}
 
     {% block content %}
-        <p class="text-sm {{ current.text }}">{{ message }}</p>
+        <p class="text-sm">{{ message }}</p>
     {% endblock %}
 </div>
