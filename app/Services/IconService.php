@@ -7,16 +7,14 @@
  * (búsqueda: 'rs-icons-service').
  *
  * Sets sincronizados por bin/sync-icons.sh (spec §12.1, entrada 8):
- *   - 'line-md'  Material Line Icons — primario, animación CSS embebida
- *                con guard nativo de prefers-reduced-motion (MIT).
- *   - 'material' @material-design-icons/svg round — respaldo estático,
- *                misma geometría Material (Apache-2.0).
- *   - 'spinner'  svg-spinners — estados de carga (MIT).
+ *   - 'heroicons'        24/outline — primario, trazo (Tailwind Labs, MIT).
+ *   - 'heroicons-solid'  24/solid — relleno, énfasis/estados activos (MIT).
  *
  * Resolución: 'name' usa el set primario; 'set:name' fuerza un set y, si
- * el icono no existe ahí, hace fallback en cadena al resto del registro
- * (p. ej. 'material:home' cae a 'line-md:home' — misma forma Material).
+ * el icono no existe ahí, hace fallback en cadena al resto del registro.
  *
+ * Animación: daisyUI `swap` (intercambio de iconos) y `loading` (spinners)
+ * — CSS puro del catálogo, sin runtime ni archivos embebidos.
  * Seguridad: el nombre se normaliza (solo [a-z0-9._-], sin '..' ni
  * separadores de ruta) y los SVG provienen del repo — nunca de input.
  */
@@ -29,12 +27,11 @@ class IconService
 {
     /** Registro de sets: clave => [directorio, licencia]. Orden = cadena de fallback. */
     private const SETS = [
-        'line-md'  => ['line-md', 'ISC (lucide-style), MIT (line-md)'],
-        'material' => ['material', 'Apache-2.0'],
-        'spinner'  => ['spinner', 'MIT'],
+        'heroicons'       => ['heroicons', 'MIT'],
+        'heroicons-solid' => ['heroicons-solid', 'MIT'],
     ];
 
-    private const DEFAULT_SET = 'line-md';
+    private const DEFAULT_SET = 'heroicons';
 
     /** Caracteres válidos para un nombre de icono (después de normalizar). */
     private const NAME_PATTERN = '/[^a-z0-9._-]/';

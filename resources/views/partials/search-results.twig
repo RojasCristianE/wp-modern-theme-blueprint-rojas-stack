@@ -18,7 +18,7 @@
 {% elseif posts|length == 0 %}
     <div class="p-12 text-center">
         <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 mb-4">
-            {% include 'components/icon.twig' with { name: 'search', classes: 'w-6 h-6' } only %}
+            {% include 'components/icon.twig' with { name: 'magnifying-glass', classes: 'w-6 h-6' } only %}
         </div>
         <p class="text-ink-muted font-medium">
             No encontramos resultados para "{{ search_query }}"
@@ -36,7 +36,7 @@
                              class="w-12 h-12 rounded-lg object-cover shadow-sm">
                     {% else %}
                         <div class="w-12 h-12 rounded-lg bg-brand-600/10 flex items-center justify-center text-brand-600 shrink-0">
-                            {% include 'components/icon.twig' with { name: 'file-text', classes: 'w-5 h-5' } only %}
+                            {% include 'components/icon.twig' with { name: 'document-text', classes: 'w-5 h-5' } only %}
                         </div>
                     {% endif %}
 

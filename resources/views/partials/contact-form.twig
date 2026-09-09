@@ -36,7 +36,7 @@
                 class="w-full inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-brand-600 rounded-full hover:bg-brand-700 transition-all shadow-lg shadow-brand-200 active:scale-95 group">
             <span>Enviar Mensaje</span>
             <div class="htmx-indicator ml-3">
-                {{ rs_icon('spinner:180-ring', { class: 'h-5 w-5 text-white' }) }}
+                <span class="loading loading-spinner loading-sm"></span>
             </div>
             {{ rs_icon('arrow-right', { class: 'w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform htmx-indicator-hide' }) }}
         </button>

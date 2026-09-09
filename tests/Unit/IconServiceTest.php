@@ -14,6 +14,11 @@ use function Brain\Monkey\Functions\when;
  * Nota: `data-rs-icon` lo añade la envoltura components/icon.twig (via
  * attrs), no el servicio — aquí se pasa explícito para probar el
  * passthrough de atributos.
+ *
+ * Sobre el fallback en cadena: los dos sets (heroicons outline/solid)
+ * son espejos completos (mismos 324 nombres), así que no existe icono
+ * que caiga de uno al otro — la cadena queda cubierta por los tests de
+ * set explícito y de nombres desconocidos.
  */
 
 beforeEach(function () {
@@ -21,44 +26,36 @@ beforeEach(function () {
 });
 
 it('renderiza un icono del set primario con clase y aria-hidden', function () {
-    $svg = IconService::render('search');
+    $svg = IconService::render('magnifying-glass');
 
     expect($svg)->toStartWith('<svg')
         ->and($svg)->toContain('class="w-5 h-5"')
         ->and($svg)->toContain('aria-hidden="true"')
-        ->and($svg)->toContain('viewBox="0 0 24 24"');
+        ->and($svg)->toContain('viewBox="0 0 24 24"')
+        ->and($svg)->toContain('stroke="currentColor"'); // outline: trazo heredado
 });
 
-it('resuelve el prefijo set:name', function () {
-    $mail = IconService::render('material:mail');
-    $ring = IconService::render('spinner:180-ring');
+it('resuelve el prefijo set:name (solid es fill, outline es stroke)', function () {
+    $outline = IconService::render('arrow-right');
+    $solid = IconService::render('heroicons-solid:check-circle');
 
-    expect($mail)->toStartWith('<svg')
-        ->and($mail)->not->toContain('animation') // material round: estático
-        ->and($ring)->toStartWith('<svg')
-        ->and($ring)->toContain('animation'); // spinner: CSS embebida
-});
-
-it('hace fallback en cadena entre sets', function () {
-    // 'arrow-close-down' solo existe en line-md; forzar material debe
-    // caer al set primario (misma geometría Material).
-    $svg = IconService::render('material:arrow-close-down');
-
-    expect($svg)->toStartWith('<svg')
-        ->and($svg)->toContain('stroke'); // line-md es trazo, material round es fill
+    expect($outline)->toContain('stroke-width')
+        ->and($solid)->toStartWith('<svg')
+        ->and($solid)->toContain('fill="currentColor"')
+        ->and($solid)->not->toContain('stroke-width');
 });
 
 it('aplica clases y atributos extra', function () {
-    $svg = IconService::render('search', ['class' => 'w-8 h-8', 'title' => 'Buscar', 'data-rs-icon' => 'search']);
+    $svg = IconService::render('magnifying-glass', ['class' => 'w-8 h-8', 'title' => 'Buscar', 'data-rs-icon' => 'magnifying-glass']);
 
     expect($svg)->toContain('class="w-8 h-8"')
         ->and($svg)->toContain('title="Buscar"')
-        ->and($svg)->toContain('data-rs-icon="search"')
+        ->and($svg)->toContain('data-rs-icon="magnifying-glass"')
         ->and($svg)->toContain('aria-hidden="true"');
 });
 
 it('descarta atributos vacíos o nulos', function () {
-    $svg = IconService::render('search', ['title' => '', 'label' => null]);
+    $svg = IconService::render('arrow-right', ['title' => '', 'label' => null]);
 
     expect($svg)->not->toContain('title=')
         ->and($svg)->not->toContain('label=');
@@ -67,7 +64,7 @@ it('descarta atributos vacíos o nulos', function () {
 it('devuelve vacío para nombres desconocidos o inseguros', function () {
     expect(IconService::render('no-existe'))->toBe('')
         ->and(IconService::render('../composer'))->toBe('')
-        ->and(IconService::render('material:../../composer'))->toBe('')
+        ->and(IconService::render('heroicons-solid:../../composer'))->toBe('')
         ->and(IconService::render('set-desconocido:search'))->toBe('')
         ->and(IconService::render(''))->toBe('');
 });
@@ -97,7 +94,7 @@ it('el provider registra rs_icon() en Twig y pasa el nombre intacto', function (
     assert(is_callable($callable));
 
     expect($function->getName())->toBe('rs_icon')
-        ->and($callable('search'))->toStartWith('<svg')
+        ->and($callable('magnifying-glass'))->toStartWith('<svg')
         // Firma tolerante: entrada no-string no revienta.
         ->and($callable(42))->toBe('');
 });

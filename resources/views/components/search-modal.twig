@@ -7,7 +7,7 @@
     <button @click="open = true; $nextTick(() => $refs.searchInput.focus())"
             class="p-2 text-ink-muted hover:text-brand-600 hover:bg-brand-600/10 rounded-full transition-all group"
             title="Buscar (Esc)">
-        {% include 'components/icon.twig' with { name: 'search', classes: 'w-5 h-5 group-hover:scale-110 transition-transform' } only %}
+        {% include 'components/icon.twig' with { name: 'magnifying-glass', classes: 'w-5 h-5 group-hover:scale-110 transition-transform' } only %}
         <span class="sr-only">Buscar</span>
     </button>
 
@@ -33,7 +33,7 @@
                 <!-- Search Input -->
                 <div class="relative p-4 border-b border-line">
                     <div class="absolute inset-y-0 left-6 flex items-center pointer-events-none text-ink-faint">
-                        {% include 'components/icon.twig' with { name: 'search', classes: 'w-5 h-5' } only %}
+                        {% include 'components/icon.twig' with { name: 'magnifying-glass', classes: 'w-5 h-5' } only %}
                     </div>
 
                     {#

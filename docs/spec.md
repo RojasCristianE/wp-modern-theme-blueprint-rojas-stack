@@ -574,13 +574,15 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      generado por `bin/sync-icons.sh` (copia los sets desde npm
      hacia el repo — producción nunca lee `node_modules`, el diff
      del sync muestra qué cambió y las eliminaciones upstream se
-     propagan). Sets:
-     **line-md** (primario, ~1.200 iconos Material Line animados
-     vía CSS embebida con guard nativo de `prefers-reduced-motion`,
-     MIT — coherencia de lenguaje: line-md ES "Material Line"),
-     **@material-design-icons/svg round** (respaldo estático,
-     misma geometría Material, Apache-2.0) y **svg-spinners**
-     (estados de carga, MIT). Resolución en render: `'name'` usa el
+     propagan).     Sets:
+     **heroicons** (primario, 24/outline — 324 iconos de trazo,
+     MIT, set oficial de Tailwind Labs y pareja natural del
+     catálogo daisyUI) y **heroicons-solid** (24/solid — relleno
+     para énfasis y estados activos). Animación de iconos: los
+     componentes daisyUI `swap` (intercambio de dos iconos con
+     rotate/flip) y `loading` (spinners CSS) — CSS puro del
+     catálogo, sin runtime ni archivos embebidos, con guard nativo
+     de `prefers-reduced-motion`. Resolución en render: `'name'` usa el
      set primario, `'set:name'` fuerza set con **fallback en
      cadena** al resto del registro; `rs_icon()` queda expuesta
      como función Twig global y `components/icon.twig` se conserva

@@ -6,20 +6,21 @@
   esta vista es una envoltura compatible con la API histórica y añade
   data-rs-icon para aserciones de e2e.
 
-  Sets: 'line-md' (primario, animado), 'material' (estático, respaldo),
-  'spinner' (carga). La resolución hace fallback en cadena entre sets.
+  Sets: 'heroicons' (24/outline, primario), 'heroicons-solid' (24/solid).
+  Animación: daisyUI `swap` (intercambio) y `loading` (spinners) — CSS
+  del catálogo, sin archivos extra.
 
   Parámetros:
-  - name:    'search' (set primario) o 'set:name' (p. ej. 'material:home').
-             Desconocido → no renderiza nada.
+  - name:    'magnifying-glass' (outline) o 'set:name' (p. ej.
+             'heroicons-solid:check-circle'). Desconocido → no renderiza.
   - classes: Clases del <svg>. Default: 'w-5 h-5'.
-  - stroke:  DEPRECADO — el trazo (2, round) viene de los archivos fuente.
-             Se ignora; se mantiene en la firma por compatibilidad.
+  - stroke:  DEPRECADO — el trazo (1.5, round) viene de los archivos
+             fuente. Se ignora; se mantiene en la firma por compatibilidad.
 
   Ejemplos:
-    {% include 'components/icon.twig' with { name: 'search' } %}
+    {% include 'components/icon.twig' with { name: 'magnifying-glass' } %}
     {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
-    {% include 'components/icon.twig' with { name: 'spinner:12-dots-scale-rotate', classes: 'w-8 h-8' } only %}
+    {% include 'components/icon.twig' with { name: 'heroicons-solid:check-circle', classes: 'w-8 h-8' } only %}
 #}
 {{ rs_icon(name, {
     class: classes ?? 'w-5 h-5',

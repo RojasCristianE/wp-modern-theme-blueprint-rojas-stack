@@ -49,12 +49,19 @@ test('el catálogo de componentes renderiza todas las secciones', async ({
   await expect(page.getByText('Brand', { exact: true })).toBeVisible();
   await expect(page.locator('svg[aria-hidden="true"]').first()).toBeAttached();
 
-  // Catálogo de iconos sincronizados (spec §12.1, entrada 9): el atributo
-  // refleja el nombre pedido — 'mail' resuelve vía fallback a material,
-  // 'spinner:180-ring' es set explícito
-  await expect(page.locator('[data-rs-icon="search"]').first()).toBeAttached();
-  await expect(page.locator('[data-rs-icon="mail"]').first()).toBeAttached();
+  // Catálogo de iconos sincronizados (spec §12.1, entrada 8): el atributo
+  // refleja el nombre pedido; 'heroicons-solid:*' es set explícito.
   await expect(
-    page.locator('[data-rs-icon="spinner:180-ring"]').first(),
+    page.locator('[data-rs-icon="magnifying-glass"]').first(),
   ).toBeAttached();
+  await expect(
+    page.locator('[data-rs-icon="envelope"]').first(),
+  ).toBeAttached();
+  await expect(
+    page.locator('[data-rs-icon="heroicons-solid:check-circle"]').first(),
+  ).toBeAttached();
+
+  // Animación de iconos: daisyUI swap + loading (CSS puro)
+  await expect(page.locator('.swap.swap-rotate').first()).toBeVisible();
+  await expect(page.locator('.loading-spinner').first()).toBeVisible();
 });

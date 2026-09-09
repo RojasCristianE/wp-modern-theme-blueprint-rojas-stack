@@ -4,11 +4,12 @@
 # (búsqueda: 'rs-icons-sync').
 #
 # Sets (spec §12.1, entrada 8):
-#   - line-md    (Material Line Icons, animados vía CSS embebida con guard
-#                 de prefers-reduced-motion) — set primario.
-#   - material   (@material-design-icons/svg, variante `round` — misma
-#                 geometría que line-md) — respaldo estático.
-#   - spinner    (svg-spinners, CSS embebida) — estados de carga.
+#   - heroicons        (24/outline — trazo, primario; stroke="currentColor")
+#   - heroicons-solid  (24/solid — relleno, énfasis/estados activos)
+#
+# Ambos son el set oficial de Tailwind Labs (MIT), grid 24×24 — la misma
+# geometría que asume el catálogo de daisyUI. Animación de iconos: daisyUI
+# `swap` (intercambio) y `loading` (spinners) — CSS puro, sin runtime.
 #
 # La copia es destructiva por set (rm + cp): las eliminaciones upstream
 # se propagan. Los SVGs quedan versionados en el repo: producción nunca
@@ -19,26 +20,23 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SRC="$ROOT/node_modules"
+SRC="$ROOT/node_modules/heroicons/24"
 DEST="$ROOT/resources/icons"
 
 fail() { echo "ERROR: $*" >&2; exit 1; }
 
-command -v cp >/dev/null || fail "entorno sin cp"
-[ -d "$SRC/line-md/svg-style" ] || fail "falta line-md — ejecuta 'bun install' primero"
-[ -d "$SRC/@material-design-icons/svg/round" ] || fail "falta @material-design-icons/svg — ejecuta 'bun install' primero"
-[ -d "$SRC/svg-spinners/svg" ] || fail "falta svg-spinners — ejecuta 'bun install' primero"
+[ -d "$SRC/outline" ] || fail "falta heroicons — ejecuta 'bun install' primero"
+[ -d "$SRC/solid" ] || fail "falta heroicons — ejecuta 'bun install' primero"
 
 sync_set() { # $1 = origen, $2 = nombre del set
     rm -rf "$DEST/$2"
     mkdir -p "$DEST/$2"
     cp "$1"/*.svg "$DEST/$2/"
-    printf '  %-10s %s iconos\n' "$2:" "$(ls "$DEST/$2" | wc -l)"
+    printf '  %-16s %s iconos\n' "$2:" "$(ls "$DEST/$2" | wc -l)"
 }
 
 mkdir -p "$DEST"
 echo "Sincronizando iconos → resources/icons/"
-sync_set "$SRC/line-md/svg-style"                  line-md
-sync_set "$SRC/@material-design-icons/svg/round"   material
-sync_set "$SRC/svg-spinners/svg"                   spinner
+sync_set "$SRC/outline" heroicons
+sync_set "$SRC/solid"   heroicons-solid
 echo "OK"

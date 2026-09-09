@@ -214,10 +214,10 @@ body {
 }
 
 /*
- * Iconos (spec §12.1, entrada 8): los SVG sincronizados de line-md y
- * svg-spinners ya traen su propio guard de prefers-reduced-motion, pero
- * se añade una red de seguridad global — bajo reduced-motion ningún icono
- * del tema se anima, venga de donde venga.
+ * Iconos (spec §12.1, entrada 8): los sets heroicons son estáticos y
+ * daisyUI (swap/loading) aplica sus animaciones solo bajo
+ * prefers-reduced-motion: no-preference. El guard queda como red de
+ * seguridad global — bajo reduced-motion ningún SVG del tema se anima.
  */
 @media (prefers-reduced-motion: reduce) {
   svg[data-rs-icon] *,
@@ -225,7 +225,7 @@ body {
   svg[data-rs-icon] *::after {
     /* biome-ignore lint/complexity/noImportantStyles: red de seguridad sobre SVGs sincronizados cuyos selectores no controlamos */
     animation: none !important;
-    /* biome-ignore lint/complexity/noImportantStyles: idem — sobrescribe la animación embebida de line-md/svg-spinners */
+    /* biome-ignore lint/complexity/noImportantStyles: idem — sobrescribe cualquier animación embebida en SVGs del tema */
     transition: none !important;
   }
 }

@@ -7,9 +7,9 @@
  * (búsqueda: 'rs-icons-twig').
  *
  * Uso en Twig:
- *   {{ rs_icon('home') }}                       → set primario (line-md)
- *   {{ rs_icon('material:home') }}              → set explícito
- *   {{ rs_icon('spinner:12-dots-scale-rotate', { class: 'w-8 h-8' }) }}
+ *   {{ rs_icon('magnifying-glass') }}             → set primario (heroicons outline)
+ *   {{ rs_icon('heroicons-solid:check-circle') }} → set explícito
+ *   {{ rs_icon('arrow-right', { class: 'w-8 h-8' }) }}
  */
 
 declare(strict_types=1);

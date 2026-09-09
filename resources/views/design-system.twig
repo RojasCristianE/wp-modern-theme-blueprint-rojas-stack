@@ -83,29 +83,40 @@
         {# ---------- Iconos ---------- #}
         <section class="mb-8 bg-surface p-8 rounded-2xl border border-line">
             <h2 class="text-xl font-bold text-ink mb-6">Iconos</h2>
-            <p class="text-sm text-ink-muted mb-4">SVG inline vía <code class="text-xs bg-page px-2 py-0.5 rounded">components/icon.twig</code> / <code class="text-xs bg-page px-2 py-0.5 rounded">rs_icon()</code> — sets sincronizados con <code class="text-xs bg-page px-2 py-0.5 rounded">bin/sync-icons.sh</code> (spec §12.1, entrada 8). Animación CSS embebida con guard de prefers-reduced-motion.</p>
+            <p class="text-sm text-ink-muted mb-4">SVG inline vía <code class="text-xs bg-page px-2 py-0.5 rounded">components/icon.twig</code> / <code class="text-xs bg-page px-2 py-0.5 rounded">rs_icon()</code> — sets heroicons (outline + solid) sincronizados con <code class="text-xs bg-page px-2 py-0.5 rounded">bin/sync-icons.sh</code> (spec §12.1, entrada 8). Animación: daisyUI <code class="text-xs bg-page px-2 py-0.5 rounded">swap</code> y <code class="text-xs bg-page px-2 py-0.5 rounded">loading</code> — CSS puro.</p>
             <div class="grid grid-cols-3 sm:grid-cols-5 gap-4 max-w-2xl">
                 {% for entry in [
-                    { name: 'search', label: 'search' },
-                    { name: 'close', label: 'close' },
-                    { name: 'menu', label: 'menu' },
+                    { name: 'magnifying-glass', label: 'magnifying-glass' },
+                    { name: 'x-mark', label: 'x-mark' },
+                    { name: 'bars-3', label: 'bars-3' },
                     { name: 'arrow-right', label: 'arrow-right' },
                     { name: 'calendar', label: 'calendar' },
-                    { name: 'info', label: 'info' },
-                    { name: 'material:check_circle', label: 'material:check_circle' },
-                    { name: 'material:cancel', label: 'material:cancel' },
-                    { name: 'material:error', label: 'material:error' },
-                    { name: 'mail', label: 'mail' },
-                    { name: 'place', label: 'place' },
-                    { name: 'schedule', label: 'schedule' },
-                    { name: 'spinner:180-ring', label: 'spinner:180-ring' },
-                    { name: 'spinner:12-dots-scale-rotate', label: 'spinner:12-dots' },
+                    { name: 'info-circle', label: 'info-circle' },
+                    { name: 'heroicons-solid:check-circle', label: 'solid:check-circle' },
+                    { name: 'heroicons-solid:shield-check', label: 'solid:shield-check' },
+                    { name: 'heroicons-solid:bell', label: 'solid:bell' },
+                    { name: 'envelope', label: 'envelope' },
+                    { name: 'map-pin', label: 'map-pin' },
+                    { name: 'clock', label: 'clock' },
                 ] %}
                     <div class="flex flex-col items-center gap-2 p-4 rounded-xl border border-line bg-page">
                         {% include 'components/icon.twig' with { name: entry.name, classes: 'w-6 h-6 text-ink' } only %}
                         <span class="text-[10px] font-mono text-ink-faint">{{ entry.label }}</span>
                     </div>
                 {% endfor %}
+            </div>
+
+            <h3 class="text-sm font-bold text-ink mt-8 mb-3">Animación: swap (intercambio) y loading</h3>
+            <div class="flex flex-wrap items-center gap-8">
+                <label class="swap swap-rotate btn btn-circle btn-outline">
+                    <input type="checkbox" autocomplete="off" aria-label="Menú de demostración">
+                    {% include 'components/icon.twig' with { name: 'bars-3', classes: 'w-6 h-6' } only %}
+                    {% include 'components/icon.twig' with { name: 'x-mark', classes: 'w-6 h-6' } only %}
+                </label>
+                <span class="loading loading-spinner text-brand-600" aria-hidden="true"></span>
+                <span class="loading loading-dots text-brand-600" aria-hidden="true"></span>
+                <span class="loading loading-ring text-brand-600" aria-hidden="true"></span>
+                <span class="text-xs font-mono text-ink-faint">swap-rotate · loading spinner/dots/ring</span>
             </div>
         </section>
 

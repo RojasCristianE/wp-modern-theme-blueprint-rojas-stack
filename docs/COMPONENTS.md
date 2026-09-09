@@ -36,24 +36,25 @@ SVG inline desde el árbol versionado `resources/icons/` (spec §12.1, entrada 8
 
 | Set | Fuente | Contenido | Licencia |
 |---|---|---|---|
-| `line-md` (primario) | npm `line-md` | ~1.200 iconos Material Line **animados** — CSS embebida con guard nativo de `prefers-reduced-motion` | MIT |
-| `material` (respaldo) | npm `@material-design-icons/svg` (variante `round`) | ~2.100 iconos Material estáticos, misma geometría que line-md | Apache-2.0 |
-| `spinner` | npm `svg-spinners` | 46 spinners (CSS embebida) | MIT |
+| `heroicons` (primario) | npm `heroicons` (24/outline) | 324 iconos de trazo — grid 24×24, `stroke="currentColor"` | MIT |
+| `heroicons-solid` | npm `heroicons` (24/solid) | 324 iconos de relleno — énfasis y estados activos | MIT |
+
+Animación de iconos: daisyUI `swap` (intercambio de dos iconos con rotate/flip) y `loading` (spinners CSS) — del catálogo, sin archivos ni runtime; ambos respetan `prefers-reduced-motion` de serie.
 
 | Prop | Tipo | Default | Descripción |
 |---|---|---|---|
-| `name` | string | — | `'name'` (set primario) o `'set:name'` (`'material:mail'`, `'spinner:180-ring'`). Desconocido → no renderiza nada. Si el icono falta en el set pedido, hay **fallback en cadena** al resto del registro |
+| `name` | string | — | `'name'` (set primario) o `'set:name'` (`'heroicons-solid:check-circle'`). Desconocido → no renderiza nada. Si el icono falta en el set pedido, hay **fallback en cadena** al resto del registro |
 | `classes` | string | `w-5 h-5` | Clases del `<svg>` |
 | `stroke` | int | — | DEPRECADO — el trazo (2, round) viene de los archivos fuente; se ignora |
 
 ```twig
 {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
-{% include 'components/icon.twig' with { name: 'spinner:12-dots-scale-rotate', classes: 'w-8 h-8' } only %}
+{% include 'components/icon.twig' with { name: 'heroicons-solid:check-circle', classes: 'w-8 h-8' } only %}
 {# o directamente la función Twig: #}
-{{ rs_icon('material:home', { class: 'w-6 h-6' }) }}
+{{ rs_icon('magnifying-glass', { class: 'w-6 h-6' }) }}
 ```
 
-> Para añadir un icono: búscalo en [line-md](https://icon-sets.iconify.design/line-md/) o [Material Symbols](https://fonts.google.com/icons), usa `set:nombre` — si existe en `resources/icons/<set>/`, se renderiza. Actualizar sets: `bun update line-md @material-design-icons/svg svg-spinners && bun run icons:sync`. Cada SVG lleva `data-rs-icon` y los iconos heredan `currentColor`.
+> Para añadir un icono: búscalo en [heroicons.com](https://heroicons.com), usa `set:nombre` — si existe en `resources/icons/<set>/`, se renderiza. Actualizar sets: `bun update heroicons && bun run icons:sync`. Cada SVG lleva `data-rs-icon` y los iconos heredan `currentColor`.
 
 ### `button.twig`
 
@@ -129,7 +130,7 @@ Tarjeta para blog/portfolio con CTA.
 
 ### `alert.twig`
 
-Alerta semántica con icono (vía `icon.twig`: `material:check_circle`, `material:cancel`, `material:error`, `info`). Dos modos de uso:
+Alerta semántica con icono (vía `icon.twig`: `check-circle`, `x-circle`, `exclamation-triangle`, `information-circle`). Dos modos de uso:
 
 ```twig
 {# Simple (include): message como texto #}
@@ -205,7 +206,7 @@ de la jerarquía, no la del fetch a admin-ajax.
 
 ## Componentes de layout (no del catálogo)
 
-`components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda (Alpine abre/cierra, HTMX consulta `admin-ajax?action=rs_live_search` y hace `hx-swap` de `partials/search-results.twig` en `#search-results`; mientras el fetch vuela, un skeleton de filas gemelas de los resultados reales reemplaza al placeholder en flujo — CSS puro vía la clase `htmx-request` que HTMX añade al indicador, sin Alpine ni overlays). `partials/archive-grid.twig` es el fragmento equivalente de archives: HTMX consulta `admin-ajax?action=rs_archive_page` y swappea grid+paginación dentro del scope Alpine `archiveView` (skeleton de carga, scroll y flash). `partials/archive-shell.twig` envuelve al grid SIN swappearse: lleva el scope `x-data="archiveView"` y mientras el fetch vuela el skeleton de tarjetas `.rs-skeleton` (shimmer con tokens del tema) — con un spinner del sistema de iconos (`spinner:12-dots-scale-rotate`) centrado sobre él — REEMPLAZA al grid real en el flujo del documento — `x-show` mutuamente excluyentes, sin `position:absolute`: el skeleton nunca tapa paginación ni footer, y como replica el shape del card real (sin placeholder de imagen, como el card) la transición es visualmente estable. Su prop `cards` (default 6 = POSTS_PER_PAGE) define cuántas tarjetas skeleton renderizar. No son componentes de propósito general — se incluyen desde `base.twig`.
+`components/header.twig` y `components/footer.twig` son el layout del sitio (sticky header con menú programático, footer con marca); `components/search-modal.twig` es el modal de búsqueda (Alpine abre/cierra, HTMX consulta `admin-ajax?action=rs_live_search` y hace `hx-swap` de `partials/search-results.twig` en `#search-results`; mientras el fetch vuela, un skeleton de filas gemelas de los resultados reales reemplaza al placeholder en flujo — CSS puro vía la clase `htmx-request` que HTMX añade al indicador, sin Alpine ni overlays). `partials/archive-grid.twig` es el fragmento equivalente de archives: HTMX consulta `admin-ajax?action=rs_archive_page` y swappea grid+paginación dentro del scope Alpine `archiveView` (skeleton de carga, scroll y flash). `partials/archive-shell.twig` envuelve al grid SIN swappearse: lleva el scope `x-data="archiveView"` y mientras el fetch vuela el skeleton de tarjetas `.rs-skeleton` (shimmer con tokens del tema) — con un spinner daisyUI (`loading loading-spinner`) centrado sobre él — REEMPLAZA al grid real en el flujo del documento — `x-show` mutuamente excluyentes, sin `position:absolute`: el skeleton nunca tapa paginación ni footer, y como replica el shape del card real (sin placeholder de imagen, como el card) la transición es visualmente estable. Su prop `cards` (default 6 = POSTS_PER_PAGE) define cuántas tarjetas skeleton renderizar. No son componentes de propósito general — se incluyen desde `base.twig`.
 
 ### daisyUI 5 (2026-09-09)
 

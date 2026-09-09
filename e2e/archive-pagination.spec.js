@@ -100,9 +100,7 @@ test('el skeleton reemplaza al grid en el flujo mientras HTMX trae el fragmento'
   await expect(skeleton).toBeVisible();
   await expect(shell.locator('[x-show="requestCount === 0"]')).toBeHidden();
   // Spinner del sistema de iconos girando junto al skeleton.
-  await expect(
-    skeleton.locator('[data-rs-icon^="spinner:"]').first(),
-  ).toBeVisible();
+  await expect(skeleton.locator('.loading-spinner').first()).toBeVisible();
   // Sin posicionamiento absoluto: nada flota sobre paginación ni footer.
   await expect(shell.locator('.absolute')).toHaveCount(0);
 

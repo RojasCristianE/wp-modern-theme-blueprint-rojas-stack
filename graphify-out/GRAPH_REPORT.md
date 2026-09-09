@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-09)
 
 ## Corpus Check
-- 224 files · ~495,557 words
+- 224 files · ~194,198 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2954 nodes · 3119 edges · 221 communities (184 shown, 26 thin omitted)
+- 2950 nodes · 3115 edges · 220 communities (184 shown, 26 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `68cffde2`
+- Built from commit: `85aa1e84`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,7 +31,6 @@
 - Performance & Parallelization
 - Component Testing
 - Debugging and Managing Flaky Tests
-- GitLab CI/CD Configuration
 - init-wp.sh
 - CI/CD Integration
 - Electron Testing
@@ -69,6 +68,7 @@
 - WebSocket & Real-Time Testing
 - Locator Strategies
 - Browser Console & JavaScript Error Handling
+- playwright-best-practices/SKILL.md
 - Multi-Tab, Window & Popup Testing
 - Test Data Factories & Generators
 - Vue and Nuxt Testing
@@ -254,7 +254,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (221 total, 26 thin omitted)
+## Communities (220 total, 26 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -320,10 +320,6 @@ Nodes (34): Anti-Patterns to Avoid, Basic Mount, Component Testing, Configuratio
 Cohesion: 0.06
 Nodes (33): Annotation-Based Quarantine, Anti-Patterns to Avoid, Async/Timing Flakiness, Categories of Flakiness, CI-Specific Flakiness, Confirming Flakiness, Consistent Viewport and Scale, Data/Parallelism-Driven Flakiness (+25 more)
 
-### Community 16 - "GitLab CI/CD Configuration"
-Cohesion: 0.11
-Nodes (18): Anti-Patterns, Basic Pipeline Configuration, Browser launch fails: "Failed to launch browser", Decision Guide, Environment Variables and Secrets, GitLab CI/CD Configuration, Key Commands, Merged report is empty after sharded run (+10 more)
-
 ### Community 18 - "CI/CD Integration"
 Cohesion: 0.06
 Nodes (32): Basic Workflow, Best Practices, Cache Node Modules, Cache Playwright Browsers, Caching, CI/CD Integration, CI Configuration Reference, CI-Specific Reporter (+24 more)
@@ -353,8 +349,8 @@ Cohesion: 0.07
 Nodes (28): Access Config in Global Setup, Anti-Patterns to Avoid, Basic Global Setup, Basic Global Teardown, Combining Both, Common Parallel Pitfall, Conditional Teardown, Configure Global Setup (+20 more)
 
 ### Community 25 - "devDependencies"
-Cohesion: 0.12
-Nodes (17): devDependencies, alpinejs, @biomejs/biome, daisyui, htmx.org, @kucrut/vite-for-wp, lefthook, line-md (+9 more)
+Cohesion: 0.13
+Nodes (15): devDependencies, alpinejs, @biomejs/biome, daisyui, heroicons, htmx.org, @kucrut/vite-for-wp, lefthook (+7 more)
 
 ### Community 26 - "iFrame Testing"
 Cohesion: 0.07
@@ -467,6 +463,10 @@ Nodes (20): Anti-Patterns to Avoid, Chaining, Common Issues & Solutions, Debuggi
 ### Community 57 - "Browser Console & JavaScript Error Handling"
 Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
+
+### Community 58 - "playwright-best-practices/SKILL.md"
+Cohesion: 0.06
+Nodes (29): Anti-Patterns, Basic Pipeline Configuration, Browser launch fails: "Failed to launch browser", Decision Guide, Environment Variables and Secrets, GitLab CI/CD Configuration, Key Commands, Merged report is empty after sharded run (+21 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -905,8 +905,8 @@ Cohesion: 0.40
 Nodes (4): Golden rules, High-risk commands (require explicit confirmation), Logging, Safety rules (WP-CLI)
 
 ### Community 173 - "Patterns"
-Cohesion: 0.11
-Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
+Cohesion: 0.29
+Nodes (7): Dynamic Shard Count, Merging Shard Reports, Patterns, Sharding Across CI Machines, Test Isolation for Parallelism, Worker Configuration, Worker-Scoped Fixtures
 
 ### Community 174 - "Perceivable"
 Cohesion: 0.50
@@ -965,8 +965,8 @@ Cohesion: 0.83
 Nodes (3): main(), parseArgs(), runWp()
 
 ### Community 204 - "package.json"
-Cohesion: 0.12
-Nodes (17): name, private, type, version, @biomejs/biome, daisyui, @kucrut/vite-for-wp, lefthook (+9 more)
+Cohesion: 0.14
+Nodes (15): name, private, type, version, @biomejs/biome, daisyui, heroicons, @kucrut/vite-for-wp (+7 more)
 
 ### Community 206 - "@playwright/test"
 Cohesion: 0.18
@@ -993,24 +993,24 @@ Cohesion: 0.83
 Nodes (3): fail(), sync-icons.sh script, sync_set()
 
 ## Knowledge Gaps
-- **1970 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1965 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2126 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1966 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1961 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2122 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Debugging & Troubleshooting` connect `Debugging & Troubleshooting` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Service Worker Testing` connect `Service Worker Testing` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `Date, Time & Clock Mocking` connect `Date, Time & Clock Mocking` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
+- **Are the 14 inferred relationships involving `rs_string()` (e.g. with `.render_fragment()` and `.handle_submit()`) actually correct?**
+  _`rs_string()` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1970 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1966 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
-- **Should `Especificación del Rojas Starter Theme` be split into smaller, more focused modules?**
-  _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._

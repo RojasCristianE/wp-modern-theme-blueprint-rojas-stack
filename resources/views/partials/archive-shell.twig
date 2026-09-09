@@ -23,10 +23,10 @@
 <div x-data="archiveView" data-archive-shell id="{{ shell_id }}" class="w-full">
     {# Skeleton en flujo normal: visible SOLO mientras el fetch vuela #}
     <div x-cloak x-show="requestCount > 0" aria-hidden="true">
-        {# Spinner del sistema de iconos (svg-spinners, CSS embebida).
-           Vía components/icon.twig: la envoltura añade data-rs-icon. #}
+        {# Spinner: daisyUI `loading` — CSS puro, sin archivos.
+           (El skeleton cubre el swap; esto lo anuncia.) #}
         <div class="flex justify-center mb-10">
-            {% include 'components/icon.twig' with { name: 'spinner:12-dots-scale-rotate', classes: 'w-10 h-10 text-brand-600' } %}
+            <span class="loading loading-spinner loading-lg text-brand-600"></span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for i in 1..cards %}
