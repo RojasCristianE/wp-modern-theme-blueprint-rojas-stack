@@ -25,7 +25,7 @@ jobs:
         run: bun run build
 
   backend:
-    name: Static Analysis (PHPStan)
+    name: Static Analysis & Tests (PHPStan L10 + Pest)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,7 +43,7 @@ jobs:
       - name: Validate composer.json
         run: composer validate
 
-      - name: PHPStan (level 6)
+      - name: PHPStan (level 10 — maximum)
         run: composer analyze
 
       - name: Unit tests (Pest)

@@ -1,6 +1,7 @@
 # **🚀 Rojas Stack — Starter Theme WordPress Moderno (AI-First)**
 
-[![CI](https://github.com/cristian-rojas/wp-modern-theme-blueprint/actions/workflows/ci.yml/badge.svg)](https://github.com/cristian-rojas/wp-modern-theme-blueprint/actions/workflows/ci.yml)
+[![CI](https://github.com/RojasCristianE/wp-modern-theme-blueprint-rojas-stack/actions/workflows/ci.yml/badge.svg)](https://github.com/RojasCristianE/wp-modern-theme-blueprint-rojas-stack/actions/workflows/ci.yml)
+[![PHPStan](https://img.shields.io/badge/PHPStan-level%2010%20(max)-8892BF)](phpstan.neon)
 [![PHP](https://img.shields.io/badge/PHP-8.5%2B-777bb4)](composer.json)
 [![Timber](https://img.shields.io/badge/Timber-Twig-93c47d)](https://timber.github.io/timber/)
 [![License](https://img.shields.io/badge/License-GPL_v2-blue)](LICENSE)
@@ -24,8 +25,21 @@ Starter theme WordPress **monolítico moderno, 100% code-first**: PHP estricto +
 | :--- | :--- |
 | **Backend** | PHP 8.5+, Composer, Timber (Twig), Carbon Fields, Rakit Validation |
 | **Frontend** | Bun, Vite, Tailwind CSS v4, HTMX, AlpineJS |
-| **QA** | PHPStan (nivel 6), Biome, Pest + Brain Monkey + Patchwork, Playwright, Spatie Ignition |
+| **QA** | PHPStan (nivel 10 — máximo), Biome, Pest + Brain Monkey + Patchwork, Playwright, Spatie Ignition |
 | **DevOps** | DDEV, GitHub Actions, Deployer, Lefthook |
+
+## **✅ Quality Gates**
+
+Tres capas ejecutan la misma batería: Lefthook en cada commit local, CI en cada push/PR — misma configuración, cero deriva.
+
+| Gate | Alcance | Comando local | CI |
+| :--- | :--- | :--- | :--- |
+| **PHPStan nivel 10** (máximo) | `app/` + `tests/` — mixed explícito, cero suppressions, sin baseline | `ddev exec composer analyze` | ✅ `backend` |
+| **Pest** (unit) | 41 tests, Brain Monkey + Patchwork, sin WP real | `ddev exec composer test` | ✅ `backend` |
+| **Biome** | JS/CSS — lint + format | `bun run lint` | ✅ `frontend` |
+| **Vite build** | bundle de producción | `bun run build` | ✅ `frontend` |
+| **Playwright** (e2e) | 14 escenarios contra DDEV | `bun run test:e2e` | — local (requiere DDEV) |
+| **Lefthook** | biome + pest + phpstan en cada commit | automático (git hooks) | — |
 
 ## **📂 Estructura**
 
