@@ -3,9 +3,10 @@ includes:
 	- vendor/pestphp/pest-plugin-phpstan/extension.neon
 
 parameters:
-	# Nivel 7: declara tipos de retorno de métodos (L6 no los exigía).
-	# La progresión 6 -> 7 se cerró junto con strict_types global (spec §9.1).
-	level: 7
+	# Nivel 8: + mixed estricto y verificación exhaustiva de offsets y
+	# callables. La progresión 6 -> 7 -> 8 se cerró junto con strict_types
+	# global (spec §9.1); app/ pasa limpia y tests/ usa centinelas tipados.
+	level: 8
 	paths:
 		- app
 		- tests

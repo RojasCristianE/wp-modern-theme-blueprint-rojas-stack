@@ -16,8 +16,10 @@ it('renderiza blog.twig con título y posts en el contexto', function () {
     when('__')->returnArg();
     when('get_query_var')->justReturn(0); // sin ?paged= → página 1
 
-    $captured = null;
-    $postsArgs = null;
+    /** @var array<int|string, mixed> $captured */
+    $captured = [];
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => ['site_url' => 'http://site.test']);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -43,7 +45,8 @@ it('respeta posts_per_page de la configuración del módulo blog', function () {
     when('__')->returnArg();
     when('get_query_var')->justReturn(0);
 
-    $postsArgs = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -62,7 +65,8 @@ it('propaga la página actual del query a los args de posts (paginación)', func
     when('__')->returnArg();
     when('get_query_var')->alias(fn (string $var) => $var === 'paged' ? 3 : 0);
 
-    $postsArgs = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -81,8 +85,10 @@ it('usa la página explícita de la ruta virtual y expone el contrato HTMX', fun
     when('__')->returnArg();
     when('get_query_var')->justReturn(0);
 
-    $captured  = null;
-    $postsArgs = null;
+    /** @var array<int|string, mixed> $captured */
+    $captured = [];
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {

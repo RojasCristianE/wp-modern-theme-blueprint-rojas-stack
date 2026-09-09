@@ -1055,7 +1055,7 @@
       "file_type": "code",
       "norm_label": "delete()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L193"
+      "source_location": "L197"
     },
     {
       "id": "tests_unit_searchcontrollertest_index",
@@ -1067,7 +1067,7 @@
       "file_type": "code",
       "norm_label": "index()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L188"
+      "source_location": "L192"
     },
     {
       "id": "tests_unit_searchcontrollertest_is_available",
@@ -1079,7 +1079,7 @@
       "file_type": "code",
       "norm_label": "is_available()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L198"
+      "source_location": "L202"
     },
     {
       "id": "tests_unit_searchcontrollertest_search",
@@ -1091,7 +1091,7 @@
       "file_type": "code",
       "norm_label": "search()",
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L183"
+      "source_location": "L187"
     },
     {
       "id": "app_contracts_searchengineinterface_searchengineinterface_delete",
@@ -65558,7 +65558,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L264",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -65569,7 +65569,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L269",
+      "source_location": "L276",
       "weight": 1.0
     },
     {
@@ -65580,7 +65580,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L274",
+      "source_location": "L281",
       "weight": 1.0
     },
     {
@@ -65591,7 +65591,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Unit/SearchControllerTest.php",
-      "source_location": "L279",
+      "source_location": "L286",
       "weight": 1.0
     },
     {
@@ -68789,5 +68789,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "71238100fa51ebd9a8190bcc57b0427415ab5e7f"
+  "built_at_commit": "c6b4e5701e5bc8e8fe10f8282fd059721b3de624"
 }

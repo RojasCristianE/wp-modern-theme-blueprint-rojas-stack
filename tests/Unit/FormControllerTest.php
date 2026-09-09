@@ -62,7 +62,8 @@ it('deriva los hooks AJAX de la clave del formulario', function () {
 it('renderiza la página configurada con el título del formulario', function () {
     when('__')->returnArg();
 
-    $captured = null;
+    /** @var array<int|string, mixed> $captured */
+    $captured = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {
@@ -82,7 +83,8 @@ it('renderiza la página configurada con el título del formulario', function ()
 it('re-renderiza el formulario con errores cuando la validación falla', function () {
     when('__')->returnArg();
 
-    $rendered = null;
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
@@ -119,8 +121,10 @@ it('envía el correo con todos los campos y renderiza el fragmento de éxito', f
     when('get_option')->justReturn('admin@site.test');
     when('get_bloginfo')->justReturn('http://site.test');
 
-    $mail = null;
-    $rendered = null;
+    /** @var array<int|string, mixed> $mail */
+    $mail = [];
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
@@ -156,7 +160,8 @@ it('usa el destinatario configurado si no es admin_email', function () {
     when('get_bloginfo')->justReturn('http://site.test');
 
     $to = null;
-    $rendered = null;
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {

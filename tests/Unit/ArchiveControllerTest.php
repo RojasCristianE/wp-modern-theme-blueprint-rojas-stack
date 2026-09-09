@@ -51,8 +51,10 @@ it('consulta por término y pagina, y renderiza el fragmento HTMX', function () 
         throw new RuntimeException('WP_DIE');
     });
 
-    $postsArgs = null;
-    $rendered  = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
         $postsArgs = $args;
@@ -98,7 +100,8 @@ it('cae a category y no filtra por término con GET inválido o ausente', functi
         throw new RuntimeException('WP_DIE');
     });
 
-    $postsArgs = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
         $postsArgs = $args;

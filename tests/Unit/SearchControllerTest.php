@@ -67,7 +67,8 @@ it('no consulta la DB si el término está vacío', function () {
         throw new RuntimeException('WP_DIE');
     });
 
-    $rendered = null;
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
     $postsArgs = 'NO_CALLED';
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$rendered) {
         $rendered = [$template, $context];
@@ -99,8 +100,10 @@ it('busca posts y renderiza el fragmento con el término saneado', function () {
     when('__')->returnArg();
     Functions\expect('wp_die')->once();
 
-    $postsArgs = null;
-    $rendered = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -136,6 +139,7 @@ it('MeilisearchClient sin credenciales no está disponible y no busca', function
 });
 
 it('MeilisearchClient con credenciales consulta /health', function () {
+    /** @var array<int|string, mixed> $captured */
     $captured = [];
 
     when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$captured) {
@@ -201,8 +205,10 @@ it('SearchController usa el motor y conserva el orden de relevancia', function (
         }
     };
 
-    $postsArgs = null;
-    $rendered = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
+    /** @var array<int|string, mixed> $rendered */
+    $rendered = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {
@@ -224,6 +230,7 @@ it('SearchController usa el motor y conserva el orden de relevancia', function (
 });
 
 it('MeilisearchClient::configure declara título > excerpt > contenido como pesos', function () {
+    /** @var array<int|string, mixed> $captured */
     $captured = [];
 
     when('wp_remote_request')->alias(function (string $url, array $args = []) use (&$captured) {
@@ -282,7 +289,8 @@ it('SearchController cae a la búsqueda DB si el motor no está disponible', fun
         }
     };
 
-    $postsArgs = null;
+    /** @var array<int|string, mixed> $postsArgs */
+    $postsArgs = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::get_posts', function (array $args = []) use (&$postsArgs) {

@@ -8,7 +8,8 @@ use function Brain\Monkey\Functions\when;
 it('renderiza el catálogo de componentes con título', function () {
     when('__')->returnArg();
 
-    $captured = null;
+    /** @var array<int|string, mixed> $captured */
+    $captured = [];
 
     \Patchwork\redefine('Timber\Timber::context', fn (): array => []);
     \Patchwork\redefine('Timber\Timber::render', function (string $template, array $context) use (&$captured) {

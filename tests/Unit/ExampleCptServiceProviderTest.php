@@ -27,7 +27,8 @@ it('registra el CPT con slug, labels y archive de features.php', function () {
     when('update_option')->justReturn(true);
     when('flush_rewrite_rules')->justReturn(null);
 
-    $registered = null;
+    /** @var array<int|string, mixed> $registered */
+    $registered = [];
 
     when('register_post_type')->alias(function (string $slug, array $args = []) use (&$registered) {
         $registered = [$slug, $args];
