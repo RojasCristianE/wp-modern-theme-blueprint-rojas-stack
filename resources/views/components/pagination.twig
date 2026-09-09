@@ -42,7 +42,7 @@
     {% set has_next = htmx ? current < pages_ct : pagination.next is not null %}
     {% set prev_num = current - 1 %}
     {% set next_num = current + 1 %}
-    {% set arrow_classes = 'inline-flex items-center justify-center p-2.5 rounded-full border border-line bg-surface text-ink-muted hover:text-brand-600 hover:border-brand-600 transition-colors' %}
+    {% set arrow_classes = 'group/arrow inline-flex items-center justify-center p-2.5 rounded-full border border-line bg-surface text-ink-muted hover:text-brand-600 hover:border-brand-600 transition-colors' %}
     {% set number_classes = 'inline-flex items-center justify-center min-w-10 h-10 px-3 rounded-full text-sm font-semibold border transition-colors' %}
 
     <nav aria-label="Paginación" class="flex items-center justify-center gap-2 mt-12"{% if htmx %} data-htmx-pagination="true"{% endif %}>
@@ -55,11 +55,11 @@
                aria-label="Página anterior"
                class="{{ arrow_classes }}"
                {% if htmx %}hx-get="{{ htmx.endpoint }}?{{ htmx.params|merge({ paged: prev_num })|url_encode }}" hx-target="{{ htmx.target }}" hx-swap="outerHTML"{% if htmx.push_url|default(false) %} hx-push-url="{{ htmx.base ? (prev_num > 1 ? htmx.base ~ 'page/' ~ prev_num ~ '/' : htmx.base) : 'true' }}"{% endif %}{% endif %}>
-                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4 rotate-180' } only %}
+                {% include 'components/icon.twig' with { name: 'arrow-left', classes: 'w-4 h-4 transition-transform group-hover/arrow:-translate-x-0.5' } only %}
             </a>
         {% else %}
             <span class="{{ arrow_classes }} opacity-40 pointer-events-none" aria-hidden="true">
-                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4 rotate-180' } only %}
+                {% include 'components/icon.twig' with { name: 'arrow-left', classes: 'w-4 h-4' } only %}
             </span>
         {% endif %}
 
@@ -87,7 +87,7 @@
                aria-label="Página siguiente"
                class="{{ arrow_classes }}"
                {% if htmx %}hx-get="{{ htmx.endpoint }}?{{ htmx.params|merge({ paged: next_num })|url_encode }}" hx-target="{{ htmx.target }}" hx-swap="outerHTML"{% if htmx.push_url|default(false) %} hx-push-url="{{ htmx.base ? (next_num > 1 ? htmx.base ~ 'page/' ~ next_num ~ '/' : htmx.base) : 'true' }}"{% endif %}{% endif %}>
-                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4' } only %}
+                {% include 'components/icon.twig' with { name: 'arrow-right', classes: 'w-4 h-4 transition-transform group-hover/arrow:translate-x-0.5' } only %}
             </a>
         {% else %}
             <span class="{{ arrow_classes }} opacity-40 pointer-events-none" aria-hidden="true">

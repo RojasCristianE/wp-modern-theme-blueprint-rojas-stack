@@ -6,7 +6,21 @@
     {{ function('wp_head') }}
 </head>
 <body class="{{ body_class }} bg-page text-ink antialiased font-sans flex flex-col min-h-screen">
-    
+
+    {#
+      Load screen (CSS-puro): marca + spinner daisyUI, mismo lenguaje que
+      los estados de carga de archives y formularios. Se desvanece vía la
+      clase rs-ready que un script inline añade al terminar el parseo del
+      documento — sin depender del orden de carga de Alpine/HTMX.
+    #}
+    <div id="rs-load" aria-hidden="true">
+        <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-lg">
+            <span class="font-bold text-xl leading-none">R</span>
+        </div>
+        <span class="loading loading-spinner text-brand-600"></span>
+        <noscript><style>#rs-load { display: none; }</style></noscript>
+    </div>
+
     {% include 'components/header.twig' %}
 
     <main id="content" class="flex-grow">
@@ -16,6 +30,7 @@
 
     {% include 'components/footer.twig' %}
 
+    <script>document.documentElement.classList.add('rs-ready')</script>
     {{ function('wp_footer') }}
 </body>
 </html>

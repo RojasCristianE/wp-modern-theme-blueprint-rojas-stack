@@ -61,7 +61,9 @@ test('el catálogo de componentes renderiza todas las secciones', async ({
     page.locator('[data-rs-icon="heroicons-solid:check-circle"]').first(),
   ).toBeAttached();
 
-  // Animación de iconos: daisyUI swap + loading (CSS puro)
+  // Animación de iconos: daisyUI swap + loading (CSS puro). El spinner
+  // del load screen (#rs-load) precede al del catálogo en el DOM: se
+  // scopea a main.
   await expect(page.locator('.swap.swap-rotate').first()).toBeVisible();
-  await expect(page.locator('.loading-spinner').first()).toBeVisible();
+  await expect(page.locator('main .loading-spinner').first()).toBeVisible();
 });

@@ -207,9 +207,49 @@ body {
   display: none;
 }
 
+/*
+ * Indicadores HTMX (spec §9.2): durante una petición htmx-request, el
+ * icono auxiliar se oculta mientras el spinner lo reemplaza.
+ */
+.htmx-request .htmx-indicator-hide {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   #search-skeleton .rs-skeleton::after {
     animation: none;
+  }
+}
+
+/*
+ * Load screen (base.twig): fondo base-100 del tema (adapta a dark
+ * automáticamente) y fade al terminar el parseo del documento. El
+ * spinner es daisyUI `loading`, que ya respeta prefers-reduced-motion.
+ */
+#rs-load {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: var(--color-base-100);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.rs-ready #rs-load {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #rs-load {
+    transition: none;
   }
 }
 
