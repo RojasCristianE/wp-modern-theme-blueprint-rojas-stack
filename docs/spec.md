@@ -598,6 +598,17 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      al sistema — todo icono del tema pasa por un solo pipeline.
      Cobertura: 7 tests Pest (render, fallback, traversal guard,
      registro Twig) + aserciones e2e en el catálogo.
+  10. **Bootstrap Icons — evaluado y descartado (2026-09-09):**
+     mecánicamente cumplía las 4 reglas (SVG local, 1 archivo por
+     icono, npm-syncable, MIT, ~2.000 iconos), pero se queda sin
+     hueco en el sistema: **estático puro** (sin variantes SMIL/CSS
+     — la animación era el requisito de la ronda) y **geometría
+     propia 16×16** (vs 24×24, trazos ~1.5× más densos a igual
+     tamaño): un tercer lenguaje de diseño, no un respaldo del
+     par Material elegido. La cadena de fallback solo es coherente
+     porque el swap entre sets Material es ópticamente invisible;
+     un fallback Bootstrap cambiaría el estilo visible del icono.
+     Sin ventaja de catálogo sobre material/round (2.122).
 
 ---
 
