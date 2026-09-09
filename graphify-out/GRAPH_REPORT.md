@@ -1,7 +1,7 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-09)
 
 ## Corpus Check
-- 224 files · ~495,582 words
+- 224 files · ~495,557 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3165c4c7`
+- Built from commit: `68cffde2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

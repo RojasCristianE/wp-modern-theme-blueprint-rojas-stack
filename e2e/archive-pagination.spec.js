@@ -71,8 +71,14 @@ test('el skeleton reemplaza al grid en el flujo mientras HTMX trae el fragmento'
   // poder observar el skeleton .rs-skeleton entre request y swap. El
   // skeleton va EN FLUJO (x-show mutuamente excluyentes con el grid):
   // sin position:absolute no tapa paginación ni footer.
-  await page.route(/rs_archive_page/, async (route) => {
-    await new Promise((resolve) => setTimeout(resolve, 400));
+  // Enrutamos TODO el tráfico: Playwright desactiva la caché HTTP cuando
+  // hay routing activo — evita que Chrome sirva markup viejo del skeleton
+  // (el spinner del sistema de iconos vive en el HTML fresco).
+  await page.route('**/*', async (route) => {
+    if (route.request().url().includes('rs_archive_page')) {
+      await new Promise((resolve) => setTimeout(resolve, 400));
+    }
+
     await route.continue();
   });
 
@@ -93,6 +99,10 @@ test('el skeleton reemplaza al grid en el flujo mientras HTMX trae el fragmento'
   // (reemplazo, no overlay).
   await expect(skeleton).toBeVisible();
   await expect(shell.locator('[x-show="requestCount === 0"]')).toBeHidden();
+  // Spinner del sistema de iconos girando junto al skeleton.
+  await expect(
+    skeleton.locator('[data-rs-icon^="spinner:"]').first(),
+  ).toBeVisible();
   // Sin posicionamiento absoluto: nada flota sobre paginación ni footer.
   await expect(shell.locator('.absolute')).toHaveCount(0);
 

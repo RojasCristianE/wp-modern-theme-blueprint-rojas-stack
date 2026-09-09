@@ -2326,7 +2326,7 @@
       "node_kind": "heading",
       "norm_label": "extender el catalogo",
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L219"
+      "source_location": "L218"
     },
     {
       "id": "docs_components_tokens_sem\u00e1nticos",
@@ -17405,7 +17405,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "docs/spec.md",
-      "source_location": "L604"
+      "source_location": "L595"
     },
     {
       "id": "docs_spec_14_criterios_de_\u00e9xito",
@@ -17417,7 +17417,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "docs/spec.md",
-      "source_location": "L614"
+      "source_location": "L605"
     },
     {
       "id": "docs_spec_1_1_prop\u00f3sito",
@@ -65199,7 +65199,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/COMPONENTS.md",
-      "source_location": "L219",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -65672,7 +65672,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L604",
+      "source_location": "L595",
       "weight": 1.0
     },
     {
@@ -65683,7 +65683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L614",
+      "source_location": "L605",
       "weight": 1.0
     },
     {
@@ -69859,5 +69859,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "3165c4c7e66116f4136d452415b19b0c2c8d657f"
+  "built_at_commit": "68cffde23518700322da3e7b140a24f808f1eacf"
 }
