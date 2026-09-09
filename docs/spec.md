@@ -506,6 +506,26 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      `wp-config*`, caches) son gitignored y quedan documentados en el
      README (sección "Aparecen al correr"). Resultado: raíz de 25 →
      21 archivos, todos con propósito evidente.
+  6. **Política de tipado estricto (post-plan):** la filosofía
+     "tipado estricto" del blueprint se volvió verificable en dos
+     fases. Fase 1: `declare(strict_types=1)` en los 18 archivos de
+     `app/` (12 del blueprint lo omitían). El efecto fue inmediato y
+     real: un TypeError — el router pasaba capturas de regex (`'2'`,
+     string) a handlers que declaran `int $paged`; con strict_types
+     la coerción silenciosa dejó de ser válida. **Regla resultante:
+     el router convierte en el límite** — `dispatch_routes()` mapea
+     segmentos numéricos a int|float antes de invocar; los slugs
+     siguen siendo string. Fase 2: PHPStan 6 → 7 → 8 sobre `app/` **y
+     `tests/`** (la extensión `pestphp/pest-plugin-phpstan` registra
+     los helpers de Pest para el análisis; `Patchwork.php` entra en
+     `scanFiles` para exponer `Patchwork\redefine`). `app/` pasa L8
+     **sin un solo cambio adicional** — la deuda era cero; los 58
+     hallazgos de L8 fueron inferencia en tests (centinelas de
+     captura con uniones array|null / array|string), resueltos con
+     `@var array<int|string, mixed>` explícito por centinela, sin
+     tocar lógica de tests. L9/L10 se descartan deliberadamente:
+     exigir `explicit mixed` en cada callback de WP es ceremonia sin
+     señal a esta escala (decisión documentada, no pendiente).
 
 ---
 
@@ -523,7 +543,7 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
 
 - [ ] Un nuevo proyecto se puede crear con `composer create-project` o "Use this template" en menos de 5 minutos. *(verificado manualmente desde clone limpio en la pre-publish sweep; pendiente la mecánica de GitHub Template/Packagist)*
 - [x] `ddev start && bun install && bun run dev` levanta el entorno con HMR funcional (verificado con `kucrut/vite-for-wp`).
-- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (40 tests Pest + 14 e2e Playwright + PHPStan nivel 6 + Biome).
+- [x] El tema pasa `composer lint`, `bun run lint`, `pest` y `playwright test` sin errores (41 tests Pest + 14 e2e Playwright + PHPStan nivel 8 sobre app/ y tests/ + Biome).
 - [x] Todos los módulos son activables/desactivables desde `app/Config/features.php` (blog, pages, forms, seo, example_cpt, design_system).
 - [x] La documentación (`README.md`, `AGENTS.md`, docs de componentes) permite que un desarrollador nuevo entregue una página en menos de 1 hora.
 

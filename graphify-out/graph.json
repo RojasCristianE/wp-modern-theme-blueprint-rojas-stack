@@ -16691,7 +16691,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "docs/spec.md",
-      "source_location": "L512"
+      "source_location": "L532"
     },
     {
       "id": "docs_spec_14_criterios_de_\u00e9xito",
@@ -16703,7 +16703,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "docs/spec.md",
-      "source_location": "L522"
+      "source_location": "L542"
     },
     {
       "id": "docs_spec_1_1_prop\u00f3sito",
@@ -34783,7 +34783,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udf10 arquitectura macro (infraestructura del servidor)**",
       "source_file": "AGENTS.md",
-      "source_location": "L41"
+      "source_location": "L43"
     },
     {
       "id": "agents_comandos_de_desarrollo_despliegue",
@@ -34795,7 +34795,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos de desarrollo & despliegue**",
       "source_file": "AGENTS.md",
-      "source_location": "L89"
+      "source_location": "L91"
     },
     {
       "id": "agents_estructura_del_tema_app_y_resources",
@@ -34807,7 +34807,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcc2 estructura del tema (`app/` y `resources/`)**",
       "source_file": "AGENTS.md",
-      "source_location": "L47"
+      "source_location": "L49"
     },
     {
       "id": "agents_filosof\u00eda_del_stack",
@@ -34831,7 +34831,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L101"
+      "source_location": "L103"
     },
     {
       "id": "agents_reglas_de_integraci\u00f3n_front_back_safe_rules",
@@ -34843,7 +34843,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd1d reglas de integracion front-back (safe rules)**",
       "source_file": "AGENTS.md",
-      "source_location": "L81"
+      "source_location": "L83"
     },
     {
       "id": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
@@ -36925,7 +36925,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L101",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -36947,7 +36947,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L41",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -36958,7 +36958,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L47",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -36980,7 +36980,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L81",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -36991,7 +36991,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L89",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -65019,7 +65019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L512",
+      "source_location": "L532",
       "weight": 1.0
     },
     {
@@ -65030,7 +65030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L522",
+      "source_location": "L542",
       "weight": 1.0
     },
     {
@@ -68789,5 +68789,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "c6b4e5701e5bc8e8fe10f8282fd059721b3de624"
+  "built_at_commit": "f5cf9fe0707c9deddbdcb1e5b907bcf3e959181d"
 }
