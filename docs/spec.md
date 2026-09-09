@@ -568,28 +568,19 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      §8.2) mapea la paleta del §8.1 sobre los roles daisy; los
      tokens `--rs-*` siguen siendo la fuente para las utilidades
      custom. Componentes nuevos: primero clases daisyUI del catálogo,
-     componente Twig con props solo si se reutiliza. Descartados en
-     la ronda de evaluación: Flowbite (runtime JS propio, chocaba
-     con Alpine y el theming — segunda vez), shadcn/Chakra
-     (React-only), HeadlessUI (React/Vue), Pines (snippets sin
-     sistema).
+     componente Twig con props solo si se reutiliza.
   9. **Sistema de iconos sincronizado (2026-09-09):** los iconos
-     migran del mapa Twig de paths lucide incrustados a mano a un
-     pipeline reproducible: `bin/sync-icons.sh` copia los sets
-     desde npm hacia `resources/icons/` (versionados en el repo —
-     producción nunca lee `node_modules`, el diff del sync muestra
-     qué cambió y las eliminaciones upstream se propagan). Sets:
+     se sirven desde el árbol versionado `resources/icons/`,
+     generado por `bin/sync-icons.sh` (copia los sets desde npm
+     hacia el repo — producción nunca lee `node_modules`, el diff
+     del sync muestra qué cambió y las eliminaciones upstream se
+     propagan). Sets:
      **line-md** (primario, ~1.200 iconos Material Line animados
      vía CSS embebida con guard nativo de `prefers-reduced-motion`,
      MIT — coherencia de lenguaje: line-md ES "Material Line"),
      **@material-design-icons/svg round** (respaldo estático,
      misma geometría Material, Apache-2.0) y **svg-spinners**
-     (estados de carga, MIT). Evaluados y descartados:
-     lucide-static (la razón original de salida del stack: iconos
-     que piden animación), lucide-animated/heroicons-animated
-     (componentes React+Motion, requieren runtime JS), Lordicon/
-     Lottie (runtime propietario), fuentes de iconos (regla "SVG
-     1 archivo por icono"). Resolución en render: `'name'` usa el
+     (estados de carga, MIT). Resolución en render: `'name'` usa el
      set primario, `'set:name'` fuerza set con **fallback en
      cadena** al resto del registro; `rs_icon()` queda expuesta
      como función Twig global y `components/icon.twig` se conserva
@@ -598,17 +589,6 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      al sistema — todo icono del tema pasa por un solo pipeline.
      Cobertura: 7 tests Pest (render, fallback, traversal guard,
      registro Twig) + aserciones e2e en el catálogo.
-  10. **Bootstrap Icons — evaluado y descartado (2026-09-09):**
-     mecánicamente cumplía las 4 reglas (SVG local, 1 archivo por
-     icono, npm-syncable, MIT, ~2.000 iconos), pero se queda sin
-     hueco en el sistema: **estático puro** (sin variantes SMIL/CSS
-     — la animación era el requisito de la ronda) y **geometría
-     propia 16×16** (vs 24×24, trazos ~1.5× más densos a igual
-     tamaño): un tercer lenguaje de diseño, no un respaldo del
-     par Material elegido. La cadena de fallback solo es coherente
-     porque el swap entre sets Material es ópticamente invisible;
-     un fallback Bootstrap cambiaría el estilo visible del icono.
-     Sin ventaja de catálogo sobre material/round (2.122).
 
 ---
 

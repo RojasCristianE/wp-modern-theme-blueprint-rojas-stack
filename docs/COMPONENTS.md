@@ -214,7 +214,6 @@ Los 4 componentes base (button, card, input, alert) migraron sus **internals a c
 - **Por qué daisyUI:** componentes 100% CSS (cero JS — HTMX y Alpine siguen siendo los únicos runtimes de comportamiento), plugin nativo de Tailwind v4 (`@plugin "daisyui"`), y generación on-demand: solo las clases presentes en las vistas llegan al bundle.
 - **Theming:** sin temas built-in (`themes: false`). Los temas custom `rojas` (default) y `rojas-dark` (`prefersdark: true` → media query, sin toggle) mapean la MISMA paleta que los tokens `--rs-*` — los roles (`primary`, `base-100`, `error`...) toman los valores del §8.1. Si cambias un color, cámbialo en ambos bloques (refactor futuro: derivar `--rs-*` de los vars daisy).
 - **Nuevos componentes:** para UI nueva prefiere clases daisyUI del catálogo (~60: dropdown, modal, tabs, toast, tooltip, drawer, rating...) antes que inventar CSS custom; envuélvelas en un componente Twig con props cuando se reutilice.
-- **Ronda 1 descartados:** Flowbite (runtime JS propio + pisaba el theming), shadcn/Chakra (React-only), HeadlessUI (React/Vue), Pines (snippets sueltos, sin sistema de theming).
 
 ## Extender el catálogo
 
