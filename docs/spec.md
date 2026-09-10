@@ -591,6 +591,33 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      al sistema — todo icono del tema pasa por un solo pipeline.
      Cobertura: 7 tests Pest (render, fallback, traversal guard,
      registro Twig) + aserciones e2e en el catálogo.
+ 10. **Política de motion — daisyUI sobre duplicados (2026-09-09):**
+     regla del stack: **daisyUI es dueño de la animación, Alpine/JS
+     son dueños del estado**. Ninguna transición custom (`x-transition`,
+     Web Animations API, keyframes propios) puede duplicar la
+     choreography que un componente o utilitario daisy ya trae.
+     Decisiones migradas bajo la regla: hamburger → daisy `swap
+     swap-rotate` con el estado en Alpine (`:class="open &&
+     'swap-active'"` — la variante JS sancionada por daisy, sin
+     checkbox fantasma); modal de búsqueda → clases `modal` /
+     `modal-top` / `modal-box` / `modal-backdrop` con `modal-open`
+     bindeado por Alpine (las x-transition que tenía duplicaban 1:1 la
+     choreography del box; `x-teleport` se conserva — es estructura,
+     no motion: sin él el modal hereda `display:none` del contenedor
+     desktop en móvil, regresión que el e2e de menú móvil cazó);
+     entrada del contenido fresco de archives → utilitario daisy
+     `fade-in` sobre `[data-archive-grid]` en main.css (reemplaza el
+     flash JS con WAAPI de `archiveView`, que quedó solo con
+     responsabilidades de estado: requestCount y scroll); spinners →
+     daisy `loading`. **Se mantiene Alpine `x-transition` solo donde
+     no existe equivalente daisy** (panel móvil en flujo del header).
+     Micro-feedback hover/press (`transition-colors/transform`,
+     `active:scale-95`) es idiom Tailwind, no duplicación. Los
+     componentes daisy (`swap`, `loading`, `modal`, `fade-in`) traen
+     su guard de `prefers-reduced-motion` de serie; el bloque global
+     de main.css sobre `svg[data-rs-icon]` queda como red de
+     seguridad. Guía de consumo en `docs/COMPONENTS.md` (sección
+     "Motion y estados de carga"). Verificación: 55 Pest + 16 e2e.
 
 ---
 
