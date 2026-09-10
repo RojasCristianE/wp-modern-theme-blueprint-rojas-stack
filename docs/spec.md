@@ -618,6 +618,23 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      de main.css sobre `svg[data-rs-icon]` queda como red de
      seguridad. Guía de consumo en `docs/COMPONENTS.md` (sección
      "Motion y estados de carga"). Verificación: 55 Pest + 16 e2e.
+ 11. **Política de propiedades de transición — nada de
+     `transition-all` (2026-09-09):** complemento de la entrada 10 a
+     nivel de micro-feedback. Regla: **toda transición declara las
+     propiedades exactas que cambian** — `transition-all` interpola
+     TODA propiedad animable (shadows, padding, margin, line-height...)
+     en cada cambio de estado, encareciendo repaints y animando cosas
+     que nadie pidió. Mapeo canónico aplicado en el sweep (8 usages en
+     5 archivos, commit `36cd0a0`): solo colores (texto/fondo/borde) →
+     `transition-colors`; color + press (`active:scale-95`) →
+     `transition-[background-color,transform]`; opacity + press →
+     `transition-[opacity,transform]`; border + fondo →
+     `transition-[border-color,background-color]`. Al añadir un hover
+     o estado activo nuevo, la transición se escribe con las
+     propiedades que realmente mutan — si la lista crece mucho, es
+     señal de diseño a revisar, no de un utility más genérico.
+     Verificación: build compila los valores arbitrarios, 55 Pest +
+     16 e2e verdes sin tocar selectores de test.
 
 ---
 
