@@ -1478,7 +1478,7 @@
       "file_type": "code",
       "norm_label": "init()",
       "source_file": "resources/scripts/main.js",
-      "source_location": "L22"
+      "source_location": "L24"
     },
     {
       "id": "app_providers_assetserviceprovider_assetserviceprovider_enqueue_assets",
@@ -74667,7 +74667,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/scripts/main.js",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -79152,5 +79152,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "f7388d26dd6c2891739be191d9671afa74f0f58d"
+  "built_at_commit": "efae52ac0449f9323f7376c769366150f56f9fd9"
 }

@@ -222,6 +222,16 @@ body {
 }
 
 /*
+ * Entrada del contenido fresco de archives (spec §9.2): el fragmento
+ * HTMX de partials/archive-grid.twig llega con el utilitario daisyUI
+ * `fade-in` — CSS puro (0.25s ease-out, guard de reduced-motion de
+ * daisyUI), reemplaza el flash JS con WAAPI que había antes.
+ */
+[data-archive-grid] {
+  animation: fade-in 0.25s ease-out;
+}
+
+/*
  * Load screen (base.twig): fondo base-100 del tema (adapta a dark
  * automáticamente) y fade al terminar el parseo del documento. El
  * spinner es daisyUI `loading`, que ya respeta prefers-reduced-motion.

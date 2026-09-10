@@ -5,8 +5,8 @@
   NO se swappea: sobrevive a cada página. Durante el fetch de HTMX el
   skeleton REEMPLAZA al grid real en el flujo del documento (x-show
   mutuamente excluyentes — sin position:absolute, sin solapamientos con
-  paginación ni footer); al llegar el swap, el grid real vuelve y el
-  flash de entrada lo maneja archiveView (main.js).
+  paginación ni footer); al llegar el swap, el grid real vuelve con el
+  utilitario daisyUI `fade-in` (CSS puro — main.css), sin JS.
 
   Parámetros:
   - posts:            PostQuery de Timber (con .pagination).

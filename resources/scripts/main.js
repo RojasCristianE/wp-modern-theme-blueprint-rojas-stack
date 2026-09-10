@@ -15,7 +15,9 @@ window.htmx = htmx;
 //     muestra el skeleton EN FLUJO (reemplaza al grid real; sin overlay
 //     absoluto) y oculta el grid hasta el swap.
 //   - scroll:   vuelve al inicio del grid al cambiar de página.
-//   - flash:    fade-in del grid fresco (Web Animations API).
+//   - La animación de entrada del contenido fresco es el utilitario daisyUI
+//     `fade-in` (resources/styles/main.css), NO JavaScript: el fragmento
+//     traído por HTMX llega con la clase y CSS la ejecuta.
 Alpine.data('archiveView', () => ({
   requestCount: 0,
 
@@ -39,12 +41,6 @@ Alpine.data('archiveView', () => ({
       if (Math.abs(window.scrollY - top) > 40) {
         window.scrollTo({ top, behavior: 'smooth' });
       }
-
-      // Flash de entrada del contenido fresco.
-      grid.animate?.([{ opacity: 0.25 }, { opacity: 1 }], {
-        duration: 260,
-        easing: 'ease-out',
-      });
     });
   },
 }));
