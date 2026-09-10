@@ -635,6 +635,26 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      señal de diseño a revisar, no de un utility más genérico.
      Verificación: build compila los valores arbitrarios, 55 Pest +
      16 e2e verdes sin tocar selectores de test.
+ 12. **Política de paint — nada de sombras animadas ni `will-change`
+     en superficies de scroll (2026-09-09):** complemento de render a
+     las entradas 10 y 11. Regla: **las superficies por donde el
+     usuario scrollea no interpolan sombras ni llevan layer-hints** —
+     animar `box-shadow` fuerza repaint de la capa blur en cada frame
+     (interpolación continua, no un cambio puntual), y el grid de
+     cards es exactamente donde el hover convive con el scroll. Aplicado:
+     `card.twig` perdió `hover:shadow-lg` + `transition-shadow` (queda
+     `shadow-sm` estático; el feedback hover vive en
+     `transition-colors` del título y `hover:scale-105` de la imagen —
+     GPU, no repaint). `will-change`: **cero usages** y así debe
+     seguir — crear capas es el costo, no la optimización; solo se
+     justifica ante animaciones continuas medidas (ninguna hoy).
+     Excepciones deliberadas: `backdrop-blur-md` del header sticky se
+     conserva (área acotada ~80px, un header por página, sombra
+     estática), y los shadows decorativos grandes (`shadow-2xl` del
+     hero de single, CTAs con `shadow-brand-200`) son estáticos y
+     fuera del área de scroll — las transiciones de sus botones son
+     transform/opacity, que no repintan la sombra. Verificación: 55
+     Pest + 16 e2e.
 
 ---
 
