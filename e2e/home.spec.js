@@ -79,3 +79,23 @@ test('el menú móvil swappea bars-3 ↔ x-mark y abre el panel en flujo', async
   await panel.getByRole('link', { name: 'Blog' }).click();
   await expect(page).toHaveURL(/\/blog/);
 });
+
+test('el menú ilumina la sección activa en desktop y móvil', async ({
+  page,
+}) => {
+  await page.goto('/blog');
+
+  // Desktop: enlace Blog con su estilo activo (color brand, sin fondo)
+  await expect(page.locator('header nav a[href*="/blog"]').first()).toHaveClass(
+    /text-brand-600/,
+  );
+
+  // Móvil: panel con highlight completo (color + fondo brand)
+  await page.setViewportSize({ width: 375, height: 667 });
+  await page.locator('header button[aria-controls="mobile-nav"]').click();
+  const panel = page.locator('#mobile-nav');
+  await expect(panel).toBeVisible();
+  await expect(panel.getByRole('link', { name: 'Blog' })).toHaveClass(
+    /bg-brand-600\/10/,
+  );
+});

@@ -38,24 +38,59 @@ class MenuServiceProvider
      */
     public function inject_menu_to_context(array $context): array
     {
+        $request_path = $this->resolve_request_path();
+
         // Generamos un objeto de menú "falso" pero estructurado como Timber espera
-        $wp           = $GLOBALS['wp'] ?? null;
-        $request_path = $wp instanceof \WP ? rs_string($wp->request) : '';
-
         $context['menu'] = (object) [
-            'items' => array_map(function($data, $index) use ($request_path) {
-                $url = rs_string($data['url'] ?? '');
+            'items' => array_map(
+                function ($data, $index) use ($request_path) {
+                    $url = rs_string($data['url'] ?? '');
 
-                return (object) [
-                    'title'    => rs_string($data['title'] ?? ''),
-                    'link'     => $url,
-                    'current'  => (trailingslashit($url) === trailingslashit(home_url(add_query_arg([], $request_path)))),
-                    'children' => [],
-                    'id'       => $index + 1000
-                ];
-            }, $this->get_primary_menu_definition(), array_keys($this->get_primary_menu_definition()))
+                    return (object) [
+                        'title'    => rs_string($data['title'] ?? ''),
+                        'link'     => $url,
+                        'current'  => $this->is_current_section($url, $request_path),
+                        'children' => [],
+                        'id'       => $index + 1000,
+                    ];
+                },
+                $this->get_primary_menu_definition(),
+                array_keys($this->get_primary_menu_definition()),
+            ),
         ];
 
         return $context;
+    }
+
+    /**
+     * Path de la petición actual según el objeto global $wp de WordPress
+     * (sin query string — WP Core lo separa en ->request).
+     */
+    private function resolve_request_path(): string
+    {
+        $wp = $GLOBALS['wp'] ?? null;
+
+        return $wp instanceof \WP ? rs_string($wp->request) : '';
+    }
+
+    /**
+     * ¿Corresponde este item a la sección actual?
+     *
+     * Match por sección (prefijo de path): /blog ilumina también
+     * /blog/page/2/ y /blog/mi-post/. Home ('/') solo matchea la raíz
+     * exacta para no robarle el highlight a las secciones reales.
+     */
+    private function is_current_section(string $item_url, string $request_path): bool
+    {
+        $item_path = (string) (parse_url($item_url, PHP_URL_PATH) ?? '');
+
+        $current = '/' . trim($request_path, '/');
+        $item    = '/' . trim($item_path, '/');
+
+        if ($item === '/') {
+            return $current === '/';
+        }
+
+        return $current === $item || str_starts_with($current, rtrim($item, '/') . '/');
     }
 }

@@ -1,16 +1,16 @@
 # Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-10)
 
 ## Corpus Check
-- 300 files · ~206,024 words
+- 301 files · ~206,504 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3351 nodes · 3512 edges · 294 communities (257 shown, 26 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
+- 3356 nodes · 3522 edges · 295 communities (259 shown, 25 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e73be45f`
+- Built from commit: `f7388d26`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -153,7 +153,7 @@
 - triage.schema.json
 - WP Project Triage
 - Responses and Fields (summary)
-- BlogController
+- Timber\Timber
 - Arquitectura del Rojas Stack
 - WP_Error
 - `block.json` (metadata) guidance
@@ -182,7 +182,7 @@
 - Multisite targeting
 - Safety rules (WP-CLI)
 - MenuServiceProvider
-- Patterns
+- Container-Based Testing
 - Perceivable
 - Common issues by impact
 - Attributes and serialization
@@ -213,7 +213,7 @@
 - package.json
 - @playwright/test
 - scripts
-- ArchiveController
+- SearchControllerTest.php
 - GitLab CI/CD Configuration
 - SeoServiceProvider
 - **🛠 Stack Tecnológico (The Dream Team)**
@@ -298,13 +298,14 @@
 - Validator
 - daisyUI 5
 - usage/SKILL.md
+- AssetServiceProvider
 
 ## God Nodes (most connected - your core abstractions)
 1. `Examples` - 24 edges
 2. `Tailwind CSS Documentation` - 17 edges
-3. `Angular Testing with Playwright` - 16 edges
-4. `main()` - 15 edges
-5. `rs_string()` - 15 edges
+3. `rs_string()` - 16 edges
+4. `Angular Testing with Playwright` - 16 edges
+5. `main()` - 15 edges
 6. `Especificación del Rojas Starter Theme` - 15 edges
 7. `Queue System` - 14 edges
 8. `Node.js Best Practices` - 14 edges
@@ -312,6 +313,8 @@
 10. `MeilisearchClient` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `menu_current_flags()` --calls--> `MenuServiceProvider`  [EXTRACTED]
+  tests/Unit/MenuServiceProviderTest.php → app/Providers/MenuServiceProvider.php
 - `MeilisearchClient` --implements--> `SearchEngineInterface`  [EXTRACTED]
   app/Services/MeilisearchClient.php → app/Contracts/SearchEngineInterface.php
 - `Rojas Stack Architecture` --rationale_for--> `Phantom WP Core Volume`  [INFERRED]
@@ -327,7 +330,7 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (294 total, 26 thin omitted)
+## Communities (295 total, 25 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
@@ -543,7 +546,7 @@ Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture,
 
 ### Community 58 - "playwright-best-practices/SKILL.md"
 Cohesion: 0.08
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
+Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -877,9 +880,9 @@ Nodes (6): Failure modes / debugging, Inputs required, Procedure, Verification, 
 Cohesion: 0.29
 Nodes (6): Do not remove core fields, Links and embedding, Raw vs rendered content, register_meta / register_post_meta / register_term_meta, register_rest_field, Responses and Fields (summary)
 
-### Community 142 - "BlogController"
-Cohesion: 0.14
-Nodes (4): BlogController, DesignSystemController, Rakit\Validation\Validator, Timber\Timber
+### Community 142 - "Timber\Timber"
+Cohesion: 0.20
+Nodes (3): DesignSystemController, Rakit\Validation\Validator, Timber\Timber
 
 ### Community 143 - "Arquitectura del Rojas Stack"
 Cohesion: 0.22
@@ -906,8 +909,12 @@ Cohesion: 0.33
 Nodes (5): Common flags, Multisite notes, Recommended workflow, Safe `wp search-replace`, Serialization caution
 
 ### Community 151 - "rs_string"
-Cohesion: 0.24
-Nodes (4): FormController, rs_array(), rs_int(), rs_string()
+Cohesion: 0.32
+Nodes (3): FormController, rs_array(), rs_string()
+
+### Community 152 - ".__construct"
+Cohesion: 0.13
+Nodes (4): ArchiveController, BlogController, rs_int(), ThemeSetup
 
 ### Community 153 - "Router decision tree (v1)"
 Cohesion: 0.40
@@ -981,9 +988,13 @@ Nodes (4): Common commands, Guardrails, Key flags, Multisite targeting
 Cohesion: 0.40
 Nodes (4): Golden rules, High-risk commands (require explicit confirmation), Logging, Safety rules (WP-CLI)
 
-### Community 173 - "Patterns"
-Cohesion: 0.11
-Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
+### Community 172 - "MenuServiceProvider"
+Cohesion: 0.31
+Nodes (3): MenuServiceProvider, menu_current_flags(), WP
+
+### Community 173 - "Container-Based Testing"
+Cohesion: 0.12
+Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 174 - "Perceivable"
 Cohesion: 0.50
@@ -1360,19 +1371,19 @@ Nodes (4): Base modules, Change a component in CSS, daisyUI 5 usage rules, daisy
 ## Knowledge Gaps
 - **2211 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+2206 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2370 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Locator Strategies` connect `Locator Strategies` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Performance & Parallelization` connect `Performance & Parallelization` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `Component Testing` connect `Component Testing` to `playwright-best-practices/SKILL.md`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `Electron Testing` connect `Electron Testing` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Are the 14 inferred relationships involving `rs_string()` (e.g. with `.render_fragment()` and `.handle_submit()`) actually correct?**
-  _`rs_string()` has 14 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 15 inferred relationships involving `rs_string()` (e.g. with `.render_fragment()` and `.handle_submit()`) actually correct?**
+  _`rs_string()` has 15 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
   _2211 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**

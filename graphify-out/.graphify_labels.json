@@ -141,7 +141,7 @@
   "139": "triage.schema.json",
   "140": "WP Project Triage",
   "141": "Responses and Fields (summary)",
-  "142": "BlogController",
+  "142": "Timber\\Timber",
   "143": "Arquitectura del Rojas Stack",
   "144": "README.md",
   "145": "WP_Error",
@@ -172,7 +172,7 @@
   "170": "Safety rules (WP-CLI)",
   "171": "features.php",
   "172": "MenuServiceProvider",
-  "173": "Patterns",
+  "173": "Container-Based Testing",
   "174": "Perceivable",
   "175": "Common issues by impact",
   "176": "Attributes and serialization",
@@ -207,7 +207,7 @@
   "205": "FeaturesConfigTest.php",
   "206": "@playwright/test",
   "207": "scripts",
-  "208": "ArchiveController",
+  "208": "SearchControllerTest.php",
   "209": "GitLab CI/CD Configuration",
   "210": "SeoServiceProvider",
   "211": "**🛠 Stack Tecnológico (The Dream Team)**",
@@ -292,5 +292,6 @@
   "290": "Validator",
   "291": "daisyUI 5",
   "292": "usage/SKILL.md",
-  "293": "GEMINI.md"
+  "293": "GEMINI.md",
+  "294": "AssetServiceProvider"
 }
