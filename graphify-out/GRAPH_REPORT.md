@@ -1,16 +1,16 @@
-# Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-09)
+# Graph Report - wp-modern-theme-blueprint-rojas-stack  (2026-09-10)
 
 ## Corpus Check
-- 224 files · ~194,198 words
+- 300 files · ~206,024 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2950 nodes · 3115 edges · 220 communities (184 shown, 26 thin omitted)
+- 3351 nodes · 3512 edges · 294 communities (257 shown, 26 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `85aa1e84`
+- Built from commit: `e73be45f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,6 +31,7 @@
 - Performance & Parallelization
 - Component Testing
 - Debugging and Managing Flaky Tests
+- Pest Testing 4
 - init-wp.sh
 - CI/CD Integration
 - Electron Testing
@@ -213,7 +214,7 @@
 - @playwright/test
 - scripts
 - ArchiveController
-- Container-Based Testing
+- GitLab CI/CD Configuration
 - SeoServiceProvider
 - **🛠 Stack Tecnológico (The Dream Team)**
 - 4. Flujo de datos
@@ -224,7 +225,79 @@
 - main.js
 - seed-demo-content.sh
 - sync-icons.sh
+- HTMX Development
+- daisyui/SKILL.md
 - meili-reindex.sh
+- daisyUI 5 colors
+- Accordion
+- Alert
+- Aura
+- Avatar
+- Badge
+- Breadcrumbs
+- Button
+- Calendar
+- Card
+- Carousel
+- Chat
+- Checkbox
+- Collapse
+- Countdown
+- Diff
+- Divider
+- Dock
+- Drawer
+- Dropdown
+- FAB
+- Fieldset
+- File input
+- Filter
+- Footer
+- Hero
+- Hover 3D
+- Hover gallery
+- Indicator
+- Input
+- Join
+- Kbd
+- Label
+- Link
+- List
+- Loading
+- Mask
+- Megamenu
+- Menu
+- Browser mockup
+- Code mockup
+- Phone mockup
+- Modal
+- Navbar
+- OTP
+- Pagination
+- Progress
+- Radial progress
+- Radio
+- Range
+- Rating
+- Select
+- Skeleton
+- Stack
+- Stat
+- Status
+- Steps
+- Swap
+- Tab
+- Table
+- Text rotate
+- Textarea
+- Theme controller
+- Timeline
+- Toast
+- Toggle
+- Tooltip
+- Validator
+- daisyUI 5
+- usage/SKILL.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Examples` - 24 edges
@@ -254,15 +327,15 @@
 ## Hyperedges (group relationships)
 - **Rojas Stack Infrastructure Components** — ddev_docker_compose_valkey_valkey_service, ddev_docker_compose_wpcore_phantom_core, ddev_config_rojas_stack [INFERRED 0.95]
 
-## Communities (220 total, 26 thin omitted)
+## Communities (294 total, 26 thin omitted)
 
 ### Community 0 - "composer.json"
 Cohesion: 0.05
 Nodes (38): composer/installers, pestphp/pest-plugin, authors, autoload, files, psr-4, config, allow-plugins (+30 more)
 
 ### Community 1 - "Componentes Twig y tokens de diseño"
-Cohesion: 0.33
-Nodes (6): Componentes de layout (no del catálogo), Componentes Twig y tokens de diseño, Convenciones, daisyUI 5 (2026-09-09), Extender el catálogo, Tokens semánticos
+Cohesion: 0.29
+Nodes (7): Componentes de layout (no del catálogo), Componentes Twig y tokens de diseño, Convenciones, daisyUI 5 (2026-09-09), Extender el catálogo, Motion y estados de carga, Tokens semánticos
 
 ### Community 2 - "Complex Authentication Flow Patterns"
 Cohesion: 0.10
@@ -319,6 +392,10 @@ Nodes (34): Anti-Patterns to Avoid, Basic Mount, Component Testing, Configuratio
 ### Community 15 - "Debugging and Managing Flaky Tests"
 Cohesion: 0.06
 Nodes (33): Annotation-Based Quarantine, Anti-Patterns to Avoid, Async/Timing Flakiness, Categories of Flakiness, CI-Specific Flakiness, Confirming Flakiness, Consistent Viewport and Scale, Data/Parallelism-Driven Flakiness (+25 more)
+
+### Community 16 - "Pest Testing 4"
+Cohesion: 0.11
+Nodes (18): Architecture Testing, Assertions, Basic Test Structure, Basic Usage, Browser Test Example, Common Pitfalls, Creating Tests, Datasets (+10 more)
 
 ### Community 18 - "CI/CD Integration"
 Cohesion: 0.06
@@ -465,8 +542,8 @@ Cohesion: 0.09
 Nodes (22): Anti-Patterns to Avoid, Attach Console to Report, Auto-Fail Fixture, Basic Console Capture, Browser Console & JavaScript Error Handling, Capture by Type, Capture Deprecation Warnings, Capture Error Details (+14 more)
 
 ### Community 58 - "playwright-best-practices/SKILL.md"
-Cohesion: 0.06
-Nodes (29): Anti-Patterns, Basic Pipeline Configuration, Browser launch fails: "Failed to launch browser", Decision Guide, Environment Variables and Secrets, GitLab CI/CD Configuration, Key Commands, Merged report is empty after sharded run (+21 more)
+Cohesion: 0.08
+Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
 
 ### Community 59 - "Multi-Tab, Window & Popup Testing"
 Cohesion: 0.10
@@ -905,8 +982,8 @@ Cohesion: 0.40
 Nodes (4): Golden rules, High-risk commands (require explicit confirmation), Logging, Safety rules (WP-CLI)
 
 ### Community 173 - "Patterns"
-Cohesion: 0.29
-Nodes (7): Dynamic Shard Count, Merging Shard Reports, Patterns, Sharding Across CI Machines, Test Isolation for Parallelism, Worker Configuration, Worker-Scoped Fixtures
+Cohesion: 0.11
+Nodes (18): Anti-Patterns, CLI Commands, Decision Guide, Dynamic Shard Count, Merged report missing results, Merging Shard Reports, More workers = Slower, "No tests found" in some shards (+10 more)
 
 ### Community 174 - "Perceivable"
 Cohesion: 0.50
@@ -976,9 +1053,9 @@ Nodes (3): envPath, wpEnv, @playwright/test
 Cohesion: 0.22
 Nodes (9): scripts, build, dev, fix, icons:sync, lint, prepare, preview (+1 more)
 
-### Community 209 - "Container-Based Testing"
-Cohesion: 0.12
-Nodes (15): Anti-Patterns, "browserType.launch: Executable doesn't exist", CI Container Jobs, Container-Based Testing, Custom Dockerfile, Decision Guide, Dev Container Setup, Docker Compose Stack (+7 more)
+### Community 209 - "GitLab CI/CD Configuration"
+Cohesion: 0.11
+Nodes (18): Anti-Patterns, Basic Pipeline Configuration, Browser launch fails: "Failed to launch browser", Decision Guide, Environment Variables and Secrets, GitLab CI/CD Configuration, Key Commands, Merged report is empty after sharded run (+10 more)
 
 ### Community 211 - "**🛠 Stack Tecnológico (The Dream Team)**"
 Cohesion: 0.40
@@ -992,24 +1069,312 @@ Nodes (5): 4.1 Lectura (Timber / WP_Query), 4.2 Metadatos (code-first), 4.3 Escr
 Cohesion: 0.83
 Nodes (3): fail(), sync-icons.sh script, sync_set()
 
+### Community 220 - "HTMX Development"
+Cohesion: 0.12
+Nodes (15): Best Practices, Core Principles, DOM Manipulation, Error Handling, HTMX Development, HTMX Usage Guidelines, Integration Patterns, Key Conventions (+7 more)
+
+### Community 221 - "daisyui/SKILL.md"
+Cohesion: 0.18
+Nodes (7): Class names, Syntax, Window mockup, Configuration, CDN, Install daisyUI 5, Standalone and framework-specific setup
+
+### Community 223 - "daisyUI 5 colors"
+Cohesion: 0.25
+Nodes (7): Change a built-in theme, daisyUI 5 colors, daisyUI color names, daisyUI color rules, daisyUI custom theme with custom colors, Enable and apply themes, Rules
+
+### Community 224 - "Accordion"
+Cohesion: 0.40
+Nodes (4): Accordion, Class names, Rules, Syntax
+
+### Community 225 - "Alert"
+Cohesion: 0.40
+Nodes (4): Alert, Class names, Rules, Syntax
+
+### Community 226 - "Aura"
+Cohesion: 0.40
+Nodes (4): Aura, Class names, Rules, Syntax
+
+### Community 227 - "Avatar"
+Cohesion: 0.40
+Nodes (4): Avatar, Class names, Rules, Syntax
+
+### Community 228 - "Badge"
+Cohesion: 0.40
+Nodes (4): Badge, Class names, Rules, Syntax
+
+### Community 229 - "Breadcrumbs"
+Cohesion: 0.40
+Nodes (4): Breadcrumbs, Class names, Rules, Syntax
+
+### Community 230 - "Button"
+Cohesion: 0.40
+Nodes (4): Button, Class names, Rules, Syntax
+
+### Community 231 - "Calendar"
+Cohesion: 0.40
+Nodes (4): Calendar, Class names, Rules, Syntax
+
+### Community 232 - "Card"
+Cohesion: 0.40
+Nodes (4): Card, Class names, Rules, Syntax
+
+### Community 233 - "Carousel"
+Cohesion: 0.40
+Nodes (4): Carousel, Class names, Rules, Syntax
+
+### Community 234 - "Chat"
+Cohesion: 0.40
+Nodes (4): Chat, Class names, Rules, Syntax
+
+### Community 235 - "Checkbox"
+Cohesion: 0.40
+Nodes (4): Checkbox, Class names, Rules, Syntax
+
+### Community 236 - "Collapse"
+Cohesion: 0.40
+Nodes (4): Class names, Collapse, Rules, Syntax
+
+### Community 237 - "Countdown"
+Cohesion: 0.40
+Nodes (4): Class names, Countdown, Rules, Syntax
+
+### Community 238 - "Diff"
+Cohesion: 0.40
+Nodes (4): Class names, Diff, Rules, Syntax
+
+### Community 239 - "Divider"
+Cohesion: 0.40
+Nodes (4): Class names, Divider, Rules, Syntax
+
+### Community 240 - "Dock"
+Cohesion: 0.40
+Nodes (4): Class names, Dock, Rules, Syntax
+
+### Community 241 - "Drawer"
+Cohesion: 0.40
+Nodes (4): Class names, Drawer, Rules, Syntax
+
+### Community 242 - "Dropdown"
+Cohesion: 0.40
+Nodes (4): Class names, Dropdown, Rules, Syntax
+
+### Community 243 - "FAB"
+Cohesion: 0.40
+Nodes (4): Class names, FAB, Rules, Syntax
+
+### Community 244 - "Fieldset"
+Cohesion: 0.40
+Nodes (4): Class names, Fieldset, Rules, Syntax
+
+### Community 245 - "File input"
+Cohesion: 0.40
+Nodes (4): Class names, File input, Rules, Syntax
+
+### Community 246 - "Filter"
+Cohesion: 0.40
+Nodes (4): Class names, Filter, Rules, Syntax
+
+### Community 247 - "Footer"
+Cohesion: 0.40
+Nodes (4): Class names, Footer, Rules, Syntax
+
+### Community 248 - "Hero"
+Cohesion: 0.40
+Nodes (4): Class names, Hero, Rules, Syntax
+
+### Community 249 - "Hover 3D"
+Cohesion: 0.40
+Nodes (4): Class names, Hover 3D, Rules, Syntax
+
+### Community 250 - "Hover gallery"
+Cohesion: 0.40
+Nodes (4): Class names, Hover gallery, Rules, Syntax
+
+### Community 251 - "Indicator"
+Cohesion: 0.40
+Nodes (4): Class names, Indicator, Rules, Syntax
+
+### Community 252 - "Input"
+Cohesion: 0.40
+Nodes (4): Class names, Input, Rules, Syntax
+
+### Community 253 - "Join"
+Cohesion: 0.40
+Nodes (4): Class names, Join, Rules, Syntax
+
+### Community 254 - "Kbd"
+Cohesion: 0.40
+Nodes (4): Class names, Kbd, Rules, Syntax
+
+### Community 255 - "Label"
+Cohesion: 0.40
+Nodes (4): Class names, Label, Rules, Syntax
+
+### Community 256 - "Link"
+Cohesion: 0.40
+Nodes (4): Class names, Link, Rules, Syntax
+
+### Community 257 - "List"
+Cohesion: 0.40
+Nodes (4): Class names, List, Rules, Syntax
+
+### Community 258 - "Loading"
+Cohesion: 0.40
+Nodes (4): Class names, Loading, Rules, Syntax
+
+### Community 259 - "Mask"
+Cohesion: 0.40
+Nodes (4): Class names, Mask, Rules, Syntax
+
+### Community 260 - "Megamenu"
+Cohesion: 0.40
+Nodes (4): Class names, Megamenu, Rules, Syntax
+
+### Community 261 - "Menu"
+Cohesion: 0.40
+Nodes (4): Class names, Menu, Rules, Syntax
+
+### Community 262 - "Browser mockup"
+Cohesion: 0.40
+Nodes (4): Browser mockup, Class names, Rules, Syntax
+
+### Community 263 - "Code mockup"
+Cohesion: 0.40
+Nodes (4): Class names, Code mockup, Rules, Syntax
+
+### Community 264 - "Phone mockup"
+Cohesion: 0.40
+Nodes (4): Class names, Phone mockup, Rules, Syntax
+
+### Community 265 - "Modal"
+Cohesion: 0.40
+Nodes (4): Class names, Modal, Rules, Syntax
+
+### Community 266 - "Navbar"
+Cohesion: 0.40
+Nodes (4): Class names, Navbar, Rules, Syntax
+
+### Community 267 - "OTP"
+Cohesion: 0.40
+Nodes (4): Class names, OTP, Rules, Syntax
+
+### Community 268 - "Pagination"
+Cohesion: 0.40
+Nodes (4): Class names, Pagination, Rules, Syntax
+
+### Community 269 - "Progress"
+Cohesion: 0.40
+Nodes (4): Class names, Progress, Rules, Syntax
+
+### Community 270 - "Radial progress"
+Cohesion: 0.40
+Nodes (4): Class names, Radial progress, Rules, Syntax
+
+### Community 271 - "Radio"
+Cohesion: 0.40
+Nodes (4): Class names, Radio, Rules, Syntax
+
+### Community 272 - "Range"
+Cohesion: 0.40
+Nodes (4): Class names, Range, Rules, Syntax
+
+### Community 273 - "Rating"
+Cohesion: 0.40
+Nodes (4): Class names, Rating, Rules, Syntax
+
+### Community 274 - "Select"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Select, Syntax
+
+### Community 275 - "Skeleton"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Skeleton, Syntax
+
+### Community 276 - "Stack"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Stack, Syntax
+
+### Community 277 - "Stat"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Stat, Syntax
+
+### Community 278 - "Status"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Status, Syntax
+
+### Community 279 - "Steps"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Steps, Syntax
+
+### Community 280 - "Swap"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Swap, Syntax
+
+### Community 281 - "Tab"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Tab
+
+### Community 282 - "Table"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Table
+
+### Community 283 - "Text rotate"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Text rotate
+
+### Community 284 - "Textarea"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Textarea
+
+### Community 285 - "Theme controller"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Theme controller
+
+### Community 286 - "Timeline"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Timeline
+
+### Community 287 - "Toast"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Toast
+
+### Community 288 - "Toggle"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Toggle
+
+### Community 289 - "Tooltip"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Tooltip
+
+### Community 290 - "Validator"
+Cohesion: 0.40
+Nodes (4): Class names, Rules, Syntax, Validator
+
+### Community 291 - "daisyUI 5"
+Cohesion: 0.40
+Nodes (5): Component discovery protocol, daisyUI 5, List of components, References that you must read, When to use this skill
+
+### Community 292 - "usage/SKILL.md"
+Cohesion: 0.40
+Nodes (4): Base modules, Change a component in CSS, daisyUI 5 usage rules, daisyUI utilities and variables
+
 ## Knowledge Gaps
-- **1966 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+1961 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2122 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **2211 isolated node(s):** `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `$schema`, `$id` (+2206 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2370 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Debugging and Managing Flaky Tests` connect `Debugging and Managing Flaky Tests` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `Service Worker Testing` connect `Service Worker Testing` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Date, Time & Clock Mocking` connect `Date, Time & Clock Mocking` to `playwright-best-practices/SKILL.md`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+- **Why does `Locator Strategies` connect `Locator Strategies` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Component Testing` connect `Component Testing` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `Electron Testing` connect `Electron Testing` to `playwright-best-practices/SKILL.md`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `rs_string()` (e.g. with `.render_fragment()` and `.handle_submit()`) actually correct?**
   _`rs_string()` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `DEFAULT_IGNORES`, `DEFAULT_IGNORES`, `DEFAULT_IGNORES` to the rest of the system?**
-  _1966 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _2211 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Complex Authentication Flow Patterns` be split into smaller, more focused modules?**
