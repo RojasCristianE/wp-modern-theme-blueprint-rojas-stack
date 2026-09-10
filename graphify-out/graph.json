@@ -14841,7 +14841,7 @@
       "node_kind": "heading",
       "norm_label": "**3. ci/cd & despliegue del tema**",
       "source_file": "AGENTS.md",
-      "source_location": "L29"
+      "source_location": "L32"
     },
     {
       "id": "agents_4_qa_debugging",
@@ -14853,7 +14853,7 @@
       "node_kind": "heading",
       "norm_label": "**4. qa & debugging**",
       "source_file": "AGENTS.md",
-      "source_location": "L35"
+      "source_location": "L38"
     },
     {
       "id": "agents_stack_tecnol\u00f3gico_the_dream_team",
@@ -22033,7 +22033,7 @@
       "node_kind": "heading",
       "norm_label": "13. preguntas abiertas y supuestos",
       "source_file": "docs/spec.md",
-      "source_location": "L597"
+      "source_location": "L641"
     },
     {
       "id": "docs_spec_14_criterios_de_\u00e9xito",
@@ -22045,7 +22045,7 @@
       "node_kind": "heading",
       "norm_label": "14. criterios de exito",
       "source_file": "docs/spec.md",
-      "source_location": "L607"
+      "source_location": "L651"
     },
     {
       "id": "docs_spec_1_1_prop\u00f3sito",
@@ -40024,7 +40024,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83c\udf10 arquitectura macro (infraestructura del servidor)**",
       "source_file": "AGENTS.md",
-      "source_location": "L43"
+      "source_location": "L46"
     },
     {
       "id": "agents_comandos_de_desarrollo_despliegue",
@@ -40036,7 +40036,7 @@
       "node_kind": "heading",
       "norm_label": "**\u26a1 comandos de desarrollo & despliegue**",
       "source_file": "AGENTS.md",
-      "source_location": "L91"
+      "source_location": "L94"
     },
     {
       "id": "agents_estructura_del_tema_app_y_resources",
@@ -40048,7 +40048,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83d\udcc2 estructura del tema (`app/` y `resources/`)**",
       "source_file": "AGENTS.md",
-      "source_location": "L49"
+      "source_location": "L52"
     },
     {
       "id": "agents_filosof\u00eda_del_stack",
@@ -40072,7 +40072,7 @@
       "node_kind": "heading",
       "norm_label": "graphify",
       "source_file": "AGENTS.md",
-      "source_location": "L103"
+      "source_location": "L106"
     },
     {
       "id": "agents_reglas_de_integraci\u00f3n_front_back_safe_rules",
@@ -40084,7 +40084,7 @@
       "node_kind": "heading",
       "norm_label": "**\ud83e\udd1d reglas de integracion front-back (safe rules)**",
       "source_file": "AGENTS.md",
-      "source_location": "L83"
+      "source_location": "L86"
     },
     {
       "id": "agents_rojas_stack_modern_theme_architecture_for_wordpress_ai_first",
@@ -42382,7 +42382,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L103",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -42404,7 +42404,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -42415,7 +42415,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L49",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -42437,7 +42437,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L83",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -42448,7 +42448,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L91",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -72478,7 +72478,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L29",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -72489,7 +72489,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
-      "source_location": "L35",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -74139,7 +74139,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L597",
+      "source_location": "L641",
       "weight": 1.0
     },
     {
@@ -74150,7 +74150,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/spec.md",
-      "source_location": "L607",
+      "source_location": "L651",
       "weight": 1.0
     },
     {
@@ -79152,5 +79152,5 @@
       "source_file": ".ddev/config.yaml"
     }
   ],
-  "built_at_commit": "efae52ac0449f9323f7376c769366150f56f9fd9"
+  "built_at_commit": "a734f7cc8e4d30a7719f3b37d2b92b4b180bb764"
 }
