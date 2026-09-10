@@ -21,7 +21,7 @@
                         title: post.title,
                         url: post.link,
                         excerpt: post.preview.length(20),
-                        image: post.thumbnail ? post.thumbnail.src|resize(600, 400) : null,
+                        image: post.thumbnail ? post.thumbnail : null,
                         meta: post.date|date('d M, Y'),
                     } only %}
                 {% endfor %}

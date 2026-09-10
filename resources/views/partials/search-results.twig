@@ -31,9 +31,12 @@
                 <a href="{{ post.link }}"
                    class="flex items-center gap-4 p-4 hover:bg-brand-600/5 transition-colors group">
                     {% if post.thumbnail %}
-                        <img src="{{ post.thumbnail.src|resize(96, 96) }}"
-                             alt="{{ post.title }}"
-                             class="w-12 h-12 rounded-lg object-cover shadow-sm">
+                        {% include 'components/image.twig' with {
+                            attachment: post.thumbnail,
+                            slot: 'thumb',
+                            class: 'w-12 h-12 rounded-lg object-cover shadow-sm',
+                            alt: post.title,
+                        } only %}
                     {% else %}
                         <div class="w-12 h-12 rounded-lg bg-brand-600/10 flex items-center justify-center text-brand-600 shrink-0">
                             {% include 'components/icon.twig' with { name: 'document-text', classes: 'w-5 h-5' } only %}

@@ -15,12 +15,12 @@
         {% if posts %}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for post in posts %}
-                    {% set card_image = post.thumbnail ? post.thumbnail.src|resize(600, 400) : null %}
+                    {# image.twig resuelve la variante dentro del pipeline rs_image #}
                     {% include 'components/card.twig' with {
                         title: post.title,
                         url: post.link,
                         excerpt: post.preview ? post.preview.length(20) : post.excerpt,
-                        image: card_image,
+                        image: post.thumbnail ? post.thumbnail : null,
                         meta: post.date|date('d M, Y'),
                         link_label: 'Escuchar →',
                     } only %}

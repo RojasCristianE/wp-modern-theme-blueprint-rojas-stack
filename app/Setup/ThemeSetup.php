@@ -14,6 +14,8 @@ use RojasStack\Fields\ThemeOptions;
 use RojasStack\Providers\AssetServiceProvider;
 use RojasStack\Providers\ExampleCptServiceProvider;
 use RojasStack\Providers\IconServiceProvider;
+use RojasStack\Providers\ImageServiceProvider;
+use RojasStack\Providers\MediaServiceProvider;
 use RojasStack\Providers\MenuServiceProvider;
 use RojasStack\Providers\RouteServiceProvider;
 use RojasStack\Providers\SeoServiceProvider;
@@ -51,6 +53,17 @@ class ThemeSetup
         (new IconServiceProvider())->register();
 
         (new AssetServiceProvider())->register();
+
+        // Media pipeline (spec §12.1, entrada 13): webp + recorte de
+        // tamaños default + warm-up opcional (Action Scheduler), y
+        // rs_image() en Twig (pipeline único de imágenes: proxy de
+        // variantes cuantizadas si IMGPROXY_ROUTE; resize nativo de
+        // Timber como fallback).
+        $media_config = rs_array($features['media'] ?? []);
+
+        /** @var array<string, mixed> $media_config */
+        (new MediaServiceProvider($media_config))->register();
+        (new ImageServiceProvider())->register();
 
         $router = new RouteServiceProvider();
         $router->register();

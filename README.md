@@ -147,6 +147,14 @@ Todo se activa/parametriza en `app/Config/features.php`:
     'singular' => 'Podcast',
     'plural' => 'Podcasts',
 ],
+
+// Pipeline de media (rs_image/image.twig): variantes on-demand con
+// imgproxy cuando IMGPROXY_ROUTE está definido (.env); resize nativo
+// de Timber como fallback. Warm-up con Action Scheduler:
+// WARMUP_ENABLED=true encola los buckets al publicar.
+'media' => [
+    'enabled' => true,
+],
 ```
 
 ## **⚡ Comandos**
@@ -160,12 +168,12 @@ Todo se activa/parametriza en `app/Config/features.php`:
 | Análisis estático (PHPStan 10) | `ddev exec composer analyze` |
 | Lint JS/CSS (Biome) | `bun run lint` (auto-fix: `bun run fix`) |
 | Tests E2E (Playwright) | `bun run test:e2e` |
-| Datos demo (paginación) | `bash bin/seed-demo-content.sh` |
+| Datos demo (paginación + media) | `bash bin/seed-demo-content.sh` |
 | Sincronizar iconos (tras actualizar sets) | `bun run icons:sync` |
 | Reindexar búsqueda (Meilisearch) | `bash bin/meili-reindex.sh` |
 | Desplegar a producción | `ddev exec dep deploy production` |
 
-Los E2E corren contra el sitio DDEV activo y usan el Chrome del sistema. Los escenarios de paginación (blog, categoría y etiqueta) requieren el contenido demo: ejecuta `bash bin/seed-demo-content.sh` una vez — el valor de `POSTS_PER_PAGE` del `.env` gobierna también los archives nativos, así que los recuentos de páginas son determinísticos. Para apuntar a otro entorno:
+Los E2E corren contra el sitio DDEV activo y usan el Chrome del sistema. Los escenarios de paginación (blog, categoría y etiqueta) y el pipeline de media requieren el contenido demo: ejecuta `bash bin/seed-demo-content.sh` una vez — el valor de `POSTS_PER_PAGE` del `.env` gobierna también los archives nativos, así que los recuentos de páginas son determinísticos. Para apuntar a otro entorno:
 
 ```bash
 PLAYWRIGHT_BASE_URL=https://staging.example.com bun run test:e2e
@@ -180,7 +188,7 @@ El catálogo vivo está en la ruta `/__components` (activa con `WP_ENV=developme
     title: post.title,
     url: post.link,
     excerpt: post.preview.length(20),
-    image: post.thumbnail ? post.thumbnail.src|resize(600, 400) : null,
+    image: post.thumbnail ? post.thumbnail : null,
     meta: post.date|date('d M, Y'),
 } only %}
 ```

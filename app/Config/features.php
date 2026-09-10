@@ -36,6 +36,23 @@ return [
             && ($_ENV['MEILI_ENABLED'] ?? $_SERVER['MEILI_ENABLED'] ?? 'true') !== 'false',
     ],
 
+    // Media pipeline (spec §12.1): webp en todas las variantes, tamaños
+    // default recortados y proxy de variantes on-demand (imgproxy).
+    // Proxy: activo SOLO si IMGPROXY_ROUTE está definido (.env) — sin
+    // ruta configurada, las URLs caen al resize nativo de Timber (comport
+    // previo). Warm-up: cola Action Scheduler (WARMUP_ENABLED=true).
+    'media' => [
+        'enabled' => true,
+        'proxy' => [
+            'enabled' => ($_ENV['IMGPROXY_ROUTE'] ?? $_SERVER['IMGPROXY_ROUTE'] ?? '') !== '',
+            'route'   => rs_string($_ENV['IMGPROXY_ROUTE'] ?? $_SERVER['IMGPROXY_ROUTE'] ?? ''),
+        ],
+        'warmup' => [
+            'enabled' => ($_ENV['WARMUP_ENABLED'] ?? $_SERVER['WARMUP_ENABLED'] ?? 'false') === 'true',
+            'widths'  => [480, 800, 1280],
+        ],
+    ],
+
     'blog' => [
         'enabled' => true,
         'posts_per_page' => $posts_per_page,

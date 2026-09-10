@@ -651,10 +651,39 @@ Ruta virtual `/__components` disponible solo en desarrollo para renderizar todos
      Excepciones deliberadas: `backdrop-blur-md` del header sticky se
      conserva (área acotada ~80px, un header por página, sombra
      estática), y los shadows decorativos grandes (`shadow-2xl` del
-     hero de single, CTAs con `shadow-brand-200`) son estáticos y
+     hero de single, CTAs con `shadow-brand-200`)     son estáticos y
      fuera del área de scroll — las transiciones de sus botones son
      transform/opacity, que no repintan la sombra. Verificación: 55
      Pest + 16 e2e.
+ 13. **Media pipeline — una API, dos motores (2026-09-10):** el
+     pipeline único de imágenes del tema es `rs_image()`/
+     `components/image.twig` (análogo al sistema de iconos): slots
+     nombrados (`card` 3:2·640, `thumb` 1:1·96, `hero` 16:9·1280·LCP,
+     `full` LCP) con encuadre por CSS `object-cover` — variantes
+     width-only y `width`/`height` del ratio del slot para CLS.
+     Motor 1, **imgproxy on-demand** (activo con `IMGPROXY_ROUTE=/
+     cdn-cgi/image`): srcset de buckets cuantizados
+     (320→1920), variantes materializadas en el borde y con caché
+     efímera en disco — los originales en `uploads/` son la única
+     copia permanente; contratos espejo en `infra/caddy/images.conf`
+     (prod) y `.ddev/nginx/site.conf` (dev), bucket inválido → 404 y
+     sin traversal. WebP/AVIF por `Accept` (`IMGPROXY_AUTO_*` de v4).
+     Motor 2, **Timber `|resize` nativo** como fallback sin proxy:
+     ancho base del slot, SIN srcset (el resize corre en primer
+     plano — anunciar candidatos los bloquearía secuencialmente).
+     Below-fold: `loading="lazy"` + `sizes="auto"`; LCP:
+     `fetchpriority="high"` sin lazy. WP genera solo `medium/large`
+     (`trim_default_sizes`) y fuerza webp en el editor
+     (`image_editor_output_format`). Warm-up opcional con Action
+     Scheduler (`WARMUP_ENABLED=true`): encola los buckets del config
+     al publicar. Lecciones de la implementación: **Timber expone su
+     API como métodos** (`Image::src()`, `width()`, `height()`), las
+     propiedades mágicas no responden a `isset()` (sin `__isset`) —
+     el primer render salió vacío por usarlas como guard; el path del
+     contrato del proxy es relativo a la **raíz de WP**
+     (`wp-content/uploads/...`, el `LOCAL_FILESYSTEM_ROOT` apunta al
+     Core Fantasma), no a `uploads/`. Cobertura: 22 Pest + 3 e2e
+     (`media-pipeline.spec.js`).
 
 ---
 

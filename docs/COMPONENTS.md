@@ -122,11 +122,38 @@ Tarjeta para blog/portfolio con CTA.
         title: post.title,
         url: post.link,
         excerpt: post.preview.length(20),
-        image: post.thumbnail ? post.thumbnail.src|resize(600, 400) : null,
+        image: post.thumbnail ? post.thumbnail : null,
         meta: post.date|date('d M, Y'),
     } only %}
 {% endfor %}
 ```
+
+### `image.twig`
+
+Envoltura Twig del pipeline único de imágenes `rs_image()` (app/Services/ImageService.php). Una API, dos motores:
+
+- **Con proxy** (`IMGPROXY_ROUTE=/cdn-cgi/image` en `.env`): `src` y `srcset` apuntan a buckets cuantizados servidos on-demand por imgproxy (`320/480/640/800/1024/1280/1600/1920`) con caché inmutable; WebP/AVIF según el `Accept` del cliente.
+- **Sin proxy**: resize nativo de Timber al ancho base del slot, sin `srcset` (el resize corre en primer plano — anunciar candidatos los bloquearía secuencialmente).
+
+Siempre emite `width`/`height` del ratio del slot (CLS, el encuadre real lo hace `object-cover`), `decoding="async"`; los slots below-fold añaden `loading="lazy"` + `sizes="auto"`, y los LCP (`hero`, `full`) llevan `fetchpriority="high"` sin lazy.
+
+| Parámetro | Tipo | Default | Descripción |
+|---|---|---|---|
+| `attachment` | Timber\\Image\|null | — | Imagen destacada (null → no renderiza) |
+| `slot` | string | `card` | `card` (3:2, 640) · `thumb` (1:1, 96) · `hero` (16:9, 1280, LCP) · `full` (original, LCP) |
+| `class` | string | `''` | Clases del `<img>` (encuadre vía `object-cover`) |
+| `alt` | string | alt del attachment | Override del texto alternativo |
+| `sizes` | string | por slot | Override del atributo `sizes` |
+
+```twig
+{% include 'components/image.twig' with {
+    attachment: post.thumbnail,
+    slot: 'hero',
+    class: 'w-full h-full object-cover',
+} only %}
+```
+
+Infra: `.ddev/docker-compose.imgproxy.yaml` (dev) y `infra/caddy/images.conf` (prod, espejo en `.ddev/nginx/site.conf`). Los originales en `uploads/` son la única copia permanente — la caché de variantes es efímera. Sin `IMGPROXY_ROUTE`, el tema degrada a Timber `|resize` con cero cambios de markup.
 
 ### `alert.twig`
 

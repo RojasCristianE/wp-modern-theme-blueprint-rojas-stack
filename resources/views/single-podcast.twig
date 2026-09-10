@@ -21,7 +21,12 @@
 
         {% if post.thumbnail %}
             <figure class="mb-16">
-                <img src="{{ post.thumbnail.src|resize(1200, 675) }}" alt="{{ post.title }}" class="w-full rounded-2xl shadow-lg">
+                {% include 'components/image.twig' with {
+                    attachment: post.thumbnail,
+                    slot: 'hero',
+                    class: 'w-full rounded-2xl shadow-lg',
+                    alt: post.title,
+                } only %}
                 {% if post.thumbnail.caption %}
                     <figcaption class="mt-3 text-center text-sm text-ink-faint italic">{{ post.thumbnail.caption }}</figcaption>
                 {% endif %}

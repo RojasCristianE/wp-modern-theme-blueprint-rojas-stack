@@ -1,0 +1,42 @@
+# imgproxy para el Rojas Stack — variantes de imagen on-demand (spec §12.1).
+# Servicio opcional: sin IMGPROXY_ROUTE en .env, el tema usa el resize
+# nativo de Timber. Sirve los uploads del Core Fantasma read-only.
+#
+# Uso directo en dev (sin router): el puerto expuesto acepta el formato
+# nativo de imgproxy, p.ej.
+#   http://127.0.0.1:8480/unsafe/rs:fit:480/plain/local:///wp-content/uploads/2026/09/f.jpg
+# Con IMGPROXY_ROUTE=/cdn-cgi/image el tema construye URLs del proxy y el
+# navegador las pide al sitio; en producción el bloque Caddy de
+# infra/caddy/images.conf hace la traducción (el contrato del tema es
+# ese bloque, no el puerto del contenedor).
+services:
+  imgproxy:
+    container_name: ddev-${DDEV_SITENAME}-imgproxy
+    image: darthsim/imgproxy:latest
+    restart: "no"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    networks:
+      default:
+        aliases:
+          - ${DDEV_SITENAME}-imgproxy
+    ports:
+      - "8480"
+    environment:
+      IMGPROXY_ALLOW_ORIGIN: "*"
+      IMGPROXY_MAX_SRC_RESOLUTION: "50"
+      IMGPROXY_QUALITY: "82"
+      # Auto-negociación WebP/AVIF según el Accept del cliente (v4).
+      IMGPROXY_AUTO_WEBP: "true"
+      IMGPROXY_AUTO_AVIF: "true"
+      # Los uploads del Core Fantasma viven en el volumen externo de DDEV.
+      IMGPROXY_LOCAL_FILESYSTEM_ROOT: "/images"
+      IMGPROXY_USE_ETAGS: "true"
+    volumes:
+      - wp-core-volume:/images:ro
+
+volumes:
+  wp-core-volume:
+    external: true
+    name: ddev-${DDEV_SITENAME}_wp-core-volume

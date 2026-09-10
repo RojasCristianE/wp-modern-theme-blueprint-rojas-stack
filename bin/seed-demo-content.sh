@@ -23,6 +23,20 @@ if [ "${MARKER}" = "1" ]; then
     exit 0
 fi
 
+# ── Imagen destacada compartida (pipeline de media, spec §12.1) ──
+# Una imagen GD real importada una vez y adjuntada a todos los posts:
+# el pipeline (webp, srcset, proxy imgproxy) se verifica contra datos
+# reales sin inflar la mediateca con 15 archivos gemelos.
+ATT_ID=$(wp option get rs_seed_demo_attachment 2>/dev/null | grep -oE '^[0-9]+' | tail -n 1 || true)
+if [ -z "${ATT_ID}" ]; then
+    echo "Generando imagen destacada demo (GD)…"
+    ddev exec php /var/www/html/bin/generate-demo-image.php >/dev/null
+    ATT_ID=$(wp media import /tmp/rs-demo.png --porcelain | grep -oE '^[0-9]+' | tail -n 1)
+    ddev exec rm -f /tmp/rs-demo.png >/dev/null 2>&1 || true
+    wp option update rs_seed_demo_attachment "${ATT_ID}" >/dev/null
+    echo "  ✓ attachment ${ATT_ID}"
+fi
+
 echo "Creando categorías…"
 wp term create category 'Rojas Stack' --slug=rojas-stack >/dev/null || true
 wp term create category 'Tutoriales' --slug=tutoriales >/dev/null || true
@@ -79,8 +93,10 @@ for title in "${TITLES[@]}"; do
     wp post term set "${post_id}" category "${cat_id}" >/dev/null
     # shellcheck disable=SC2086
     wp post term set "${post_id}" post_tag ${TAGSETS[$((i - 1))]} >/dev/null
+    # Featured image real para el pipeline de media (idempotente).
+    wp post meta set "${post_id}" _thumbnail_id "${ATT_ID}" >/dev/null
     echo "  ✓ demo-${i} [${cat_id}]"
 done
 
 wp option update rs_seed_demo_marker 1 >/dev/null
-echo "Listo: 15 posts, 3 categorías, 3 etiquetas."
+echo "Listo: 15 posts, 3 categorías, 3 etiquetas, featured image compartida (attachment ${ATT_ID})."

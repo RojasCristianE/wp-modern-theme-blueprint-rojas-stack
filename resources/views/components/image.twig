@@ -1,0 +1,27 @@
+{#
+  Componente de imagen del tema — envoltura del pipeline único rs_image().
+
+  La lógica vive en app/Services/ImageService.php (catálogo de slots,
+  srcset con buckets del proxy, LCP vs lazy). Este componente es la vía
+  canónica desde las plantillas, como icon.twig lo es para rs_icon().
+
+  Parámetros:
+  - attachment: Timber\Image (o URL string en demos). null → no renderiza.
+  - slot:       'card' (default) | 'thumb' | 'hero' | 'full' — catálogo en
+                ImageService::SLOTS.
+  - class:      clases del <img> (el encuadre lo hace CSS object-cover).
+  - alt:        override del texto alternativo (default: alt del attachment).
+  - sizes:      override del atributo sizes (default por slot).
+
+  Uso:
+    {% include 'components/image.twig' with {
+        attachment: post.thumbnail,
+        slot: 'hero',
+        class: 'w-full h-full object-cover',
+    } only %}
+#}
+{{ rs_image(attachment, slot|default('card'), {
+    class: class|default(''),
+    alt: alt|default(''),
+    sizes: sizes|default(''),
+}) }}
