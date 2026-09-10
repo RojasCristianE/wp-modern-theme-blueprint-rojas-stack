@@ -24,6 +24,9 @@ Este documento define la arquitectura y filosofía del **Rojas Stack**, un entor
 ### **2. Frontend & Interacción (Bun & Vite)**
 * **Vite + vite-plugin-live-reload:** Bundler con HMR total.
 * **Tailwind CSS v4:** Diseño atómico y accesible con tokens semánticos.
+* **daisyUI 5:** Componentes CSS del catálogo sobre Tailwind (temas `rojas`/`rojas-dark`, sin temas built-in — cero JS).
+* **Política de motion (no negociable):** **daisyUI es dueño de la animación, Alpine/JS son dueños del estado.** Nunca duplicar con `x-transition`, WAAPI o keyframes propios la choreography que daisy ya trae (`swap`, `loading`, `modal`, `fade-in`); `x-transition` solo cuando no existe equivalente daisy. Los componentes daisy traen su guard de `prefers-reduced-motion` de serie. Detalle: spec §12.1 entrada 10 + `docs/COMPONENTS.md` ("Motion y estados de carga").
+* **Política de transición (no negociable):** **prohibido `transition-all`.** Toda transición declara las propiedades exactas que cambian: solo colores → `transition-colors`; con press (`active:scale-95`) → `transition-[background-color,transform]` u `transition-[opacity,transform]`. Si la lista de propiedades crece mucho, es señal de diseño a revisar. Detalle: spec §12.1 entrada 11.
 * **HTMX + AlpineJS:** Interactividad reactiva sin la complejidad de SPAs.
 
 ### **3. CI/CD & Despliegue del Tema**
