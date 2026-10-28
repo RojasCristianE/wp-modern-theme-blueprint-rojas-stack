@@ -6,6 +6,12 @@
       "sourceType": "autoskills-registry",
       "computedHash": "bffe3d08cfe92ebad63699f74ce29e35c19850ebfbf474c1463183cfe34d6a09"
     },
+    "audit-website": {
+      "source": "squirrelscan/skills",
+      "sourceType": "github",
+      "skillPath": "skills/audit-website/SKILL.md",
+      "computedHash": "0168ff18c2c37c9417c8cfacedb0bbe6446e04d23a2b5747b8f584e57f4645b0"
+    },
     "bun": {
       "source": "midudev/autoskills",
       "sourceType": "autoskills-registry",
@@ -74,6 +80,12 @@
       "source": "addyosmani/web-quality-skills",
       "sourceType": "autoskills-registry",
       "computedHash": "c184da724d1c61ad077f27418ea8e7e88fd54bcdf98165e18be7e4681cbd5e20"
+    },
+    "squirrelscan": {
+      "source": "squirrelscan/skills",
+      "sourceType": "github",
+      "skillPath": "skills/squirrelscan/SKILL.md",
+      "computedHash": "8b1515a8fb86d4a17598d0807f91d7484023615084533db5631cd47b7d3c9e7c"
     },
     "tailwind-css-patterns": {
       "source": "giuseppe-trisciuoglio/developer-kit",
